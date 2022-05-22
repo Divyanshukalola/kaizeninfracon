@@ -11,7 +11,7 @@ import Fade from "@mui/material/Fade";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import { CardActionArea, CardActions } from "@mui/material";
+import { CardActionArea } from "@mui/material";
 
 function Home() {
   const ColorButton = styled(Button)(({ theme }) => ({
