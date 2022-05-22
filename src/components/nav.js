@@ -20,7 +20,7 @@ const Nav = () => {
           {" "}
           <div className="row">
             <div className="col">
-              <a href="javascript:void(0);" style={{ color: "#09316f" }}>
+              <a href="javascript:;" style={{ color: "#09316f" }}>
                 <BsFillTelephoneFill
                   className="mx-2"
                   style={{ fontSize: "14px" }}
@@ -41,7 +41,7 @@ const Nav = () => {
               </a>
             </div>
             <div className="col">
-              <a href="javascript:void(0);" style={{ color: "#09316f" }}>
+              <a href="javascript:;" style={{ color: "#09316f" }}>
                 {" "}
                 <BsFillClockFill
                   className="mx-2"
@@ -56,7 +56,7 @@ const Nav = () => {
           <div className="row" style={{ float: "right" }}>
             <div className="col-1">
               <a
-                href="javascript:void(0);"
+                href="javascript:;"
                 style={{ color: "#09316f", fontWeight: "bold" }}
               >
                 <BsFacebook style={{ fontSize: "14px" }}></BsFacebook>{" "}
@@ -72,7 +72,7 @@ const Nav = () => {
             </div>
             <div className="col-1">
               <a
-                href="javascript:void(0);"
+                href="javascript:;"
                 style={{ color: "#09316f", fontWeight: "bold" }}
               >
                 <BsLinkedin style={{ fontSize: "14px" }}></BsLinkedin>
@@ -86,7 +86,7 @@ const Nav = () => {
         <div className="col my-4 mx-5">
           {/* <img src="" alt="" /> */}
           <a
-            href="javascript:void(0);"
+            href="javascript:;"
             style={{ color: "#09316f", fontWeight: "bold" }}
             className="mx-5"
           >
@@ -97,7 +97,7 @@ const Nav = () => {
           <div className="row mx-3 mt-3 text-center" style={{ float: "right" }}>
             <div className="col ">
               <a
-                href="javascript:void(0);"
+                href="javascript:;"
                 style={{ color: "#09316f", fontWeight: "bold" }}
               >
                 Home
@@ -105,7 +105,7 @@ const Nav = () => {
             </div>
             <div className="col">
               <a
-                href="javascript:void(0);"
+                href="javascript:;"
                 style={{ color: "#09316f", fontWeight: "bold" }}
               >
                 About
@@ -113,7 +113,7 @@ const Nav = () => {
             </div>
             <div className="col">
               <a
-                href="javascript:void(0);"
+                href="javascript:;"
                 style={{ color: "#09316f", fontWeight: "bold" }}
               >
                 Services
@@ -121,7 +121,7 @@ const Nav = () => {
             </div>
             <div className="col">
               <a
-                href="javascript:void(0);"
+                href="javascript:;"
                 style={{ color: "#09316f", fontWeight: "bold" }}
               >
                 Project
@@ -129,7 +129,7 @@ const Nav = () => {
             </div>
             <div className="col">
               <a
-                href="javascript:void(0);"
+                href="javascript:;"
                 style={{ color: "#09316f", fontWeight: "bold" }}
               >
                 News
@@ -137,7 +137,7 @@ const Nav = () => {
             </div>
             <div className="col">
               <a
-                href="javascript:void(0);"
+                href="javascript:;"
                 style={{ color: "#09316f", fontWeight: "bold" }}
               >
                 Contact
