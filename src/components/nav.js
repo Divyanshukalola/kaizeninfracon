@@ -107,7 +107,7 @@ const Nav = () => {
       </div>
       <hr style={{ marginBottom: "0px" }} />
       <div className="row sticky-top bg-white">
-        <div className="col my-4 mx-5">
+        <div className="col my-3 mx-5">
           {/* <img src="" alt="" /> */}
           <button
             style={{
@@ -120,7 +120,7 @@ const Nav = () => {
             <BsBuilding style={{ fontSize: "50px" }}></BsBuilding>
           </button>
         </div>
-        <div className="col-7 my-4 mx-5">
+        <div className="col-7 my-3 mx-5">
           <div className="row mx-3 mt-3 text-center" style={{ float: "right" }}>
             <div className="col ">
               <button
