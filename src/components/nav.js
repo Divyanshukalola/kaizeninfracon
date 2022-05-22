@@ -16,61 +16,91 @@ const Nav = () => {
     <>
       {/* navigation  */}{" "}
       <div className="row mx-5 my-3 ">
-        <div className="col-6">
+        <div className="col-7">
           {" "}
           <div className="row">
             <div className="col">
-              <a style={{ color: "#09316f" }}>
+              <button
+                style={{
+                  border: "transparent",
+                  color: "#09316f",
+                  background: "transparent",
+                }}
+              >
                 <BsFillTelephoneFill
                   className="mx-2"
                   style={{ fontSize: "14px" }}
                 ></BsFillTelephoneFill>{" "}
                 +91 9687620711
-              </a>
+              </button>
             </div>
             <div className="col">
-              <a
-                href="mailto:dkalola@hawk.iit.edu"
-                style={{ color: "#09316f" }}
+              <button
+                style={{
+                  border: "transparent",
+                  color: "#09316f",
+                  background: "transparent",
+                }}
               >
                 <BsFillEnvelopeFill
                   className="mx-2"
                   style={{ fontSize: "14px" }}
                 ></BsFillEnvelopeFill>
                 dkalola@hawk.iit.edu
-              </a>
+              </button>
             </div>
             <div className="col">
-              <a style={{ color: "#09316f" }}>
+              <button
+                style={{
+                  border: "transparent",
+                  color: "#09316f",
+                  background: "transparent",
+                }}
+              >
                 {" "}
                 <BsFillClockFill
                   className="mx-2"
                   style={{ fontSize: "14px" }}
                 ></BsFillClockFill>
                 SUN-MON 9:00 AM
-              </a>
+              </button>
             </div>
           </div>
         </div>
         <div className="col">
           <div className="row" style={{ float: "right" }}>
             <div className="col-1">
-              <a style={{ color: "#09316f", fontWeight: "bold" }}>
+              <button
+                style={{
+                  border: "transparent",
+                  color: "#09316f",
+                  background: "transparent",
+                }}
+              >
                 <BsFacebook style={{ fontSize: "14px" }}></BsFacebook>{" "}
-              </a>
+              </button>
             </div>
             <div className="col-1">
-              <a
-                href="mailto:dkalola@hawk.iit.edu"
-                style={{ color: "#09316f", fontWeight: "bold" }}
+              <button
+                style={{
+                  border: "transparent",
+                  color: "#09316f",
+                  background: "transparent",
+                }}
               >
                 <BsTwitter style={{ fontSize: "14px" }}></BsTwitter>
-              </a>
+              </button>
             </div>
             <div className="col-1">
-              <a style={{ color: "#09316f", fontWeight: "bold" }}>
+              <button
+                style={{
+                  border: "transparent",
+                  color: "#09316f",
+                  background: "transparent",
+                }}
+              >
                 <BsLinkedin style={{ fontSize: "14px" }}></BsLinkedin>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -79,29 +109,84 @@ const Nav = () => {
       <div className="row my-4 sticky-top bg-white">
         <div className="col my-4 mx-5">
           {/* <img src="" alt="" /> */}
-          <a style={{ color: "#09316f", fontWeight: "bold" }} className="mx-5">
+          <button
+            style={{
+              border: "transparent",
+              color: "#09316f",
+              background: "transparent",
+            }}
+            className="mx-5"
+          >
             <BsBuilding style={{ fontSize: "50px" }}></BsBuilding>
-          </a>
+          </button>
         </div>
         <div className="col-7 ">
           <div className="row mx-3 mt-3 text-center" style={{ float: "right" }}>
             <div className="col ">
-              <a style={{ color: "#09316f", fontWeight: "bold" }}>Home</a>
+              <button
+                style={{
+                  border: "transparent",
+                  color: "#09316f",
+                  background: "transparent",
+                }}
+              >
+                Home
+              </button>
             </div>
             <div className="col">
-              <a style={{ color: "#09316f", fontWeight: "bold" }}>About</a>
+              <button
+                style={{
+                  border: "transparent",
+                  color: "#09316f",
+                  background: "transparent",
+                }}
+              >
+                About
+              </button>
             </div>
             <div className="col">
-              <a style={{ color: "#09316f", fontWeight: "bold" }}>Services</a>
+              <button
+                style={{
+                  border: "transparent",
+                  color: "#09316f",
+                  background: "transparent",
+                }}
+              >
+                Services
+              </button>
             </div>
             <div className="col">
-              <a style={{ color: "#09316f", fontWeight: "bold" }}>Project</a>
+              <button
+                style={{
+                  border: "transparent",
+                  color: "#09316f",
+                  background: "transparent",
+                }}
+              >
+                Project
+              </button>
             </div>
             <div className="col">
-              <a style={{ color: "#09316f", fontWeight: "bold" }}>News</a>
+              <button
+                style={{
+                  border: "transparent",
+                  color: "#09316f",
+                  background: "transparent",
+                }}
+              >
+                News
+              </button>
             </div>
             <div className="col">
-              <a style={{ color: "#09316f", fontWeight: "bold" }}>Contact</a>
+              <button
+                style={{
+                  border: "transparent",
+                  color: "#09316f",
+                  background: "transparent",
+                }}
+              >
+                Contact
+              </button>
             </div>
           </div>
         </div>
