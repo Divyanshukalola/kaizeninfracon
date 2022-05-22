@@ -82,17 +82,18 @@ const Nav = () => {
         </div>
       </div>
       <hr />
-      <div className="row mx-5 my-4">
-        <div className="col">
+      <div className="row my-4 sticky-top bg-white">
+        <div className="col my-4 mx-5">
           {/* <img src="" alt="" /> */}
           <a
             href="javascript:void(0)"
             style={{ color: "#09316f", fontWeight: "bold" }}
+            className="mx-5"
           >
             <BsBuilding style={{ fontSize: "50px" }}></BsBuilding>
           </a>
         </div>
-        <div className="col-7">
+        <div className="col-7 ">
           <div className="row mx-3 mt-3 text-center" style={{ float: "right" }}>
             <div className="col ">
               <a

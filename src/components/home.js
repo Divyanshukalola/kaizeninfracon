@@ -17,7 +17,10 @@ function Home() {
   }));
   return (
     <div className="Home">
+      {/* navigation  */}
       <Topnavigation></Topnavigation>
+
+      {/* hero  */}
       <div className=" bg-light">
         <div
           id="carouselExampleControls"
@@ -168,12 +171,12 @@ function Home() {
           </a>
         </div>
       </div>
-
-      {/* <div className=" bg-white">
+      {/* section 1 */}
+      <div className=" bg-white">
         <div className="containter">
           {" "}
-          <div className="row mx-5">
-            <div className="col">
+          <div className="row mx-5 mt-5">
+            <div className="col text-center" style={{ height: "620px" }}>
               <Slide
                 direction="right"
                 in={true}
@@ -181,10 +184,16 @@ function Home() {
                 unmountOnExit
                 timeout={300}
               >
-                <div style={{ marginTop: "30%", marginLeft: "10%" }}>
+                <div className="mt-5">
                   {" "}
-                  <span>WE MAKE</span>
-                  <h1>Create Your Dream</h1>
+                  <span>WHAT WE DO</span>
+                  <hr />
+                  <h2 style={{ fontWeight: "bold" }}>
+                    We build strong brands and grow businesses through branded{" "}
+                    <br />
+                    services,{" "}
+                    <span className="secondary">digital storytelling</span> .
+                  </h2>
                   <p>We make your dream a reality. </p>
                   <ColorButton
                     variant="contained"
@@ -195,14 +204,9 @@ function Home() {
                 </div>
               </Slide>
             </div>
-            <div className="col mt-4 text-center">
-              <Fade in={true}>
-                <img src={man} alt="worker" height={"600px"} />
-              </Fade>
-            </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
