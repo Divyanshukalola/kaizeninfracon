@@ -3,11 +3,11 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <div className="row my-5">
-        <div className="col-7 my-5 text-left">
+      <div className="row">
+        <div className="col-7 text-left">
           <p>Copyright ©2019 Mugli. All Rights Reserved</p>
         </div>
-        <div className="col mt-5">
+        <div className="col">
           <div className="row">
             <div className="col">
               <button
