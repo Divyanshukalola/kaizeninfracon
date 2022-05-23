@@ -7,7 +7,10 @@ import { BsFillClockFill } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
-import { BsBuilding } from "react-icons/bs";
+
+
+
+import mainlogo from "./../static/img/logo2big.png";
 
 // import { IconName } from "react-icons/bs";
 
@@ -117,7 +120,7 @@ const Nav = () => {
             }}
             className="mx-5"
           >
-            <BsBuilding style={{ fontSize: "50px" }}></BsBuilding>
+            <img src={mainlogo} alt="mainlogo" height={"50px"} />
           </button>
         </div>
         <div className="col-7 my-3 mx-5">
