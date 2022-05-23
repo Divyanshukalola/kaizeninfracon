@@ -1,9 +1,12 @@
 import * as React from "react";
 import mainlogo from "./../static/img/logo2big.png";
+import Topnavigation from "./nav";
 
 function CommingSoon() {
   return (
     <div className="App">
+      {" "}
+      <Topnavigation></Topnavigation>
       <br />
       <br />
       <br />
