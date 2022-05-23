@@ -352,6 +352,7 @@ function Home() {
                             src={
                               "https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png"
                             }
+                            alt="img"
                             className="hoverClients"
                             height="140px"
                           />
@@ -364,6 +365,7 @@ function Home() {
                             src={
                               "http://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png"
                             }
+                            alt="img"
                             className="hoverClients"
                             height="140px"
                           />
@@ -379,18 +381,19 @@ function Home() {
                             src={
                               "http://assets.stickpng.com/images/580b57fcd9996e24bc43c521.png"
                             }
+                            alt="img"
                             className="hoverClients"
                             height="140px"
                           />
                         </Fade>
                       </div>
                       <div className="col">
-                        {" "}
                         <Fade in={true} timeout={800}>
                           <img
                             src={
                               "https://barod.cymru/wp-content/uploads/2020/07/facebook-icon-transparent-background-3.png"
                             }
+                            alt="img"
                             className="hoverClients"
                             height="140px"
                           />
