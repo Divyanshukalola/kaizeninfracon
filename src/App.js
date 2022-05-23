@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import CommingSoon from "./components/commingsoon";
 import Home from "./components/home";
+import About from "./components/about";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<CommingSoon></CommingSoon>} />
           <Route path="/home" element={<Home></Home>} />
+          <Route path="/about" element={<About></About>} />
         </Routes>
       </BrowserRouter>
 
