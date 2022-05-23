@@ -9,6 +9,7 @@ import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 import Slide from "@mui/material/Slide";
 import Fade from "@mui/material/Fade";
+import Grow from "@mui/material/Grow";
 
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -19,189 +20,182 @@ function Home() {
   const ColorButton = styled(Button)(({ theme }) => ({
     backgroundColor: "#ff5e10",
     "&:hover": {
-      backgroundColor: "#09316f",
+      backgroundColor: "#1c3e44",
     },
   }));
   return (
     <div className="Home">
       {/* navigation  */}
       <Topnavigation></Topnavigation>
-
-      {/* hero  */}
-      <div className=" bg-light">
-        <div
-          id="carouselExampleControls"
-          className="carousel slide"
-          data-ride="carousel"
-          style={{
-            backgroundImage:
-              'url("https://wallpaperaccess.com/full/309097.jpg")',
-          }}
-        >
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <div className="containter  ">
-                {" "}
-                <div className="row mx-5">
-                  <div className="col">
-                    <Slide
-                      direction="right"
-                      in={true}
-                      mountOnEnter
-                      unmountOnExit
-                      timeout={500}
-                    >
-                      <div
-                        style={{
-                          marginTop: "30%",
-                          marginLeft: "10%",
-                          textDecoration: "none",
-                        }}
-                        className="carousel-caption"
+      <div>
+        {/* hero  */}
+        <div className=" bg-light">
+          <div
+            id="carouselExampleControls"
+            className="carousel slide"
+            data-ride="carousel"
+            style={{
+              backgroundImage:
+                'url("https://wallpaperaccess.com/full/309097.jpg")',
+            }}
+          >
+            <div className="carousel-inner">
+              <div className="carousel-item active">
+                <div className="containter  ">
+                  {" "}
+                  <div className="row mx-5">
+                    <div className="col">
+                      <Slide
+                        direction="right"
+                        in={true}
+                        mountOnEnter
+                        unmountOnExit
+                        timeout={500}
                       >
-                        {" "}
-                        <span>WE MAKE</span>
-                        <h1>Create Your Dream</h1>
-                        <p>We make your dream a reality. </p>
-                        <ColorButton
-                          variant="contained"
-                          style={{ backgoundColor: "black" }}
+                        <div
+                          style={{
+                            marginTop: "30%",
+                            marginLeft: "10%",
+                            textDecoration: "none",
+                          }}
+                          className="carousel-caption"
                         >
-                          Learn More
-                        </ColorButton>
-                      </div>
-                    </Slide>
+                          {" "}
+                          <span>WE MAKE</span>
+                          <h1>Create Your Dream</h1>
+                          <p>We make your dream a reality. </p>
+                          <ColorButton
+                            variant="contained"
+                            style={{ backgoundColor: "black" }}
+                          >
+                            Learn More
+                          </ColorButton>
+                        </div>
+                      </Slide>
+                    </div>
+                    <div className="col mt-4 text-center">
+                      <Fade in={true} timeout={500}>
+                        <img src={man} alt="worker" height={"630px"} />
+                      </Fade>
+                    </div>
                   </div>
-                  <div className="col mt-4 text-center">
-                    <Fade in={true} timeout={500}>
-                      <img src={man} alt="worker" height={"630px"} />
-                    </Fade>
+                </div>
+              </div>
+              <div className="carousel-item">
+                <div className="containter">
+                  {" "}
+                  <div className="row mx-5">
+                    <div className="col mt-4 text-center">
+                      <Fade in={true} timeout={500}>
+                        <img src={building} alt="worker" height={"630px"} />
+                      </Fade>
+                    </div>
+                    <div className="col">
+                      <Slide
+                        direction="right"
+                        in={true}
+                        mountOnEnter
+                        unmountOnExit
+                        timeout={500}
+                      >
+                        <div
+                          style={{ marginTop: "30%", marginLeft: "10%" }}
+                          className="carousel-caption"
+                        >
+                          {" "}
+                          <span>WE DESIGN</span>
+                          <h1>Professional and Modern Designs</h1>
+                          <p>We make your concept a reality. </p>
+                          <ColorButton
+                            variant="contained"
+                            style={{ backgoundColor: "black" }}
+                          >
+                            Learn More
+                          </ColorButton>
+                        </div>
+                      </Slide>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="carousel-item">
+                <div className="containter">
+                  {" "}
+                  <div className="row">
+                    <div className="col" style={{ height: "650px" }}>
+                      <Slide
+                        direction="right"
+                        in={true}
+                        mountOnEnter
+                        unmountOnExit
+                        timeout={500}
+                      >
+                        <div
+                          style={{
+                            marginTop: "30%",
+                            marginLeft: "10%",
+                            right: "25%",
+                            bottom: "30%",
+                            left: "auto",
+                          }}
+                          className="carousel-caption text-center"
+                        >
+                          {" "}
+                          <span>WE SELECT</span>
+                          <h1>Our Buildings uses the best materials.</h1>
+                          <p>We make your dream strong and reliable. </p>
+                          <ColorButton
+                            variant="contained"
+                            style={{ backgoundColor: "black" }}
+                          >
+                            Contact Us
+                          </ColorButton>
+                        </div>
+                      </Slide>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="carousel-item">
-              <div className="containter">
-                {" "}
-                <div className="row mx-5">
-                  <div className="col mt-4 text-center">
-                    <Fade in={true} timeout={500}>
-                      <img src={building} alt="worker" height={"630px"} />
-                    </Fade>
-                  </div>
-                  <div className="col">
-                    <Slide
-                      direction="right"
-                      in={true}
-                      mountOnEnter
-                      unmountOnExit
-                      timeout={500}
-                    >
-                      <div
-                        style={{ marginTop: "30%", marginLeft: "10%" }}
-                        className="carousel-caption"
-                      >
-                        {" "}
-                        <span>WE DESIGN</span>
-                        <h1>Professional and Modern Designs</h1>
-                        <p>We make your concept a reality. </p>
-                        <ColorButton
-                          variant="contained"
-                          style={{ backgoundColor: "black" }}
-                        >
-                          Learn More
-                        </ColorButton>
-                      </div>
-                    </Slide>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <div className="containter">
-                {" "}
-                <div className="row">
-                  <div className="col" style={{ height: "650px" }}>
-                    <Slide
-                      direction="right"
-                      in={true}
-                      mountOnEnter
-                      unmountOnExit
-                      timeout={500}
-                    >
-                      <div
-                        style={{
-                          marginTop: "30%",
-                          marginLeft: "10%",
-                          right: "25%",
-                          bottom: "30%",
-                          left: "auto",
-                        }}
-                        className="carousel-caption text-center"
-                      >
-                        {" "}
-                        <span>WE SELECT</span>
-                        <h1>Our Buildings uses the best materials.</h1>
-                        <p>We make your dream strong and reliable. </p>
-                        <ColorButton
-                          variant="contained"
-                          style={{ backgoundColor: "black" }}
-                        >
-                          Contact Us
-                        </ColorButton>
-                      </div>
-                    </Slide>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <a
+              className="carousel-control-prev"
+              href="#carouselExampleControls"
+              data-slide="prev"
+              style={{ color: "black" }}
+            >
+              <span
+                className="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              className="carousel-control-next"
+              href="#carouselExampleControls"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                className="carousel-control-next-icon"
+                aria-hidden="false"
+              ></span>
+              <span className="sr-only">Next</span>
+            </a>
           </div>
-          <a
-            className="carousel-control-prev"
-            href="#carouselExampleControls"
-            data-slide="prev"
-            style={{ color: "black" }}
-          >
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a
-            className="carousel-control-next"
-            href="#carouselExampleControls"
-            role="button"
-            data-slide="next"
-          >
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="false"
-            ></span>
-            <span className="sr-only">Next</span>
-          </a>
         </div>
-      </div>
-      {/* section 1 */}
-      <div className=" bg-white">
-        <div className="containter">
-          {" "}
-          <div className="row mx-5 mt-5">
-            <div className="col text-center" style={{ height: "620px" }}>
-              <Slide
-                direction="right"
-                in={true}
-                mountOnEnter
-                unmountOnExit
-                timeout={300}
-              >
+        {/* section 1 */}
+        <div className=" bg-white">
+          <div className="containter">
+            {" "}
+            <div className="row mx-5 mt-5">
+              <div className="col text-center" style={{ height: "620px" }}>
                 <div className="mt-5">
                   {" "}
                   <span>WHAT WE DO</span>
                   <hr />
                   <br />
                   <h2 style={{ fontWeight: "bold" }}>
-                    We build strong brands and grow businesses through branded{" "}
+                    We build your dream and grow businesses through branded{" "}
                     <br />
                     services,{" "}
                     <span className="secondary">digital storytelling</span> .
@@ -220,13 +214,12 @@ function Home() {
                           />
                           <CardContent>
                             <h5>
-                              Never compromise on quality for economics
-                              benefits.
+                              Never compromise on quality for economic benefits.
                             </h5>
-                            <p>
+                            <small>
                               Lorem ipsum dolor sit amet, conse ctetur
                               adipisicing elit, sed do eiusmod tempor incidid
-                            </p>
+                            </small>
                           </CardContent>
                         </CardActionArea>
                       </Card>
@@ -245,10 +238,10 @@ function Home() {
                               Never compromise on quality for economics
                               benefits.
                             </h5>
-                            <p>
+                            <small>
                               Lorem ipsum dolor sit amet, conse ctetur
                               adipisicing elit, sed do eiusmod tempor incidid
-                            </p>
+                            </small>
                           </CardContent>
                         </CardActionArea>
                       </Card>
@@ -267,10 +260,10 @@ function Home() {
                               Never compromise on quality for economics
                               benefits.
                             </h5>
-                            <p>
+                            <small>
                               Lorem ipsum dolor sit amet, conse ctetur
                               adipisicing elit, sed do eiusmod tempor incidid
-                            </p>
+                            </small>
                           </CardContent>
                         </CardActionArea>
                       </Card>
@@ -286,13 +279,13 @@ function Home() {
                           />
                           <CardContent>
                             <h5>
-                              Never compromise on quality for economics
-                              benefits.
+                              Employees are our brain,hands & legs, treat them
+                              as our own limbs.
                             </h5>
-                            <p>
+                            <small>
                               Lorem ipsum dolor sit amet, conse ctetur
                               adipisicing elit, sed do eiusmod tempor incidid
-                            </p>
+                            </small>
                           </CardContent>
                         </CardActionArea>
                       </Card>
@@ -300,11 +293,416 @@ function Home() {
                   </div>
                   <br />
                   <br />
-                  <Footer></Footer>
+                  <div>
+                    {" "}
+                    <ColorButton
+                      variant="contained"
+                      style={{ backgoundColor: "black", zIndex: "0" }}
+                    >
+                      Contact Us
+                    </ColorButton>
+                  </div>
+                  <br />
                 </div>
-              </Slide>
+              </div>
             </div>
           </div>
+        </div>
+        <br />
+        <br />
+        {/* Clients */}
+        <div className=" bg-light">
+          <div className="containter">
+            {" "}
+            <div className="row mx-5 mt-5" style={{ height: "730px" }}>
+              <div className="col mt-5">
+                <div className="mt-5 text-center">
+                  {" "}
+                  <span>OUR CLIENTS</span>
+                  <hr />
+                </div>
+
+                <div className="row">
+                  <div className="col text-center">
+                    <div
+                      className="container"
+                      style={{
+                        marginTop: "35%",
+                        marginLeft: "10%",
+                        color: "lightgray",
+                      }}
+                    >
+                      {" "}
+                      <Slide
+                        direction="right"
+                        in={true}
+                        mountOnEnter
+                        unmountOnExit
+                        timeout={500}
+                      >
+                        <h1 style={{ fontSize: "55px" }}>We Proudly Server</h1>
+                      </Slide>{" "}
+                    </div>
+                  </div>
+                  <div className="col">
+                    <div className="row mt-5 text-center">
+                      <div className="col ">
+                        <Fade in={true} timeout={500}>
+                          <img
+                            src={
+                              "https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png"
+                            }
+                            className="hoverClients"
+                            height="140px"
+                          />
+                        </Fade>
+                      </div>
+                      <div className="col">
+                        {" "}
+                        <Fade in={true} timeout={600}>
+                          <img
+                            src={
+                              "http://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png"
+                            }
+                            className="hoverClients"
+                            height="140px"
+                          />
+                        </Fade>
+                      </div>
+                    </div>
+                    <br />
+                    <br />
+                    <div className="row mt-5 text-center">
+                      <div className="col ">
+                        <Fade in={true} timeout={700}>
+                          <img
+                            src={
+                              "http://assets.stickpng.com/images/580b57fcd9996e24bc43c521.png"
+                            }
+                            className="hoverClients"
+                            height="140px"
+                          />
+                        </Fade>
+                      </div>
+                      <div className="col">
+                        {" "}
+                        <Fade in={true} timeout={800}>
+                          <img
+                            src={
+                              "https://barod.cymru/wp-content/uploads/2020/07/facebook-icon-transparent-background-3.png"
+                            }
+                            className="hoverClients"
+                            height="140px"
+                          />
+                        </Fade>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* News */}
+        <div className=" bg-white my-5">
+          <div className="containter">
+            {" "}
+            <div className="row mx-5 mt-5">
+              <div className="col">
+                <div className="mt-5 text-center">
+                  {" "}
+                  <span>NEWS AND UPDATES</span>
+                  <hr />
+                  <br />
+                </div>
+
+                <div className="row ">
+                  <div className="col border-right">
+                    <div>
+                      <h3 style={{ zIndex: "99", lineHeight: "1.6" }}>
+                        This is the title of the{" "}
+                        <mark
+                          style={{
+                            backgroundColor: "#ff5e10",
+                            color: "white",
+                            opacity: "80%",
+                          }}
+                        >
+                          news
+                        </mark>{" "}
+                        or the update
+                      </h3>
+                      <small>
+                        {" "}
+                        This is the sample body of the update or news. This will
+                        contain a breif about the item.Lorem Ipsum is simply
+                        dummy text of the printing and typesetting industry.
+                        galley of type and scrambled it to make a type specimen
+                        book. <br /> <br /> It has survived not only five
+                        centuries, but also the leap into electronic
+                        typesetting, remaining essentially unchanged.
+                      </small>
+                      <br />
+                      <br />
+                      <div className="row">
+                        <div className="col">
+                          {" "}
+                          <small style={{ color: "grey" }}>
+                            <b>Date: 1-24-2022</b>
+                          </small>
+                        </div>
+                        <div className="col text-right">
+                          <button
+                            style={{
+                              backgroundColor: "transparent",
+                              border: "transparent",
+                              fontSize: "13px",
+                              color: "blue",
+                            }}
+                          >
+                            Learn More
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <hr />
+                    <div>
+                      <h3>This is the title of the news or the update</h3>
+                      <small>
+                        {" "}
+                        This is the sample body of the update or news. This will
+                        contain a breif about the item.Lorem Ipsum is simply
+                        dummy text of the printing and typesetting industry.
+                      </small>
+                      <br />
+                      <br />
+                      <div className="row">
+                        <div className="col">
+                          {" "}
+                          <small style={{ color: "grey" }}>
+                            <b>Date: 1-24-2022</b>
+                          </small>
+                        </div>
+                        <div className="col text-right">
+                          <button
+                            style={{
+                              backgroundColor: "transparent",
+                              border: "transparent",
+                              fontSize: "13px",
+                              color: "blue",
+                            }}
+                          >
+                            Learn More
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col border-right">
+                    {" "}
+                    <div>
+                      <img
+                        src="https://media.istockphoto.com/photos/breaking-news-world-news-with-map-backgorund-picture-id1182477852?k=20&m=1182477852&s=612x612&w=0&h=I3wdSzT_5h1y9dHq_YpZ9AqdIKg8epthr8Guva8FkPA="
+                        alt=""
+                        height={"300px"}
+                      />
+                      <br />
+                      <br />
+                      <h3>This is the title of the news or the update</h3>
+                      <small>
+                        This is the sample body of the update or news. This will
+                        contain a breif about the item.Lorem Ipsum is simply
+                        dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text
+                        ever since the 1500s, when an unknown printer took a
+                        galley of type and scrambled it to make a type specimen
+                        book. It has survived not only five centuries, but also
+                        the leap into electronic typesetting, remaining
+                        essentially unchanged.{" "}
+                      </small>
+                      <br />
+                      <br />
+                      <div className="row">
+                        <div className="col">
+                          {" "}
+                          <small style={{ color: "grey" }}>
+                            <b>Date: 1-24-2022</b>
+                          </small>
+                        </div>
+                        <div className="col text-right">
+                          <button
+                            style={{
+                              backgroundColor: "transparent",
+                              border: "transparent",
+                              fontSize: "13px",
+                              color: "blue",
+                            }}
+                          >
+                            Learn More
+                          </button>
+                        </div>
+                      </div>
+                    </div>{" "}
+                  </div>
+                  <div className="col border-right">
+                    <div>
+                      <img
+                        src="https://media.istockphoto.com/photos/breaking-news-world-news-with-map-backgorund-picture-id1182477852?k=20&m=1182477852&s=612x612&w=0&h=I3wdSzT_5h1y9dHq_YpZ9AqdIKg8epthr8Guva8FkPA="
+                        alt=""
+                        height={"200px"}
+                      />
+                      <br />
+                      <br />
+                      <h3>This is the title of the news or the update</h3>
+                      <small>
+                        This is the sample body of the update or news. This will
+                        contain a breif about the item.Lorem Ipsum is simply
+                        dummy text of the printing and typesetting industry.
+                      </small>
+                      <br />
+                      <br />
+                      <div className="row">
+                        <div className="col">
+                          {" "}
+                          <small style={{ color: "grey" }}>
+                            <b>Date: 1-24-2022</b>
+                          </small>
+                        </div>
+                        <div className="col text-right">
+                          <button
+                            style={{
+                              backgroundColor: "transparent",
+                              border: "transparent",
+                              fontSize: "13px",
+                              color: "blue",
+                            }}
+                          >
+                            Learn More
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <hr />
+                    <div>
+                      <img
+                        src="https://media.istockphoto.com/photos/breaking-news-world-news-with-map-backgorund-picture-id1182477852?k=20&m=1182477852&s=612x612&w=0&h=I3wdSzT_5h1y9dHq_YpZ9AqdIKg8epthr8Guva8FkPA="
+                        alt=""
+                        height={"200px"}
+                      />
+                      <br />
+                      <br />
+                      <h3>This is the title of the news or the update</h3>
+                      <small>
+                        This is the sample body of the update or news. This will
+                        contain a breif about the item.Lorem Ipsum is simply
+                        dummy text of the printing and typesetting industry.
+                      </small>
+                      <br />
+                      <br />
+                      <div className="row">
+                        <div className="col">
+                          {" "}
+                          <small style={{ color: "grey" }}>
+                            <b>Date: 1-24-2022</b>
+                          </small>
+                        </div>
+                        <div className="col text-right">
+                          <button
+                            style={{
+                              backgroundColor: "transparent",
+                              border: "transparent",
+                              fontSize: "13px",
+                              color: "blue",
+                            }}
+                          >
+                            Learn More
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col">
+                    <div>
+                      <h3>This is the title of the news or the update</h3>
+                      <small>
+                        {" "}
+                        This is the sample body of the update or news. This will
+                        contain a breif about the item.Lorem Ipsum is simply
+                        dummy text of the printing and typesetting industry.
+                        galley of type and scrambled it to make a type specimen
+                        book. <br /> <br /> It has survived not only five
+                        centuries, but also the leap into electronic
+                        typesetting, remaining essentially unchanged.
+                      </small>
+                      <br />
+                      <br />
+                      <div className="row">
+                        <div className="col">
+                          {" "}
+                          <small style={{ color: "grey" }}>
+                            <b>Date: 1-24-2022</b>
+                          </small>
+                        </div>
+                        <div className="col text-right">
+                          <button
+                            style={{
+                              backgroundColor: "transparent",
+                              border: "transparent",
+                              fontSize: "13px",
+                              color: "blue",
+                            }}
+                          >
+                            Learn More
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <hr />
+                    <div>
+                      <h3>This is the title of the news or the update</h3>
+                      <small>
+                        {" "}
+                        This is the sample body of the update or news. This will
+                        contain a breif about the item.Lorem Ipsum is simply
+                        dummy text of the printing and typesetting industry.
+                        galley of type and scrambled it to make a type specimen
+                        book. <br /> <br /> It has survived not only five
+                        centuries, but also the leap into electronic
+                        typesetting, remaining essentially unchanged.
+                      </small>
+                      <br />
+                      <br />
+                      <div className="row">
+                        <div className="col">
+                          {" "}
+                          <small style={{ color: "grey" }}>
+                            <b>Date: 1-24-2022</b>
+                          </small>
+                        </div>
+                        <div className="col">
+                          <button
+                            style={{
+                              backgroundColor: "transparent",
+                              border: "transparent",
+                              fontSize: "13px",
+                              color: "blue",
+                            }}
+                          >
+                            Learn More
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div className="mx-5 my-5">
+          <Footer></Footer>
         </div>
       </div>
     </div>

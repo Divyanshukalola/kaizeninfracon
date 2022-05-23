@@ -26,7 +26,7 @@ const Nav = () => {
               <button
                 style={{
                   border: "transparent",
-                  color: "#09316f",
+                  color: "#1c3e44",
                   background: "transparent",
                 }}
               >
@@ -41,7 +41,7 @@ const Nav = () => {
               <button
                 style={{
                   border: "transparent",
-                  color: "#09316f",
+                  color: "#1c3e44",
                   background: "transparent",
                 }}
               >
@@ -56,7 +56,7 @@ const Nav = () => {
               <button
                 style={{
                   border: "transparent",
-                  color: "#09316f",
+                  color: "#1c3e44",
                   background: "transparent",
                 }}
               >
@@ -76,7 +76,7 @@ const Nav = () => {
               <button
                 style={{
                   border: "transparent",
-                  color: "#09316f",
+                  color: "#1c3e44",
                   background: "transparent",
                 }}
               >
@@ -87,7 +87,7 @@ const Nav = () => {
               <button
                 style={{
                   border: "transparent",
-                  color: "#09316f",
+                  color: "#1c3e44",
                   background: "transparent",
                 }}
               >
@@ -98,7 +98,7 @@ const Nav = () => {
               <button
                 style={{
                   border: "transparent",
-                  color: "#09316f",
+                  color: "#1c3e44",
                   background: "transparent",
                 }}
               >
@@ -115,7 +115,7 @@ const Nav = () => {
           <button
             style={{
               border: "transparent",
-              color: "#09316f",
+              color: "#1c3e44",
               background: "transparent",
             }}
             className="mx-5"
@@ -129,7 +129,7 @@ const Nav = () => {
               <button
                 style={{
                   border: "transparent",
-                  color: "#09316f",
+                  color: "#1c3e44",
                   background: "transparent",
                 }}
               >
@@ -140,7 +140,7 @@ const Nav = () => {
               <button
                 style={{
                   border: "transparent",
-                  color: "#09316f",
+                  color: "#1c3e44",
                   background: "transparent",
                 }}
               >
@@ -151,7 +151,7 @@ const Nav = () => {
               <button
                 style={{
                   border: "transparent",
-                  color: "#09316f",
+                  color: "#1c3e44",
                   background: "transparent",
                 }}
               >
@@ -162,7 +162,7 @@ const Nav = () => {
               <button
                 style={{
                   border: "transparent",
-                  color: "#09316f",
+                  color: "#1c3e44",
                   background: "transparent",
                 }}
               >
@@ -173,7 +173,7 @@ const Nav = () => {
               <button
                 style={{
                   border: "transparent",
-                  color: "#09316f",
+                  color: "#1c3e44",
                   background: "transparent",
                 }}
               >
@@ -184,7 +184,7 @@ const Nav = () => {
               <button
                 style={{
                   border: "transparent",
-                  color: "#09316f",
+                  color: "#1c3e44",
                   background: "transparent",
                 }}
               >

@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="col-7 my-5 text-left">
           <p>Copyright ©2019 Mugli. All Rights Reserved</p>
         </div>
-        <div className="col my-5">
+        <div className="col mt-5">
           <div className="row">
             <div className="col">
               <button
