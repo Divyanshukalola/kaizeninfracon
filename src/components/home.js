@@ -1,5 +1,7 @@
 import React from "react";
 
+import Footer from "./footer";
+
 import Topnavigation from "./nav";
 import man from "./../static/img/man.png";
 import building from "./../static/img/buildings.png";
@@ -31,6 +33,10 @@ function Home() {
           id="carouselExampleControls"
           className="carousel slide"
           data-ride="carousel"
+          style={{
+            backgroundImage:
+              'url("https://wallpaperaccess.com/full/309097.jpg")',
+          }}
         >
           <div className="carousel-inner">
             <div className="carousel-item active">
@@ -68,7 +74,7 @@ function Home() {
                   </div>
                   <div className="col mt-4 text-center">
                     <Fade in={true} timeout={500}>
-                      <img src={man} alt="worker" height={"600px"} />
+                      <img src={man} alt="worker" height={"630px"} />
                     </Fade>
                   </div>
                 </div>
@@ -80,7 +86,7 @@ function Home() {
                 <div className="row mx-5">
                   <div className="col mt-4 text-center">
                     <Fade in={true} timeout={500}>
-                      <img src={building} alt="worker" height={"600px"} />
+                      <img src={building} alt="worker" height={"630px"} />
                     </Fade>
                   </div>
                   <div className="col">
@@ -115,7 +121,7 @@ function Home() {
               <div className="containter">
                 {" "}
                 <div className="row">
-                  <div className="col" style={{ height: "620px" }}>
+                  <div className="col" style={{ height: "650px" }}>
                     <Slide
                       direction="right"
                       in={true}
@@ -193,12 +199,14 @@ function Home() {
                   {" "}
                   <span>WHAT WE DO</span>
                   <hr />
+                  <br />
                   <h2 style={{ fontWeight: "bold" }}>
                     We build strong brands and grow businesses through branded{" "}
                     <br />
                     services,{" "}
                     <span className="secondary">digital storytelling</span> .
                   </h2>
+                  <br />
                   <br />
                   <div className="row">
                     <div className="col">
@@ -291,12 +299,8 @@ function Home() {
                     </div>
                   </div>
                   <br />
-                  <ColorButton
-                    variant="contained"
-                    style={{ backgoundColor: "black" }}
-                  >
-                    Learn More
-                  </ColorButton>
+                  <br />
+                  <Footer></Footer>
                 </div>
               </Slide>
             </div>
