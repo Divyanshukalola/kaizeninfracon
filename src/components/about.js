@@ -5,8 +5,8 @@ import Footer from "./footer";
 import Topnavigation from "./nav";
 // import man from "./../static/img/man.png";
 // import building from "./../static/img/buildings.png";
-import Button from "@mui/material/Button";
-import { styled } from "@mui/material/styles";
+// import Button from "@mui/material/Button";
+// import { styled } from "@mui/material/styles";
 // import Slide from "@mui/material/Slide";
 // import Fade from "@mui/material/Fade";
 
@@ -16,12 +16,6 @@ import { styled } from "@mui/material/styles";
 // import { CardActionArea } from "@mui/material";
 
 function About() {
-  const ColorButton = styled(Button)(({ theme }) => ({
-    backgroundColor: "#ff5e10",
-    "&:hover": {
-      backgroundColor: "#1c3e44",
-    },
-  }));
   return (
     <div className="about">
       {/* navigation  */}
