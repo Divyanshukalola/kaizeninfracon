@@ -19,7 +19,7 @@ function About() {
   return (
     <div className="about">
       {/* navigation  */}
-      <Topnavigation></Topnavigation>
+      <Topnavigation about="true"></Topnavigation>
 
       <div
         className="bg-light"

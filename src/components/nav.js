@@ -7,14 +7,20 @@ import { BsFillClockFill } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
-
-
+import { useNavigate } from "react-router-dom";
 
 import mainlogo from "./../static/img/logo2big.png";
 
 // import { IconName } from "react-icons/bs";
 
-const Nav = () => {
+const Nav = (props) => {
+  const navigate = useNavigate();
+  function home() {
+    navigate("/home");
+  }
+  function about() {
+    navigate("/about");
+  }
   return (
     <>
       {/* navigation  */}{" "}
@@ -139,8 +145,38 @@ const Nav = () => {
                   background: "transparent",
                   cursor: "pointer",
                 }}
+                onClick={home}
               >
-                <span className="hoverNavItem hoverNavItemActive">Home</span>
+                <span
+                  className={
+                    props.home
+                      ? "hoverNavItem hoverNavItemActive"
+                      : "hoverNavItem"
+                  }
+                >
+                  Home
+                </span>
+              </button>
+            </div>
+            <div className="col">
+              <button
+                style={{
+                  border: "transparent",
+                  color: "#1c3e44",
+                  background: "transparent",
+                  cursor: "pointer",
+                }}
+                onClick={about}
+              >
+                <span
+                  className={
+                    props.about
+                      ? "hoverNavItem hoverNavItemActive"
+                      : "hoverNavItem"
+                  }
+                >
+                  About
+                </span>
               </button>
             </div>
             <div className="col">
@@ -152,7 +188,15 @@ const Nav = () => {
                   cursor: "pointer",
                 }}
               >
-                <span className="hoverNavItem">About</span>
+                <span
+                  className={
+                    props.services
+                      ? "hoverNavItem hoverNavItemActive"
+                      : "hoverNavItem"
+                  }
+                >
+                  Services
+                </span>
               </button>
             </div>
             <div className="col">
@@ -164,7 +208,15 @@ const Nav = () => {
                   cursor: "pointer",
                 }}
               >
-                <span className="hoverNavItem">Services</span>
+                <span
+                  className={
+                    props.proj
+                      ? "hoverNavItem hoverNavItemActive"
+                      : "hoverNavItem"
+                  }
+                >
+                  Project
+                </span>
               </button>
             </div>
             <div className="col">
@@ -176,7 +228,15 @@ const Nav = () => {
                   cursor: "pointer",
                 }}
               >
-                <span className="hoverNavItem">Project</span>
+                <span
+                  className={
+                    props.news
+                      ? "hoverNavItem hoverNavItemActive"
+                      : "hoverNavItem"
+                  }
+                >
+                  News
+                </span>
               </button>
             </div>
             <div className="col">
@@ -188,19 +248,15 @@ const Nav = () => {
                   cursor: "pointer",
                 }}
               >
-                <span className="hoverNavItem">News</span>
-              </button>
-            </div>
-            <div className="col">
-              <button
-                style={{
-                  border: "transparent",
-                  color: "#1c3e44",
-                  background: "transparent",
-                  cursor: "pointer",
-                }}
-              >
-                <span className="hoverNavItem">Career</span>
+                <span
+                  className={
+                    props.career
+                      ? "hoverNavItem hoverNavItemActive"
+                      : "hoverNavItem"
+                  }
+                >
+                  Career
+                </span>
               </button>
             </div>
             <div className="col ">
@@ -212,7 +268,15 @@ const Nav = () => {
                   cursor: "pointer",
                 }}
               >
-                <span className="hoverNavItem">Contact</span>
+                <span
+                  className={
+                    props.contact
+                      ? "hoverNavItem hoverNavItemActive"
+                      : "hoverNavItem"
+                  }
+                >
+                  Contact
+                </span>
               </button>
             </div>
           </div>

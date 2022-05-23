@@ -26,7 +26,7 @@ function Home() {
   return (
     <div className="Home">
       {/* navigation  */}
-      <Topnavigation></Topnavigation>
+      <Topnavigation home="true"></Topnavigation>
       <div>
         {/* hero  */}
         <div className=" bg-light">
