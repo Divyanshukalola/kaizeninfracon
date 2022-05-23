@@ -28,6 +28,7 @@ const Nav = () => {
                   border: "transparent",
                   color: "#1c3e44",
                   background: "transparent",
+                  cursor: "pointer",
                 }}
               >
                 <BsFillTelephoneFill
@@ -43,6 +44,7 @@ const Nav = () => {
                   border: "transparent",
                   color: "#1c3e44",
                   background: "transparent",
+                  cursor: "pointer",
                 }}
               >
                 <BsFillEnvelopeFill
@@ -58,6 +60,7 @@ const Nav = () => {
                   border: "transparent",
                   color: "#1c3e44",
                   background: "transparent",
+                  cursor: "pointer",
                 }}
               >
                 {" "}
@@ -78,6 +81,7 @@ const Nav = () => {
                   border: "transparent",
                   color: "#1c3e44",
                   background: "transparent",
+                  cursor: "pointer",
                 }}
               >
                 <BsFacebook style={{ fontSize: "14px" }}></BsFacebook>{" "}
@@ -89,6 +93,7 @@ const Nav = () => {
                   border: "transparent",
                   color: "#1c3e44",
                   background: "transparent",
+                  cursor: "pointer",
                 }}
               >
                 <BsTwitter style={{ fontSize: "14px" }}></BsTwitter>
@@ -100,6 +105,7 @@ const Nav = () => {
                   border: "transparent",
                   color: "#1c3e44",
                   background: "transparent",
+                  cursor: "pointer",
                 }}
               >
                 <BsLinkedin style={{ fontSize: "14px" }}></BsLinkedin>
@@ -131,9 +137,10 @@ const Nav = () => {
                   border: "transparent",
                   color: "#1c3e44",
                   background: "transparent",
+                  cursor: "pointer",
                 }}
               >
-                Home
+                <span className="hoverNavItem hoverNavItemActive">Home</span>
               </button>
             </div>
             <div className="col">
@@ -142,9 +149,10 @@ const Nav = () => {
                   border: "transparent",
                   color: "#1c3e44",
                   background: "transparent",
+                  cursor: "pointer",
                 }}
               >
-                About
+                <span className="hoverNavItem">About</span>
               </button>
             </div>
             <div className="col">
@@ -153,9 +161,10 @@ const Nav = () => {
                   border: "transparent",
                   color: "#1c3e44",
                   background: "transparent",
+                  cursor: "pointer",
                 }}
               >
-                Services
+                <span className="hoverNavItem">Services</span>
               </button>
             </div>
             <div className="col">
@@ -164,9 +173,10 @@ const Nav = () => {
                   border: "transparent",
                   color: "#1c3e44",
                   background: "transparent",
+                  cursor: "pointer",
                 }}
               >
-                Project
+                <span className="hoverNavItem">Project</span>
               </button>
             </div>
             <div className="col">
@@ -175,9 +185,10 @@ const Nav = () => {
                   border: "transparent",
                   color: "#1c3e44",
                   background: "transparent",
+                  cursor: "pointer",
                 }}
               >
-                News
+                <span className="hoverNavItem">News</span>
               </button>
             </div>
             <div className="col">
@@ -186,9 +197,22 @@ const Nav = () => {
                   border: "transparent",
                   color: "#1c3e44",
                   background: "transparent",
+                  cursor: "pointer",
                 }}
               >
-                Contact
+                <span className="hoverNavItem">Career</span>
+              </button>
+            </div>
+            <div className="col ">
+              <button
+                style={{
+                  border: "transparent",
+                  color: "#1c3e44",
+                  background: "transparent",
+                  cursor: "pointer",
+                }}
+              >
+                <span className="hoverNavItem">Contact</span>
               </button>
             </div>
           </div>

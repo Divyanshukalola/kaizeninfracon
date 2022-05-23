@@ -212,5 +212,20 @@
 filter: grayscale(0%);
 }
 
+.hoverNavItem{
+  border-bottom: transparent;
+  transition: 0.3s;
+  width: 0px;
+}
+.hoverNavItem:hover{
+  width: auto;
+  border-bottom: #1c3e44 3px solid;
+}
+
+.hoverNavItemActive{
+  border-bottom: #1c3e44 3px solid;
+}
+
+
 
 
