@@ -227,5 +227,29 @@ filter: grayscale(0%);
 }
 
 
+.overlay {
+  position: relative; 
+  bottom: 100%; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  z-index: 99;
+
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  line-height: normal;
+  overflow-y: scroll;
+
+  padding: 20px;
+  cursor: pointer;
+
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+
 
 
