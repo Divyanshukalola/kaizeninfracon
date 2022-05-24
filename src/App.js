@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CommingSoon from "./components/commingsoon";
 import Home from "./components/home";
 import About from "./components/about";
+import News from "./components/news";
+import Projects from "./components/projects";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Route path="/" element={<CommingSoon></CommingSoon>} />
           <Route path="/home" element={<Home></Home>} />
           <Route path="/about" element={<About></About>} />
+          <Route path="/news" element={<News></News>} />
+          <Route path="/proj" element={<Projects></Projects>} />
         </Routes>
       </BrowserRouter>
 
