@@ -15,6 +15,15 @@ import Topnavigation from "./nav";
 // import CardMedia from "@mui/material/CardMedia";
 // import { CardActionArea } from "@mui/material";
 
+import sample from "./../static/img/sample_video.mp4";
+
+import Card from "@mui/material/Card";
+import Typography from "@mui/material/Typography";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import CardActions from "@mui/material/CardActions";
+import Button from "@mui/material/Button";
+
 function News() {
   return (
     <div className="Services">
@@ -25,7 +34,7 @@ function News() {
         className="bg-light"
         style={{
           backgroundImage:
-            'url("https://images.hdqwalls.com/wallpapers/golden-gate-bridge-san-francisco-night-ds.jpg")',
+            'url("https://ak.picdn.net/shutterstock/videos/1055334359/thumb/1.jpg")',
           height: "500px",
           backgroundSize: "100%",
           backgroundRepeat: "no-repeat",
@@ -35,8 +44,218 @@ function News() {
         <div className="row text-center">
           <div className="col">
             <h1 style={{ color: "white", marginTop: "15%", fontSize: "55px" }}>
-              OUR News
+              OUR NEWS
             </h1>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-white">
+        <div className="mt-5 text-center">
+          {" "}
+          <span className="sectionHeader">MEDIA CORNER</span>
+          <hr />
+          <br />
+        </div>
+        <div className="row mx-5 my-5">
+          <div className="col">
+            {" "}
+            <Card>
+              <CardMedia
+                component="img"
+                height="140"
+                image={
+                  "https://images.examples.com/wp-content/uploads/2018/03/Purehell.crop_671x504_03.preview.jpg"
+                }
+                alt="green iguana"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  Sample News 1
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Lizards are a widespread group of squamate reptiles, with over
+                  6,000 species, ranging across all continents except Antarctica
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small">Learn More</Button>
+              </CardActions>
+            </Card>
+          </div>
+          <div className="col">
+            {" "}
+            <Card>
+              <CardMedia
+                component="img"
+                height="140"
+                image={
+                  "https://images.examples.com/wp-content/uploads/2018/03/Purehell.crop_671x504_03.preview.jpg"
+                }
+                alt="green iguana"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  Sample News 2
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Lizards are a widespread group of squamate reptiles, with over
+                  6,000 species, ranging across all continents except Antarctica
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small">Learn More</Button>
+              </CardActions>
+            </Card>
+          </div>
+          <div className="col">
+            {" "}
+            <Card>
+              <CardMedia
+                component="img"
+                height="140"
+                image={
+                  "https://images.examples.com/wp-content/uploads/2018/03/Purehell.crop_671x504_03.preview.jpg"
+                }
+                alt="green iguana"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  Sample News 3
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Lizards are a widespread group of squamate reptiles, with over
+                  6,000 species, ranging across all continents except Antarctica
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small">Learn More</Button>
+              </CardActions>
+            </Card>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-white">
+        <div className="mt-5 text-center">
+          {" "}
+          <span className="sectionHeader">ARTICLE CORNER</span>
+          <hr />
+          <br />
+        </div>
+        <div className="row mx-5 my-5">
+          <div className="col">
+            {" "}
+            <Card>
+              <CardMedia
+                component="img"
+                height="340"
+                image={
+                  "https://images.template.net/wp-content/uploads/2016/10/Creative-Magazine-Cover-Page-Template.jpg"
+                }
+                alt="green iguana"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  Sample Article 1
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Lizards are a widespread group of squamate reptiles, with over
+                  6,000 species, ranging across all continents except Antarctica
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small">Learn More</Button>
+              </CardActions>
+            </Card>
+          </div>
+          <div className="col">
+            {" "}
+            <Card>
+              <CardMedia
+                component="img"
+                height="340"
+                image={
+                  "https://images.template.net/wp-content/uploads/2016/10/Creative-Magazine-Cover-Page-Template.jpg"
+                }
+                alt="green iguana"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  Sample Article 2
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Lizards are a widespread group of squamate reptiles, with over
+                  6,000 species, ranging across all continents except Antarctica
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small">Learn More</Button>
+              </CardActions>
+            </Card>
+          </div>
+          <div className="col">
+            {" "}
+            <Card>
+              <CardMedia
+                component="img"
+                height="340"
+                image={
+                  "https://images.template.net/wp-content/uploads/2016/10/Creative-Magazine-Cover-Page-Template.jpg"
+                }
+                alt="green iguana"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  Sample Article 3
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Lizards are a widespread group of squamate reptiles, with over
+                  6,000 species, ranging across all continents except Antarctica
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small">Learn More</Button>
+              </CardActions>
+            </Card>
+          </div>
+        </div>
+      </div>
+      <div className="bg-white">
+        <div className="mt-5 text-center">
+          {" "}
+          <span className="sectionHeader">INTERVIEW CORNER</span>
+          <hr />
+          <br />
+        </div>
+        <div className="row mx-5 my-5">
+          <div className="col text-center">
+            <video src={sample} controls height={"200px"}></video>
+            <br />
+            <small>
+              {" "}
+              Lizards are a widespread group of squamate reptiles, with over
+              6,000 species, ranging across all continents except Antarctica
+            </small>
+          </div>
+          <div className="col text-center">
+            <video src={sample} controls height={"200px"}></video>
+            <br />
+            <small>
+              {" "}
+              Lizards are a widespread group of squamate reptiles, with over
+              6,000 species, ranging across all continents except Antarctica
+            </small>
+          </div>
+          <div className="col text-center">
+            {" "}
+            <video src={sample} controls height={"200px"}></video>
+            <br />
+            <small>
+              {" "}
+              Lizards are a widespread group of squamate reptiles, with over
+              6,000 species, ranging across all continents except Antarctica
+            </small>
           </div>
         </div>
       </div>

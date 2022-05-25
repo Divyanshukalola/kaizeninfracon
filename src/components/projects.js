@@ -3,18 +3,9 @@ import React from "react";
 import Footer from "./footer";
 
 import Topnavigation from "./nav";
-// import man from "./../static/img/man.png";
-// import building from "./../static/img/buildings.png";
-// import Button from "@mui/material/Button";
-// import { styled } from "@mui/material/styles";
-// import Slide from "@mui/material/Slide";
-// import Fade from "@mui/material/Fade";
 
-// import Card from "@mui/material/Card";
-// import CardContent from "@mui/material/CardContent";
-// import CardMedia from "@mui/material/CardMedia";
-// import { CardActionArea } from "@mui/material";
-
+// img
+import sample_proj from "./../static/img/proposed/proj2.png";
 
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
@@ -24,6 +15,12 @@ import Box from "@mui/material/Box";
 
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
+
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import Button from "@mui/material/Button";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
 
 function srcset(image, size, rows = 1, cols = 1) {
   return {
@@ -200,6 +197,12 @@ function Projects() {
               </Tabs>
             </Box>
             <TabPanel value={value} index={0}>
+              {/* all projects  */}
+              <div className="mt-4 mx-5 text-center">
+                {" "}
+                <span className="sectionHeader">ALL PROJECTS</span>
+                <hr />
+              </div>
               <div className="row">
                 <div className="col">
                   <ImageList
@@ -234,7 +237,61 @@ function Projects() {
               </div>
             </TabPanel>
             <TabPanel value={value} index={1}>
-              Item Two
+              {/* current projects  */}
+              <div className="mt-4 mx-5 text-center">
+                {" "}
+                <span className="sectionHeader">CURRENT PROJECTS</span>
+                <hr />
+              </div>
+              <div className="row mx-5 my-5">
+                <div className="col-6">
+                  <Card>
+                    <CardMedia
+                      component="img"
+                      height="140"
+                      image={sample_proj}
+                      alt="green iguana"
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="div">
+                        BALASORE-Const of Hospital Bldg for NGMC (650 Bedded)
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        Lizards are a widespread group of squamate reptiles,
+                        with over 6,000 species, ranging across all continents
+                        except Antarctica
+                      </Typography>
+                    </CardContent>
+                    <CardActions>
+                      <Button size="small">Learn More</Button>
+                    </CardActions>
+                  </Card>
+                </div>
+                <div className="col-6">
+                  <Card>
+                    <CardMedia
+                      component="img"
+                      height="140"
+                      image={sample_proj}
+                      alt="green iguana"
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="div">
+                        ANGUL-Const. of Multi Storied Residential Apartment
+                        Scheme OSHB.
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        Lizards are a widespread group of squamate reptiles,
+                        with over 6,000 species, ranging across all continents
+                        except Antarctica
+                      </Typography>
+                    </CardContent>
+                    <CardActions>
+                      <Button size="small">Learn More</Button>
+                    </CardActions>
+                  </Card>
+                </div>
+              </div>
             </TabPanel>
           </Box>
         </div>

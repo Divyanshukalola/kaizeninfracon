@@ -415,7 +415,7 @@ function Home() {
               <div className="col">
                 <div className="mt-3 text-center">
                   {" "}
-                  <span className="sectionHeader">NEWS AND UPDATES</span>
+                  <span className="sectionHeader">HIGHLIGHTS AND UPDATES</span>
                   <hr />
                   <br />
                 </div>
