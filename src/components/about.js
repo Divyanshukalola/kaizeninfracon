@@ -1,7 +1,8 @@
 import React from "react";
 
 import Footer from "./footer";
-
+import director1 from "./../static/img/hardik.png";
+import director2 from "./../static/img/bhovan.png";
 import Topnavigation from "./nav";
 // import man from "./../static/img/man.png";
 // import building from "./../static/img/buildings.png";
@@ -41,23 +42,78 @@ function About() {
               </h1>
               <p className="mx-5 mb-5">
                 {" "}
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+                Kaizen Infracon is a well known name with handy proposals in the
+                field of Construction and Infrastructure Development Projects.
+                Kaizen Infracon is known in its client base for its sincerity
+                and dedication in the execution of projects withs good quality
+                aspects. Kaizen Infracon was started in the year 2019 as a
+                Partnership Firm and headed by Mr. Hardik Rangani as a Managing
+                Partner of Kaizen Infracon. Mr. Hardik Rangani is having a
+                qualification of Diploma in Civil Engineering and M.B.A. in
+                Project Management.
               </p>
             </div>
           </div>
         </div>
       </div>
 
+      <div className="bg-white">
+        <div className="mt-5 mx-5 text-center">
+          {" "}
+          <span className="sectionHeader">PROMOTERS AND PARTNERS</span>
+          <hr />
+        </div>
+        <div className="row">
+          <div className="col ">
+            <div className="row mx-5 my-5">
+              <div className="col-5">
+                {" "}
+                <img src={director1} alt="" height={"200px"} width={"170px"} />
+              </div>
+              <div className="col">
+                <h4>Mr. Hardik Rangani </h4>
+                <small>
+                  <li>Managing Partner of Kaizen Infracon</li>
+                  <li>
+                    Diploma in Civil Engineer and Master in Business
+                    Administration
+                  </li>
+                  <li>Experience of 7 to 8 Year in Construction Activities</li>
+                  <li>Promoter of Iron Triangle Limited</li>
+                </small>
+              </div>
+            </div>
+          </div>
+          <div className="col">
+            <div className="row mx-5 my-5">
+              <div className="col-5">
+                {" "}
+                <img src={director2} alt="" height={"200px"} width={"190px"} />
+              </div>
+              <div className="col">
+                <h4>Mr. Bhovan Rangani </h4>
+                <small>
+                  <li>Founder Partner of Kaizen Infracon</li>
+                  <li>Graduation in B.A.</li>
+                  <li>Experience of 35 Year in Construction Activities</li>
+                  <li>
+                    Whole Time Director and Founder Promoter of Iron Triangle
+                    Limited
+                  </li>
+                </small>
+              </div>
+            </div>{" "}
+          </div>
+        </div>
+      </div>
+
       <div className="bg-light">
+        <br />
+        <div className="mt-4 mx-5 text-center">
+          {" "}
+          <span className="sectionHeader">EXPERTISE</span>
+          <hr />
+        </div>
         <div className="row ">
           <div className="col text-center my-5">
             <img

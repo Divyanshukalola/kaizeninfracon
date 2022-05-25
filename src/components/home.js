@@ -189,9 +189,9 @@ function Home() {
             {" "}
             <div className="row mx-5 mt-5">
               <div className="col text-center" style={{ height: "620px" }}>
-                <div className="mt-5">
+                <div className="mt-3">
                   {" "}
-                  <span>WHAT WE DO</span>
+                  <span className="sectionHeader">WHAT WE DO</span>
                   <hr />
                   <br />
                   <h2 style={{ fontWeight: "bold" }}>
@@ -316,9 +316,9 @@ function Home() {
             {" "}
             <div className="row mx-5 mt-5" style={{ height: "730px" }}>
               <div className="col mt-5">
-                <div className="mt-5 text-center">
+                <div className="mt-3 text-center">
                   {" "}
-                  <span>OUR CLIENTS</span>
+                  <span className="sectionHeader">OUR CLIENTS</span>
                   <hr />
                 </div>
 
@@ -413,9 +413,9 @@ function Home() {
             {" "}
             <div className="row mx-5 mt-5">
               <div className="col">
-                <div className="mt-5 text-center">
+                <div className="mt-3 text-center">
                   {" "}
-                  <span>NEWS AND UPDATES</span>
+                  <span className="sectionHeader">NEWS AND UPDATES</span>
                   <hr />
                   <br />
                 </div>
