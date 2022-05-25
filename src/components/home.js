@@ -61,9 +61,13 @@ function Home() {
                           className="carousel-caption"
                         >
                           {" "}
-                          <span>WE MAKE</span>
-                          <h1>Create Your Dream</h1>
-                          <p>We make your dream a reality. </p>
+                          <span>PURPOSE</span>
+                          <h1>We design with a heartfelt intention</h1>
+                          <p>
+                            Our mission is straightforward. Every day, we look
+                            forward to the pleasure and honour of collaborating
+                            with our clients to make a difference.{" "}
+                          </p>
                           <ColorButton
                             variant="contained"
                             style={{ backgoundColor: "black" }}
@@ -158,28 +162,28 @@ function Home() {
               </div>
             </div>
             <a
-              className="carousel-control-prev"
+              class="carousel-control-prev"
               href="#carouselExampleControls"
+              role="button"
               data-slide="prev"
-              style={{ color: "black" }}
             >
               <span
-                className="carousel-control-prev-icon"
+                class="carousel-control-prev-icon"
                 aria-hidden="true"
               ></span>
               <span class="sr-only">Previous</span>
             </a>
             <a
-              className="carousel-control-next"
+              class="carousel-control-next"
               href="#carouselExampleControls"
               role="button"
               data-slide="next"
             >
               <span
-                className="carousel-control-next-icon"
-                aria-hidden="false"
+                class="carousel-control-next-icon"
+                aria-hidden="true"
               ></span>
-              <span className="sr-only">Next</span>
+              <span class="sr-only">Next</span>
             </a>
           </div>
         </div>
