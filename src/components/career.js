@@ -15,14 +15,14 @@ import Topnavigation from "./nav";
 // import CardMedia from "@mui/material/CardMedia";
 // import { CardActionArea } from "@mui/material";
 
-import sample from "./../static/img/sample_video.mp4";
+// import sample from "./../static/img/sample_video.mp4";
 
-import Card from "@mui/material/Card";
-import Typography from "@mui/material/Typography";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import CardActions from "@mui/material/CardActions";
-import Button from "@mui/material/Button";
+// import Card from "@mui/material/Card";
+// import Typography from "@mui/material/Typography";
+// import CardContent from "@mui/material/CardContent";
+// import CardMedia from "@mui/material/CardMedia";
+// import CardActions from "@mui/material/CardActions";
+// import Button from "@mui/material/Button";
 
 function Career() {
   return (
