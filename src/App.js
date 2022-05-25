@@ -7,6 +7,7 @@ import CommingSoon from "./components/commingsoon";
 import Home from "./components/home";
 import About from "./components/about";
 import News from "./components/news";
+import Career from "./components/career";
 import Projects from "./components/projects";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/about" element={<About></About>} />
           <Route path="/news" element={<News></News>} />
           <Route path="/proj" element={<Projects></Projects>} />
+          <Route path="/career" element={<Career></Career>} />
         </Routes>
       </BrowserRouter>
 

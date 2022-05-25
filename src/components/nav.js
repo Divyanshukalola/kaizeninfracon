@@ -27,6 +27,9 @@ const Nav = (props) => {
    function proj() {
      navigate("/proj");
    }
+   function career() {
+     navigate("/career");
+   }
    return (
      <>
        {/* navigation  */}{" "}
@@ -239,6 +242,7 @@ const Nav = (props) => {
                    background: "transparent",
                    cursor: "pointer",
                  }}
+                 onClick={career}
                >
                  <span
                    className={

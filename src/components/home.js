@@ -107,9 +107,12 @@ function Home() {
                           className="carousel-caption"
                         >
                           {" "}
-                          <span>WE DESIGN</span>
-                          <h1>Professional and Modern Designs</h1>
-                          <p>We make your concept a reality. </p>
+                          <span>WE MAKE</span>
+                          <h1>Longterm Relations</h1>
+                          <p>
+                            Kizen & Company has always prioritised the
+                            development of long-term connections.{" "}
+                          </p>
                           <ColorButton
                             variant="contained"
                             style={{ backgoundColor: "black" }}
@@ -138,16 +141,19 @@ function Home() {
                           style={{
                             marginTop: "30%",
                             marginLeft: "10%",
-                            right: "25%",
+                            right: "20%",
                             bottom: "30%",
                             left: "auto",
                           }}
                           className="carousel-caption text-center"
                         >
                           {" "}
-                          <span>WE SELECT</span>
-                          <h1>Our Buildings uses the best materials.</h1>
-                          <p>We make your dream strong and reliable. </p>
+                          <span>EXPERTISE</span>
+                          <h1>Our broad skills and teamwork guarantee...</h1>
+                          <p>
+                            Excellence in design and delivery, novel solutions,
+                            and unparalleled time and cost reductions{" "}
+                          </p>
                           <ColorButton
                             variant="contained"
                             style={{ backgoundColor: "black" }}
@@ -199,11 +205,12 @@ function Home() {
                   <hr />
                   <br />
                   <h2 style={{ fontWeight: "bold" }}>
-                    We build your dream and grow businesses through branded{" "}
-                    <br />
-                    services,{" "}
-                    <span className="secondary">digital storytelling</span> .
+                    Our <span className="secondary">biggest</span> prize is…
                   </h2>
+                  <p>
+                    Seeing our labour uplifts the human spirit and enriches the
+                    human experience.
+                  </p>
                   <br />
                   <br />
                   <div className="row">
@@ -218,11 +225,11 @@ function Home() {
                           />
                           <CardContent>
                             <h5>
-                              Never compromise on quality for economic benefits.
+                              Supporting Wellness Through Human-Centered Design
                             </h5>
                             <small>
-                              Lorem ipsum dolor sit amet, conse ctetur
-                              adipisicing elit, sed do eiusmod tempor incidid
+                              We take inspiration from the society that we live
+                              in and work to make it more efficient.
                             </small>
                           </CardContent>
                         </CardActionArea>
@@ -239,12 +246,11 @@ function Home() {
                           />
                           <CardContent>
                             <h5>
-                              Never compromise on quality for economics
-                              benefits.
+                              Supporting Wellness Through Human-Centered Design
                             </h5>
                             <small>
-                              Lorem ipsum dolor sit amet, conse ctetur
-                              adipisicing elit, sed do eiusmod tempor incidid
+                              We take inspiration from the society we live in
+                              and work to make it more efficient.
                             </small>
                           </CardContent>
                         </CardActionArea>
@@ -265,8 +271,8 @@ function Home() {
                               benefits.
                             </h5>
                             <small>
-                              Lorem ipsum dolor sit amet, conse ctetur
-                              adipisicing elit, sed do eiusmod tempor incidid
+                              We feel that delivering long-term services is more
+                              sustainable.
                             </small>
                           </CardContent>
                         </CardActionArea>
@@ -283,12 +289,11 @@ function Home() {
                           />
                           <CardContent>
                             <h5>
-                              Employees are our brain,hands & legs, treat them
-                              as our own limbs.
+                              In society, <br /> we work to create new
+                              opportunities. <br />
                             </h5>
                             <small>
-                              Lorem ipsum dolor sit amet, conse ctetur
-                              adipisicing elit, sed do eiusmod tempor incidid
+                              Extending the Horizons of Training Excellence.
                             </small>
                           </CardContent>
                         </CardActionArea>
@@ -329,7 +334,7 @@ function Home() {
                 <div className="row">
                   <div className="col text-center">
                     <div
-                      className="container"
+                      className="container client_info"
                       style={{
                         marginTop: "35%",
                         marginLeft: "10%",
@@ -344,7 +349,7 @@ function Home() {
                         unmountOnExit
                         timeout={500}
                       >
-                        <h1 style={{ fontSize: "55px" }}>We Proudly Server</h1>
+                        <h1 style={{ fontSize: "55px" }}>We Proudly Serve</h1>
                       </Slide>{" "}
                     </div>
                   </div>
