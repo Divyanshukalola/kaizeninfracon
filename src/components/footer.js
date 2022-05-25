@@ -4,50 +4,38 @@ const Footer = () => {
   return (
     <>
       <div className="row">
-        <div className="col-7 text-left">
-          <p>Copyright ©2019 Mugli. All Rights Reserved</p>
+        <div className="col-4 text-center my-4">
+          <p>Copyright © 2022 Kizen. All Rights Reserved</p>
+        </div>
+        <div className="col-2 border-right">
+          <div className="row">
+            <div className="col text-right">
+              <button className="footbutton">About </button>
+              <br />
+              <button className="footbutton">News </button> <br />
+              <button className="footbutton">Over Events </button> <br />
+              <button className="footbutton">Contact us </button>
+            </div>
+          </div>
         </div>
         <div className="col">
           <div className="row">
             <div className="col">
-              <button
-                style={{
-                  backgroundColor: "transparent",
-                  border: "transparent",
-                }}
-              >
-                About{" "}
-              </button>
+              <h5>Rajkot, Gujarat</h5>
+              <p>
+                504 / 505, R K Prime, Near Nanamava Circle, <br /> 150 Feet Ring
+                Road,RAJKOT-360005.
+              </p>
             </div>
             <div className="col">
-              <button
-                style={{
-                  backgroundColor: "transparent",
-                  border: "transparent",
-                }}
-              >
-                News{" "}
-              </button>
-            </div>
-            <div className="col">
-              <button
-                style={{
-                  backgroundColor: "transparent",
-                  border: "transparent",
-                }}
-              >
-                Over Events{" "}
-              </button>
-            </div>
-            <div className="col">
-              <button
-                style={{
-                  backgroundColor: "transparent",
-                  border: "transparent",
-                }}
-              >
-                Contact us{" "}
-              </button>
+              {" "}
+              <p>
+                <b>Phone: </b>+91 281 2962748
+              </p>
+              <p>
+                <b>Email: </b>
+                kaizeninfracon18617@gmail.com
+              </p>
             </div>
           </div>
         </div>
