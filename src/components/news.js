@@ -28,7 +28,7 @@ function News() {
   return (
     <div className="Services">
       {/* navigation  */}
-      <Topnavigation services="true"></Topnavigation>
+      <Topnavigation news="true"></Topnavigation>
 
       <div
         className="bg-light"

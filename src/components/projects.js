@@ -158,17 +158,7 @@ function Projects() {
       {/* navigation  */}
       <Topnavigation proj="true"></Topnavigation>
 
-      <div
-        className="bg-light"
-        style={{
-          backgroundImage:
-            'url("https://images.hdqwalls.com/wallpapers/golden-gate-bridge-san-francisco-night-ds.jpg")',
-          height: "500px",
-          backgroundSize: "100%",
-          backgroundRepeat: "no-repeat",
-          opacity: "70%",
-        }}
-      >
+      <div className="bg-light projects">
         <div className="row text-center">
           <div className="col">
             <h1 style={{ color: "white", marginTop: "15%", fontSize: "55px" }}>
