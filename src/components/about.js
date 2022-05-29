@@ -152,17 +152,7 @@ function About() {
                 Lorem Ipsum.
               </p>
 
-              <button
-                style={{
-                  backgroundColor: "transparent",
-                  border: "transparent",
-                  color: "blue",
-                  cursor: "pointer",
-                }}
-                className="mx-5"
-              >
-                Learn More
-              </button>
+              <button className="mx-5 jobbutton">Learn More</button>
             </div>
           </div>
         </div>
@@ -198,17 +188,7 @@ function About() {
                 Lorem Ipsum.
               </p>
 
-              <button
-                style={{
-                  backgroundColor: "transparent",
-                  border: "transparent",
-                  color: "blue",
-                  cursor: "pointer",
-                }}
-                className="mx-5"
-              >
-                Learn More
-              </button>
+              <button className="mx-5 jobbutton">Learn More</button>
             </div>
           </div>
           <div className="col text-center my-5">
@@ -260,17 +240,7 @@ function About() {
                 Lorem Ipsum.
               </p>
 
-              <button
-                style={{
-                  backgroundColor: "transparent",
-                  border: "transparent",
-                  color: "blue",
-                  cursor: "pointer",
-                }}
-                className="mx-5"
-              >
-                Learn More
-              </button>
+              <button className="mx-5 jobbutton">Learn More</button>
             </div>
           </div>
         </div>
@@ -306,17 +276,7 @@ function About() {
                 Lorem Ipsum.
               </p>
 
-              <button
-                style={{
-                  backgroundColor: "transparent",
-                  border: "transparent",
-                  color: "blue",
-                  cursor: "pointer",
-                }}
-                className="mx-5"
-              >
-                Learn More
-              </button>
+              <button className="mx-5 jobbutton">Learn More</button>
             </div>
           </div>
           <div className="col text-center my-5">
@@ -368,17 +328,7 @@ function About() {
                 Lorem Ipsum.
               </p>
 
-              <button
-                style={{
-                  backgroundColor: "transparent",
-                  border: "transparent",
-                  color: "blue",
-                  cursor: "pointer",
-                }}
-                className="mx-5"
-              >
-                Learn More
-              </button>
+              <button className="mx-5 jobbutton">Learn More</button>
             </div>
           </div>
         </div>
@@ -414,17 +364,7 @@ function About() {
                 Lorem Ipsum.
               </p>
 
-              <button
-                style={{
-                  backgroundColor: "transparent",
-                  border: "transparent",
-                  color: "blue",
-                  cursor: "pointer",
-                }}
-                className="mx-5"
-              >
-                Learn More
-              </button>
+              <button className="mx-5 jobbutton">Learn More</button>
             </div>
           </div>
           <div className="col text-center my-5">

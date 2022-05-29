@@ -270,9 +270,13 @@ filter: grayscale(0%);
   border-left: transparent;
   text-transform: capitalize;
   background-color: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+
 }
 .jobbutton:hover{
   color: #ff5e10;
+
 }
 
 .footbutton{

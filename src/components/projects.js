@@ -181,6 +181,9 @@ function Projects() {
                 value={value}
                 onChange={handleChange}
                 aria-label="basic tabs example"
+                textColor="#ff5e10"
+                indicatorColor="secondary"
+                centered
               >
                 <Tab label="All Projects" {...a11yProps(0)} />
                 <Tab label="Current Projects" {...a11yProps(1)} />
@@ -192,37 +195,85 @@ function Projects() {
                 {" "}
                 <span className="sectionHeader">ALL PROJECTS</span>
                 <hr />
+                <br />
               </div>
               <div className="row">
                 <div className="col">
-                  <ImageList
-                    sx={{ width: "auto", height: "auto" }}
-                    variant="quilted"
-                    cols={4}
-                    rowHeight={300}
-                  >
-                    {itemData.map((item) => (
-                      <ImageListItem
-                        key={item.img}
-                        cols={item.cols || 1}
-                        rows={item.rows || 1}
-                        className="container"
-                      >
-                        <img
-                          {...srcset(item.img, 121, item.rows, item.cols)}
-                          alt={item.title}
-                          loading="lazy "
-                          className="hoverClients"
-                          style={{ cursor: "pointer", display: "block" }}
-                        />
-                        <div class="overlay" style={{ height: "300px" }}>
-                          <h5>{item.title}</h5>
-                          <br />
-                          <small>{item.description}</small>
+                  <div className=" text-center my-3">
+                    <h1 style={{ color: "lightgray" }}>COMMERCIAL BUILDING</h1>
+                  </div>
+                </div>
+                <div className="col">
+                  <div className="bd-example">
+                    <div
+                      id="carouselExampleCaptions"
+                      className="carousel slide"
+                      data-ride="carousel"
+                    >
+                      <ol className="carousel-indicators">
+                        <li
+                          data-target="#carouselExampleCaptions"
+                          data-slide-to="0"
+                          className="active"
+                        ></li>
+                        <li
+                          data-target="#carouselExampleCaptions"
+                          data-slide-to="1"
+                        ></li>
+                        <li
+                          data-target="#carouselExampleCaptions"
+                          data-slide-to="2"
+                        ></li>
+                      </ol>
+                      <div className="carousel-inner">
+                        <div className="carousel-item active">
+                          <img
+                            src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d"
+                            className="d-block w-100"
+                            alt="..."
+                          />
                         </div>
-                      </ImageListItem>
-                    ))}
-                  </ImageList>
+                        <div className="carousel-item">
+                          <img
+                            src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d"
+                            className="d-block w-100"
+                            alt="..."
+                          />
+                        </div>
+                        <div className="carousel-item">
+                          <img
+                            src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d"
+                            className="d-block w-100"
+                            alt="..."
+                          />
+                        </div>
+                      </div>
+                      <a
+                        className="carousel-control-prev"
+                        href="#carouselExampleCaptions"
+                        role="button"
+                        data-slide="prev"
+                      >
+                        <span
+                          className="carousel-control-prev-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span className="sr-only">Previous</span>
+                      </a>
+                      <a
+                        className="carousel-control-next"
+                        href="#carouselExampleCaptions"
+                        role="button"
+                        data-slide="next"
+                      >
+                        <span
+                          className="carousel-control-next-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span className="sr-only">Next</span>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </TabPanel>
@@ -253,7 +304,9 @@ function Projects() {
                       </Typography>
                     </CardContent>
                     <CardActions>
-                      <Button size="small">Learn More</Button>
+                      <button className="mx-2 my-3 jobbutton">
+                        Learn More
+                      </button>
                     </CardActions>
                   </Card>
                 </div>
@@ -277,7 +330,9 @@ function Projects() {
                       </Typography>
                     </CardContent>
                     <CardActions>
-                      <Button size="small">Learn More</Button>
+                      <button className="mx-2 my-3 jobbutton">
+                        Learn More
+                      </button>
                     </CardActions>
                   </Card>
                 </div>

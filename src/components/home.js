@@ -68,12 +68,13 @@ function Home() {
                             forward to the pleasure and honour of collaborating
                             with our clients to make a difference.{" "}
                           </p>
-                          <ColorButton
+                          {/* <ColorButton
                             variant="contained"
                             style={{ backgoundColor: "black" }}
                           >
                             Learn More
-                          </ColorButton>
+                          </ColorButton> */}
+                          <button className="jobbutton">Learn More</button>
                         </div>
                       </Slide>
                     </div>
@@ -113,12 +114,13 @@ function Home() {
                             Kizen & Company has always prioritised the
                             development of long-term connections.{" "}
                           </p>
-                          <ColorButton
+                          {/* <ColorButton
                             variant="contained"
                             style={{ backgoundColor: "black" }}
                           >
                             Learn More
-                          </ColorButton>
+                          </ColorButton> */}
+                          <button className="jobbutton">Learn More</button>
                         </div>
                       </Slide>
                     </div>
@@ -154,12 +156,13 @@ function Home() {
                             Excellence in design and delivery, novel solutions,
                             and unparalleled time and cost reductions{" "}
                           </p>
-                          <ColorButton
+                          {/* <ColorButton
                             variant="contained"
                             style={{ backgoundColor: "black" }}
                           >
                             Contact Us
-                          </ColorButton>
+                          </ColorButton> */}
+                          <button className="jobbutton">Contact us</button>
                         </div>
                       </Slide>
                     </div>
@@ -304,12 +307,13 @@ function Home() {
                   <br />
                   <div>
                     {" "}
-                    <ColorButton
+                    {/* <ColorButton
                       variant="contained"
                       style={{ backgoundColor: "black", zIndex: "0" }}
                     >
                       Contact Us
-                    </ColorButton>
+                    </ColorButton> */}
+                    <button className="jobbutton">Contact us</button>
                   </div>
                   <br />
                 </div>
