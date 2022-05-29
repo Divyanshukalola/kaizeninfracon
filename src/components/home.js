@@ -5,8 +5,8 @@ import Footer from "./footer";
 import Topnavigation from "./nav";
 import man from "./../static/img/man.png";
 import building from "./../static/img/buildings.png";
-import Button from "@mui/material/Button";
-import { styled } from "@mui/material/styles";
+// import Button from "@mui/material/Button";
+// import { styled } from "@mui/material/styles";
 import Slide from "@mui/material/Slide";
 import Fade from "@mui/material/Fade";
 
