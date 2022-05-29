@@ -198,9 +198,9 @@ function Projects() {
                 <br />
               </div>
               {/* commercial  */}
-              <div className="row">
-                <div className="col">
-                  <div className=" text-center my-3">
+              <div className="row followMeBar">
+                <div className="col ">
+                  <div className=" text-center my-3 ">
                     <h1 style={{ color: "lightgray" }}>COMMERCIAL BUILDING</h1>
                   </div>
                 </div>
@@ -208,7 +208,7 @@ function Projects() {
               <br />
               <div className="row">
                 <div className="col">
-                  <div className="row" style={{ height: "230px" }}>
+                  <div className="row projectRow">
                     <div className="col">
                       <img
                         src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
@@ -218,6 +218,10 @@ function Projects() {
                       <div className="container text">
                         <h5 className="mt-2">Title</h5>
                         <small>This is the body.</small>
+                        <br />
+                        <button className="mx-2 my-3 jobbutton">
+                          Learn More
+                        </button>
                       </div>
                     </div>
                     <div className="col">
@@ -229,28 +233,10 @@ function Projects() {
                       <div className="container text">
                         <h5 className="mt-2">Title</h5>
                         <small>This is the body.</small>
-                      </div>
-                    </div>
-                    <div className="col">
-                      <img
-                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
-                        alt=""
-                        className="projectImg"
-                      />
-                      <div className="container text">
-                        <h5 className="mt-2">Title</h5>
-                        <small>This is the body.</small>
-                      </div>
-                    </div>
-                    <div className="col">
-                      <img
-                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
-                        alt=""
-                        className="projectImg"
-                      />
-                      <div className="container text">
-                        <h5 className="mt-2">Title</h5>
-                        <small>This is the body.</small>
+                        <br />
+                        <button className="mx-2 my-3 jobbutton">
+                          Learn More
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -259,9 +245,9 @@ function Projects() {
               <br />
               <hr />
               {/* residential  */}
-              <div className="row">
+              <div className="row followMeBar">
                 <div className="col">
-                  <div className=" text-center my-3">
+                  <div className=" text-center my-3 ">
                     <h1 style={{ color: "lightgray" }}>RESIDENTIAL BUILDING</h1>
                   </div>
                 </div>
@@ -269,7 +255,7 @@ function Projects() {
               <br />
               <div className="row">
                 <div className="col">
-                  <div className="row" style={{ height: "230px" }}>
+                  <div className="row projectRow">
                     <div className="col">
                       <img
                         src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
@@ -279,6 +265,10 @@ function Projects() {
                       <div className="container text">
                         <h5 className="mt-2">Title</h5>
                         <small>This is the body.</small>
+                        <br />
+                        <button className="mx-2 my-3 jobbutton">
+                          Learn More
+                        </button>
                       </div>
                     </div>
                     <div className="col">
@@ -290,28 +280,10 @@ function Projects() {
                       <div className="container text">
                         <h5 className="mt-2">Title</h5>
                         <small>This is the body.</small>
-                      </div>
-                    </div>
-                    <div className="col">
-                      <img
-                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
-                        alt=""
-                        className="projectImg"
-                      />
-                      <div className="container text">
-                        <h5 className="mt-2">Title</h5>
-                        <small>This is the body.</small>
-                      </div>
-                    </div>
-                    <div className="col">
-                      <img
-                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
-                        alt=""
-                        className="projectImg"
-                      />
-                      <div className="container text">
-                        <h5 className="mt-2">Title</h5>
-                        <small>This is the body.</small>
+                        <br />
+                        <button className="mx-2 my-3 jobbutton">
+                          Learn More
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -320,7 +292,7 @@ function Projects() {
               <br />
               <hr />
               {/* roads and bridges  */}
-              <div className="row">
+              <div className="row followMeBar">
                 <div className="col">
                   <div className=" text-center my-3">
                     <h1 style={{ color: "lightgray" }}>ROADS AND BRIDGES</h1>
@@ -331,13 +303,21 @@ function Projects() {
               <br />
               <div className="row">
                 <div className="col">
-                  <div className="row" style={{ height: "230px" }}>
+                  <div className="row projectRow">
                     <div className="col">
                       <img
                         src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
                         alt=""
                         className="projectImg"
                       />
+                      <div className="container text">
+                        <h5 className="mt-2">Title</h5>
+                        <small>This is the body.</small>
+                        <br />
+                        <button className="mx-2 my-3 jobbutton">
+                          Learn More
+                        </button>
+                      </div>
                     </div>
                     <div className="col">
                       <img
@@ -345,20 +325,14 @@ function Projects() {
                         alt=""
                         className="projectImg"
                       />
-                    </div>
-                    <div className="col">
-                      <img
-                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
-                        alt=""
-                        className="projectImg"
-                      />
-                    </div>
-                    <div className="col">
-                      <img
-                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
-                        alt=""
-                        className="projectImg"
-                      />
+                      <div className="container text">
+                        <h5 className="mt-2">Title</h5>
+                        <small>This is the body.</small>
+                        <br />
+                        <button className="mx-2 my-3 jobbutton">
+                          Learn More
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -366,7 +340,7 @@ function Projects() {
               <br />
               <hr />
               {/* hospital and colleges */}
-              <div className="row">
+              <div className="row followMeBar">
                 <div className="col">
                   <div className=" text-center my-3">
                     <h1 style={{ color: "lightgray" }}>
@@ -378,34 +352,36 @@ function Projects() {
               <br />
               <div className="row">
                 <div className="col">
-                  <div className="row" style={{ height: "230px" }}>
+                  <div className="row projectRow">
                     <div className="col">
                       <img
                         src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
                         alt=""
                         className="projectImg"
-                      />
+                      />{" "}
+                      <div className="container text">
+                        <h5 className="mt-2">Title</h5>
+                        <small>This is the body.</small>
+                        <br />
+                        <button className="mx-2 my-3 jobbutton">
+                          Learn More
+                        </button>
+                      </div>
                     </div>
                     <div className="col">
                       <img
                         src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
                         alt=""
                         className="projectImg"
-                      />
-                    </div>
-                    <div className="col">
-                      <img
-                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
-                        alt=""
-                        className="projectImg"
-                      />
-                    </div>
-                    <div className="col">
-                      <img
-                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
-                        alt=""
-                        className="projectImg"
-                      />
+                      />{" "}
+                      <div className="container text">
+                        <h5 className="mt-2">Title</h5>
+                        <small>This is the body.</small>
+                        <br />
+                        <button className="mx-2 my-3 jobbutton">
+                          Learn More
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -413,7 +389,7 @@ function Projects() {
               <br />
               <hr />
               {/* gov admin buildings */}
-              <div className="row">
+              <div className="row followMeBar">
                 <div className="col">
                   <div className=" text-center my-3">
                     <h1 style={{ color: "lightgray" }}>
@@ -425,34 +401,36 @@ function Projects() {
               <br />
               <div className="row">
                 <div className="col">
-                  <div className="row" style={{ height: "230px" }}>
+                  <div className="row projectRow">
                     <div className="col">
                       <img
                         src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
                         alt=""
                         className="projectImg"
-                      />
+                      />{" "}
+                      <div className="container text">
+                        <h5 className="mt-2">Title</h5>
+                        <small>This is the body.</small>
+                        <br />
+                        <button className="mx-2 my-3 jobbutton">
+                          Learn More
+                        </button>
+                      </div>
                     </div>
                     <div className="col">
                       <img
                         src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
                         alt=""
                         className="projectImg"
-                      />
-                    </div>
-                    <div className="col">
-                      <img
-                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
-                        alt=""
-                        className="projectImg"
-                      />
-                    </div>
-                    <div className="col">
-                      <img
-                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
-                        alt=""
-                        className="projectImg"
-                      />
+                      />{" "}
+                      <div className="container text">
+                        <h5 className="mt-2">Title</h5>
+                        <small>This is the body.</small>
+                        <br />
+                        <button className="mx-2 my-3 jobbutton">
+                          Learn More
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -460,7 +438,7 @@ function Projects() {
               <br />
               <hr />
               {/* other facilities  */}
-              <div className="row">
+              <div className="row followMeBar">
                 <div className="col">
                   <div className=" text-center my-3">
                     <h1 style={{ color: "lightgray" }}>OTHER FACILITIES</h1>
@@ -470,34 +448,37 @@ function Projects() {
               <br />
               <div className="row">
                 <div className="col">
-                  <div className="row" style={{ height: "230px" }}>
+                  <div className="row projectRow">
                     <div className="col">
                       <img
                         src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
                         alt=""
                         className="projectImg"
-                      />
+                      />{" "}
+                      <div className="container text">
+                        <h5 className="mt-2">Title</h5>
+                        <small>This is the body.</small>
+                        <br />
+                        <button className="mx-2 my-3 jobbutton">
+                          Learn More
+                        </button>
+                      </div>
                     </div>
+
                     <div className="col">
                       <img
                         src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
                         alt=""
                         className="projectImg"
-                      />
-                    </div>
-                    <div className="col">
-                      <img
-                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
-                        alt=""
-                        className="projectImg"
-                      />
-                    </div>
-                    <div className="col">
-                      <img
-                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
-                        alt=""
-                        className="projectImg"
-                      />
+                      />{" "}
+                      <div className="container text">
+                        <h5 className="mt-2">Title</h5>
+                        <small>This is the body.</small>
+                        <br />
+                        <button className="mx-2 my-3 jobbutton">
+                          Learn More
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
