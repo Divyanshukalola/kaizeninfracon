@@ -17,12 +17,12 @@ import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
 
 function Home() {
-  const ColorButton = styled(Button)(({ theme }) => ({
-    backgroundColor: "#ff5e10",
-    "&:hover": {
-      backgroundColor: "#1c3e44",
-    },
-  }));
+  // const ColorButton = styled(Button)(({ theme }) => ({
+  //   backgroundColor: "#ff5e10",
+  //   "&:hover": {
+  //     backgroundColor: "#1c3e44",
+  //   },
+  // }));
   return (
     <div className="Home">
       {/* navigation  */}
