@@ -197,81 +197,307 @@ function Projects() {
                 <hr />
                 <br />
               </div>
+              {/* commercial  */}
               <div className="row">
                 <div className="col">
                   <div className=" text-center my-3">
                     <h1 style={{ color: "lightgray" }}>COMMERCIAL BUILDING</h1>
                   </div>
                 </div>
+              </div>
+              <br />
+              <div className="row">
                 <div className="col">
-                  <div className="bd-example">
-                    <div
-                      id="carouselExampleCaptions"
-                      className="carousel slide"
-                      data-ride="carousel"
-                    >
-                      <ol className="carousel-indicators">
-                        <li
-                          data-target="#carouselExampleCaptions"
-                          data-slide-to="0"
-                          className="active"
-                        ></li>
-                        <li
-                          data-target="#carouselExampleCaptions"
-                          data-slide-to="1"
-                        ></li>
-                        <li
-                          data-target="#carouselExampleCaptions"
-                          data-slide-to="2"
-                        ></li>
-                      </ol>
-                      <div className="carousel-inner">
-                        <div className="carousel-item active">
-                          <img
-                            src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d"
-                            className="d-block w-100"
-                            alt="..."
-                          />
-                        </div>
-                        <div className="carousel-item">
-                          <img
-                            src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d"
-                            className="d-block w-100"
-                            alt="..."
-                          />
-                        </div>
-                        <div className="carousel-item">
-                          <img
-                            src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d"
-                            className="d-block w-100"
-                            alt="..."
-                          />
-                        </div>
+                  <div className="row" style={{ height: "230px" }}>
+                    <div className="col">
+                      <img
+                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
+                        alt=""
+                        className="projectImg"
+                      />
+                      <div className="container text">
+                        <h5 className="mt-2">Title</h5>
+                        <small>This is the body.</small>
                       </div>
-                      <a
-                        className="carousel-control-prev"
-                        href="#carouselExampleCaptions"
-                        role="button"
-                        data-slide="prev"
-                      >
-                        <span
-                          className="carousel-control-prev-icon"
-                          aria-hidden="true"
-                        ></span>
-                        <span className="sr-only">Previous</span>
-                      </a>
-                      <a
-                        className="carousel-control-next"
-                        href="#carouselExampleCaptions"
-                        role="button"
-                        data-slide="next"
-                      >
-                        <span
-                          className="carousel-control-next-icon"
-                          aria-hidden="true"
-                        ></span>
-                        <span className="sr-only">Next</span>
-                      </a>
+                    </div>
+                    <div className="col">
+                      <img
+                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
+                        alt=""
+                        className="projectImg"
+                      />
+                      <div className="container text">
+                        <h5 className="mt-2">Title</h5>
+                        <small>This is the body.</small>
+                      </div>
+                    </div>
+                    <div className="col">
+                      <img
+                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
+                        alt=""
+                        className="projectImg"
+                      />
+                      <div className="container text">
+                        <h5 className="mt-2">Title</h5>
+                        <small>This is the body.</small>
+                      </div>
+                    </div>
+                    <div className="col">
+                      <img
+                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
+                        alt=""
+                        className="projectImg"
+                      />
+                      <div className="container text">
+                        <h5 className="mt-2">Title</h5>
+                        <small>This is the body.</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <hr />
+              {/* residential  */}
+              <div className="row">
+                <div className="col">
+                  <div className=" text-center my-3">
+                    <h1 style={{ color: "lightgray" }}>RESIDENTIAL BUILDING</h1>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div className="row">
+                <div className="col">
+                  <div className="row" style={{ height: "230px" }}>
+                    <div className="col">
+                      <img
+                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
+                        alt=""
+                        className="projectImg"
+                      />
+                      <div className="container text">
+                        <h5 className="mt-2">Title</h5>
+                        <small>This is the body.</small>
+                      </div>
+                    </div>
+                    <div className="col">
+                      <img
+                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
+                        alt=""
+                        className="projectImg"
+                      />
+                      <div className="container text">
+                        <h5 className="mt-2">Title</h5>
+                        <small>This is the body.</small>
+                      </div>
+                    </div>
+                    <div className="col">
+                      <img
+                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
+                        alt=""
+                        className="projectImg"
+                      />
+                      <div className="container text">
+                        <h5 className="mt-2">Title</h5>
+                        <small>This is the body.</small>
+                      </div>
+                    </div>
+                    <div className="col">
+                      <img
+                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
+                        alt=""
+                        className="projectImg"
+                      />
+                      <div className="container text">
+                        <h5 className="mt-2">Title</h5>
+                        <small>This is the body.</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <hr />
+              {/* roads and bridges  */}
+              <div className="row">
+                <div className="col">
+                  <div className=" text-center my-3">
+                    <h1 style={{ color: "lightgray" }}>ROADS AND BRIDGES</h1>
+                  </div>
+                </div>
+              </div>
+
+              <br />
+              <div className="row">
+                <div className="col">
+                  <div className="row" style={{ height: "230px" }}>
+                    <div className="col">
+                      <img
+                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
+                        alt=""
+                        className="projectImg"
+                      />
+                    </div>
+                    <div className="col">
+                      <img
+                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
+                        alt=""
+                        className="projectImg"
+                      />
+                    </div>
+                    <div className="col">
+                      <img
+                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
+                        alt=""
+                        className="projectImg"
+                      />
+                    </div>
+                    <div className="col">
+                      <img
+                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
+                        alt=""
+                        className="projectImg"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <hr />
+              {/* hospital and colleges */}
+              <div className="row">
+                <div className="col">
+                  <div className=" text-center my-3">
+                    <h1 style={{ color: "lightgray" }}>
+                      HOSPITAL AND COLLEGES
+                    </h1>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div className="row">
+                <div className="col">
+                  <div className="row" style={{ height: "230px" }}>
+                    <div className="col">
+                      <img
+                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
+                        alt=""
+                        className="projectImg"
+                      />
+                    </div>
+                    <div className="col">
+                      <img
+                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
+                        alt=""
+                        className="projectImg"
+                      />
+                    </div>
+                    <div className="col">
+                      <img
+                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
+                        alt=""
+                        className="projectImg"
+                      />
+                    </div>
+                    <div className="col">
+                      <img
+                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
+                        alt=""
+                        className="projectImg"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <hr />
+              {/* gov admin buildings */}
+              <div className="row">
+                <div className="col">
+                  <div className=" text-center my-3">
+                    <h1 style={{ color: "lightgray" }}>
+                      GOVERNMENT ADMINISTRATIVE BUILDING
+                    </h1>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div className="row">
+                <div className="col">
+                  <div className="row" style={{ height: "230px" }}>
+                    <div className="col">
+                      <img
+                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
+                        alt=""
+                        className="projectImg"
+                      />
+                    </div>
+                    <div className="col">
+                      <img
+                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
+                        alt=""
+                        className="projectImg"
+                      />
+                    </div>
+                    <div className="col">
+                      <img
+                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
+                        alt=""
+                        className="projectImg"
+                      />
+                    </div>
+                    <div className="col">
+                      <img
+                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
+                        alt=""
+                        className="projectImg"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <hr />
+              {/* other facilities  */}
+              <div className="row">
+                <div className="col">
+                  <div className=" text-center my-3">
+                    <h1 style={{ color: "lightgray" }}>OTHER FACILITIES</h1>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div className="row">
+                <div className="col">
+                  <div className="row" style={{ height: "230px" }}>
+                    <div className="col">
+                      <img
+                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
+                        alt=""
+                        className="projectImg"
+                      />
+                    </div>
+                    <div className="col">
+                      <img
+                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
+                        alt=""
+                        className="projectImg"
+                      />
+                    </div>
+                    <div className="col">
+                      <img
+                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
+                        alt=""
+                        className="projectImg"
+                      />
+                    </div>
+                    <div className="col">
+                      <img
+                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
+                        alt=""
+                        className="projectImg"
+                      />
                     </div>
                   </div>
                 </div>

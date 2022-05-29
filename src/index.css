@@ -291,6 +291,36 @@ filter: grayscale(0%);
   color: #ff5e10;
 }
 
+.projectImg{
+  cursor: pointer;
+  filter: grayscale();
+  transition: 0.5s;
+  width: 320px;
+  position: absolute;
+}
+.text{
+  display: none;
+  width: 320px;
+  background-color: #cbcbcbbf;
+  margin: 10px;
+  position: absolute;
+  
+  
+}
+.text:hover {
+   display: inline-block;
+
+  
+  
+}
+.projectImg:hover ~ .text{
+  display: inline-block;
+  
+}
+.projectImg:hover{
+  filter: none;
+}
+
 
 
 
