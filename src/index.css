@@ -257,6 +257,7 @@ filter: grayscale(0%);
 
 .projects{
   background-image:url("https://images.hdqwalls.com/wallpapers/golden-gate-bridge-san-francisco-night-ds.jpg");
+
    height: 500px;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -335,6 +336,8 @@ filter: grayscale(0%);
   z-index: 1;
   background-color: white;
 }
+
+
 
 
 

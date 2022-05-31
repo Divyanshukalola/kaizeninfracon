@@ -1,6 +1,6 @@
 import "./index.css";
 
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import CommingSoon from "./components/commingsoon";
@@ -10,7 +10,26 @@ import News from "./components/news";
 import Career from "./components/career";
 import Projects from "./components/projects";
 
+// import Firebase from "firebase";
+// import config from "./config";
+
+// Firebase.initializeApp(config.firebase);
+
 function App() {
+  // const [state, setState] = useState([]);
+  // const writeUserData = () => {
+  //   Firebase.database().ref("/").set(state);
+  //   console.log("DATA SAVED");
+  // };
+
+  // const getUserData = () => {
+  //   let ref = Firebase.database().ref("/");
+  //   ref.on("value", (snapshot) => {
+  //     const state1 = snapshot.val();
+  //     setState(state1);
+  //   });
+  //   console.log("DATA RETRIEVED");
+  // };
   return (
     <div className="App">
       <BrowserRouter>

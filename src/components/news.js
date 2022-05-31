@@ -79,7 +79,7 @@ function News() {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small">Learn More</Button>
+                <button className="mx-2 my-3 jobbutton">Learn More</button>
               </CardActions>
             </Card>
           </div>
@@ -104,7 +104,7 @@ function News() {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small">Learn More</Button>
+                <button className="mx-2 my-3 jobbutton">Learn More</button>
               </CardActions>
             </Card>
           </div>
@@ -129,7 +129,7 @@ function News() {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small">Learn More</Button>
+                <button className="mx-2 my-3 jobbutton">Learn More</button>
               </CardActions>
             </Card>
           </div>
@@ -165,7 +165,7 @@ function News() {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small">Learn More</Button>
+                <button className="mx-2 my-3 jobbutton">Learn More</button>
               </CardActions>
             </Card>
           </div>
@@ -190,7 +190,7 @@ function News() {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small">Learn More</Button>
+                <button className="mx-2 my-3 jobbutton">Learn More</button>
               </CardActions>
             </Card>
           </div>
@@ -215,7 +215,7 @@ function News() {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small">Learn More</Button>
+                <button className="mx-2 my-3 jobbutton">Learn More</button>
               </CardActions>
             </Card>
           </div>
