@@ -13,7 +13,7 @@ import Career from "./components/career";
 import Projects from "./components/projects";
 
 import { db } from "./firebase-config";
-import { addDoc, collection, getDocs } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 
 function App() {
   const [news, setNews] = useState([]);
@@ -28,13 +28,13 @@ function App() {
   // Similar to componentDidMount and componentDidUpdate:
 
   //write Data
-  const writeData = async () => {
-    await addDoc(dataCollectionRef1, {
-      name: "Hevea",
-      email: "123@gmail.com",
-      pass: "skdjncksdjc",
-    });
-  };
+  // const writeData = async () => {
+  //   await addDoc(dataCollectionRef1, {
+  //     name: "Hevea",
+  //     email: "123@gmail.com",
+  //     pass: "skdjncksdjc",
+  //   });
+  // };
 
   // read data from firebase
   useEffect(() => {

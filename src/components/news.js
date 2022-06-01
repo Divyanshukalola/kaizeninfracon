@@ -47,11 +47,11 @@ function News(props) {
     return result;
   }
 
-  function dateConvert(date) {
-    var t = new Date(1970, 0, 1); // Epoch
-    t.setSeconds(date);
-    return t;
-  }
+  // function dateConvert(date) {
+  //   var t = new Date(1970, 0, 1); // Epoch
+  //   t.setSeconds(date);
+  //   return t;
+  // }
   return (
     <div className="Services">
       {/* navigation  */}
@@ -87,7 +87,13 @@ function News(props) {
       >
         <div className="row text-center">
           <div className="col">
-            <h1 style={{ color: "white", marginTop: "15%", fontSize: "55px" }}>
+            <h1
+              style={{
+                color: "white",
+                marginTop: "15%",
+                fontSize: "55px",
+              }}
+            >
               OUR NEWS
             </h1>
           </div>
