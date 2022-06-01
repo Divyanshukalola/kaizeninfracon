@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Footer from "./footer";
 
@@ -25,6 +25,9 @@ import Topnavigation from "./nav";
 // import Button from "@mui/material/Button";
 
 function Career() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="Services">
       {/* navigation  */}

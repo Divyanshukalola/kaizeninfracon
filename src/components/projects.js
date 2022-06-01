@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Footer from "./footer";
 
@@ -22,99 +22,6 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 
-// function srcset(image, size, rows = 1, cols = 1) {
-//   return {
-//     src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-//     srcSet: `${image}?w=${size * cols}&h=${
-//       size * rows
-//     }&fit=crop&auto=format&dpr=2 2x`,
-//   };
-// }
-
-// const itemData = [
-//   {
-//     img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
-//     title: "Breakfast",
-//     rows: 2,
-//     cols: 2,
-//     description:
-//       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-//   },
-//   {
-//     img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
-//     title: "Burger",
-//     description:
-//       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-//   },
-//   {
-//     img: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
-//     title: "Camera",
-//     description:
-//       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-//   },
-//   {
-//     img: "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c",
-//     title: "Coffee",
-//     cols: 2,
-//     description:
-//       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-//   },
-//   {
-//     img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
-//     title: "Hats",
-//     cols: 2,
-//     description:
-//       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-//   },
-//   {
-//     img: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
-//     title: "Honey",
-//     author: "@arwinneil",
-//     rows: 2,
-//     cols: 2,
-//     description:
-//       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-//   },
-//   {
-//     img: "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6",
-//     title: "Basketball",
-//     description:
-//       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-//   },
-//   {
-//     img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
-//     title: "Fern",
-//     description:
-//       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-//   },
-//   {
-//     img: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25",
-//     title: "Mushrooms",
-//     rows: 2,
-//     cols: 2,
-//     description:
-//       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-//   },
-//   {
-//     img: "https://images.unsplash.com/photo-1567306301408-9b74779a11af",
-//     title: "Tomato basil",
-//     description:
-//       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-//   },
-//   {
-//     img: "https://images.unsplash.com/photo-1471357674240-e1a485acb3e1",
-//     title: "Sea star",
-//     description:
-//       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-//   },
-//   {
-//     img: "https://images.unsplash.com/photo-1589118949245-7d38baf380d6",
-//     title: "Bike",
-//     cols: 2,
-//     description:
-//       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-//   },
-// ];
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -147,7 +54,29 @@ function a11yProps(index) {
     "aria-controls": `simple-tabpanel-${index}`,
   };
 }
-function Projects() {
+function organiseData(array, size) {
+  var perChunk = size; // items per chunk
+
+  var inputArray = array;
+
+  var result = inputArray.reduce((resultArray, item, index) => {
+    const chunkIndex = Math.floor(index / perChunk);
+
+    if (!resultArray[chunkIndex]) {
+      resultArray[chunkIndex] = []; // start a new chunk
+    }
+
+    resultArray[chunkIndex].push(item);
+
+    return resultArray;
+  }, []);
+
+  return result;
+}
+function Projects(props) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -198,6 +127,7 @@ function Projects() {
                 <br />
               </div>
               {/* commercial  */}
+
               <div className="row followMeBar">
                 <div className="col ">
                   <div className=" text-center my-3 ">
@@ -208,37 +138,38 @@ function Projects() {
               <br />
               <div className="row">
                 <div className="col">
-                  <div className="row projectRow">
-                    <div className="col">
-                      <img
-                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
-                        alt=""
-                        className="projectImg"
-                      />
-                      <div className="container text">
-                        <h5 className="mt-2">Title</h5>
-                        <small>This is the body.</small>
-                        <br />
-                        <button className="mx-2 my-3 jobbutton">
-                          Learn More
-                        </button>
-                      </div>
-                    </div>
-                    <div className="col">
-                      <img
-                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
-                        alt=""
-                        className="projectImg"
-                      />
-                      <div className="container text">
-                        <h5 className="mt-2">Title</h5>
-                        <small>This is the body.</small>
-                        <br />
-                        <button className="mx-2 my-3 jobbutton">
-                          Learn More
-                        </button>
-                      </div>
-                    </div>
+                  <div className="row projectRow ">
+                    {organiseData(props.proj, 2).map((obj) => {
+                      return (
+                        <>
+                          <div>
+                            {obj.map((obj1) => {
+                              return (
+                                <>
+                                  {obj1.type === 1 ? (
+                                    <div className="col">
+                                      <img
+                                        src={obj1.img}
+                                        alt=""
+                                        className="projectImg"
+                                      />
+                                      <div className="container text">
+                                        <h5 className="mt-2">{obj1.title}</h5>
+                                        <small>{obj1.body}</small>
+                                        <br />
+                                        <button className="mx-2 my-3 jobbutton">
+                                          Learn More
+                                        </button>
+                                      </div>
+                                    </div>
+                                  ) : null}
+                                </>
+                              );
+                            })}
+                          </div>
+                        </>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -255,37 +186,38 @@ function Projects() {
               <br />
               <div className="row">
                 <div className="col">
-                  <div className="row projectRow">
-                    <div className="col">
-                      <img
-                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
-                        alt=""
-                        className="projectImg"
-                      />
-                      <div className="container text">
-                        <h5 className="mt-2">Title</h5>
-                        <small>This is the body.</small>
-                        <br />
-                        <button className="mx-2 my-3 jobbutton">
-                          Learn More
-                        </button>
-                      </div>
-                    </div>
-                    <div className="col">
-                      <img
-                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
-                        alt=""
-                        className="projectImg"
-                      />
-                      <div className="container text">
-                        <h5 className="mt-2">Title</h5>
-                        <small>This is the body.</small>
-                        <br />
-                        <button className="mx-2 my-3 jobbutton">
-                          Learn More
-                        </button>
-                      </div>
-                    </div>
+                  <div className="row projectRow ">
+                    {organiseData(props.proj, 2).map((obj) => {
+                      return (
+                        <>
+                          <div>
+                            {obj.map((obj1) => {
+                              return (
+                                <>
+                                  {obj1.type === 2 ? (
+                                    <div className="col">
+                                      <img
+                                        src={obj1.img}
+                                        alt=""
+                                        className="projectImg"
+                                      />
+                                      <div className="container text">
+                                        <h5 className="mt-2">{obj1.title}</h5>
+                                        <small>{obj1.body}</small>
+                                        <br />
+                                        <button className="mx-2 my-3 jobbutton">
+                                          Learn More
+                                        </button>
+                                      </div>
+                                    </div>
+                                  ) : null}
+                                </>
+                              );
+                            })}
+                          </div>
+                        </>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -303,37 +235,38 @@ function Projects() {
               <br />
               <div className="row">
                 <div className="col">
-                  <div className="row projectRow">
-                    <div className="col">
-                      <img
-                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
-                        alt=""
-                        className="projectImg"
-                      />
-                      <div className="container text">
-                        <h5 className="mt-2">Title</h5>
-                        <small>This is the body.</small>
-                        <br />
-                        <button className="mx-2 my-3 jobbutton">
-                          Learn More
-                        </button>
-                      </div>
-                    </div>
-                    <div className="col">
-                      <img
-                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
-                        alt=""
-                        className="projectImg"
-                      />
-                      <div className="container text">
-                        <h5 className="mt-2">Title</h5>
-                        <small>This is the body.</small>
-                        <br />
-                        <button className="mx-2 my-3 jobbutton">
-                          Learn More
-                        </button>
-                      </div>
-                    </div>
+                  <div className="row projectRow ">
+                    {organiseData(props.proj, 2).map((obj) => {
+                      return (
+                        <>
+                          <div>
+                            {obj.map((obj1) => {
+                              return (
+                                <>
+                                  {obj1.type === 3 ? (
+                                    <div className="col">
+                                      <img
+                                        src={obj1.img}
+                                        alt=""
+                                        className="projectImg"
+                                      />
+                                      <div className="container text">
+                                        <h5 className="mt-2">{obj1.title}</h5>
+                                        <small>{obj1.body}</small>
+                                        <br />
+                                        <button className="mx-2 my-3 jobbutton">
+                                          Learn More
+                                        </button>
+                                      </div>
+                                    </div>
+                                  ) : null}
+                                </>
+                              );
+                            })}
+                          </div>
+                        </>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -352,37 +285,38 @@ function Projects() {
               <br />
               <div className="row">
                 <div className="col">
-                  <div className="row projectRow">
-                    <div className="col">
-                      <img
-                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
-                        alt=""
-                        className="projectImg"
-                      />{" "}
-                      <div className="container text">
-                        <h5 className="mt-2">Title</h5>
-                        <small>This is the body.</small>
-                        <br />
-                        <button className="mx-2 my-3 jobbutton">
-                          Learn More
-                        </button>
-                      </div>
-                    </div>
-                    <div className="col">
-                      <img
-                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
-                        alt=""
-                        className="projectImg"
-                      />{" "}
-                      <div className="container text">
-                        <h5 className="mt-2">Title</h5>
-                        <small>This is the body.</small>
-                        <br />
-                        <button className="mx-2 my-3 jobbutton">
-                          Learn More
-                        </button>
-                      </div>
-                    </div>
+                  <div className="row projectRow ">
+                    {organiseData(props.proj, 2).map((obj) => {
+                      return (
+                        <>
+                          <div>
+                            {obj.map((obj1) => {
+                              return (
+                                <>
+                                  {obj1.type === 4 ? (
+                                    <div className="col">
+                                      <img
+                                        src={obj1.img}
+                                        alt=""
+                                        className="projectImg"
+                                      />
+                                      <div className="container text">
+                                        <h5 className="mt-2">{obj1.title}</h5>
+                                        <small>{obj1.body}</small>
+                                        <br />
+                                        <button className="mx-2 my-3 jobbutton">
+                                          Learn More
+                                        </button>
+                                      </div>
+                                    </div>
+                                  ) : null}
+                                </>
+                              );
+                            })}
+                          </div>
+                        </>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -401,37 +335,38 @@ function Projects() {
               <br />
               <div className="row">
                 <div className="col">
-                  <div className="row projectRow">
-                    <div className="col">
-                      <img
-                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
-                        alt=""
-                        className="projectImg"
-                      />{" "}
-                      <div className="container text">
-                        <h5 className="mt-2">Title</h5>
-                        <small>This is the body.</small>
-                        <br />
-                        <button className="mx-2 my-3 jobbutton">
-                          Learn More
-                        </button>
-                      </div>
-                    </div>
-                    <div className="col">
-                      <img
-                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
-                        alt=""
-                        className="projectImg"
-                      />{" "}
-                      <div className="container text">
-                        <h5 className="mt-2">Title</h5>
-                        <small>This is the body.</small>
-                        <br />
-                        <button className="mx-2 my-3 jobbutton">
-                          Learn More
-                        </button>
-                      </div>
-                    </div>
+                  <div className="row projectRow ">
+                    {organiseData(props.proj, 2).map((obj) => {
+                      return (
+                        <>
+                          <div>
+                            {obj.map((obj1) => {
+                              return (
+                                <>
+                                  {obj1.type === 5 ? (
+                                    <div className="col">
+                                      <img
+                                        src={obj1.img}
+                                        alt=""
+                                        className="projectImg"
+                                      />
+                                      <div className="container text">
+                                        <h5 className="mt-2">{obj1.title}</h5>
+                                        <small>{obj1.body}</small>
+                                        <br />
+                                        <button className="mx-2 my-3 jobbutton">
+                                          Learn More
+                                        </button>
+                                      </div>
+                                    </div>
+                                  ) : null}
+                                </>
+                              );
+                            })}
+                          </div>
+                        </>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -448,38 +383,38 @@ function Projects() {
               <br />
               <div className="row">
                 <div className="col">
-                  <div className="row projectRow">
-                    <div className="col">
-                      <img
-                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
-                        alt=""
-                        className="projectImg"
-                      />{" "}
-                      <div className="container text">
-                        <h5 className="mt-2">Title</h5>
-                        <small>This is the body.</small>
-                        <br />
-                        <button className="mx-2 my-3 jobbutton">
-                          Learn More
-                        </button>
-                      </div>
-                    </div>
-
-                    <div className="col">
-                      <img
-                        src="https://www.levelset.com/wp-content/uploads/2019/02/apartments.jpg"
-                        alt=""
-                        className="projectImg"
-                      />{" "}
-                      <div className="container text">
-                        <h5 className="mt-2">Title</h5>
-                        <small>This is the body.</small>
-                        <br />
-                        <button className="mx-2 my-3 jobbutton">
-                          Learn More
-                        </button>
-                      </div>
-                    </div>
+                  <div className="row projectRow ">
+                    {organiseData(props.proj, 2).map((obj) => {
+                      return (
+                        <>
+                          <div>
+                            {obj.map((obj1) => {
+                              return (
+                                <>
+                                  {obj1.type === 6 ? (
+                                    <div className="col">
+                                      <img
+                                        src={obj1.img}
+                                        alt=""
+                                        className="projectImg"
+                                      />
+                                      <div className="container text">
+                                        <h5 className="mt-2">{obj1.title}</h5>
+                                        <small>{obj1.body}</small>
+                                        <br />
+                                        <button className="mx-2 my-3 jobbutton">
+                                          Learn More
+                                        </button>
+                                      </div>
+                                    </div>
+                                  ) : null}
+                                </>
+                              );
+                            })}
+                          </div>
+                        </>
+                      );
+                    })}
                   </div>
                 </div>
               </div>

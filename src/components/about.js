@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Footer from "./footer";
 import director1 from "./../static/img/hardik.png";
@@ -17,6 +17,9 @@ import Topnavigation from "./nav";
 // import { CardActionArea } from "@mui/material";
 
 function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="about">
       {/* navigation  */}

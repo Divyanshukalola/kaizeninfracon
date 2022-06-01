@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Footer from "./footer";
 
@@ -10,13 +10,15 @@ import building from "./../static/img/buildings.png";
 import Slide from "@mui/material/Slide";
 import Fade from "@mui/material/Fade";
 
-
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
 
 function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   // const ColorButton = styled(Button)(({ theme }) => ({
   //   backgroundColor: "#ff5e10",
   //   "&:hover": {

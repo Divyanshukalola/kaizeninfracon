@@ -303,11 +303,14 @@ filter: grayscale(0%);
 }
 .text{
   display: none;
-  width: 320px;
+  width: 490px;
+  max-height: 300px;
   background-color: #cbcbcbbf;
   margin: 10px;
   position: absolute;
   transition: 0.5s;
+  overflow: hidden;
+    text-overflow: ellipsis;
   
   
 }
@@ -324,7 +327,7 @@ filter: grayscale(0%);
   filter: none;
 }
 .projectRow{
-  height: 450px;
+  min-height: 450px;
 }
 
 

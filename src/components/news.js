@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Footer from "./footer";
 
@@ -15,8 +15,6 @@ import Topnavigation from "./nav";
 // import CardMedia from "@mui/material/CardMedia";
 // import { CardActionArea } from "@mui/material";
 
-import sample from "./../static/img/sample_video.mp4";
-
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
 import CardContent from "@mui/material/CardContent";
@@ -24,11 +22,57 @@ import CardMedia from "@mui/material/CardMedia";
 import CardActions from "@mui/material/CardActions";
 // import Button from "@mui/material/Button";
 
-function News() {
+function News(props) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  // console.log(props.news);
+  function organiseData(array, size) {
+    var perChunk = size; // items per chunk
+
+    var inputArray = array;
+
+    var result = inputArray.reduce((resultArray, item, index) => {
+      const chunkIndex = Math.floor(index / perChunk);
+
+      if (!resultArray[chunkIndex]) {
+        resultArray[chunkIndex] = []; // start a new chunk
+      }
+
+      resultArray[chunkIndex].push(item);
+
+      return resultArray;
+    }, []);
+
+    return result;
+  }
+
+  function dateConvert(date) {
+    var t = new Date(1970, 0, 1); // Epoch
+    t.setSeconds(date);
+    return t;
+  }
   return (
     <div className="Services">
       {/* navigation  */}
       <Topnavigation news="true"></Topnavigation>
+      <div>
+        {/* {organiseData(props.new, 3).map((obj) => {
+          return (
+            <>
+              <div>
+                {obj.map((obj1) => {
+                  return (
+                    <>
+                      <div>{obj1.title}</div>
+                    </>
+                  );
+                })}
+              </div>
+            </>
+          );
+        })} */}
+      </div>
 
       <div
         className="bg-light"
@@ -57,82 +101,64 @@ function News() {
           <hr />
           <br />
         </div>
-        <div className="row mx-5 my-5">
-          <div className="col">
-            {" "}
-            <Card>
-              <CardMedia
-                component="img"
-                height="140"
-                image={
-                  "https://images.examples.com/wp-content/uploads/2018/03/Purehell.crop_671x504_03.preview.jpg"
-                }
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
-                  Sample News 1
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <button className="mx-2 my-3 jobbutton">Learn More</button>
-              </CardActions>
-            </Card>
-          </div>
-          <div className="col">
-            {" "}
-            <Card>
-              <CardMedia
-                component="img"
-                height="140"
-                image={
-                  "https://images.examples.com/wp-content/uploads/2018/03/Purehell.crop_671x504_03.preview.jpg"
-                }
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
-                  Sample News 2
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <button className="mx-2 my-3 jobbutton">Learn More</button>
-              </CardActions>
-            </Card>
-          </div>
-          <div className="col">
-            {" "}
-            <Card>
-              <CardMedia
-                component="img"
-                height="140"
-                image={
-                  "https://images.examples.com/wp-content/uploads/2018/03/Purehell.crop_671x504_03.preview.jpg"
-                }
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
-                  Sample News 3
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <button className="mx-2 my-3 jobbutton">Learn More</button>
-              </CardActions>
-            </Card>
-          </div>
+        <div className="row mx-5 my-5 justify-content-center">
+          {organiseData(props.new, 3).map((obj) => {
+            return (
+              <>
+                <div>
+                  {obj.map((obj1) => {
+                    return (
+                      <>
+                        <div className="col">
+                          {" "}
+                          <Card>
+                            <CardMedia
+                              component="img"
+                              height="250"
+                              image={obj1.img}
+                              alt="green iguana"
+                            />
+                            <CardContent>
+                              <Typography
+                                gutterBottom
+                                variant="h6"
+                                component="div"
+                              >
+                                {obj1.title}
+                              </Typography>
+                              <Typography
+                                variant="body3"
+                                color="text.secondary"
+                              >
+                                {obj1.body}
+                              </Typography>
+                              <br />
+                              <br />
+                              <Typography
+                                variant="body3"
+                                color="text.secondary"
+                              >
+                                {" "}
+                                Date:{" "}
+                                {new Date(
+                                  obj1.date.seconds * 1000
+                                ).toLocaleDateString()}
+                              </Typography>
+                            </CardContent>
+                            <CardActions>
+                              <button className="mx-2 mb-3 jobbutton">
+                                Learn More
+                              </button>
+                            </CardActions>
+                          </Card>
+                        </div>
+                      </>
+                    );
+                  })}
+                </div>
+              </>
+            );
+          })}
         </div>
       </div>
 
@@ -143,82 +169,65 @@ function News() {
           <hr />
           <br />
         </div>
-        <div className="row mx-5 my-5">
-          <div className="col">
-            {" "}
-            <Card>
-              <CardMedia
-                component="img"
-                height="340"
-                image={
-                  "https://images.template.net/wp-content/uploads/2016/10/Creative-Magazine-Cover-Page-Template.jpg"
-                }
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
-                  Sample Article 1
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <button className="mx-2 my-3 jobbutton">Learn More</button>
-              </CardActions>
-            </Card>
-          </div>
-          <div className="col">
-            {" "}
-            <Card>
-              <CardMedia
-                component="img"
-                height="340"
-                image={
-                  "https://images.template.net/wp-content/uploads/2016/10/Creative-Magazine-Cover-Page-Template.jpg"
-                }
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
-                  Sample Article 2
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <button className="mx-2 my-3 jobbutton">Learn More</button>
-              </CardActions>
-            </Card>
-          </div>
-          <div className="col">
-            {" "}
-            <Card>
-              <CardMedia
-                component="img"
-                height="340"
-                image={
-                  "https://images.template.net/wp-content/uploads/2016/10/Creative-Magazine-Cover-Page-Template.jpg"
-                }
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
-                  Sample Article 3
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <button className="mx-2 my-3 jobbutton">Learn More</button>
-              </CardActions>
-            </Card>
-          </div>
+        <div className="row mx-5 my-5 justify-content-center">
+          {organiseData(props.arti, 3).map((obj) => {
+            return (
+              <>
+                <div>
+                  {obj.map((obj1) => {
+                    return (
+                      <>
+                        <div className="col">
+                          {" "}
+                          <Card>
+                            <CardMedia
+                              component="img"
+                              height="340"
+                              image={obj1.img}
+                              alt="green iguana"
+                            />
+                            <CardContent>
+                              <Typography
+                                gutterBottom
+                                variant="h6"
+                                component="div"
+                              >
+                                {obj1.title}
+                              </Typography>
+                              <Typography
+                                variant="body2"
+                                color="text.secondary"
+                              >
+                                {obj1.body}
+                              </Typography>
+                              <br />
+                              <br />
+                              <Typography
+                                variant="body3"
+                                color="text.secondary"
+                              >
+                                {" "}
+                                Date:{" "}
+                                {new Date(
+                                  obj1.date.seconds * 1000
+                                ).toLocaleDateString()}
+                              </Typography>
+                            </CardContent>
+
+                            <CardActions>
+                              <button className="mx-2 my-3 jobbutton">
+                                Learn More
+                              </button>
+                            </CardActions>
+                          </Card>
+                        </div>
+                      </>
+                    );
+                  })}
+                </div>
+              </>
+            );
+          })}
         </div>
       </div>
       <div className="bg-white">
@@ -228,35 +237,39 @@ function News() {
           <hr />
           <br />
         </div>
-        <div className="row mx-5 my-5">
-          <div className="col text-center">
-            <video src={sample} controls height={"200px"}></video>
-            <br />
-            <small>
-              {" "}
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
-            </small>
-          </div>
-          <div className="col text-center">
-            <video src={sample} controls height={"200px"}></video>
-            <br />
-            <small>
-              {" "}
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
-            </small>
-          </div>
-          <div className="col text-center">
-            {" "}
-            <video src={sample} controls height={"200px"}></video>
-            <br />
-            <small>
-              {" "}
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
-            </small>
-          </div>
+        <div className="row mx-5 my-5 justify-content-center">
+          {organiseData(props.videos, 3).map((obj) => {
+            return (
+              <>
+                <div>
+                  {obj.map((obj1) => {
+                    return (
+                      <>
+                        <div className="col text-center">
+                          <video
+                            src={obj1.link}
+                            controls
+                            height={"200px"}
+                            style={{ float: "center" }}
+                          ></video>
+                          <br />
+                          <small> {obj1.description}</small>
+                          <br />
+                          <small>
+                            {" "}
+                            Date:{" "}
+                            {new Date(
+                              obj1.date.seconds * 1000
+                            ).toLocaleDateString()}
+                          </small>
+                        </div>
+                      </>
+                    );
+                  })}
+                </div>
+              </>
+            );
+          })}
         </div>
       </div>
 
