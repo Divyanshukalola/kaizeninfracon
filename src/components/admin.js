@@ -16,18 +16,18 @@ import { useForm } from "react-hook-form";
 // import CardMedia from "@mui/material/CardMedia";
 // import { CardActionArea } from "@mui/material";
 
-import Card from "@mui/material/Card";
-import Typography from "@mui/material/Typography";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import CardActions from "@mui/material/CardActions";
-import TextField from "@mui/material/TextField";
-import { addDoc, collection, getDocs } from "firebase/firestore";
+// import Card from "@mui/material/Card";
+// import Typography from "@mui/material/Typography";
+// import CardContent from "@mui/material/CardContent";
+// import CardMedia from "@mui/material/CardMedia";
+// import CardActions from "@mui/material/CardActions";
+// import TextField from "@mui/material/TextField";
+import { addDoc, collection } from "firebase/firestore";
 import { db } from "./../firebase-config";
 // import Button from "@mui/material/Button";
 
 function Admin(props) {
-  const { register, handleSubmit, getValues, control } = useForm({});
+  const { register, getValues } = useForm({});
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
