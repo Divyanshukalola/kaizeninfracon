@@ -169,66 +169,59 @@ function News(props) {
           <hr />
           <br />
         </div>
-        <div className="row mx-5 my-5 justify-content-center">
-          {organiseData(props.arti, 3).map((obj) => {
-            return (
-              <>
-                <div>
-                  {obj.map((obj1) => {
-                    return (
-                      <>
-                        <div className="col">
-                          {" "}
-                          <Card>
-                            <CardMedia
-                              component="img"
-                              height="340"
-                              image={obj1.img}
-                              alt="green iguana"
-                            />
-                            <CardContent>
-                              <Typography
-                                gutterBottom
-                                variant="h6"
-                                component="div"
-                              >
-                                {obj1.title}
-                              </Typography>
-                              <Typography
-                                variant="body2"
-                                color="text.secondary"
-                              >
-                                {obj1.body}
-                              </Typography>
-                              <br />
-                              <br />
-                              <Typography
-                                variant="body3"
-                                color="text.secondary"
-                              >
-                                {" "}
-                                Date:{" "}
-                                {new Date(
-                                  obj1.date.seconds * 1000
-                                ).toLocaleDateString()}
-                              </Typography>
-                            </CardContent>
 
-                            <CardActions>
-                              <button className="mx-2 my-3 jobbutton">
-                                Learn More
-                              </button>
-                            </CardActions>
-                          </Card>
-                        </div>
-                      </>
-                    );
-                  })}
-                </div>
-              </>
-            );
-          })}
-        </div>
+        {organiseData(props.arti, 3).map((obj) => {
+          return (
+            <>
+              <div className="row mx-5 my-5 justify-content-center">
+                {obj.map((obj1) => {
+                  return (
+                    <>
+                      <div className="col">
+                        {" "}
+                        <Card>
+                          <CardMedia
+                            component="img"
+                            height="340"
+                            image={obj1.img}
+                            alt="green iguana"
+                          />
+                          <CardContent>
+                            <Typography
+                              gutterBottom
+                              variant="h6"
+                              component="div"
+                            >
+                              {obj1.title}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                              {obj1.body}
+                            </Typography>
+                            <br />
+                            <br />
+                            <Typography variant="body3" color="text.secondary">
+                              {" "}
+                              Date:{" "}
+                              {new Date(
+                                obj1.date.seconds * 1000
+                              ).toLocaleDateString()}
+                            </Typography>
+                          </CardContent>
+
+                          <CardActions>
+                            <button className="mx-2 my-3 jobbutton">
+                              Learn More
+                            </button>
+                          </CardActions>
+                        </Card>
+                      </div>
+                    </>
+                  );
+                })}
+              </div>
+            </>
+          );
+        })}
       </div>
       <div className="bg-white">
         <div className="mt-5 text-center">
@@ -237,40 +230,39 @@ function News(props) {
           <hr />
           <br />
         </div>
-        <div className="row mx-5 my-5 justify-content-center">
-          {organiseData(props.videos, 3).map((obj) => {
-            return (
-              <>
-                <div>
-                  {obj.map((obj1) => {
-                    return (
-                      <>
-                        <div className="col text-center">
-                          <video
-                            src={obj1.link}
-                            controls
-                            height={"200px"}
-                            style={{ float: "center" }}
-                          ></video>
-                          <br />
-                          <small> {obj1.description}</small>
-                          <br />
-                          <small>
-                            {" "}
-                            Date:{" "}
-                            {new Date(
-                              obj1.date.seconds * 1000
-                            ).toLocaleDateString()}
-                          </small>
-                        </div>
-                      </>
-                    );
-                  })}
-                </div>
-              </>
-            );
-          })}
-        </div>
+
+        {organiseData(props.videos, 3).map((obj) => {
+          return (
+            <>
+              <div className="row mx-5 my-5 justify-content-center">
+                {obj.map((obj1) => {
+                  return (
+                    <>
+                      <div className="col text-center">
+                        <video
+                          src={obj1.link}
+                          controls
+                          height={"200px"}
+                          style={{ float: "center" }}
+                        ></video>
+                        <br />
+                        <small> {obj1.description}</small>
+                        <br />
+                        <small>
+                          {" "}
+                          Date:{" "}
+                          {new Date(
+                            obj1.date.seconds * 1000
+                          ).toLocaleDateString()}
+                        </small>
+                      </div>
+                    </>
+                  );
+                })}
+              </div>
+            </>
+          );
+        })}
       </div>
 
       {/* footer  */}
