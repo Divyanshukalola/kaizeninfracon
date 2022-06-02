@@ -11,6 +11,7 @@ import About from "./components/about";
 import News from "./components/news";
 import Career from "./components/career";
 import Projects from "./components/projects";
+import Admin from "./components/admin";
 
 import { db } from "./firebase-config";
 import { collection, getDocs } from "firebase/firestore";
@@ -64,6 +65,7 @@ function App() {
           />
           <Route path="/proj" element={<Projects proj={projects}></Projects>} />
           <Route path="/career" element={<Career></Career>} />
+          <Route path="/admin" element={<Admin></Admin>} />
         </Routes>
       </BrowserRouter>
     </div>
