@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import Footer from "./footer";
 
@@ -25,177 +25,106 @@ import { useForm } from "react-hook-form";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "./../firebase-config";
 // import Button from "@mui/material/Button";
+import PropTypes from "prop-types";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import {
+  ref,
+  uploadBytes,
+  getDownloadURL,
+  deleteObject,
+} from "@firebase/storage";
+import { storage } from "./../firebase-config";
+
+import { v4 } from "uuid";
+
+import AdminProj from "./admin/proj";
+import AdminNews from "./admin/news";
+
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
+  };
+}
 
 function Admin(props) {
-  const { register, getValues } = useForm({});
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const dataCollectionRef1 = collection(db, "news");
-  //write Data
-  const writeData = async () => {
-    console.log("Writing Initiated");
-    var mydate = new Date(getValues("date"));
-    await addDoc(dataCollectionRef1, {
-      title: getValues("title"),
-      body: getValues("body"),
-      img: "",
-      date: mydate,
-      writenBy: getValues("writtenBy"),
-    });
-    console.log("Writing Concluded");
-  };
-  // console.log(props.news);
-  function organiseData(array, size) {
-    var perChunk = size; // items per chunk
 
-    var inputArray = array;
-
-    var result = inputArray.reduce((resultArray, item, index) => {
-      const chunkIndex = Math.floor(index / perChunk);
-
-      if (!resultArray[chunkIndex]) {
-        resultArray[chunkIndex] = []; // start a new chunk
-      }
-
-      resultArray[chunkIndex].push(item);
-
-      return resultArray;
-    }, []);
-
-    return result;
-  }
-
-  function dateConvert(date) {
-    var t = new Date(1970, 0, 1); // Epoch
-    t.setSeconds(date);
-    return t;
-  }
   return (
     <div className="Services">
       {/* navigation  */}
+
       <Topnavigation news="true"></Topnavigation>
       <br />
-      <div className="row text-center">
-        <div className="col">
-          <h3>News</h3>
-        </div>
-      </div>
-      <hr />
-      <div className="row ">
-        <div className="col">
-          <div className="row mx-5">
-            <div className="col">
-              <div className="form-group">
-                <label for="exampleInputEmail1">Title</label>
-                <input
-                  type="email"
-                  className="form-control"
-                  id="exampleInputEmail1"
-                  ariaDescribedby="emailHelp"
-                  placeholder="News Headline"
-                  {...register("title")}
-                />
-                <small id="emailHelp" class="form-text text-muted">
-                  News Headline.
-                </small>
-              </div>
-            </div>
-            <div className="col">
-              <div className="form-group">
-                <label for="exampleInputEmail1">Written By:</label>
-                <input
-                  type="email"
-                  className="form-control"
-                  id="exampleInputEmail1"
-                  ariaDescribedby="emailHelp"
-                  placeholder="Enter your name"
-                  {...register("writtenBy")}
-                />
-                <small id="emailHelp" class="form-text text-muted">
-                  Name of the writer
-                </small>
-              </div>
-            </div>
-            <div className="col">
-              <div className="form-group">
-                <label for="exampleInputEmail1">Date:</label>
-                <input
-                  type="email"
-                  className="form-control"
-                  id="exampleInputEmail1"
-                  ariaDescribedby="emailHelp"
-                  placeholder="Enter date"
-                  {...register("date")}
-                />
-              </div>
-            </div>
-            <div className="col">
-              {" "}
-              <div className="form-group">
-                <label for="exampleFormControlFile1">Image file</label>
-                <input
-                  type="file"
-                  className="form-control-file"
-                  id="exampleFormControlFile1"
-                />
-              </div>
-            </div>
-          </div>
-          <br />
-          <div className="row mx-5">
-            <div className="col">
-              <div className="form-group">
-                <label for="exampleInputEmail1">News</label>
-
-                <textarea
-                  className="form-control"
-                  id="w3review"
-                  name="w3review"
-                  rows="4"
-                  placeholder="Write your news ..."
-                  {...register("body")}
-                ></textarea>
-                <small id="emailHelp" class="form-text text-muted">
-                  Write your news here.
-                </small>
-              </div>
-            </div>
-          </div>
-          <br />
-          <div className="row text-center">
-            <div className="col">
-              <button className="jobbutton" onClick={writeData}>
-                Add News
-              </button>
-            </div>
-          </div>
-
-          <hr />
-        </div>
-      </div>
-      <div className="row">
-        <div className="col">
-          {" "}
-          <div className="row mx-5 my-5 border ">
-            <div className="col mx-3 my-3">
-              <h5>Title</h5>
-              <h6>Body</h6>
-              <h6>Date: non</h6>
-              <br />
-              <button className="jobbutton mr-5">Edit</button>
-              <button className="jobbutton">Delete</button>
-            </div>
-            <div className="col my-3 text-center">
-              <img
-                src="https://images.unsplash.com/photo-1579353977828-2a4eab540b9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2FtcGxlfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
-                alt=""
-                width={"200px"}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      <Box sx={{ width: "100%" }}>
+        <Box
+          sx={{
+            borderBottom: 1,
+            borderColor: "divider",
+          }}
+        >
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            aria-label="basic tabs example"
+            textColor="#ff5e10"
+            indicatorColor="secondary"
+            centered
+          >
+            <Tab label="Projects" {...a11yProps(0)} />
+            <Tab label="News" {...a11yProps(1)} />
+            <Tab label="Articles" {...a11yProps(2)} />
+            <Tab label="Videos" {...a11yProps(3)} />
+            <Tab label="Resume" {...a11yProps(4)} />
+          </Tabs>
+        </Box>
+        <TabPanel value={value} index={1}>
+          <AdminNews news={props.new} value={setValue}></AdminNews>
+        </TabPanel>
+        <TabPanel value={value} index={0}>
+          <AdminProj proj={props.proj} value={setValue}></AdminProj>
+        </TabPanel>
+        <TabPanel value={value} index={2}></TabPanel>
+        <TabPanel value={value} index={3}></TabPanel>
+        <TabPanel value={value} index={4}></TabPanel>
+      </Box>
 
       {/* footer  */}
       <br />

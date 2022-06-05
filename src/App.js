@@ -65,7 +65,17 @@ function App() {
           />
           <Route path="/proj" element={<Projects proj={projects}></Projects>} />
           <Route path="/career" element={<Career></Career>} />
-          <Route path="/admin" element={<Admin></Admin>} />
+          <Route
+            path="/admin"
+            element={
+              <Admin
+                new={news}
+                arti={article}
+                videos={videos}
+                proj={projects}
+              ></Admin>
+            }
+          />
         </Routes>
       </BrowserRouter>
     </div>
