@@ -127,7 +127,6 @@ function Projects(props) {
                 <br />
               </div>
               {/* commercial  */}
-
               <div className="row followMeBar">
                 <div className="col ">
                   <div className=" text-center my-3 ">
@@ -138,39 +137,35 @@ function Projects(props) {
               <br />
               <div className="row">
                 <div className="col">
-                  <div className="row projectRow ">
-                    {organiseData(props.proj, 2).map((obj) => {
-                      return (
-                        <>
-                          <div>
-                            {obj.map((obj1) => {
-                              return (
-                                <>
-                                  {obj1.type === 1 ? (
-                                    <div className="col">
-                                      <img
-                                        src={obj1.img}
-                                        alt=""
-                                        className="projectImg"
-                                      />
-                                      <div className="container text">
-                                        <h5 className="mt-2">{obj1.title}</h5>
-                                        <small>{obj1.body}</small>
-                                        <br />
-                                        <button className="mx-2 my-3 jobbutton">
-                                          Learn More
-                                        </button>
-                                      </div>
-                                    </div>
-                                  ) : null}
-                                </>
-                              );
-                            })}
-                          </div>
-                        </>
-                      );
-                    })}
-                  </div>
+                  {organiseData(props.proj, 2).map((obj) => {
+                    return (
+                      <div className="row projectRow ">
+                        {obj.map((obj1) => {
+                          return (
+                            <>
+                              {obj1.type === 1 ? (
+                                <div className="col">
+                                  <img
+                                    src={obj1.img}
+                                    alt=""
+                                    className="projectImg"
+                                  />
+                                  <div className="container text">
+                                    <h5 className="mt-2">{obj1.title}</h5>
+                                    <small>{obj1.body}</small>
+                                    <br />
+                                    <button className="mx-2 my-3 jobbutton">
+                                      Learn More
+                                    </button>
+                                  </div>
+                                </div>
+                              ) : null}
+                            </>
+                          );
+                        })}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
               <br />
@@ -186,41 +181,40 @@ function Projects(props) {
               <br />
               <div className="row">
                 <div className="col">
-                  <div className="row projectRow ">
+                  <>
                     {organiseData(props.proj, 2).map((obj) => {
                       return (
-                        <>
-                          <div>
-                            {obj.map((obj1) => {
-                              return (
-                                <>
-                                  {obj1.type === 2 ? (
-                                    <div className="col">
-                                      <img
-                                        src={obj1.img}
-                                        alt=""
-                                        className="projectImg"
-                                      />
-                                      <div className="container text">
-                                        <h5 className="mt-2">{obj1.title}</h5>
-                                        <small>{obj1.body}</small>
-                                        <br />
-                                        <button className="mx-2 my-3 jobbutton">
-                                          Learn More
-                                        </button>
-                                      </div>
+                        <div className="row projectRow ">
+                          {obj.map((obj1) => {
+                            return (
+                              <>
+                                {obj1.type === 2 ? (
+                                  <div className="col">
+                                    <img
+                                      src={obj1.img}
+                                      alt=""
+                                      className="projectImg"
+                                    />
+                                    <div className="container text">
+                                      <h5 className="mt-2">{obj1.title}</h5>
+                                      <small>{obj1.body}</small>
+                                      <br />
+                                      <button className="mx-2 my-3 jobbutton">
+                                        Learn More
+                                      </button>
                                     </div>
-                                  ) : null}
-                                </>
-                              );
-                            })}
-                          </div>
-                        </>
+                                  </div>
+                                ) : null}
+                              </>
+                            );
+                          })}
+                        </div>
                       );
                     })}
-                  </div>
+                  </>
                 </div>
               </div>
+
               <br />
               <hr />
               {/* roads and bridges  */}
@@ -231,43 +225,40 @@ function Projects(props) {
                   </div>
                 </div>
               </div>
-
               <br />
               <div className="row">
                 <div className="col">
-                  <div className="row projectRow ">
+                  <>
                     {organiseData(props.proj, 2).map((obj) => {
                       return (
-                        <>
-                          <div>
-                            {obj.map((obj1) => {
-                              return (
-                                <>
-                                  {obj1.type === 3 ? (
-                                    <div className="col">
-                                      <img
-                                        src={obj1.img}
-                                        alt=""
-                                        className="projectImg"
-                                      />
-                                      <div className="container text">
-                                        <h5 className="mt-2">{obj1.title}</h5>
-                                        <small>{obj1.body}</small>
-                                        <br />
-                                        <button className="mx-2 my-3 jobbutton">
-                                          Learn More
-                                        </button>
-                                      </div>
+                        <div className="row projectRow ">
+                          {obj.map((obj1) => {
+                            return (
+                              <>
+                                {obj1.type === 3 ? (
+                                  <div className="col">
+                                    <img
+                                      src={obj1.img}
+                                      alt=""
+                                      className="projectImg"
+                                    />
+                                    <div className="container text">
+                                      <h5 className="mt-2">{obj1.title}</h5>
+                                      <small>{obj1.body}</small>
+                                      <br />
+                                      <button className="mx-2 my-3 jobbutton">
+                                        Learn More
+                                      </button>
                                     </div>
-                                  ) : null}
-                                </>
-                              );
-                            })}
-                          </div>
-                        </>
+                                  </div>
+                                ) : null}
+                              </>
+                            );
+                          })}
+                        </div>
                       );
                     })}
-                  </div>
+                  </>
                 </div>
               </div>
               <br />
@@ -285,39 +276,37 @@ function Projects(props) {
               <br />
               <div className="row">
                 <div className="col">
-                  <div className="row projectRow ">
+                  <>
                     {organiseData(props.proj, 2).map((obj) => {
                       return (
-                        <>
-                          <div>
-                            {obj.map((obj1) => {
-                              return (
-                                <>
-                                  {obj1.type === 4 ? (
-                                    <div className="col">
-                                      <img
-                                        src={obj1.img}
-                                        alt=""
-                                        className="projectImg"
-                                      />
-                                      <div className="container text">
-                                        <h5 className="mt-2">{obj1.title}</h5>
-                                        <small>{obj1.body}</small>
-                                        <br />
-                                        <button className="mx-2 my-3 jobbutton">
-                                          Learn More
-                                        </button>
-                                      </div>
+                        <div className="row projectRow ">
+                          {obj.map((obj1) => {
+                            return (
+                              <>
+                                {obj1.type === 4 ? (
+                                  <div className="col">
+                                    <img
+                                      src={obj1.img}
+                                      alt=""
+                                      className="projectImg"
+                                    />
+                                    <div className="container text">
+                                      <h5 className="mt-2">{obj1.title}</h5>
+                                      <small>{obj1.body}</small>
+                                      <br />
+                                      <button className="mx-2 my-3 jobbutton">
+                                        Learn More
+                                      </button>
                                     </div>
-                                  ) : null}
-                                </>
-                              );
-                            })}
-                          </div>
-                        </>
+                                  </div>
+                                ) : null}
+                              </>
+                            );
+                          })}
+                        </div>
                       );
                     })}
-                  </div>
+                  </>
                 </div>
               </div>
               <br />
@@ -335,11 +324,11 @@ function Projects(props) {
               <br />
               <div className="row">
                 <div className="col">
-                  <div className="row projectRow ">
+                  <>
                     {organiseData(props.proj, 2).map((obj) => {
                       return (
                         <>
-                          <div>
+                          <div className="row projectRow ">
                             {obj.map((obj1) => {
                               return (
                                 <>
@@ -367,7 +356,7 @@ function Projects(props) {
                         </>
                       );
                     })}
-                  </div>
+                  </>
                 </div>
               </div>
               <br />
@@ -383,11 +372,11 @@ function Projects(props) {
               <br />
               <div className="row">
                 <div className="col">
-                  <div className="row projectRow ">
+                  <>
                     {organiseData(props.proj, 2).map((obj) => {
                       return (
                         <>
-                          <div>
+                          <div className="row projectRow ">
                             {obj.map((obj1) => {
                               return (
                                 <>
@@ -415,7 +404,7 @@ function Projects(props) {
                         </>
                       );
                     })}
-                  </div>
+                  </>
                 </div>
               </div>
             </TabPanel>
@@ -438,32 +427,6 @@ function Projects(props) {
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
                         BALASORE-Const of Hospital Bldg for NGMC (650 Bedded)
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        Lizards are a widespread group of squamate reptiles,
-                        with over 6,000 species, ranging across all continents
-                        except Antarctica
-                      </Typography>
-                    </CardContent>
-                    <CardActions>
-                      <button className="mx-2 my-3 jobbutton">
-                        Learn More
-                      </button>
-                    </CardActions>
-                  </Card>
-                </div>
-                <div className="col-6">
-                  <Card>
-                    <CardMedia
-                      component="img"
-                      height="140"
-                      image={sample_proj}
-                      alt="green iguana"
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
-                        ANGUL-Const. of Multi Storied Residential Apartment
-                        Scheme OSHB.
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
                         Lizards are a widespread group of squamate reptiles,

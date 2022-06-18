@@ -134,9 +134,21 @@ function News(props) {
                               {obj1.title}
                             </Typography>
                             <Typography variant="body3" color="text.secondary">
-                              {obj1.body}
+                              <div
+                                style={{
+                                  whiteSpace: "pre-wrap",
+                                  overflowWrap: "break-word",
+                                }}
+                              >
+                                {" "}
+                                <pre>{obj1.body}</pre>
+                              </div>
                             </Typography>
                             <br />
+                            <Typography variant="body3" color="text.secondary">
+                              {" "}
+                              Written By: {obj1.writenBy}
+                            </Typography>
                             <br />
                             <Typography variant="body3" color="text.secondary">
                               {" "}
@@ -194,10 +206,22 @@ function News(props) {
                             >
                               {obj1.title}
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                              {obj1.body}
+                            <Typography variant="body3" color="text.secondary">
+                              <div
+                                style={{
+                                  whiteSpace: "pre-wrap",
+                                  overflowWrap: "break-word",
+                                }}
+                              >
+                                {" "}
+                                <pre>{obj1.body}</pre>
+                              </div>
                             </Typography>
                             <br />
+                            <Typography variant="body3" color="text.secondary">
+                              {" "}
+                              Written By: {obj1.writenBy}
+                            </Typography>
                             <br />
                             <Typography variant="body3" color="text.secondary">
                               {" "}
