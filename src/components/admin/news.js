@@ -86,7 +86,7 @@ function AdminNews({ news }) {
   function deleteFile(id) {
     const projects = news;
     projects.map((obj) => {
-      if (id == obj.id) {
+      if (id === obj.id) {
         const desertRef = ref(storage, `news/${obj.imageListID}`);
         // Delete the image
         deleteObject(desertRef);
@@ -102,7 +102,8 @@ function AdminNews({ news }) {
             alert("File Not Deleted!!");
           });
       }
-    }, []);
+      return null;
+    });
   }
 
   // console.log(props.news);

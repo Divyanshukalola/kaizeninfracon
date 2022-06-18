@@ -102,7 +102,8 @@ function AdminVideos({ videos, setValue }) {
             alert("File Not Deleted!!");
           });
       }
-    }, []);
+      return null;
+    });
   }
 
   return (

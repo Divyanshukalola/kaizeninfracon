@@ -102,7 +102,8 @@ function AdminArticle({ arti, setValue }) {
             alert("File Not Deleted!!");
           });
       }
-    }, []);
+      return null;
+    });
   }
 
   return (

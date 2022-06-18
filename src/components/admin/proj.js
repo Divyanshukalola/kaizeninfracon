@@ -201,7 +201,8 @@ function AdminProj(props) {
             const desertRef = ref(storage, `proj/${obj.projid}/${info[1].id}`);
             // Delete the image
             deleteObject(desertRef);
-          }, []);
+            return null;
+          });
         }
 
         deleteDoc(doc(dataCollectionRef1, obj.id))
@@ -215,7 +216,8 @@ function AdminProj(props) {
             alert("File Not Deleted!!");
           });
       }
-    }, []);
+      return null;
+    });
   }
 
   return (
