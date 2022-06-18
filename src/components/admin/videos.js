@@ -1,32 +1,11 @@
 import React, { useEffect, useState } from "react";
 
 import { useForm } from "react-hook-form";
-// import man from "./../static/img/man.png";
-// import building from "./../static/img/buildings.png";
-// import Button from "@mui/material/Button";
-// import { styled } from "@mui/material/styles";
-// import Slide from "@mui/material/Slide";
-// import Fade from "@mui/material/Fade";
 
-// import Card from "@mui/material/Card";
-// import CardContent from "@mui/material/CardContent";
-// import CardMedia from "@mui/material/CardMedia";
-// import { CardActionArea } from "@mui/material";
-
-// import Card from "@mui/material/Card";
-// import Typography from "@mui/material/Typography";
-// import CardContent from "@mui/material/CardContent";
-// import CardMedia from "@mui/material/CardMedia";
-// import CardActions from "@mui/material/CardActions";
-// import TextField from "@mui/material/TextField";
-import { doc, addDoc, collection, deleteDoc } from "firebase/firestore";
+import { doc, deleteDoc, addDoc, collection } from "firebase/firestore";
 import { db } from "./../../firebase-config";
 // import Button from "@mui/material/Button";
-// import PropTypes from "prop-types";
-// import Tabs from "@mui/material/Tabs";
-// import Tab from "@mui/material/Tab";
-// import Typography from "@mui/material/Typography";
-// import Box from "@mui/material/Box";
+
 import {
   ref,
   uploadBytes,
@@ -37,16 +16,16 @@ import { storage } from "./../../firebase-config";
 
 import { v4 } from "uuid";
 
-function AdminNews({ news }) {
+function AdminVideos({ videos, setValue }) {
   const [file, setFile] = useState(null);
-
   const [loading, setLoading] = useState(false);
+
   const [id] = useState(v4());
   const { register, getValues } = useForm({});
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const dataCollectionRef1 = collection(db, "news");
+  const dataCollectionRef1 = collection(db, "video");
 
   //write Data
   async function writeDataNews() {
@@ -55,23 +34,23 @@ function AdminNews({ news }) {
     if (file == null) {
       addDoc(dataCollectionRef1, {
         title: getValues("title"),
-        body: getValues("body"),
-        img: null,
+        description: getValues("body"),
+        link: "null",
         date: getValues("date"),
-        writenBy: getValues("writtenBy"),
-        imageListID: id,
+
+        videoID: id,
       });
     }
-    const imageRef = ref(storage, `news/${id}`);
+    const imageRef = ref(storage, `videos/${id}`);
     await uploadBytes(imageRef, file).then((snapshot) => {
       getDownloadURL(snapshot.ref).then((url) => {
         addDoc(dataCollectionRef1, {
           title: getValues("title"),
-          body: getValues("body"),
-          img: url,
+          description: getValues("body"),
+          link: url,
           date: getValues("date"),
-          writenBy: getValues("writtenBy"),
-          imageListID: id,
+
+          videoID: id,
         });
       });
     });
@@ -79,33 +58,11 @@ function AdminNews({ news }) {
     await setTimeout(
       function() {
         setLoading(false);
-
         window.location.reload(false);
+        setValue(2);
       }.bind(this),
       1000
     );
-  }
-
-  function deleteFile(id) {
-    const projects = news;
-    projects.map((obj) => {
-      if (id == obj.id) {
-        const desertRef = ref(storage, `news/${obj.imageListID}`);
-        // Delete the image
-        deleteObject(desertRef);
-
-        deleteDoc(doc(dataCollectionRef1, obj.id))
-          .then(() => {
-            console.log("Files Deleted");
-
-            alert("File Deleted Successfully!!");
-            window.location.reload(false);
-          })
-          .catch((error) => {
-            alert("File Not Deleted!!");
-          });
-      }
-    });
   }
 
   // console.log(props.news);
@@ -129,7 +86,27 @@ function AdminNews({ news }) {
     return result;
   }
 
-  //   function deleteFile(type, id) {}
+  function deleteFile(id) {
+    const projects = videos;
+    projects.map((obj) => {
+      if (id == obj.id) {
+        const desertRef = ref(storage, `videos/${obj.videoID}`);
+        // Delete the image
+        deleteObject(desertRef);
+
+        deleteDoc(doc(dataCollectionRef1, obj.id))
+          .then(() => {
+            console.log("Files Deleted");
+
+            alert("File Deleted Successfully!!");
+            window.location.reload(false);
+          })
+          .catch((error) => {
+            alert("File Not Deleted!!");
+          });
+      }
+    });
+  }
 
   return (
     <>
@@ -138,7 +115,7 @@ function AdminNews({ news }) {
       {/* news  */}
       <div className="row text-center">
         <div className="col">
-          <h3>News</h3>
+          <h3>Videos</h3>
         </div>
       </div>
       <hr />
@@ -151,30 +128,16 @@ function AdminNews({ news }) {
                 <input
                   type="email"
                   className="form-control"
-                  placeholder="News Headline"
+                  placeholder="Video Title ..."
                   {...register("title")}
                   {...(loading ? "disabled" : null)}
                 />
                 <small id="emailHelp" class="form-text text-muted">
-                  News Headline.
+                  Video Title.
                 </small>
               </div>
             </div>
-            <div className="col">
-              <div className="form-group">
-                <label>Written By:</label>
-                <input
-                  type="email"
-                  className="form-control"
-                  placeholder="Enter your name"
-                  {...register("writtenBy")}
-                  {...(loading ? "disabled" : null)}
-                />
-                <small id="emailHelp" class="form-text text-muted">
-                  Name of the writer
-                </small>
-              </div>
-            </div>
+
             <div className="col">
               <div className="form-group">
                 <label>Date:</label>
@@ -192,7 +155,7 @@ function AdminNews({ news }) {
             <div className="col">
               {" "}
               <div className="form-group">
-                <label for="exampleFormControlFile1">Image file</label>
+                <label for="exampleFormControlFile1">File</label>
                 <input
                   type="file"
                   className="form-control-file"
@@ -209,20 +172,17 @@ function AdminNews({ news }) {
           <div className="row mx-5">
             <div className="col">
               <div className="form-group">
-                <label>News</label>
+                <label>Description</label>
 
                 <textarea
                   className="form-control"
                   id="w3review"
                   name="w3review"
                   rows="4"
-                  placeholder="Write your news ..."
+                  placeholder="Write your description ..."
                   {...register("body")}
                   {...(loading ? "disabled" : null)}
                 ></textarea>
-                <small id="emailHelp" class="form-text text-muted">
-                  Write your news here.
-                </small>
               </div>
             </div>
           </div>
@@ -235,7 +195,7 @@ function AdminNews({ news }) {
                 </button>
               ) : (
                 <button className="jobbutton" onClick={writeDataNews}>
-                  Add News
+                  Add Video
                 </button>
               )}
             </div>
@@ -244,45 +204,55 @@ function AdminNews({ news }) {
           <hr />
         </div>
       </div>
-      {organiseData(news, 2).map((obj) => {
+      {organiseData(videos, 2).map((obj) => {
         return (
-          <div className="row">
+          <>
             {obj.map((obj1) => {
               return (
-                <div className="col">
-                  <div className="row mx-5 my-5 border ">
-                    <div className="col mx-3 my-3">
-                      <h5>{obj1.title}</h5>
-                      <h6>{obj1.body}</h6>
-                      <h6>
-                        Date:{" "}
-                        {new Date(
-                          obj1.date.seconds * 1000
-                        ).toLocaleDateString()}
-                      </h6>
-                      <br />
-                      <button className="jobbutton mr-5">Edit</button>
-                      <button
-                        className="jobbutton"
-                        onClick={() => {
-                          deleteFile(obj1.id);
-                        }}
-                      >
-                        Delete
-                      </button>
-                    </div>
-                    <div className="col my-3 text-center">
-                      <img src={obj1.img} alt="" width={"200px"} />
+                <div className="row">
+                  <div className="col">
+                    <div className="row mx-5 my-5 border ">
+                      <div className="col mx-3 my-3">
+                        <h5>{obj1.title}</h5>
+                        <h6>{obj1.description}</h6>
+                        <small>
+                          <b>Date: </b>
+                          {new Date(
+                            obj1.date.seconds * 1000
+                          ).toLocaleDateString()}
+                        </small>
+                        <br />
+
+                        <br />
+                        <br />
+                        <button className="jobbutton mr-5">Edit</button>
+                        <button
+                          className="jobbutton"
+                          onClick={() => {
+                            deleteFile(obj1.id);
+                          }}
+                        >
+                          Delete
+                        </button>
+                      </div>
+                      <div className="col my-3 text-center">
+                        <video
+                          src={obj1.link}
+                          controls
+                          height={"200px"}
+                          style={{ float: "center" }}
+                        ></video>
+                      </div>
                     </div>
                   </div>
                 </div>
               );
             })}
-          </div>
+          </>
         );
       })}
     </>
   );
 }
 
-export default AdminNews;
+export default AdminVideos;

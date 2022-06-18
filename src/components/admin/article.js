@@ -1,32 +1,11 @@
 import React, { useEffect, useState } from "react";
 
 import { useForm } from "react-hook-form";
-// import man from "./../static/img/man.png";
-// import building from "./../static/img/buildings.png";
-// import Button from "@mui/material/Button";
-// import { styled } from "@mui/material/styles";
-// import Slide from "@mui/material/Slide";
-// import Fade from "@mui/material/Fade";
 
-// import Card from "@mui/material/Card";
-// import CardContent from "@mui/material/CardContent";
-// import CardMedia from "@mui/material/CardMedia";
-// import { CardActionArea } from "@mui/material";
-
-// import Card from "@mui/material/Card";
-// import Typography from "@mui/material/Typography";
-// import CardContent from "@mui/material/CardContent";
-// import CardMedia from "@mui/material/CardMedia";
-// import CardActions from "@mui/material/CardActions";
-// import TextField from "@mui/material/TextField";
-import { doc, addDoc, collection, deleteDoc } from "firebase/firestore";
+import { doc, deleteDoc, addDoc, collection } from "firebase/firestore";
 import { db } from "./../../firebase-config";
 // import Button from "@mui/material/Button";
-// import PropTypes from "prop-types";
-// import Tabs from "@mui/material/Tabs";
-// import Tab from "@mui/material/Tab";
-// import Typography from "@mui/material/Typography";
-// import Box from "@mui/material/Box";
+
 import {
   ref,
   uploadBytes,
@@ -37,16 +16,16 @@ import { storage } from "./../../firebase-config";
 
 import { v4 } from "uuid";
 
-function AdminNews({ news }) {
+function AdminArticle({ arti, setValue }) {
   const [file, setFile] = useState(null);
-
   const [loading, setLoading] = useState(false);
+
   const [id] = useState(v4());
   const { register, getValues } = useForm({});
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const dataCollectionRef1 = collection(db, "news");
+  const dataCollectionRef1 = collection(db, "article");
 
   //write Data
   async function writeDataNews() {
@@ -56,13 +35,13 @@ function AdminNews({ news }) {
       addDoc(dataCollectionRef1, {
         title: getValues("title"),
         body: getValues("body"),
-        img: null,
+        img: "null",
         date: getValues("date"),
-        writenBy: getValues("writtenBy"),
+        writenBy: getValues("author"),
         imageListID: id,
       });
     }
-    const imageRef = ref(storage, `news/${id}`);
+    const imageRef = ref(storage, `article/${id}`);
     await uploadBytes(imageRef, file).then((snapshot) => {
       getDownloadURL(snapshot.ref).then((url) => {
         addDoc(dataCollectionRef1, {
@@ -70,7 +49,7 @@ function AdminNews({ news }) {
           body: getValues("body"),
           img: url,
           date: getValues("date"),
-          writenBy: getValues("writtenBy"),
+          writenBy: getValues("author"),
           imageListID: id,
         });
       });
@@ -79,33 +58,11 @@ function AdminNews({ news }) {
     await setTimeout(
       function() {
         setLoading(false);
-
         window.location.reload(false);
+        setValue(2);
       }.bind(this),
       1000
     );
-  }
-
-  function deleteFile(id) {
-    const projects = news;
-    projects.map((obj) => {
-      if (id == obj.id) {
-        const desertRef = ref(storage, `news/${obj.imageListID}`);
-        // Delete the image
-        deleteObject(desertRef);
-
-        deleteDoc(doc(dataCollectionRef1, obj.id))
-          .then(() => {
-            console.log("Files Deleted");
-
-            alert("File Deleted Successfully!!");
-            window.location.reload(false);
-          })
-          .catch((error) => {
-            alert("File Not Deleted!!");
-          });
-      }
-    });
   }
 
   // console.log(props.news);
@@ -129,7 +86,27 @@ function AdminNews({ news }) {
     return result;
   }
 
-  //   function deleteFile(type, id) {}
+  function deleteFile(id) {
+    const projects = arti;
+    projects.map((obj) => {
+      if (id == obj.id) {
+        const desertRef = ref(storage, `article/${obj.imageListID}`);
+        // Delete the image
+        deleteObject(desertRef);
+
+        deleteDoc(doc(dataCollectionRef1, obj.id))
+          .then(() => {
+            console.log("Files Deleted");
+
+            alert("File Deleted Successfully!!");
+            window.location.reload(false);
+          })
+          .catch((error) => {
+            alert("File Not Deleted!!");
+          });
+      }
+    });
+  }
 
   return (
     <>
@@ -138,7 +115,7 @@ function AdminNews({ news }) {
       {/* news  */}
       <div className="row text-center">
         <div className="col">
-          <h3>News</h3>
+          <h3>Article</h3>
         </div>
       </div>
       <hr />
@@ -156,25 +133,26 @@ function AdminNews({ news }) {
                   {...(loading ? "disabled" : null)}
                 />
                 <small id="emailHelp" class="form-text text-muted">
-                  News Headline.
+                  Article Title.
                 </small>
               </div>
             </div>
             <div className="col">
               <div className="form-group">
-                <label>Written By:</label>
+                <label>Name of Author</label>
                 <input
                   type="email"
                   className="form-control"
-                  placeholder="Enter your name"
-                  {...register("writtenBy")}
+                  placeholder="News Headline"
+                  {...register("author")}
                   {...(loading ? "disabled" : null)}
                 />
                 <small id="emailHelp" class="form-text text-muted">
-                  Name of the writer
+                  Article Written By.
                 </small>
               </div>
             </div>
+
             <div className="col">
               <div className="form-group">
                 <label>Date:</label>
@@ -192,7 +170,7 @@ function AdminNews({ news }) {
             <div className="col">
               {" "}
               <div className="form-group">
-                <label for="exampleFormControlFile1">Image file</label>
+                <label for="exampleFormControlFile1">File</label>
                 <input
                   type="file"
                   className="form-control-file"
@@ -209,19 +187,19 @@ function AdminNews({ news }) {
           <div className="row mx-5">
             <div className="col">
               <div className="form-group">
-                <label>News</label>
+                <label>Article</label>
 
                 <textarea
                   className="form-control"
                   id="w3review"
                   name="w3review"
-                  rows="4"
-                  placeholder="Write your news ..."
+                  rows="8"
+                  placeholder="Write your article ..."
                   {...register("body")}
                   {...(loading ? "disabled" : null)}
                 ></textarea>
                 <small id="emailHelp" class="form-text text-muted">
-                  Write your news here.
+                  Write your article here.
                 </small>
               </div>
             </div>
@@ -235,7 +213,7 @@ function AdminNews({ news }) {
                 </button>
               ) : (
                 <button className="jobbutton" onClick={writeDataNews}>
-                  Add News
+                  Add Article
                 </button>
               )}
             </div>
@@ -244,7 +222,7 @@ function AdminNews({ news }) {
           <hr />
         </div>
       </div>
-      {organiseData(news, 2).map((obj) => {
+      {organiseData(arti, 2).map((obj) => {
         return (
           <div className="row">
             {obj.map((obj1) => {
@@ -254,12 +232,17 @@ function AdminNews({ news }) {
                     <div className="col mx-3 my-3">
                       <h5>{obj1.title}</h5>
                       <h6>{obj1.body}</h6>
-                      <h6>
-                        Date:{" "}
+                      <small>
+                        <b>Date: </b>
                         {new Date(
                           obj1.date.seconds * 1000
                         ).toLocaleDateString()}
-                      </h6>
+                      </small>
+                      <br />
+                      <small>
+                        <b>Author:</b> {obj1.writenBy}
+                      </small>
+                      <br />
                       <br />
                       <button className="jobbutton mr-5">Edit</button>
                       <button
@@ -285,4 +268,4 @@ function AdminNews({ news }) {
   );
 }
 
-export default AdminNews;
+export default AdminArticle;

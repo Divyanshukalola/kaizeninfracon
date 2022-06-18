@@ -26,17 +26,6 @@ function App() {
   const dataCollectionRef3 = collection(db, "article");
   const dataCollectionRef4 = collection(db, "video");
 
-  // Similar to componentDidMount and componentDidUpdate:
-
-  //write Data
-  // const writeData = async () => {
-  //   await addDoc(dataCollectionRef1, {
-  //     name: "Hevea",
-  //     email: "123@gmail.com",
-  //     pass: "skdjncksdjc",
-  //   });
-  // };
-
   // read data from firebase
   useEffect(() => {
     // Update the document title using the browser API
