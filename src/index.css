@@ -319,6 +319,12 @@ filter: grayscale(0%);
 
   
 }
+.projectImg{
+  min-height: 500px;
+  min-width: 600px;
+  max-width: 600px;
+  max-height: 500px;
+}
 .projectImg:hover ~ .text{
   display: inline-block;
   

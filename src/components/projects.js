@@ -144,7 +144,7 @@ function Projects(props) {
                           return (
                             <>
                               {obj1.type === 1 ? (
-                                <div className="col">
+                                <div className="col d-flex justify-content-center">
                                   <img
                                     src={obj1.img}
                                     alt=""
@@ -189,7 +189,7 @@ function Projects(props) {
                             return (
                               <>
                                 {obj1.type === 2 ? (
-                                  <div className="col">
+                                  <div className="col d-flex justify-content-center">
                                     <img
                                       src={obj1.img}
                                       alt=""
@@ -236,7 +236,7 @@ function Projects(props) {
                             return (
                               <>
                                 {obj1.type === 3 ? (
-                                  <div className="col">
+                                  <div className="col d-flex justify-content-center">
                                     <img
                                       src={obj1.img}
                                       alt=""
@@ -284,7 +284,7 @@ function Projects(props) {
                             return (
                               <>
                                 {obj1.type === 4 ? (
-                                  <div className="col">
+                                  <div className="col d-flex justify-content-center">
                                     <img
                                       src={obj1.img}
                                       alt=""
@@ -333,7 +333,7 @@ function Projects(props) {
                               return (
                                 <>
                                   {obj1.type === 5 ? (
-                                    <div className="col">
+                                    <div className="col d-flex justify-content-center">
                                       <img
                                         src={obj1.img}
                                         alt=""
@@ -381,7 +381,7 @@ function Projects(props) {
                               return (
                                 <>
                                   {obj1.type === 6 ? (
-                                    <div className="col">
+                                    <div className="col d-flex justify-content-center">
                                       <img
                                         src={obj1.img}
                                         alt=""
