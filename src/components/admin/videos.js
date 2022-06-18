@@ -55,14 +55,11 @@ function AdminVideos({ videos, setValue }) {
       });
     });
 
-    await setTimeout(
-      function() {
-        setLoading(false);
-        window.location.reload(false);
-        setValue(2);
-      }.bind(this),
-      1000
-    );
+    await setTimeout(function() {
+      setLoading(false);
+      window.location.reload(false);
+      setValue(2);
+    }, 1000);
   }
 
   // console.log(props.news);
@@ -89,7 +86,7 @@ function AdminVideos({ videos, setValue }) {
   function deleteFile(id) {
     const projects = videos;
     projects.map((obj) => {
-      if (id == obj.id) {
+      if (id === obj.id) {
         const desertRef = ref(storage, `videos/${obj.videoID}`);
         // Delete the image
         deleteObject(desertRef);
@@ -105,7 +102,7 @@ function AdminVideos({ videos, setValue }) {
             alert("File Not Deleted!!");
           });
       }
-    });
+    }, []);
   }
 
   return (

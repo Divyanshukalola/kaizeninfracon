@@ -76,14 +76,11 @@ function AdminNews({ news }) {
       });
     });
 
-    await setTimeout(
-      function() {
-        setLoading(false);
+    await setTimeout(function() {
+      setLoading(false);
 
-        window.location.reload(false);
-      }.bind(this),
-      1000
-    );
+      window.location.reload(false);
+    }, 1000);
   }
 
   function deleteFile(id) {
@@ -105,7 +102,7 @@ function AdminNews({ news }) {
             alert("File Not Deleted!!");
           });
       }
-    });
+    }, []);
   }
 
   // console.log(props.news);

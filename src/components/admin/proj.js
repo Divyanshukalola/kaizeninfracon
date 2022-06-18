@@ -156,13 +156,10 @@ function AdminProj(props) {
     }
 
     console.log("Data Uploaded");
-    await setTimeout(
-      function() {
-        setLoading(false);
-        window.location.reload(false);
-      }.bind(this),
-      1000
-    );
+    await setTimeout(function() {
+      setLoading(false);
+      window.location.reload(false);
+    }, 1000);
   }
 
   // console.log(props.news);
@@ -193,18 +190,18 @@ function AdminProj(props) {
     projects.map((obj) => {
       console.log("Obj ID");
       console.log(obj.projid);
-      if (id == obj.id) {
+      if (id === obj.id) {
         const desertRef = ref(storage, `proj/${obj.projid}/${obj.projid}`);
         // Delete the image
         deleteObject(desertRef);
-        if (obj.extra_info) {
+        if (obj.extra_info != null) {
           Object.entries(obj.extra_info).map((info) => {
             console.log("Image ID");
             console.log(info[1].id);
             const desertRef = ref(storage, `proj/${obj.projid}/${info[1].id}`);
             // Delete the image
             deleteObject(desertRef);
-          });
+          }, []);
         }
 
         deleteDoc(doc(dataCollectionRef1, obj.id))
@@ -218,7 +215,7 @@ function AdminProj(props) {
             alert("File Not Deleted!!");
           });
       }
-    });
+    }, []);
   }
 
   return (
