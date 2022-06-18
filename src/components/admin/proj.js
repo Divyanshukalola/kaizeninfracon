@@ -717,9 +717,9 @@ function AdminProj(props) {
                           </div>
                         </div>
                         <h5>{obj1.title}</h5>
-                        <h6>
+                        <div>
                           <pre>{obj1.body}</pre>
-                        </h6>
+                        </div>
                         <div className="row">
                           <div className="col">
                             <hr />
