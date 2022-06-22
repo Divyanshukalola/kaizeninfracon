@@ -44,6 +44,7 @@ import AdminProj from "./admin/proj";
 import AdminNews from "./admin/news";
 import AdminArticle from "./admin/article";
 import AdminVideos from "./admin/videos";
+import AdminClients from "./admin/clients";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -114,7 +115,7 @@ function Admin(props) {
             <Tab label="News" {...a11yProps(1)} />
             <Tab label="Articles" {...a11yProps(2)} />
             <Tab label="Videos" {...a11yProps(3)} />
-            {/* <Tab label="Resume" {...a11yProps(4)} /> */}
+            {/* <Tab label="Clients" {...a11yProps(4)} /> */}
           </Tabs>
         </Box>
         <TabPanel value={value} index={1}>
@@ -129,7 +130,9 @@ function Admin(props) {
         <TabPanel value={value} index={3}>
           <AdminVideos videos={props.videos}></AdminVideos>
         </TabPanel>
-        {/* <TabPanel value={value} index={4}></TabPanel> */}
+        {/* <TabPanel value={value} index={4}>
+          <AdminClients cli={props.cli}></AdminClients>
+        </TabPanel> */}
       </Box>
 
       {/* footer  */}

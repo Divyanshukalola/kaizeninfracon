@@ -205,12 +205,7 @@
     color: #1c3e44;
   }
 
- .hoverClients{
-   filter: grayscale(100%);
- } 
-.hoverClients:hover{
-filter: grayscale(0%);
-}
+ 
 
 .hoverNavItem{
   border-bottom: transparent;
@@ -335,11 +330,13 @@ filter: grayscale(0%);
 .projectRow{
   min-height: 520px;
 }
+.projectRow1{
+  min-height: 520px;
+}
 
 
 
 .followMeBar {
-
   position: sticky;
   top:10%;
   z-index: 1;
@@ -357,6 +354,45 @@ pre{
 
 div{
   overflow-wrap: break-word;
+}
+.cli1{
+  display: none;
+}
+
+.clititle{
+  height: 0%;
+  transition: 0.5s;
+  color: black;
+}
+
+.clititle:hover{
+  height: 100%;
+}
+
+
+.hoverClients{
+   filter: grayscale(100%);
+ } 
+.hoverClients:hover{
+filter: grayscale(0%);
+}
+
+.mediac{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.newsImg{
+  max-height: 400px;
+  max-width: 1000px;
+
+}
+.removeButton{
+border-top: transparent;
+border-left: transparent;
+border-right: transparent;
+border-color: grey;
+  color: red;
+  background-color: transparent;
 }
 
 

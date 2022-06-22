@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 
 import Footer from "./footer";
+import TextTruncate from "react-text-truncate";
+import { useNavigate } from "react-router-dom";
 
 import Topnavigation from "./nav";
 // import man from "./../static/img/man.png";
@@ -20,9 +22,11 @@ import Typography from "@mui/material/Typography";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import CardActions from "@mui/material/CardActions";
+import NewsView from "./views/newsview";
 // import Button from "@mui/material/Button";
 
 function News(props) {
+  const navigate = useNavigate();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -56,23 +60,7 @@ function News(props) {
     <div className="Services">
       {/* navigation  */}
       <Topnavigation news="true"></Topnavigation>
-      <div>
-        {/* {organiseData(props.new, 3).map((obj) => {
-          return (
-            <>
-              <div>
-                {obj.map((obj1) => {
-                  return (
-                    <>
-                      <div>{obj1.title}</div>
-                    </>
-                  );
-                })}
-              </div>
-            </>
-          );
-        })} */}
-      </div>
+      <div></div>
 
       <div
         className="bg-light"
@@ -141,7 +129,14 @@ function News(props) {
                                 }}
                               >
                                 {" "}
-                                <pre>{obj1.body}</pre>
+                                <pre>
+                                  <TextTruncate
+                                    line={1}
+                                    element="span"
+                                    truncateText="…"
+                                    text={obj1.body}
+                                  />
+                                </pre>
                               </div>
                             </Typography>
                             <br />
@@ -159,7 +154,12 @@ function News(props) {
                             </Typography>
                           </CardContent>
                           <CardActions>
-                            <button className="mx-2 mb-3 jobbutton">
+                            <button
+                              className="mx-2 mb-3 jobbutton"
+                              onClick={() => {
+                                navigate(`/news/${obj1.id}`);
+                              }}
+                            >
                               Learn More
                             </button>
                           </CardActions>
@@ -194,7 +194,7 @@ function News(props) {
                         <Card>
                           <CardMedia
                             component="img"
-                            height="340"
+                            height="300"
                             image={obj1.img}
                             alt="green iguana"
                           />
@@ -208,13 +208,21 @@ function News(props) {
                             </Typography>
                             <Typography variant="body3" color="text.secondary">
                               <div
+                                className="artibody"
                                 style={{
                                   whiteSpace: "pre-wrap",
                                   overflowWrap: "break-word",
                                 }}
                               >
                                 {" "}
-                                <pre>{obj1.body}</pre>
+                                <pre>
+                                  <TextTruncate
+                                    line={1}
+                                    element="span"
+                                    truncateText="…"
+                                    text={obj1.body}
+                                  />
+                                </pre>
                               </div>
                             </Typography>
                             <br />
@@ -233,7 +241,12 @@ function News(props) {
                           </CardContent>
 
                           <CardActions>
-                            <button className="mx-2 my-3 jobbutton">
+                            <button
+                              className="mx-2 my-3 jobbutton"
+                              onClick={() => {
+                                navigate(`/news/${obj1.id}`);
+                              }}
+                            >
                               Learn More
                             </button>
                           </CardActions>
@@ -250,7 +263,7 @@ function News(props) {
       <div className="bg-white">
         <div className="mt-5 text-center">
           {" "}
-          <span className="sectionHeader">INTERVIEW CORNER</span>
+          <span className="sectionHeader">VIDEO CORNER</span>
           <hr />
           <br />
         </div>

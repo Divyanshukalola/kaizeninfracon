@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import Footer from "./footer";
 
@@ -16,6 +16,7 @@ import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
 
 function Home() {
+  const [clistate, setclistate] = useState(0);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -342,26 +343,53 @@ function Home() {
                     <div
                       className="container client_info"
                       style={{
-                        marginTop: "35%",
+                        marginTop: "30%",
                         marginLeft: "10%",
                         color: "lightgray",
                       }}
                     >
-                      {" "}
-                      <Slide
-                        direction="right"
-                        in={true}
-                        mountOnEnter
-                        unmountOnExit
-                        timeout={500}
-                      >
-                        <h1 style={{ fontSize: "55px" }}>We Proudly Serve</h1>
-                      </Slide>{" "}
+                      <>
+                        {clistate === 1 ? (
+                          <div className="clititle">
+                            <h1 style={{ fontSize: "55px" }}>Google</h1>
+                            <small>
+                              This is the worlds one of the biggest giants.
+                            </small>
+                          </div>
+                        ) : clistate === 2 ? (
+                          <div className="clititle">
+                            <h1 style={{ fontSize: "55px" }}>Twitter</h1>
+                            <small>
+                              This is the worlds one of the biggest giants.
+                            </small>
+                          </div>
+                        ) : clistate === 3 ? (
+                          <div className="clititle">
+                            <h1 style={{ fontSize: "55px" }}>Instagram</h1>
+                            <small>
+                              This is the worlds one of the biggest giants.
+                            </small>
+                          </div>
+                        ) : clistate === 4 ? (
+                          <div className="clititle">
+                            <h1 style={{ fontSize: "55px" }}>Facebook</h1>
+                            <small>
+                              This is the worlds one of the biggest giants.
+                            </small>
+                          </div>
+                        ) : (
+                          <div>
+                            <h1 style={{ fontSize: "55px" }}>
+                              We Proudly Serve
+                            </h1>
+                          </div>
+                        )}
+                      </>
                     </div>
                   </div>
                   <div className="col">
                     <div className="row mt-5 text-center">
-                      <div className="col ">
+                      <div className="col">
                         <Fade in={true} timeout={500}>
                           <img
                             src={
@@ -370,6 +398,12 @@ function Home() {
                             alt="img"
                             className="hoverClients"
                             height="140px"
+                            onMouseEnter={() => {
+                              setclistate(1);
+                            }}
+                            onMouseLeave={() => {
+                              setclistate(0);
+                            }}
                           />
                         </Fade>
                       </div>
@@ -378,11 +412,17 @@ function Home() {
                         <Fade in={true} timeout={600}>
                           <img
                             src={
-                              "http://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png"
+                              "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/2491px-Twitter-logo.svg.png"
                             }
                             alt="img"
                             className="hoverClients"
                             height="140px"
+                            onMouseEnter={() => {
+                              setclistate(2);
+                            }}
+                            onMouseLeave={() => {
+                              setclistate(0);
+                            }}
                           />
                         </Fade>
                       </div>
@@ -399,6 +439,12 @@ function Home() {
                             alt="img"
                             className="hoverClients"
                             height="140px"
+                            onMouseEnter={() => {
+                              setclistate(3);
+                            }}
+                            onMouseLeave={() => {
+                              setclistate(0);
+                            }}
                           />
                         </Fade>
                       </div>
@@ -411,6 +457,12 @@ function Home() {
                             alt="img"
                             className="hoverClients"
                             height="140px"
+                            onMouseEnter={() => {
+                              setclistate(4);
+                            }}
+                            onMouseLeave={() => {
+                              setclistate(0);
+                            }}
                           />
                         </Fade>
                       </div>

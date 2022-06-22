@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 // import Parser from "html-react-parser";
 
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 import { doc, addDoc, collection, deleteDoc } from "firebase/firestore";
 import { db } from "./../../firebase-config";
@@ -60,8 +61,7 @@ TabPanel.propTypes = {
 // }
 
 function AdminProj(props) {
-
-
+  const navigate = useNavigate();
   const [count, setCount] = React.useState(0);
   const [count1, setCount1] = React.useState(0);
 
@@ -418,8 +418,22 @@ function AdminProj(props) {
                 <input
                   type="text"
                   className="form-control"
-                  // value={"12/12/12"}
+                  placeholder="MM/DD/YYYY"
                   {...register("details.project_start_date", {
+                    valueAsDate: true,
+                  })}
+                  {...(loading ? "disabled" : null)}
+                />
+              </div>
+            </div>
+            <div className="col">
+              <div className="form-group">
+                <label>Project end date:</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="MM/DD/YYYY"
+                  {...register("details.project_end_date", {
                     valueAsDate: true,
                   })}
                   {...(loading ? "disabled" : null)}
@@ -836,9 +850,10 @@ function AdminProj(props) {
                                     <h6>{time[1].tag}</h6>
                                     <h6>
                                       Date:{" "}
-                                      {new Date(
+                                      {/* {new Date(
                                         time[1].date.seconds * 1000
-                                      ).toLocaleDateString()}
+                                      ).toLocaleDateString()} */}
+                                      {console.log(obj1)}
                                     </h6>
                                   </div>
                                 );
@@ -880,7 +895,14 @@ function AdminProj(props) {
                         </div>
 
                         <br />
-                        <button className="jobbutton mr-5">Edit</button>
+                        <button
+                          className="jobbutton mr-5"
+                          onClick={() => {
+                            navigate(`/projectedit/${obj1.id}`);
+                          }}
+                        >
+                          Edit
+                        </button>
                         <button
                           className="jobbutton"
                           onClick={() => {
