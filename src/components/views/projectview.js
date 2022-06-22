@@ -52,25 +52,25 @@ function ProjectView({ project }) {
     window.scrollTo(0, 0);
   }, []);
   // console.log(props.project);
-  function organiseData(array, size) {
-    var perChunk = size; // items per chunk
+  // function organiseData(array, size) {
+  //   var perChunk = size; // items per chunk
 
-    var inputArray = array;
+  //   var inputArray = array;
 
-    var result = inputArray.reduce((resultArray, item, index) => {
-      const chunkIndex = Math.floor(index / perChunk);
+  //   var result = inputArray.reduce((resultArray, item, index) => {
+  //     const chunkIndex = Math.floor(index / perChunk);
 
-      if (!resultArray[chunkIndex]) {
-        resultArray[chunkIndex] = []; // start a new chunk
-      }
+  //     if (!resultArray[chunkIndex]) {
+  //       resultArray[chunkIndex] = []; // start a new chunk
+  //     }
 
-      resultArray[chunkIndex].push(item);
+  //     resultArray[chunkIndex].push(item);
 
-      return resultArray;
-    }, []);
+  //     return resultArray;
+  //   }, []);
 
-    return result;
-  }
+  //   return result;
+  // }
 
   return (
     <div className="Services">
@@ -229,7 +229,11 @@ function ProjectView({ project }) {
                           {index % 2 === 0 ? (
                             <div className="row bg-light">
                               <div className="col my-5 mx-3">
-                                <pre style={{ fontSize: "15px" }}>
+                                <pre
+                                  style={{
+                                    fontSize: "15px",
+                                  }}
+                                >
                                   {obj[1].data}
                                 </pre>
                                 <br />
@@ -244,7 +248,13 @@ function ProjectView({ project }) {
                                   }}
                                 >
                                   {obj[1].tag}
-                                  <span style={{ color: "#ff5e10" }}>.</span>
+                                  <span
+                                    style={{
+                                      color: "#ff5e10",
+                                    }}
+                                  >
+                                    .
+                                  </span>
                                 </h1>
                               </div>
                             </div>
@@ -259,11 +269,21 @@ function ProjectView({ project }) {
                                   }}
                                 >
                                   {obj[1].tag}
-                                  <span style={{ color: "#ff5e10" }}>.</span>
+                                  <span
+                                    style={{
+                                      color: "#ff5e10",
+                                    }}
+                                  >
+                                    .
+                                  </span>
                                 </h1>
                               </div>
                               <div className="col my-5 mx-3">
-                                <pre style={{ fontSize: "15px" }}>
+                                <pre
+                                  style={{
+                                    fontSize: "15px",
+                                  }}
+                                >
                                   {obj[1].data}
                                 </pre>
                                 <br />

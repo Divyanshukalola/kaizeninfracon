@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 // import Parser from "html-react-parser";
 
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+
 
 import { doc, collection, updateDoc } from "firebase/firestore";
 import { db } from "./../../firebase-config";
@@ -78,7 +78,7 @@ function AdminProjEdit(props) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const dataCollectionRef1 = collection(db, "projects");
+  // const dataCollectionRef1 = collection(db, "projects");
 
   async function UpdateDoc(urlLink) {
     var timeref;

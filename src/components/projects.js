@@ -149,7 +149,7 @@ function Projects({ proj }) {
                 <div className="col">
                   <div className="row  d-flex justify-content-center">
                     {proj
-                      .filter((e) => e.type == 1)
+                      .filter((e) => e.type === 1)
                       .map((obj1) => {
                         return (
                           <>
@@ -194,7 +194,7 @@ function Projects({ proj }) {
                 <div className="col">
                   <div className="row  d-flex justify-content-center">
                     {proj
-                      .filter((e) => e.type == 2)
+                      .filter((e) => e.type === 2)
                       .map((obj1) => {
                         return (
                           <>
@@ -240,7 +240,7 @@ function Projects({ proj }) {
                 <div className="col">
                   <div className="row  d-flex justify-content-center">
                     {proj
-                      .filter((e) => e.type == 3)
+                      .filter((e) => e.type === 3)
                       .map((obj1) => {
                         return (
                           <>
@@ -287,7 +287,7 @@ function Projects({ proj }) {
                 <div className="col">
                   <div className="row  d-flex justify-content-center">
                     {proj
-                      .filter((e) => e.type == 4)
+                      .filter((e) => e.type === 4)
                       .map((obj1) => {
                         return (
                           <>
@@ -334,7 +334,7 @@ function Projects({ proj }) {
                 <div className="col">
                   <div className="row  d-flex justify-content-center">
                     {proj
-                      .filter((e) => e.type == 5)
+                      .filter((e) => e.type === 5)
                       .map((obj1) => {
                         return (
                           <>
@@ -379,7 +379,7 @@ function Projects({ proj }) {
                 <div className="col">
                   <div className="row  d-flex justify-content-center">
                     {proj
-                      .filter((e) => e.type == 6)
+                      .filter((e) => e.type === 6)
                       .map((obj1) => {
                         return (
                           <>

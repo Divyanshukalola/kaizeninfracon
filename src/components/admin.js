@@ -44,7 +44,7 @@ import AdminProj from "./admin/proj";
 import AdminNews from "./admin/news";
 import AdminArticle from "./admin/article";
 import AdminVideos from "./admin/videos";
-import AdminClients from "./admin/clients";
+// import AdminClients from "./admin/clients";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;

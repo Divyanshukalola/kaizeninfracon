@@ -22,25 +22,25 @@ function NewsView({ news }) {
     window.scrollTo(0, 0);
   }, []);
   // console.log(props.news);
-  function organiseData(array, size) {
-    var perChunk = size; // items per chunk
+  // function organiseData(array, size) {
+  //   var perChunk = size; // items per chunk
 
-    var inputArray = array;
+  //   var inputArray = array;
 
-    var result = inputArray.reduce((resultArray, item, index) => {
-      const chunkIndex = Math.floor(index / perChunk);
+  //   var result = inputArray.reduce((resultArray, item, index) => {
+  //     const chunkIndex = Math.floor(index / perChunk);
 
-      if (!resultArray[chunkIndex]) {
-        resultArray[chunkIndex] = []; // start a new chunk
-      }
+  //     if (!resultArray[chunkIndex]) {
+  //       resultArray[chunkIndex] = []; // start a new chunk
+  //     }
 
-      resultArray[chunkIndex].push(item);
+  //     resultArray[chunkIndex].push(item);
 
-      return resultArray;
-    }, []);
+  //     return resultArray;
+  //   }, []);
 
-    return result;
-  }
+  //   return result;
+  // }
 
   // function dateConvert(date) {
   //   var t = new Date(1970, 0, 1); // Epoch
