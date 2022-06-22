@@ -419,7 +419,7 @@ function Projects({ proj }) {
               </div>
               {organiseData(proj, 2).map((obj) => {
                 let today = new Date().toLocaleDateString("en-us");
-                var t = new Date(1970, 0, 1);
+                // var t = new Date(1970, 0, 1);
 
                 // let seconds = t.setSeconds(today);
                 var date = new Date(today);
