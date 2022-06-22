@@ -17,18 +17,18 @@ import Topnavigation from "../nav";
 
 // import Button from "@mui/material/Button";
 
-import TimelineItem from "@mui/lab/TimelineItem";
-import TimelineSeparator from "@mui/lab/TimelineSeparator";
-import TimelineConnector from "@mui/lab/TimelineConnector";
-import TimelineContent from "@mui/lab/TimelineContent";
-import TimelineDot from "@mui/lab/TimelineDot";
-import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
-import { Timeline, TimelineEvent } from "@mailtop/horizontal-timeline";
-import { useState } from "react";
+// import TimelineItem from "@mui/lab/TimelineItem";
+// import TimelineSeparator from "@mui/lab/TimelineSeparator";
+// import TimelineConnector from "@mui/lab/TimelineConnector";
+// import TimelineContent from "@mui/lab/TimelineContent";
+// import TimelineDot from "@mui/lab/TimelineDot";
+// import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
+// import { Timeline, TimelineEvent } from "@mailtop/horizontal-timeline";
+// import { useState } from "react";
 
-import { BsFillCircleFill } from "react-icons/bs";
-import { BsFillClockFill } from "react-icons/bs";
-import { BsFillCheckCircleFill } from "react-icons/bs";
+// import { BsFillCircleFill } from "react-icons/bs";
+// import { BsFillClockFill } from "react-icons/bs";
+// import { BsFillCheckCircleFill } from "react-icons/bs";
 function ProjectView({ project }) {
   var items = false;
   if (project.timeline) {
@@ -173,7 +173,7 @@ function ProjectView({ project }) {
                 </div>
                 <div className="row">
                   <div className="col text-center">
-                    <Timeline
+                    {/* <Timeline
                       minEvents={Object.entries(project.timeline).length}
                     >
                       {items.map((obj, index) => {
@@ -202,7 +202,7 @@ function ProjectView({ project }) {
                           </>
                         );
                       })}
-                    </Timeline>
+                    </Timeline> */}
                   </div>
                 </div>
               </>
