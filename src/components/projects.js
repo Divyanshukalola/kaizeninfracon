@@ -78,7 +78,7 @@ function Projects({ proj }) {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    var items = false;
+    // var items = false;
   }, []);
   const [value, setValue] = React.useState(0);
 
@@ -421,7 +421,7 @@ function Projects({ proj }) {
                 let today = new Date().toLocaleDateString("en-us");
                 var t = new Date(1970, 0, 1);
 
-                let seconds = t.setSeconds(today);
+                // let seconds = t.setSeconds(today);
                 var date = new Date(today);
                 var seconds2 = date.getTime() / 1000;
                 return (

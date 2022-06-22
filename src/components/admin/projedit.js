@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
 
-import { doc, collection, updateDoc } from "firebase/firestore";
+import { doc, updateDoc } from "firebase/firestore";
 import { db } from "./../../firebase-config";
 // import Button from "@mui/material/Button";
 import PropTypes from "prop-types";
