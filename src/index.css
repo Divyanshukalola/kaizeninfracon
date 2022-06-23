@@ -214,11 +214,11 @@
 }
 .hoverNavItem:hover{
   width: auto;
-  border-bottom: #1c3e44 3px solid;
+  border-bottom: #ff5e10 3px solid;
 }
 
 .hoverNavItemActive{
-  border-bottom: #1c3e44 3px solid;
+  border-bottom: #ff5e10 3px solid;
 }
 
 
