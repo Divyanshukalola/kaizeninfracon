@@ -5,7 +5,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import CommingSoon from "./components/commingsoon";
+// import CommingSoon from "./components/commingsoon";
 import Home from "./components/home";
 import About from "./components/about";
 import News from "./components/news";

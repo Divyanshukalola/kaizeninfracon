@@ -431,7 +431,7 @@ function Home({ proj }) {
           </div>
         </div>
         {/* Clients */}
-        <div className=" bg-light">
+        {/* <div className=" bg-light">
           <div className="containter">
             {" "}
             <div className="row mx-5 mt-5" style={{ height: "730px" }}>
@@ -576,7 +576,7 @@ function Home({ proj }) {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <br />
         <div className="mx-5 my-5">
