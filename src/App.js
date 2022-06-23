@@ -89,14 +89,17 @@ function App() {
   return (
     <div className="App">
       {loading ? (
-        <ReactLoading
-          className="loading"
-          type="bubbles"
-          color="#ff5e10"
-          height={400}
-          width={100}
-        />
+        <>
+          <p>Loading</p>
+        </>
       ) : (
+        // <ReactLoading
+        //   className="loading"
+        //   type="bubbles"
+        //   color="#ff5e10"
+        //   height={400}
+        //   width={100}
+        // />
         <BrowserRouter>
           <Routes>
             {/* <Route path="/" element={<CommingSoon></CommingSoon>} /> */}
