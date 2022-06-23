@@ -19,7 +19,7 @@ import AdminProjEdit from "./components/admin/projedit";
 import Timeline from "./components/timeline";
 import { db } from "./firebase-config";
 import { collection, getDocs } from "firebase/firestore";
-// import Home1 from "./components/home1";
+import Home from "./components/home1";
 import ReactLoading from "react-loading";
 
 function App() {
@@ -105,7 +105,7 @@ function App() {
               path="/"
               element={<Home1 proj={projects} coverImage={coverImage}></Home1>}
             />
-            <Route path="/1" element={<Home1 proj={projects}></Home1>} />
+            <Route path="/1" element={<Home proj={projects}></Home>} />
             <Route path="/about" element={<About></About>} />
             <Route
               path="/news"
