@@ -16,6 +16,7 @@ import NewsView from "./components/views/newsview";
 import ArticleView from "./components/views/articleview";
 import ProjectView from "./components/views/projectview";
 import AdminProjEdit from "./components/admin/projedit";
+import Timeline from "./components/timeline";
 import { db } from "./firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 
@@ -53,6 +54,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<CommingSoon></CommingSoon>} />
+          <Route path="/timeline" element={<Timeline></Timeline>} />
           <Route path="/home" element={<Home></Home>} />
           <Route path="/about" element={<About></About>} />
           <Route

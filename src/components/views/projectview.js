@@ -17,18 +17,8 @@ import Topnavigation from "../nav";
 
 // import Button from "@mui/material/Button";
 
-// import TimelineItem from "@mui/lab/TimelineItem";
-// import TimelineSeparator from "@mui/lab/TimelineSeparator";
-// import TimelineConnector from "@mui/lab/TimelineConnector";
-// import TimelineContent from "@mui/lab/TimelineContent";
-// import TimelineDot from "@mui/lab/TimelineDot";
-// import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
-// import { Timeline, TimelineEvent } from "@mailtop/horizontal-timeline";
-// import { useState } from "react";
+import Timeline from "../timeline";
 
-// import { BsFillCircleFill } from "react-icons/bs";
-// import { BsFillClockFill } from "react-icons/bs";
-// import { BsFillCheckCircleFill } from "react-icons/bs";
 function ProjectView({ project }) {
   var items = false;
   if (project.timeline) {
@@ -51,26 +41,6 @@ function ProjectView({ project }) {
 
     window.scrollTo(0, 0);
   }, []);
-  // console.log(props.project);
-  // function organiseData(array, size) {
-  //   var perChunk = size; // items per chunk
-
-  //   var inputArray = array;
-
-  //   var result = inputArray.reduce((resultArray, item, index) => {
-  //     const chunkIndex = Math.floor(index / perChunk);
-
-  //     if (!resultArray[chunkIndex]) {
-  //       resultArray[chunkIndex] = []; // start a new chunk
-  //     }
-
-  //     resultArray[chunkIndex].push(item);
-
-  //     return resultArray;
-  //   }, []);
-
-  //   return result;
-  // }
 
   return (
     <div className="Services">
@@ -173,36 +143,7 @@ function ProjectView({ project }) {
                 </div>
                 <div className="row">
                   <div className="col text-center">
-                    {/* <Timeline
-                      minEvents={Object.entries(project.timeline).length}
-                    >
-                      {items.map((obj, index) => {
-                        return (
-                          <>
-                            <TimelineEvent
-                              color={
-                                index === 0
-                                  ? "#D0D3D4"
-                                  : index === items.length - 1
-                                  ? "#9c2919"
-                                  : "#87a2c7"
-                              }
-                              icon={
-                                index === 0
-                                  ? BsFillCircleFill
-                                  : index === items.length - 1
-                                  ? BsFillCheckCircleFill
-                                  : BsFillClockFill
-                              }
-                              title={obj[1].tag}
-                              subtitle={new Date(
-                                obj[1].date.seconds * 1000
-                              ).toLocaleDateString()}
-                            />
-                          </>
-                        );
-                      })}
-                    </Timeline> */}
+                    <Timeline items={items}></Timeline>
                   </div>
                 </div>
               </>
@@ -229,17 +170,16 @@ function ProjectView({ project }) {
                           {index % 2 === 0 ? (
                             <div className="row bg-light">
                               <div className="col my-5 mx-3">
+                                <img src={obj[1].img} alt="" width={"700px"} />
                                 <pre
-                                  style={{
-                                    fontSize: "15px",
-                                  }}
+                                  style={{ fontSize: "15px" }}
+                                  className="my-3"
                                 >
                                   {obj[1].data}
                                 </pre>
                                 <br />
-                                <img src={obj[1].img} alt="" width={"700px"} />
                               </div>
-                              <div className="col-3 my-5 mx-3 text-right">
+                              <div className="col-3 my-5 mx-3 text-center">
                                 <h1
                                   style={{
                                     color: "lightgray",
@@ -248,13 +188,7 @@ function ProjectView({ project }) {
                                   }}
                                 >
                                   {obj[1].tag}
-                                  <span
-                                    style={{
-                                      color: "#ff5e10",
-                                    }}
-                                  >
-                                    .
-                                  </span>
+                                  <span style={{ color: "#ff5e10" }}>.</span>
                                 </h1>
                               </div>
                             </div>
@@ -269,28 +203,22 @@ function ProjectView({ project }) {
                                   }}
                                 >
                                   {obj[1].tag}
-                                  <span
-                                    style={{
-                                      color: "#ff5e10",
-                                    }}
-                                  >
-                                    .
-                                  </span>
+                                  <span style={{ color: "#ff5e10" }}>.</span>
                                 </h1>
                               </div>
                               <div className="col my-5 mx-3">
+                                <img src={obj[1].img} alt="" width={"700px"} />
                                 <pre
-                                  style={{
-                                    fontSize: "15px",
-                                  }}
+                                  style={{ fontSize: "15px" }}
+                                  className="my-3"
                                 >
                                   {obj[1].data}
                                 </pre>
                                 <br />
-                                <img src={obj[1].img} alt="" width={"700px"} />
                               </div>
                             </div>
                           )}
+                          <hr />
                         </>
                       );
                     })}
