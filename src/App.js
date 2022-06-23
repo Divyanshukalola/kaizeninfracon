@@ -19,6 +19,7 @@ import AdminProjEdit from "./components/admin/projedit";
 import Timeline from "./components/timeline";
 import { db } from "./firebase-config";
 import { collection, getDocs } from "firebase/firestore";
+import Home1 from "./components/home1";
 
 function App() {
   const [news, setNews] = useState([]);
@@ -55,7 +56,8 @@ function App() {
         <Routes>
           {/* <Route path="/" element={<CommingSoon></CommingSoon>} /> */}
           <Route path="/timeline" element={<Timeline></Timeline>} />
-          <Route path="/" element={<Home proj={projects}></Home>} />
+          <Route path="/" element={<Home1 proj={projects}></Home1>} />
+          <Route path="/1" element={<Home1 proj={projects}></Home1>} />
           <Route path="/about" element={<About></About>} />
           <Route
             path="/news"
