@@ -105,7 +105,10 @@ function App() {
               path="/"
               element={<Home1 proj={projects} coverImage={coverImage}></Home1>}
             />
-            <Route path="/1" element={<Home proj={projects}></Home>} />
+            <Route
+              path="/1"
+              element={<Home proj={projects} coverImage={coverImage}></Home>}
+            />
             <Route path="/about" element={<About></About>} />
             <Route
               path="/news"

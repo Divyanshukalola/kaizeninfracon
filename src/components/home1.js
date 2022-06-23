@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import Footer from "./footer";
 
-// import Topnavigation from "./nav1";
+import Topnavigation from "./nav1";
 
 // import Button from "@mui/material/Button";
 // import { styled } from "@mui/material/styles";
@@ -17,7 +17,7 @@ import Typography from "@mui/material/Typography";
 import CardActions from "@mui/material/CardActions";
 import { useNavigate } from "react-router-dom";
 
-// import { Fade } from "react-slideshow-image";
+import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
 function Home1({ proj, coverImage }) {
@@ -57,7 +57,7 @@ function Home1({ proj, coverImage }) {
         {/* hero  */}
         {/* 'url("https://img.freepik.com/free-photo/geometric-facades-residential-building_294094-27.jpg?w=2000")' */}
 
-        {/* <Fade arrows={false} duration={3000}>
+        <Fade arrows={false} duration={3000}>
           {coverImage.map((fadeImage, index) => (
             <div className="each-fade" key={index}>
               <div
@@ -98,7 +98,7 @@ function Home1({ proj, coverImage }) {
               </div>
             </div>
           ))}
-        </Fade> */}
+        </Fade>
         <br />
         {/* section 1 */}
         <div className=" bg-white">
