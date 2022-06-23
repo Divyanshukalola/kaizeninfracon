@@ -88,7 +88,7 @@ function App() {
 
   return (
     <div className="App">
-      {loading ? (
+      {/* {loading ? (
         <>
           <p>Loading</p>
         </>
@@ -100,72 +100,71 @@ function App() {
         //   height={400}
         //   width={100}
         // />
-        <BrowserRouter>
-          <Routes>
-            {/* <Route path="/" element={<CommingSoon></CommingSoon>} /> */}
-            <Route path="/timeline" element={<Timeline></Timeline>} />
-            <Route
-              path="/"
-              element={<Home1 proj={projects} coverImage={coverImage}></Home1>}
-            />
-            <Route path="/1" element={<Home1 proj={projects}></Home1>} />
-            <Route path="/about" element={<About></About>} />
-            <Route
-              path="/news"
-              element={<News new={news} arti={article} videos={videos}></News>}
-            />
-            <Route
-              path="/proj"
-              element={<Projects proj={projects}></Projects>}
-            />
-            <Route path="/career" element={<Career></Career>} />
-            <Route
-              path="/admin"
-              element={
-                <Admin
-                  new={news}
-                  arti={article}
-                  videos={videos}
-                  proj={projects}
-                  // cli={clients}
-                ></Admin>
-              }
-            />
-            {news.map((obj) => {
-              return (
-                <Route
-                  path={`/news/${obj.id}`}
-                  element={<NewsView news={obj}></NewsView>}
-                />
-              );
-            })}
-            {article.map((obj) => {
-              return (
-                <Route
-                  path={`/news/${obj.id}`}
-                  element={<ArticleView article={obj}></ArticleView>}
-                />
-              );
-            })}
-            {projects.map((obj) => {
-              return (
-                <Route
-                  path={`/projects/${obj.id}`}
-                  element={<ProjectView project={obj}></ProjectView>}
-                />
-              );
-            })}
-            {projects.map((obj) => {
-              return (
-                <Route
-                  path={`/projectedit/${obj.id}`}
-                  element={<AdminProjEdit project={obj}></AdminProjEdit>}
-                />
-              );
-            })}
-          </Routes>
-        </BrowserRouter>
-      )}
+       
+      )} */}
+
+      <BrowserRouter>
+        <Routes>
+          {/* <Route path="/" element={<CommingSoon></CommingSoon>} /> */}
+          <Route path="/timeline" element={<Timeline></Timeline>} />
+          <Route
+            path="/"
+            element={<Home1 proj={projects} coverImage={coverImage}></Home1>}
+          />
+          <Route path="/1" element={<Home1 proj={projects}></Home1>} />
+          <Route path="/about" element={<About></About>} />
+          <Route
+            path="/news"
+            element={<News new={news} arti={article} videos={videos}></News>}
+          />
+          <Route path="/proj" element={<Projects proj={projects}></Projects>} />
+          <Route path="/career" element={<Career></Career>} />
+          <Route
+            path="/admin"
+            element={
+              <Admin
+                new={news}
+                arti={article}
+                videos={videos}
+                proj={projects}
+                // cli={clients}
+              ></Admin>
+            }
+          />
+          {news.map((obj) => {
+            return (
+              <Route
+                path={`/news/${obj.id}`}
+                element={<NewsView news={obj}></NewsView>}
+              />
+            );
+          })}
+          {article.map((obj) => {
+            return (
+              <Route
+                path={`/news/${obj.id}`}
+                element={<ArticleView article={obj}></ArticleView>}
+              />
+            );
+          })}
+          {projects.map((obj) => {
+            return (
+              <Route
+                path={`/projects/${obj.id}`}
+                element={<ProjectView project={obj}></ProjectView>}
+              />
+            );
+          })}
+          {projects.map((obj) => {
+            return (
+              <Route
+                path={`/projectedit/${obj.id}`}
+                element={<AdminProjEdit project={obj}></AdminProjEdit>}
+              />
+            );
+          })}
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
