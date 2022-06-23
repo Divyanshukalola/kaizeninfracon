@@ -28,7 +28,7 @@ function App() {
   const [article, setarticle] = useState([]);
   const [videos, setvideos] = useState([]);
   const [coverImage, setcoverImage] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [setLoading] = useState(true);
   // const [clients, setclients] = useState([]);
 
   const dataCollectionRef1 = collection(db, "news");
