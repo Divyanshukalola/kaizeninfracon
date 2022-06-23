@@ -1,22 +1,10 @@
 import React from "react";
-import { useState } from "react";
-
-import { BsFillTelephoneFill } from "react-icons/bs";
-import { BsFillEnvelopeFill } from "react-icons/bs";
-import { BsFillClockFill } from "react-icons/bs";
-
-import { BsFacebook } from "react-icons/bs";
-import { BsTwitter } from "react-icons/bs";
-import { BsLinkedin } from "react-icons/bs";
-import { useNavigate } from "react-router-dom";
-
-import mainlogo from "./../static/img/logo2big.png";
 
 // import { IconName } from "react-icons/bs";
 
 const Timeline = (props) => {
   let count = 0;
-  const navigate = useNavigate();
+
   function organiseData(array, size) {
     var perChunk = size; // items per chunk
 
@@ -39,7 +27,12 @@ const Timeline = (props) => {
 
   return (
     <>
-      <div style={{ overflowX: "scroll", width: "100%" }}>
+      <div
+        style={{
+          overflowX: "scroll",
+          width: "100%",
+        }}
+      >
         {organiseData(props.items, 100).map((obj1, index1) => {
           return (
             <>
