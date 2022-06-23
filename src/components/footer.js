@@ -6,6 +6,7 @@ const Footer = () => {
       <div className="row">
         <div className="col-4 text-center my-4">
           <p>Copyright © 2022 Kizen. All Rights Reserved</p>
+          <br />
         </div>
         <div className="col-2 border-right">
           <div className="row">
@@ -38,6 +39,17 @@ const Footer = () => {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="row text-center mt-5">
+        <div className="col">
+          Created By:{" "}
+          <a
+            style={{ color: "#ff5e10" }}
+            href="https://www.linkedin.com/in/divyanshu-k-4b6a1311a/"
+          >
+            Divyanshu Kalola
+          </a>
         </div>
       </div>
     </>

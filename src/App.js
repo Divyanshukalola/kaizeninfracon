@@ -53,9 +53,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<CommingSoon></CommingSoon>} />
+          {/* <Route path="/" element={<CommingSoon></CommingSoon>} /> */}
           <Route path="/timeline" element={<Timeline></Timeline>} />
-          <Route path="/home" element={<Home></Home>} />
+          <Route path="/" element={<Home proj={projects}></Home>} />
           <Route path="/about" element={<About></About>} />
           <Route
             path="/news"

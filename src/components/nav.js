@@ -33,7 +33,7 @@ const Nav = (props) => {
    return (
      <>
        {/* navigation  */}{" "}
-       <div className="row mx-5 my-3 ">
+       <div className="row mx-5 my-3 " style={{ zIndex: "1" }}>
          <div className="col-7">
            {" "}
            <div className="row">
@@ -50,10 +50,10 @@ const Nav = (props) => {
                    className="mx-2"
                    style={{ fontSize: "14px" }}
                  ></BsFillTelephoneFill>{" "}
-                 +91 9687620711
+                 +91 281 2962748
                </button>
              </div>
-             <div className="col">
+             <div className="col-5">
                <button
                  style={{
                    border: "transparent",
@@ -66,7 +66,7 @@ const Nav = (props) => {
                    className="mx-2"
                    style={{ fontSize: "14px" }}
                  ></BsFillEnvelopeFill>
-                 dkalola@hawk.iit.edu
+                 kaizeninfracon18617@gmail.com
                </button>
              </div>
              <div className="col">
@@ -129,8 +129,8 @@ const Nav = (props) => {
            </div>
          </div>
        </div>
-       <hr style={{ marginBottom: "0px" }} />
-       <div className="row sticky-top bg-white">
+       <hr style={{ marginBottom: "0px", zIndex: "1" }} />
+       <div className="row sticky-top bg-white" style={{ zIndex: "1" }}>
          <div className="col my-3 mx-5">
            {/* <img src="" alt="" /> */}
            <button

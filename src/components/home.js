@@ -14,18 +14,36 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import CardActions from "@mui/material/CardActions";
+import { useNavigate } from "react-router-dom";
 
-function Home() {
+function Home({ proj }) {
   const [clistate, setclistate] = useState(0);
+  const navigate = useNavigate();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  // const ColorButton = styled(Button)(({ theme }) => ({
-  //   backgroundColor: "#ff5e10",
-  //   "&:hover": {
-  //     backgroundColor: "#1c3e44",
-  //   },
-  // }));
+  function organiseData(array, size) {
+    var perChunk = size; // items per chunk
+
+    var inputArray = array;
+
+    var result = inputArray.reduce((resultArray, item, index) => {
+      const chunkIndex = Math.floor(index / perChunk);
+
+      if (!resultArray[chunkIndex]) {
+        resultArray[chunkIndex] = []; // start a new chunk
+      }
+
+      resultArray[chunkIndex].push(item);
+
+      return resultArray;
+    }, []);
+
+    return result;
+  }
+
   return (
     <div className="Home">
       {/* navigation  */}
@@ -107,7 +125,10 @@ function Home() {
                         timeout={500}
                       >
                         <div
-                          style={{ marginTop: "30%", marginLeft: "10%" }}
+                          style={{
+                            marginTop: "30%",
+                            marginLeft: "10%",
+                          }}
                           className="carousel-caption"
                         >
                           {" "}
@@ -326,6 +347,89 @@ function Home() {
         </div>
         <br />
         <br />
+        {/* section 1 */}
+        <div className=" bg-white">
+          <div className="containter">
+            {" "}
+            <div className="row mx-5 mt-5">
+              <div className="col text-center">
+                <div className="mt-3">
+                  {" "}
+                  <span className="sectionHeader">WHAT'S GOING ON</span>
+                  <hr />
+                  <br />
+                  <h2 style={{ fontWeight: "bold" }}>
+                    We are
+                    <span className="secondary"> proud</span> of…
+                  </h2>
+                  <br />
+                  <br />
+                  <div className="row">
+                    <div className="col">
+                      {" "}
+                      {organiseData(proj, 2).map((obj) => {
+                        let today = new Date().toLocaleDateString("en-us");
+                        // var t = new Date(1970, 0, 1);
+
+                        // let seconds = t.setSeconds(today);
+                        var date = new Date(today);
+                        var seconds2 = date.getTime() / 1000;
+                        return (
+                          <>
+                            <div className="row mx-5 my-5">
+                              {" "}
+                              {obj.map((obj1) => {
+                                return (
+                                  <>
+                                    {seconds2 <
+                                    obj1.details.project_end_date.seconds ? (
+                                      <div className="col-6">
+                                        <Card>
+                                          <CardMedia
+                                            component="img"
+                                            height="340"
+                                            image={obj1.img}
+                                            alt="green iguana"
+                                          />
+                                          <CardContent>
+                                            <Typography
+                                              gutterBottom
+                                              variant="h5"
+                                              component="div"
+                                            >
+                                              {obj1.title}
+                                            </Typography>
+                                          </CardContent>
+                                          <CardActions>
+                                            <button
+                                              className="mx-2 my-3 jobbutton"
+                                              onClick={() => {
+                                                navigate(
+                                                  `/projects/${obj1.id}`
+                                                );
+                                              }}
+                                            >
+                                              Learn More
+                                            </button>
+                                          </CardActions>
+                                        </Card>
+                                      </div>
+                                    ) : null}
+                                  </>
+                                );
+                              })}
+                            </div>
+                          </>
+                        );
+                      })}
+                    </div>{" "}
+                  </div>
+                  <br />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         {/* Clients */}
         <div className=" bg-light">
           <div className="containter">
