@@ -20,7 +20,7 @@ import Timeline from "./components/timeline";
 import { db } from "./firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 import Home1 from "./components/home1";
-import ReactLoading from "react-loading";
+// import ReactLoading from "react-loading";
 
 function App() {
   const [news, setNews] = useState([]);
