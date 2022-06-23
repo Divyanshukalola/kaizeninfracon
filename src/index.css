@@ -489,6 +489,14 @@ border-color: grey;
     font-weight: bold;
 }
 
+.loading{
+  position: fixed;
+  top: 50%;
+  left:45%;
+  transition: 1s;
+  z-index: 99999;
+}
+
 
 
 

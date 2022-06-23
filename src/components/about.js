@@ -36,7 +36,7 @@ function About() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="row mx-5 my-5">
+        <div className="row mx-5">
           <div className="col-6 mt-5">
             <div style={{ borderStyle: "solid", borderColor: "#1c3e44" }}>
               {" "}

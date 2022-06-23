@@ -1,12 +1,6 @@
 import React from "react";
 
-import { BsFillTelephoneFill } from "react-icons/bs";
-import { BsFillEnvelopeFill } from "react-icons/bs";
-import { BsFillClockFill } from "react-icons/bs";
 
-import { BsFacebook } from "react-icons/bs";
-import { BsTwitter } from "react-icons/bs";
-import { BsLinkedin } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 
 import mainlogo from "./../static/img/logo2big.png";
@@ -16,7 +10,7 @@ import mainlogo from "./../static/img/logo2big.png";
 const Nav1 = (props) => {
   const navigate = useNavigate();
   function home() {
-    navigate("/home");
+    navigate("/");
   }
   function about() {
     navigate("/about");

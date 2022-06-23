@@ -20,30 +20,12 @@ import { useNavigate } from "react-router-dom";
 import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
-function Home1({ proj }) {
+function Home1({ proj, coverImage }) {
+  console.log(proj);
+  console.log(coverImage);
   const navigate = useNavigate();
   const [clistate, setclistate] = useState(0);
-  const imgs = [
-    {
-      img:
-        "https://img.freepik.com/free-photo/geometric-facades-residential-building_294094-27.jpg?w=2000",
-      cap: "Championing curiosity",
-    },
-    {
-      img:
-        "https://images.unsplash.com/photo-1460472178825-e5240623afd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YnVpbGRpbmdzfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
-      cap: "Longterm Relations",
-    },
-    {
-      img:
-        "https://cdn.pixabay.com/photo/2017/04/24/13/37/architecture-2256489__480.jpg",
-      cap: "Connecting communities",
-    },
-    {
-      img: "https://i.insider.com/5cbf3c8fb14bf426443fd865?width=700",
-      cap: "Planning for the future",
-    },
-  ];
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -76,7 +58,7 @@ function Home1({ proj }) {
         {/* 'url("https://img.freepik.com/free-photo/geometric-facades-residential-building_294094-27.jpg?w=2000")' */}
 
         <Fade arrows={false} duration={3000}>
-          {imgs.map((fadeImage, index) => (
+          {coverImage.map((fadeImage, index) => (
             <div className="each-fade" key={index}>
               <div
                 className="each-slide"
@@ -102,7 +84,13 @@ function Home1({ proj }) {
                       >
                         <span className="slide-tagline">{fadeImage.cap}</span>
 
-                        <span style={{ color: "#ff5e10" }}>.</span>
+                        <span
+                          style={{
+                            color: "#ff5e10",
+                          }}
+                        >
+                          .
+                        </span>
                       </h2>
                     </div>
                   </div>
@@ -123,7 +111,11 @@ function Home1({ proj }) {
                   <span className="sectionHeader">WHAT WE DO</span>
                   <hr />
                   <br />
-                  <h2 style={{ fontWeight: "bold" }}>
+                  <h2
+                    style={{
+                      fontWeight: "bold",
+                    }}
+                  >
                     Our <span className="secondary">biggest</span> prize is…
                   </h2>
                   <p>
@@ -133,7 +125,12 @@ function Home1({ proj }) {
                   <br />
                   <div className="row">
                     <div className="col">
-                      <Card sx={{ height: "300px" }} variant="outlined">
+                      <Card
+                        sx={{
+                          height: "300px",
+                        }}
+                        variant="outlined"
+                      >
                         <CardMedia
                           component="img"
                           height="200"
@@ -152,7 +149,12 @@ function Home1({ proj }) {
                       </Card>
                     </div>
                     <div className="col">
-                      <Card sx={{ height: "300px" }} variant="outlined">
+                      <Card
+                        sx={{
+                          height: "300px",
+                        }}
+                        variant="outlined"
+                      >
                         <CardMedia
                           component="img"
                           height="200"
@@ -173,7 +175,12 @@ function Home1({ proj }) {
                   </div>
                   <div className="row my-4">
                     <div className="col">
-                      <Card sx={{ height: "300px" }} variant="outlined">
+                      <Card
+                        sx={{
+                          height: "300px",
+                        }}
+                        variant="outlined"
+                      >
                         <CardMedia
                           component="img"
                           height="200"
@@ -192,7 +199,12 @@ function Home1({ proj }) {
                       </Card>
                     </div>
                     <div className="col">
-                      <Card sx={{ height: "300px" }} variant="outlined">
+                      <Card
+                        sx={{
+                          height: "300px",
+                        }}
+                        variant="outlined"
+                      >
                         <CardMedia
                           component="img"
                           height="200"
@@ -240,7 +252,11 @@ function Home1({ proj }) {
                   <span className="sectionHeader">WHAT'S GOING ON</span>
                   <hr />
                   <br />
-                  <h2 style={{ fontWeight: "bold" }}>
+                  <h2
+                    style={{
+                      fontWeight: "bold",
+                    }}
+                  >
                     We are
                     <span className="secondary"> proud</span> of…
                   </h2>
@@ -337,35 +353,63 @@ function Home1({ proj }) {
                       <>
                         {clistate === 1 ? (
                           <div className="clititle">
-                            <h1 style={{ fontSize: "55px" }}>Google</h1>
+                            <h1
+                              style={{
+                                fontSize: "55px",
+                              }}
+                            >
+                              Google
+                            </h1>
                             <small>
                               This is the worlds one of the biggest giants.
                             </small>
                           </div>
                         ) : clistate === 2 ? (
                           <div className="clititle">
-                            <h1 style={{ fontSize: "55px" }}>Twitter</h1>
+                            <h1
+                              style={{
+                                fontSize: "55px",
+                              }}
+                            >
+                              Twitter
+                            </h1>
                             <small>
                               This is the worlds one of the biggest giants.
                             </small>
                           </div>
                         ) : clistate === 3 ? (
                           <div className="clititle">
-                            <h1 style={{ fontSize: "55px" }}>Instagram</h1>
+                            <h1
+                              style={{
+                                fontSize: "55px",
+                              }}
+                            >
+                              Instagram
+                            </h1>
                             <small>
                               This is the worlds one of the biggest giants.
                             </small>
                           </div>
                         ) : clistate === 4 ? (
                           <div className="clititle">
-                            <h1 style={{ fontSize: "55px" }}>Facebook</h1>
+                            <h1
+                              style={{
+                                fontSize: "55px",
+                              }}
+                            >
+                              Facebook
+                            </h1>
                             <small>
                               This is the worlds one of the biggest giants.
                             </small>
                           </div>
                         ) : (
                           <div>
-                            <h1 style={{ fontSize: "55px" }}>
+                            <h1
+                              style={{
+                                fontSize: "55px",
+                              }}
+                            >
                               We Proudly Serve
                             </h1>
                           </div>
