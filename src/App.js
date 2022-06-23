@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // import CommingSoon from "./components/commingsoon";
-// import Home from "./components/home";
+import Home1 from "./components/home";
 import About from "./components/about";
 import News from "./components/news";
 import Career from "./components/career";
@@ -19,8 +19,8 @@ import AdminProjEdit from "./components/admin/projedit";
 import Timeline from "./components/timeline";
 import { db } from "./firebase-config";
 import { collection, getDocs } from "firebase/firestore";
-import Home1 from "./components/home1";
-// import ReactLoading from "react-loading";
+// import Home1 from "./components/home1";
+import ReactLoading from "react-loading";
 
 function App() {
   const [news, setNews] = useState([]);
@@ -28,7 +28,7 @@ function App() {
   const [article, setarticle] = useState([]);
   const [videos, setvideos] = useState([]);
   const [coverImage, setcoverImage] = useState([]);
-  const [setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
   // const [clients, setclients] = useState([]);
 
   const dataCollectionRef1 = collection(db, "news");
@@ -88,83 +88,81 @@ function App() {
 
   return (
     <div className="App">
-      {/* {loading ? (
-        <>
-          <p>Loading</p>
-        </>
+      {loading ? (
+        <ReactLoading
+          className="loading"
+          type="bubbles"
+          color="#ff5e10"
+          height={400}
+          width={100}
+        />
       ) : (
-        // <ReactLoading
-        //   className="loading"
-        //   type="bubbles"
-        //   color="#ff5e10"
-        //   height={400}
-        //   width={100}
-        // />
-       
-      )} */}
-
-      <BrowserRouter>
-        <Routes>
-          {/* <Route path="/" element={<CommingSoon></CommingSoon>} /> */}
-          <Route path="/timeline" element={<Timeline></Timeline>} />
-          <Route
-            path="/"
-            element={<Home1 proj={projects} coverImage={coverImage}></Home1>}
-          />
-          <Route path="/1" element={<Home1 proj={projects}></Home1>} />
-          <Route path="/about" element={<About></About>} />
-          <Route
-            path="/news"
-            element={<News new={news} arti={article} videos={videos}></News>}
-          />
-          <Route path="/proj" element={<Projects proj={projects}></Projects>} />
-          <Route path="/career" element={<Career></Career>} />
-          <Route
-            path="/admin"
-            element={
-              <Admin
-                new={news}
-                arti={article}
-                videos={videos}
-                proj={projects}
-                // cli={clients}
-              ></Admin>
-            }
-          />
-          {news.map((obj) => {
-            return (
-              <Route
-                path={`/news/${obj.id}`}
-                element={<NewsView news={obj}></NewsView>}
-              />
-            );
-          })}
-          {article.map((obj) => {
-            return (
-              <Route
-                path={`/news/${obj.id}`}
-                element={<ArticleView article={obj}></ArticleView>}
-              />
-            );
-          })}
-          {projects.map((obj) => {
-            return (
-              <Route
-                path={`/projects/${obj.id}`}
-                element={<ProjectView project={obj}></ProjectView>}
-              />
-            );
-          })}
-          {projects.map((obj) => {
-            return (
-              <Route
-                path={`/projectedit/${obj.id}`}
-                element={<AdminProjEdit project={obj}></AdminProjEdit>}
-              />
-            );
-          })}
-        </Routes>
-      </BrowserRouter>
+        <BrowserRouter>
+          <Routes>
+            {/* <Route path="/" element={<CommingSoon></CommingSoon>} /> */}
+            <Route path="/timeline" element={<Timeline></Timeline>} />
+            <Route
+              path="/"
+              element={<Home1 proj={projects} coverImage={coverImage}></Home1>}
+            />
+            <Route path="/1" element={<Home1 proj={projects}></Home1>} />
+            <Route path="/about" element={<About></About>} />
+            <Route
+              path="/news"
+              element={<News new={news} arti={article} videos={videos}></News>}
+            />
+            <Route
+              path="/proj"
+              element={<Projects proj={projects}></Projects>}
+            />
+            <Route path="/career" element={<Career></Career>} />
+            <Route
+              path="/admin"
+              element={
+                <Admin
+                  new={news}
+                  arti={article}
+                  videos={videos}
+                  proj={projects}
+                  // cli={clients}
+                ></Admin>
+              }
+            />
+            {news.map((obj) => {
+              return (
+                <Route
+                  path={`/news/${obj.id}`}
+                  element={<NewsView news={obj}></NewsView>}
+                />
+              );
+            })}
+            {article.map((obj) => {
+              return (
+                <Route
+                  path={`/news/${obj.id}`}
+                  element={<ArticleView article={obj}></ArticleView>}
+                />
+              );
+            })}
+            {projects.map((obj) => {
+              return (
+                <Route
+                  path={`/projects/${obj.id}`}
+                  element={<ProjectView project={obj}></ProjectView>}
+                />
+              );
+            })}
+            {projects.map((obj) => {
+              return (
+                <Route
+                  path={`/projectedit/${obj.id}`}
+                  element={<AdminProjEdit project={obj}></AdminProjEdit>}
+                />
+              );
+            })}
+          </Routes>
+        </BrowserRouter>
+      )}
     </div>
   );
 }
