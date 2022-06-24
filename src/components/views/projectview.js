@@ -45,7 +45,7 @@ function ProjectView({ project }) {
   return (
     <div className="Services">
       {/* navigation  */}
-      <Topnavigation project="true"></Topnavigation>
+      <Topnavigation proj="true"></Topnavigation>
       <br />
       <br />
       <div className="container">

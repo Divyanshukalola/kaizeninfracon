@@ -15,7 +15,7 @@ function SectionProjectView({ project, type }) {
   return (
     <div className="Services">
       {/* navigation  */}
-      <Topnavigation project="true"></Topnavigation>
+      <Topnavigation proj="true"></Topnavigation>
       <br />
       <br />
       <div
