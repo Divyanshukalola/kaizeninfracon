@@ -23,6 +23,7 @@ import Home1 from "./components/home1";
 import ReactLoading from "react-loading";
 import People from "./components/people";
 import AdminLogin from "./components/admin/login";
+import SectionProjectView from "./components/views/sectionProjectView";
 
 function App() {
   const [news, setNews] = useState([]);
@@ -32,6 +33,7 @@ function App() {
   const [coverImage, setcoverImage] = useState([]);
   const [loading, setLoading] = useState(true);
   const [state, setState] = useState(false);
+  const types = [1, 2, 3, 4, 5, 6];
 
   // const [clients, setclients] = useState([]);
 
@@ -127,6 +129,19 @@ function App() {
             />
             <Route path="/career" element={<Career></Career>} />
 
+            {types.map((obj) => {
+              return (
+                <Route
+                  path={`/sectionProjectView/${obj}`}
+                  element={
+                    <SectionProjectView
+                      type={obj}
+                      project={projects}
+                    ></SectionProjectView>
+                  }
+                />
+              );
+            })}
             <Route
               path="/admin"
               element={

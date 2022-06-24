@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 
 import Footer from "./footer";
+import { useNavigate } from "react-router-dom";
 
 import Topnavigation from "./nav";
 
 function About() {
+  const navigate = useNavigate();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -114,7 +116,7 @@ function About() {
         <div className="row" style={{ width: "101%" }}>
           <div className="col text-center my-5">
             <img
-              src="https://www.navedzubairi.com/wp-content/uploads/2018/10/corporate-building-760x400.jpg"
+              src="https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/images%2Ftype1.jpeg?alt=media&token=2a0c783e-f16d-4046-9633-cc336077924f"
               alt="about"
               height={"300px"}
               className="my-4"
@@ -149,7 +151,14 @@ function About() {
                 Lorem Ipsum.
               </p>
 
-              <button className="mx-5 jobbutton">Learn More</button>
+              <button
+                className="mx-5 jobbutton"
+                onClick={() => {
+                  navigate("/sectionProjectView/1");
+                }}
+              >
+                Learn More
+              </button>
             </div>
           </div>
         </div>
@@ -185,12 +194,19 @@ function About() {
                 Lorem Ipsum.
               </p>
 
-              <button className="mx-5 jobbutton">Learn More</button>
+              <button
+                className="mx-5 jobbutton"
+                onClick={() => {
+                  navigate("/sectionProjectView/2");
+                }}
+              >
+                Learn More
+              </button>
             </div>
           </div>
           <div className="col text-center my-5">
             <img
-              src="https://media.istockphoto.com/photos/europe-modern-complex-of-residential-buildings-picture-id1165384568?k=20&m=1165384568&s=612x612&w=0&h=CAnAr3uJtmkr0IQ2EPgm0IBoo8oCm-FEYEtyor8X_9I="
+              src="https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/images%2Ftype2.jpeg?alt=media&token=55c77853-5d41-45ce-a999-4804c15c7592"
               alt="about"
               height={"300px"}
               className="my-4"
@@ -202,7 +218,7 @@ function About() {
         <div className="row " style={{ width: "101%" }}>
           <div className="col text-center my-5">
             <img
-              src="https://cdn.wallpapersafari.com/31/16/U0HoD2.jpg"
+              src="https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/images%2Ftype3.webp?alt=media&token=587aeb75-070a-427f-bfc7-33f741f2c415"
               alt="about"
               height={"300px"}
               className="my-4"
@@ -237,7 +253,14 @@ function About() {
                 Lorem Ipsum.
               </p>
 
-              <button className="mx-5 jobbutton">Learn More</button>
+              <button
+                className="mx-5 jobbutton"
+                onClick={() => {
+                  navigate("/sectionProjectView/3");
+                }}
+              >
+                Learn More
+              </button>
             </div>
           </div>
         </div>
@@ -273,12 +296,19 @@ function About() {
                 Lorem Ipsum.
               </p>
 
-              <button className="mx-5 jobbutton">Learn More</button>
+              <button
+                className="mx-5 jobbutton"
+                onClick={() => {
+                  navigate("/sectionProjectView/4");
+                }}
+              >
+                Learn More
+              </button>
             </div>
           </div>
           <div className="col text-center my-5">
             <img
-              src="https://media.istockphoto.com/photos/building-with-large-h-sign-for-hospital-picture-id1130389312?b=1&k=20&m=1130389312&s=170667a&w=0&h=l4_sJR50L_2MNBgd0bUmVgVhTi2fZLRZh8S48wScAfo="
+              src="https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/images%2Ftype4.jpeg?alt=media&token=ecb512e7-774c-41da-95c3-60db258d1aa8"
               alt="about"
               height={"330px"}
               className="my-4"
@@ -290,7 +320,7 @@ function About() {
         <div className="row " style={{ width: "101%" }}>
           <div className="col text-center my-5">
             <img
-              src="https://www.re-thinkingthefuture.com/wp-content/uploads/2021/02/A3239-10-Impressive-Government-buildings-Image-28.jpg"
+              src="https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/images%2Ftype5.jpeg?alt=media&token=262ab589-23a8-4834-bb4c-fa29ae7e28c7"
               alt="about"
               height={"360px"}
               className="my-4"
@@ -325,7 +355,14 @@ function About() {
                 Lorem Ipsum.
               </p>
 
-              <button className="mx-5 jobbutton">Learn More</button>
+              <button
+                className="mx-5 jobbutton"
+                onClick={() => {
+                  navigate("/sectionProjectView/5");
+                }}
+              >
+                Learn More
+              </button>
             </div>
           </div>
         </div>
@@ -361,12 +398,19 @@ function About() {
                 Lorem Ipsum.
               </p>
 
-              <button className="mx-5 jobbutton">Learn More</button>
+              <button
+                className="mx-5 jobbutton"
+                onClick={() => {
+                  navigate("/sectionProjectView/6");
+                }}
+              >
+                Learn More
+              </button>
             </div>
           </div>
           <div className="col text-center my-5">
             <img
-              src="https://images.pexels.com/photos/1662159/pexels-photo-1662159.jpeg?auto=compress&cs=tinysrgb&h=566.525&fit=crop&w=633.175&dpr=1"
+              src="https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/images%2Ftype6.jpeg?alt=media&token=a3b59769-a0c4-4b89-8951-31d61d032ef0"
               alt="about"
               height={"330px"}
               className="my-4"
