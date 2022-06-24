@@ -850,10 +850,10 @@ function AdminProj(props) {
                                     <h6>{time[1].tag}</h6>
                                     <h6>
                                       Date:{" "}
-                                      {/* {new Date(
+                                      {new Date(
                                         time[1].date.seconds * 1000
-                                      ).toLocaleDateString()} */}
-                                      {console.log(obj1)}
+                                      ).toLocaleDateString()}
+                                      {/* {console.log(obj1)} */}
                                     </h6>
                                   </div>
                                 );
