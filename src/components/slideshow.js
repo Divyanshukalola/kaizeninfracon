@@ -8,7 +8,11 @@ function SlideSHow(props) {
   const imgs = props.data;
   console.log(props.data);
   useEffect(() => {
-    window.scrollTo(0, 0);
+      window.scrollTo(0, 0);
+      if (ref.current !== undefined) {
+        ref.current.style.backgroundImage = `url("${imgs[0].img}")`;
+        ref1.current.innerText = imgs[0].cap;
+      }
   }, []);
 
   let slideIndex = 0;
