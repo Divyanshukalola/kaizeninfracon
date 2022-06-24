@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import Footer from "./footer";
 
 import Topnavigation from "./nav";
-import { useNavigate } from "react-router-dom";
+
 
 function People() {
   useEffect(() => {
