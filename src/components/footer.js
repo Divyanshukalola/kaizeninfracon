@@ -1,6 +1,7 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="row ">
@@ -11,11 +12,42 @@ const Footer = () => {
         <div className="col-2 border-right">
           <div className="row">
             <div className="col text-right">
-              <button className="footbutton">About </button>
+              <button
+                className="footbutton"
+                onClick={() => {
+                  navigate("/about");
+                }}
+              >
+                About{" "}
+              </button>
               <br />
-              <button className="footbutton">News </button> <br />
-              <button className="footbutton">Over Events </button> <br />
+              <button
+                className="footbutton"
+                onClick={() => {
+                  navigate("/news");
+                }}
+              >
+                News{" "}
+              </button>{" "}
+              <br />
+              <button
+                className="footbutton"
+                onClick={() => {
+                  navigate("/news");
+                }}
+              >
+                Over Events{" "}
+              </button>{" "}
+              <br />
               <button className="footbutton">Contact us </button>
+              <button
+                className="footbutton"
+                onClick={() => {
+                  navigate("/admin");
+                }}
+              >
+                Admin{" "}
+              </button>
             </div>
           </div>
         </div>
