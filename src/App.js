@@ -22,7 +22,7 @@ import { collection, getDocs } from "firebase/firestore";
 import Home1 from "./components/home1";
 import ReactLoading from "react-loading";
 
-import SlideSHow from "./components/slideshow";
+
 
 function App() {
   const [news, setNews] = useState([]);
