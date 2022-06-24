@@ -67,6 +67,7 @@ function About() {
                 borderColor: "#ff5e10",
                 borderWidth: "3px",
               }}
+              alt="img"
             />
 
             <br />
@@ -89,6 +90,7 @@ function About() {
                 borderColor: "#ff5e10",
                 borderWidth: "3px",
               }}
+              alt="img"
             />
 
             <br />
