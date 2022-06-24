@@ -29,7 +29,7 @@ function About() {
         className="bg-light"
         style={{
           background:
-            'linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("https://media.istockphoto.com/photos/engineer-meeting-for-an-architectural-project-working-with-partner-picture-id1330168130?b=1&k=20&m=1330168130&s=170667a&w=0&h=vM84Dd1d3N4hhUDvf2mcOGQGaK_vBhljyQrsp17jOoE="),no-repeat',
+            'linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/images%2Faboutus.webp?alt=media&token=dcb021c7-20bd-43f7-aa2c-b586ff0ed303"),no-repeat',
 
           height: "500px",
           backgroundSize: "100%",

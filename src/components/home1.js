@@ -3,12 +3,6 @@ import React, { useEffect, useState } from "react";
 import Footer from "./footer";
 
 
-
-// import Button from "@mui/material/Button";
-// import { styled } from "@mui/material/styles";
-// import Slide from "@mui/material/Slide";
-// import Fade from "@mui/material/Fade";
-
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";

@@ -91,7 +91,17 @@ function Projects({ proj }) {
       {/* navigation  */}
       <Topnavigation proj="true"></Topnavigation>
 
-      <div className="bg-light projects">
+      <div
+        className="bg-light"
+        style={{
+          background:
+            'linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/images%2Fprojects.jpeg?alt=media&token=6c75e8c5-cdc2-4933-87b2-388bbf3c3828"),no-repeat',
+
+          height: "500px",
+          backgroundSize: "100%",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <div className="row text-center">
           <div className="col">
             <h1
