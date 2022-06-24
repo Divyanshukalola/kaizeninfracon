@@ -194,7 +194,7 @@ function ProjectView({ project }) {
                             </div>
                           ) : (
                             <div className="row bg-white">
-                              <div className="col-3 my-5 mx-3">
+                              <div className="col-3 my-5 mx-3 text-center">
                                 <h1
                                   style={{
                                     color: "lightgray",
