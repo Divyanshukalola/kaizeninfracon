@@ -21,8 +21,7 @@ import { db } from "./firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 import Home1 from "./components/home1";
 import ReactLoading from "react-loading";
-
-
+import People from "./components/people";
 
 function App() {
   const [news, setNews] = useState([]);
@@ -107,10 +106,7 @@ function App() {
               path="/"
               element={<Home1 proj={projects} coverImage={coverImage}></Home1>}
             />
-            <Route
-              path="/1"
-              element={<Home proj={projects} coverImage={coverImage}></Home>}
-            />
+            <Route path="/people" element={<People></People>} />
 
             <Route path="/about" element={<About></About>} />
             <Route

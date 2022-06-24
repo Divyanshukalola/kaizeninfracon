@@ -129,7 +129,6 @@ function Projects({ proj }) {
               <Tabs
                 value={value}
                 onChange={handleChange}
-                aria-label="basic tabs example"
                 textColor="#ff5e10"
                 indicatorColor="secondary"
                 centered
@@ -139,13 +138,6 @@ function Projects({ proj }) {
               </Tabs>
             </Box>
             <TabPanel value={value} index={0}>
-              {/* all projects  */}
-              <div className="mt-4 mx-5 text-center">
-                {" "}
-                <span className="sectionHeader">ALL PROJECTS</span>
-                <hr />
-                <br />
-              </div>
               {/* commercial  */}
               <div className="row followMeBar">
                 <div className="col ">
@@ -163,7 +155,12 @@ function Projects({ proj }) {
                       .map((obj1) => {
                         return (
                           <>
-                            <div className="col-6 projectRow d-flex justify-content-center">
+                            <div
+                              className="col-6 projectRow d-flex justify-content-center"
+                              onClick={() => {
+                                navigate(`/projects/${obj1.id}`);
+                              }}
+                            >
                               <img
                                 src={obj1.img}
                                 alt=""
@@ -208,7 +205,12 @@ function Projects({ proj }) {
                       .map((obj1) => {
                         return (
                           <>
-                            <div className="col-6 projectRow d-flex justify-content-center">
+                            <div
+                              className="col-6 projectRow d-flex justify-content-center"
+                              onClick={() => {
+                                navigate(`/projects/${obj1.id}`);
+                              }}
+                            >
                               <img
                                 src={obj1.img}
                                 alt=""
@@ -254,7 +256,12 @@ function Projects({ proj }) {
                       .map((obj1) => {
                         return (
                           <>
-                            <div className="col-6 projectRow d-flex justify-content-center">
+                            <div
+                              className="col-6 projectRow d-flex justify-content-center"
+                              onClick={() => {
+                                navigate(`/projects/${obj1.id}`);
+                              }}
+                            >
                               <img
                                 src={obj1.img}
                                 alt=""
@@ -301,7 +308,12 @@ function Projects({ proj }) {
                       .map((obj1) => {
                         return (
                           <>
-                            <div className="col-6 projectRow d-flex justify-content-center">
+                            <div
+                              className="col-6 projectRow d-flex justify-content-center"
+                              onClick={() => {
+                                navigate(`/projects/${obj1.id}`);
+                              }}
+                            >
                               <img
                                 src={obj1.img}
                                 alt=""
@@ -348,7 +360,12 @@ function Projects({ proj }) {
                       .map((obj1) => {
                         return (
                           <>
-                            <div className="col-6 projectRow d-flex justify-content-center">
+                            <div
+                              className="col-6 projectRow d-flex justify-content-center"
+                              onClick={() => {
+                                navigate(`/projects/${obj1.id}`);
+                              }}
+                            >
                               <img
                                 src={obj1.img}
                                 alt=""
@@ -393,7 +410,12 @@ function Projects({ proj }) {
                       .map((obj1) => {
                         return (
                           <>
-                            <div className="col-6 projectRow d-flex justify-content-center">
+                            <div
+                              className="col-6 projectRow d-flex justify-content-center"
+                              onClick={() => {
+                                navigate(`/projects/${obj1.id}`);
+                              }}
+                            >
                               <img
                                 src={obj1.img}
                                 alt=""

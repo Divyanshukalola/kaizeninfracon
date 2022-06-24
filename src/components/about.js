@@ -1,20 +1,8 @@
 import React, { useEffect } from "react";
 
 import Footer from "./footer";
-import director1 from "./../static/img/hardik.png";
-import director2 from "./../static/img/bhovan.png";
-import Topnavigation from "./nav";
-// import man from "./../static/img/man.png";
-// import building from "./../static/img/buildings.png";
-// import Button from "@mui/material/Button";
-// import { styled } from "@mui/material/styles";
-// import Slide from "@mui/material/Slide";
-// import Fade from "@mui/material/Fade";
 
-// import Card from "@mui/material/Card";
-// import CardContent from "@mui/material/CardContent";
-// import CardMedia from "@mui/material/CardMedia";
-// import { CardActionArea } from "@mui/material";
+import Topnavigation from "./nav";
 
 function About() {
   useEffect(() => {
@@ -66,46 +54,51 @@ function About() {
           <span className="sectionHeader">PROMOTERS AND PARTNERS</span>
           <hr />
         </div>
-        <div className="row">
-          <div className="col ">
-            <div className="row mx-5 my-5">
-              <div className="col-5">
-                {" "}
-                <img src={director1} alt="" height={"200px"} width={"170px"} />
-              </div>
-              <div className="col">
-                <h4>Mr. Hardik Rangani </h4>
-                <small>
-                  <li>Managing Partner of Kaizen Infracon</li>
-                  <li>
-                    Diploma in Civil Engineer and Master in Business
-                    Administration
-                  </li>
-                  <li>Experience of 7 to 8 Year in Construction Activities</li>
-                  <li>Promoter of Iron Triangle Limited</li>
-                </small>
-              </div>
-            </div>
+
+        <div className="row justify-content-center containter mr-5 my-5">
+          <div className="col-3 text-center ">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/images%2Fpeople%2Fhardik.png?alt=media&token=6cb96d94-54a3-4f3d-9f75-b561b7d65bba"
+              style={{
+                height: "210px",
+                width: "210px",
+                borderStyle: "solid",
+                borderRadius: "50%",
+                borderColor: "#ff5e10",
+                borderWidth: "3px",
+              }}
+            />
+
+            <br />
+            <br />
+            <h5 style={{ fontWeight: "600", color: "grey" }}>
+              Mr. Hardik Rangani
+            </h5>
+            <small style={{ color: "grey" }}>
+              Managing Partner of Kaizen Infracon
+            </small>
           </div>
-          <div className="col">
-            <div className="row mx-5 my-5">
-              <div className="col-5">
-                {" "}
-                <img src={director2} alt="" height={"200px"} width={"190px"} />
-              </div>
-              <div className="col">
-                <h4>Mr. Bhovan Rangani </h4>
-                <small>
-                  <li>Founder Partner of Kaizen Infracon</li>
-                  <li>Graduation in B.A.</li>
-                  <li>Experience of 35 Year in Construction Activities</li>
-                  <li>
-                    Whole Time Director and Founder Promoter of Iron Triangle
-                    Limited
-                  </li>
-                </small>
-              </div>
-            </div>{" "}
+          <div className="col-3 text-center ">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/images%2Fpeople%2FBhovan.png?alt=media&token=d2741d8d-9d62-40d8-9bed-a3d41e255b0d"
+              style={{
+                height: "210px",
+                width: "210px",
+                borderStyle: "solid",
+                borderRadius: "50%",
+                borderColor: "#ff5e10",
+                borderWidth: "3px",
+              }}
+            />
+
+            <br />
+            <br />
+            <h5 style={{ fontWeight: "600", color: "grey" }}>
+              Mr. Bhovan Rangani
+            </h5>
+            <small style={{ color: "grey" }}>
+              Founder Partner of Kaizen Infracon
+            </small>
           </div>
         </div>
       </div>

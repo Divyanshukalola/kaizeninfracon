@@ -12,6 +12,9 @@ const Nav = (props) => {
   function home() {
     navigate("/");
   }
+  function people() {
+    navigate("/people");
+  }
   function about() {
     navigate("/about");
   }
@@ -25,251 +28,172 @@ const Nav = (props) => {
     navigate("/career");
   }
   return (
-    <>
-      {/* navigation  */}{" "}
-      {/* <div className="row mx-5 my-3 " style={{ zIndex: "1" }}>
-         <div className="col-7">
-           {" "}
-           <div className="row">
-             <div className="col">
-               <button
-                 style={{
-                   border: "transparent",
-                   color: "#1c3e44",
-                   background: "transparent",
-                   cursor: "pointer",
-                 }}
-               >
-                 <BsFillTelephoneFill
-                   className="mx-2"
-                   style={{ fontSize: "14px" }}
-                 ></BsFillTelephoneFill>{" "}
-                 +91 281 2962748
-               </button>
-             </div>
-             <div className="col-5">
-               <button
-                 style={{
-                   border: "transparent",
-                   color: "#1c3e44",
-                   background: "transparent",
-                   cursor: "pointer",
-                 }}
-               >
-                 <BsFillEnvelopeFill
-                   className="mx-2"
-                   style={{ fontSize: "14px" }}
-                 ></BsFillEnvelopeFill>
-                 kaizeninfracon18617@gmail.com
-               </button>
-             </div>
-             <div className="col">
-               <button
-                 style={{
-                   border: "transparent",
-                   color: "#1c3e44",
-                   background: "transparent",
-                   cursor: "pointer",
-                 }}
-               >
-                 {" "}
-                 <BsFillClockFill
-                   className="mx-2"
-                   style={{ fontSize: "14px" }}
-                 ></BsFillClockFill>
-                 SUN-MON 9:00 AM
-               </button>
-             </div>
-           </div>
-         </div>
-         <div className="col">
-           <div className="row" style={{ float: "right" }}>
-             <div className="col-1">
-               <button
-                 style={{
-                   border: "transparent",
-                   color: "#1c3e44",
-                   background: "transparent",
-                   cursor: "pointer",
-                 }}
-               >
-                 <BsFacebook style={{ fontSize: "14px" }}></BsFacebook>{" "}
-               </button>
-             </div>
-             <div className="col-1">
-               <button
-                 style={{
-                   border: "transparent",
-                   color: "#1c3e44",
-                   background: "transparent",
-                   cursor: "pointer",
-                 }}
-               >
-                 <BsTwitter style={{ fontSize: "14px" }}></BsTwitter>
-               </button>
-             </div>
-             <div className="col-1">
-               <button
-                 style={{
-                   border: "transparent",
-                   color: "#1c3e44",
-                   background: "transparent",
-                   cursor: "pointer",
-                 }}
-               >
-                 <BsLinkedin style={{ fontSize: "14px" }}></BsLinkedin>
-               </button>
-             </div>
-           </div>
-         </div>
-       </div>
-       <hr style={{ marginBottom: "0px", zIndex: "1" }} /> */}
-      <div className="row sticky-top bg-white" style={{ zIndex: "1" }}>
-        <div className="col my-3 mx-5">
-          {/* <img src="" alt="" /> */}
-          <button
-            style={{
-              border: "transparent",
-              color: "#1c3e44",
-              background: "transparent",
-            }}
-            className="mx-5"
-          >
-            <img src={mainlogo} alt="mainlogo" height={"50px"} />
-          </button>
-        </div>
-        <div className="col-7 my-3 mx-5">
-          <div className="row mx-3 mt-3 text-center" style={{ float: "right" }}>
-            <div className="col ">
-              <button
-                style={{
-                  border: "transparent",
-                  color: "#1c3e44",
-                  background: "transparent",
-                  cursor: "pointer",
-                }}
-                onClick={home}
+    <div className="row sticky-top bg-white border" style={{ zIndex: "9999" }}>
+      <div className="col-6 my-3">
+        <button
+          style={{
+            border: "transparent",
+            color: "#1c3e44",
+            background: "transparent",
+          }}
+          className="ml-5"
+        >
+          <img src={mainlogo} alt="mainlogo" height={"50px"} />
+        </button>
+      </div>
+      <div className="col-6 my-3 ">
+        <div className="row mt-3 text-right ">
+          <div className="col  ">
+            <button
+              style={{
+                border: "transparent",
+                color: "#1c3e44",
+                background: "transparent",
+                cursor: "pointer",
+              }}
+              onClick={home}
+            >
+              <span
+                className={
+                  props.home
+                    ? "hoverNavItem hoverNavItemActive"
+                    : "hoverNavItem"
+                }
               >
-                <span
-                  className={
-                    props.home
-                      ? "hoverNavItem hoverNavItemActive"
-                      : "hoverNavItem"
-                  }
-                >
-                  Home
-                </span>
-              </button>
-            </div>
-            <div className="col">
-              <button
-                style={{
-                  border: "transparent",
-                  color: "#1c3e44",
-                  background: "transparent",
-                  cursor: "pointer",
-                }}
-                onClick={about}
-              >
-                <span
-                  className={
-                    props.about
-                      ? "hoverNavItem hoverNavItemActive"
-                      : "hoverNavItem"
-                  }
-                >
-                  About
-                </span>
-              </button>
-            </div>
+                Home
+              </span>
+            </button>
+          </div>
 
-            <div className="col">
-              <button
-                style={{
-                  border: "transparent",
-                  color: "#1c3e44",
-                  background: "transparent",
-                  cursor: "pointer",
-                }}
-                onClick={proj}
+          <div className="col ">
+            <button
+              style={{
+                border: "transparent",
+                color: "#1c3e44",
+                background: "transparent",
+                cursor: "pointer",
+              }}
+              onClick={about}
+            >
+              <span
+                className={
+                  props.about
+                    ? "hoverNavItem hoverNavItemActive"
+                    : "hoverNavItem"
+                }
               >
-                <span
-                  className={
-                    props.proj
-                      ? "hoverNavItem hoverNavItemActive"
-                      : "hoverNavItem"
-                  }
-                >
-                  Project
-                </span>
-              </button>
-            </div>
-            <div className="col">
-              <button
-                style={{
-                  border: "transparent",
-                  color: "#1c3e44",
-                  background: "transparent",
-                  cursor: "pointer",
-                }}
-                onClick={news}
+                About
+              </span>
+            </button>
+          </div>
+          <div className="col  ">
+            <button
+              style={{
+                border: "transparent",
+                color: "#1c3e44",
+                background: "transparent",
+                cursor: "pointer",
+              }}
+              onClick={people}
+            >
+              <span
+                className={
+                  props.team
+                    ? "hoverNavItem hoverNavItemActive"
+                    : "hoverNavItem"
+                }
               >
-                <span
-                  className={
-                    props.news
-                      ? "hoverNavItem hoverNavItemActive"
-                      : "hoverNavItem"
-                  }
-                >
-                  News
-                </span>
-              </button>
-            </div>
-            <div className="col">
-              <button
-                style={{
-                  border: "transparent",
-                  color: "#1c3e44",
-                  background: "transparent",
-                  cursor: "pointer",
-                }}
-                onClick={career}
+                Team
+              </span>
+            </button>
+          </div>
+
+          <div className="col ">
+            <button
+              style={{
+                border: "transparent",
+                color: "#1c3e44",
+                background: "transparent",
+                cursor: "pointer",
+              }}
+              onClick={proj}
+            >
+              <span
+                className={
+                  props.proj
+                    ? "hoverNavItem hoverNavItemActive"
+                    : "hoverNavItem"
+                }
               >
-                <span
-                  className={
-                    props.career
-                      ? "hoverNavItem hoverNavItemActive"
-                      : "hoverNavItem"
-                  }
-                >
-                  Career
-                </span>
-              </button>
-            </div>
-            <div className="col ">
-              <button
-                style={{
-                  border: "transparent",
-                  color: "#1c3e44",
-                  background: "transparent",
-                  cursor: "pointer",
-                }}
+                Project
+              </span>
+            </button>
+          </div>
+          <div className="col ">
+            <button
+              style={{
+                border: "transparent",
+                color: "#1c3e44",
+                background: "transparent",
+                cursor: "pointer",
+              }}
+              onClick={news}
+            >
+              <span
+                className={
+                  props.news
+                    ? "hoverNavItem hoverNavItemActive"
+                    : "hoverNavItem"
+                }
               >
-                <span
-                  className={
-                    props.contact
-                      ? "hoverNavItem hoverNavItemActive"
-                      : "hoverNavItem"
-                  }
-                >
-                  Contact
-                </span>
-              </button>
-            </div>
+                News
+              </span>
+            </button>
+          </div>
+          <div className="col ">
+            <button
+              style={{
+                border: "transparent",
+                color: "#1c3e44",
+                background: "transparent",
+                cursor: "pointer",
+              }}
+              onClick={career}
+            >
+              <span
+                className={
+                  props.career
+                    ? "hoverNavItem hoverNavItemActive"
+                    : "hoverNavItem"
+                }
+              >
+                Career
+              </span>
+            </button>
+          </div>
+          <div className="col ">
+            <button
+              style={{
+                border: "transparent",
+                color: "#1c3e44",
+                background: "transparent",
+                cursor: "pointer",
+              }}
+            >
+              <span
+                className={
+                  props.contact
+                    ? "hoverNavItem hoverNavItemActive"
+                    : "hoverNavItem"
+                }
+              >
+                Contact
+              </span>
+            </button>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
