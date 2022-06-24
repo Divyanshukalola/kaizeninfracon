@@ -22,6 +22,7 @@ import { collection, getDocs } from "firebase/firestore";
 import Home1 from "./components/home1";
 import ReactLoading from "react-loading";
 import People from "./components/people";
+import AdminLogin from "./components/admin/login";
 
 function App() {
   const [news, setNews] = useState([]);
@@ -30,6 +31,8 @@ function App() {
   const [videos, setvideos] = useState([]);
   const [coverImage, setcoverImage] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [state, setState] = useState(false);
+
   // const [clients, setclients] = useState([]);
 
   const dataCollectionRef1 = collection(db, "news");
@@ -41,51 +44,52 @@ function App() {
 
   // read data from firebase
   useEffect(() => {
-    // Update the document title using the browser API
-    const getData = async () => {
-      const New = await getDocs(dataCollectionRef1);
-      const proj = await getDocs(dataCollectionRef2);
-      const arti = await getDocs(dataCollectionRef3);
-      const video = await getDocs(dataCollectionRef4);
-      //  const client = await getDocs(dataCollectionRef5);
-      const coverimage = await getDocs(dataCollectionRef6);
+                    // Update the document title using the browser API
 
-      setNews(
-        New.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
-        }))
-      );
-      setprojects(
-        proj.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
-        }))
-      );
-      setarticle(
-        arti.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
-        }))
-      );
-      setvideos(
-        video.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
-        }))
-      );
-      setcoverImage(
-        coverimage.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
-        }))
-      );
+                    const getData = async () => {
+                      const New = await getDocs(dataCollectionRef1);
+                      const proj = await getDocs(dataCollectionRef2);
+                      const arti = await getDocs(dataCollectionRef3);
+                      const video = await getDocs(dataCollectionRef4);
+                      //  const client = await getDocs(dataCollectionRef5);
+                      const coverimage = await getDocs(dataCollectionRef6);
 
-      // setclients(client.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-      setLoading(false);
-    };
-    getData();
-  }, []);
+                      setNews(
+                        New.docs.map((doc) => ({
+                          ...doc.data(),
+                          id: doc.id,
+                        }))
+                      );
+                      setprojects(
+                        proj.docs.map((doc) => ({
+                          ...doc.data(),
+                          id: doc.id,
+                        }))
+                      );
+                      setarticle(
+                        arti.docs.map((doc) => ({
+                          ...doc.data(),
+                          id: doc.id,
+                        }))
+                      );
+                      setvideos(
+                        video.docs.map((doc) => ({
+                          ...doc.data(),
+                          id: doc.id,
+                        }))
+                      );
+                      setcoverImage(
+                        coverimage.docs.map((doc) => ({
+                          ...doc.data(),
+                          id: doc.id,
+                        }))
+                      );
+
+                      // setclients(client.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+                      setLoading(false);
+                    };
+                    getData();
+                  }, []);
 
   return (
     <div className="App">
@@ -110,6 +114,10 @@ function App() {
 
             <Route path="/about" element={<About></About>} />
             <Route
+              path="/login"
+              element={<AdminLogin setState={setState}></AdminLogin>}
+            />
+            <Route
               path="/news"
               element={<News new={news} arti={article} videos={videos}></News>}
             />
@@ -118,16 +126,23 @@ function App() {
               element={<Projects proj={projects}></Projects>}
             />
             <Route path="/career" element={<Career></Career>} />
+
             <Route
               path="/admin"
               element={
-                <Admin
-                  new={news}
-                  arti={article}
-                  videos={videos}
-                  proj={projects}
-                  // cli={clients}
-                ></Admin>
+                state ? (
+                  <Admin
+                    new={news}
+                    arti={article}
+                    videos={videos}
+                    proj={projects}
+                    state={state}
+
+                    // cli={clients}
+                  ></Admin>
+                ) : (
+                  <AdminLogin setState={setState}></AdminLogin>
+                )
               }
             />
             {news.map((obj) => {

@@ -4,6 +4,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import mainlogo from "./../static/img/logo2big.png";
+import { signOut } from "firebase/auth";
+import { auth } from "./../firebase-config";
 
 // import { IconName } from "react-icons/bs";
 
@@ -27,12 +29,17 @@ const Nav = (props) => {
   function career() {
     navigate("/career");
   }
+
+  async function logout() {
+    await signOut(auth);
+    navigate("/login");
+  }
   return (
     <div
       className="row sticky-top bg-white"
       style={{ zIndex: "9999", width: "101%" }}
     >
-      <div className="col-6 my-3 ">
+      <div className={props.logout ? "col-5 my-3 " : "col-6 my-3 "}>
         <button
           style={{
             border: "transparent",
@@ -194,6 +201,13 @@ const Nav = (props) => {
               </span>
             </button>
           </div>
+          {props.logout ? (
+            <div className="col">
+              <button className="btn btn-outline-danger" onClick={logout}>
+                <span>Logout</span>
+              </button>
+            </div>
+          ) : null}
         </div>
       </div>
     </div>

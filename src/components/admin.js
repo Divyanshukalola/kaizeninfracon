@@ -94,46 +94,66 @@ function Admin(props) {
     <div className="Services">
       {/* navigation  */}
 
-      <Topnavigation news="true"></Topnavigation>
+      <Topnavigation logout={true}></Topnavigation>
       <br />
-      <Box sx={{ width: "100%" }}>
-        <Box
-          sx={{
-            borderBottom: 1,
-            borderColor: "divider",
-          }}
-        >
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            aria-label="basic tabs example"
-            textColor="#ff5e10"
-            indicatorColor="secondary"
-            centered
+
+      <hr />
+      {props.state ? (
+        <Box sx={{ width: "100%" }}>
+          <Box
+            sx={{
+              borderBottom: 1,
+              borderColor: "divider",
+            }}
           >
-            <Tab label="Projects" {...a11yProps(0)} />
-            <Tab label="News" {...a11yProps(1)} />
-            <Tab label="Articles" {...a11yProps(2)} />
-            <Tab label="Videos" {...a11yProps(3)} />
-            {/* <Tab label="Clients" {...a11yProps(4)} /> */}
-          </Tabs>
-        </Box>
-        <TabPanel value={value} index={1}>
-          <AdminNews news={props.new} value={setValue}></AdminNews>
-        </TabPanel>
-        <TabPanel value={value} index={0}>
-          <AdminProj proj={props.proj} value={setValue}></AdminProj>
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-          <AdminArticle arti={props.arti} value={setValue}></AdminArticle>
-        </TabPanel>
-        <TabPanel value={value} index={3}>
-          <AdminVideos videos={props.videos}></AdminVideos>
-        </TabPanel>
-        {/* <TabPanel value={value} index={4}>
+            <Tabs
+              value={value}
+              onChange={handleChange}
+              aria-label="basic tabs example"
+              textColor="#ff5e10"
+              indicatorColor="secondary"
+              centered
+            >
+              <Tab label="Projects" {...a11yProps(0)} />
+              <Tab label="News" {...a11yProps(1)} />
+              <Tab label="Articles" {...a11yProps(2)} />
+              <Tab label="Videos" {...a11yProps(3)} />
+
+              {/* <Tab label="Clients" {...a11yProps(4)} /> */}
+            </Tabs>
+          </Box>
+          <TabPanel value={value} index={1}>
+            <AdminNews news={props.new} value={setValue}></AdminNews>
+          </TabPanel>
+          <TabPanel value={value} index={0}>
+            <AdminProj proj={props.proj} value={setValue}></AdminProj>
+          </TabPanel>
+          <TabPanel value={value} index={2}>
+            <AdminArticle arti={props.arti} value={setValue}></AdminArticle>
+          </TabPanel>
+          <TabPanel value={value} index={3}>
+            <AdminVideos videos={props.videos}></AdminVideos>
+          </TabPanel>
+
+          {/* <TabPanel value={value} index={4}>
           <AdminClients cli={props.cli}></AdminClients>
         </TabPanel> */}
-      </Box>
+        </Box>
+      ) : (
+        <>
+          <div className="row">
+            <div className="col text-center">
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/images%2Fnotauth.png?alt=media&token=75ab26d5-7091-4a36-97a6-9827e8dc1021"
+                alt=""
+              />
+              <p>
+                Please go to the <a href="/">home</a> page.
+              </p>
+            </div>
+          </div>
+        </>
+      )}
 
       {/* footer  */}
       <br />
