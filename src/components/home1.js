@@ -17,8 +17,9 @@ import Typography from "@mui/material/Typography";
 import CardActions from "@mui/material/CardActions";
 import { useNavigate } from "react-router-dom";
 
-import { Fade } from "react-slideshow-image";
-import "react-slideshow-image/dist/styles.css";
+
+
+import SlideSHow from "./slideshow";
 
 function Home1({ proj, coverImage }) {
   console.log(proj);
@@ -52,53 +53,11 @@ function Home1({ proj, coverImage }) {
   return (
     <div className="Home">
       {/* navigation  */}
-      {/* <Topnavigation home="true"></Topnavigation> */}
+
       <div>
         {/* hero  */}
-        {/* 'url("https://img.freepik.com/free-photo/geometric-facades-residential-building_294094-27.jpg?w=2000")' */}
 
-        <Fade arrows={false} duration={3000}>
-          {coverImage.map((fadeImage, index) => (
-            <div className="each-fade" key={index}>
-              <div
-                className="each-slide"
-                style={{
-                  backgroundImage: `url(${fadeImage.img})`,
-                  height: "800px",
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "100% 100%",
-                }}
-              >
-                {" "}
-                <Topnavigation home="true"></Topnavigation>
-                <span>
-                  {" "}
-                  <div className="row">
-                    <div className="col mx-5 text-left">
-                      <h2
-                        style={{
-                          marginTop: "35%",
-                          fontSize: "90px",
-                          textTransform: "uppercase",
-                        }}
-                      >
-                        <span className="slide-tagline">{fadeImage.cap}</span>
-
-                        <span
-                          style={{
-                            color: "#ff5e10",
-                          }}
-                        >
-                          .
-                        </span>
-                      </h2>
-                    </div>
-                  </div>
-                </span>
-              </div>
-            </div>
-          ))}
-        </Fade>
+        <SlideSHow time={5000} data={coverImage}></SlideSHow>
         <br />
         {/* section 1 */}
         <div className=" bg-white">
