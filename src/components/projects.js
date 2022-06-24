@@ -102,7 +102,7 @@ function Projects({ proj }) {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="row text-center">
+        <div className="row text-center" style={{ width: "101%" }}>
           <div className="col">
             <h1
               style={{
@@ -116,7 +116,7 @@ function Projects({ proj }) {
           </div>
         </div>
       </div>
-      <div className="row">
+      <div className="row " style={{ width: "101%" }}>
         <div className="col">
           {" "}
           <Box sx={{ width: "100%" }}>
@@ -138,306 +138,312 @@ function Projects({ proj }) {
               </Tabs>
             </Box>
             <TabPanel value={value} index={0}>
-              {/* commercial  */}
-              <div className="row followMeBar">
-                <div className="col ">
-                  <div className=" text-center my-3 ">
-                    <h1 style={{ color: "lightgray" }}>COMMERCIAL BUILDING</h1>
+              <div>
+                {/* commercial  */}
+                <div className="row followMeBar">
+                  <div className="col ">
+                    <div className=" text-center my-3 ">
+                      <h1 style={{ color: "lightgray" }}>
+                        COMMERCIAL BUILDING
+                      </h1>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <br />
-              <div className="row ">
-                <div className="col">
-                  <div className="row  d-flex justify-content-center">
-                    {proj
-                      .filter((e) => e.type === 1)
-                      .map((obj1) => {
-                        return (
-                          <>
-                            <div
-                              className="col-6 projectRow d-flex justify-content-center"
-                              onClick={() => {
-                                navigate(`/projects/${obj1.id}`);
-                              }}
-                            >
-                              <img
-                                src={obj1.img}
-                                alt=""
-                                className="projectImg"
-                              />
-                              <div className="container text">
-                                <h5 className="mt-2">{obj1.title}</h5>
-                                <small>{obj1.body}</small>
-                                <br />
-                                <button
-                                  className="mx-2 my-3 jobbutton"
-                                  onClick={() => {
-                                    navigate(`/projects/${obj1.id}`);
-                                  }}
-                                >
-                                  Learn More
-                                </button>
+                <br />
+                <div className="row ">
+                  <div className="col">
+                    <div className="row  d-flex justify-content-center">
+                      {proj
+                        .filter((e) => e.type === 1)
+                        .map((obj1) => {
+                          return (
+                            <>
+                              <div
+                                className="col-6 projectRow d-flex justify-content-center"
+                                onClick={() => {
+                                  navigate(`/projects/${obj1.id}`);
+                                }}
+                              >
+                                <img
+                                  src={obj1.img}
+                                  alt=""
+                                  className="projectImg"
+                                />
+                                <div className="container text">
+                                  <h5 className="mt-2">{obj1.title}</h5>
+                                  <small>{obj1.body}</small>
+                                  <br />
+                                  <button
+                                    className="mx-2 my-3 jobbutton"
+                                    onClick={() => {
+                                      navigate(`/projects/${obj1.id}`);
+                                    }}
+                                  >
+                                    Learn More
+                                  </button>
+                                </div>
                               </div>
-                            </div>
-                          </>
-                        );
-                      })}
+                            </>
+                          );
+                        })}
+                    </div>
                   </div>
                 </div>
-              </div>
-              <br />
-              <hr />
-              {/* residential  */}
-              <div className="row followMeBar">
-                <div className="col">
-                  <div className=" text-center my-3 ">
-                    <h1 style={{ color: "lightgray" }}>RESIDENTIAL BUILDING</h1>
+                <br />
+                <hr />
+                {/* residential  */}
+                <div className="row followMeBar">
+                  <div className="col">
+                    <div className=" text-center my-3 ">
+                      <h1 style={{ color: "lightgray" }}>
+                        RESIDENTIAL BUILDING
+                      </h1>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <br />
-              <div className="row ">
-                <div className="col">
-                  <div className="row  d-flex justify-content-center">
-                    {proj
-                      .filter((e) => e.type === 2)
-                      .map((obj1) => {
-                        return (
-                          <>
-                            <div
-                              className="col-6 projectRow d-flex justify-content-center"
-                              onClick={() => {
-                                navigate(`/projects/${obj1.id}`);
-                              }}
-                            >
-                              <img
-                                src={obj1.img}
-                                alt=""
-                                className="projectImg"
-                              />
-                              <div className="container text">
-                                <h5 className="mt-2">{obj1.title}</h5>
-                                <small>{obj1.body}</small>
-                                <br />
-                                <button
-                                  className="mx-2 my-3 jobbutton"
-                                  onClick={() => {
-                                    navigate(`/projects/${obj1.id}`);
-                                  }}
-                                >
-                                  Learn More
-                                </button>
+                <br />
+                <div className="row ">
+                  <div className="col">
+                    <div className="row d-flex justify-content-center">
+                      {proj
+                        .filter((e) => e.type === 2)
+                        .map((obj1) => {
+                          return (
+                            <>
+                              <div
+                                className="col-6 projectRow d-flex justify-content-center"
+                                onClick={() => {
+                                  navigate(`/projects/${obj1.id}`);
+                                }}
+                              >
+                                <img
+                                  src={obj1.img}
+                                  alt=""
+                                  className="projectImg"
+                                />
+                                <div className="container text">
+                                  <h5 className="mt-2">{obj1.title}</h5>
+                                  <small>{obj1.body}</small>
+                                  <br />
+                                  <button
+                                    className="mx-2 my-3 jobbutton"
+                                    onClick={() => {
+                                      navigate(`/projects/${obj1.id}`);
+                                    }}
+                                  >
+                                    Learn More
+                                  </button>
+                                </div>
                               </div>
-                            </div>
-                          </>
-                        );
-                      })}
+                            </>
+                          );
+                        })}
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <br />
-              <hr />
-              {/* roads and bridges  */}
-              <div className="row followMeBar">
-                <div className="col">
-                  <div className=" text-center my-3">
-                    <h1 style={{ color: "lightgray" }}>ROADS AND BRIDGES</h1>
+                <br />
+                <hr />
+                {/* roads and bridges  */}
+                <div className="row followMeBar">
+                  <div className="col">
+                    <div className=" text-center my-3">
+                      <h1 style={{ color: "lightgray" }}>ROADS AND BRIDGES</h1>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <br />
-              <div className="row ">
-                <div className="col">
-                  <div className="row  d-flex justify-content-center">
-                    {proj
-                      .filter((e) => e.type === 3)
-                      .map((obj1) => {
-                        return (
-                          <>
-                            <div
-                              className="col-6 projectRow d-flex justify-content-center"
-                              onClick={() => {
-                                navigate(`/projects/${obj1.id}`);
-                              }}
-                            >
-                              <img
-                                src={obj1.img}
-                                alt=""
-                                className="projectImg"
-                              />
-                              <div className="container text">
-                                <h5 className="mt-2">{obj1.title}</h5>
-                                <small>{obj1.body}</small>
-                                <br />
-                                <button
-                                  className="mx-2 my-3 jobbutton"
-                                  onClick={() => {
-                                    navigate(`/projects/${obj1.id}`);
-                                  }}
-                                >
-                                  Learn More
-                                </button>
+                <br />
+                <div className="row ">
+                  <div className="col">
+                    <div className="row  d-flex justify-content-center">
+                      {proj
+                        .filter((e) => e.type === 3)
+                        .map((obj1) => {
+                          return (
+                            <>
+                              <div
+                                className="col-6 projectRow d-flex justify-content-center"
+                                onClick={() => {
+                                  navigate(`/projects/${obj1.id}`);
+                                }}
+                              >
+                                <img
+                                  src={obj1.img}
+                                  alt=""
+                                  className="projectImg"
+                                />
+                                <div className="container text">
+                                  <h5 className="mt-2">{obj1.title}</h5>
+                                  <small>{obj1.body}</small>
+                                  <br />
+                                  <button
+                                    className="mx-2 my-3 jobbutton"
+                                    onClick={() => {
+                                      navigate(`/projects/${obj1.id}`);
+                                    }}
+                                  >
+                                    Learn More
+                                  </button>
+                                </div>
                               </div>
-                            </div>
-                          </>
-                        );
-                      })}
+                            </>
+                          );
+                        })}
+                    </div>
                   </div>
                 </div>
-              </div>
-              <br />
-              <hr />
-              {/* hospital and colleges */}
-              <div className="row followMeBar">
-                <div className="col">
-                  <div className=" text-center my-3">
-                    <h1 style={{ color: "lightgray" }}>
-                      HOSPITAL AND COLLEGES
-                    </h1>
+                <br />
+                <hr />
+                {/* hospital and colleges */}
+                <div className="row followMeBar">
+                  <div className="col">
+                    <div className=" text-center my-3">
+                      <h1 style={{ color: "lightgray" }}>
+                        HOSPITAL AND COLLEGES
+                      </h1>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <br />
-              <div className="row ">
-                <div className="col">
-                  <div className="row  d-flex justify-content-center">
-                    {proj
-                      .filter((e) => e.type === 4)
-                      .map((obj1) => {
-                        return (
-                          <>
-                            <div
-                              className="col-6 projectRow d-flex justify-content-center"
-                              onClick={() => {
-                                navigate(`/projects/${obj1.id}`);
-                              }}
-                            >
-                              <img
-                                src={obj1.img}
-                                alt=""
-                                className="projectImg"
-                              />
-                              <div className="container text">
-                                <h5 className="mt-2">{obj1.title}</h5>
-                                <small>{obj1.body}</small>
-                                <br />
-                                <button
-                                  className="mx-2 my-3 jobbutton"
-                                  onClick={() => {
-                                    navigate(`/projects/${obj1.id}`);
-                                  }}
-                                >
-                                  Learn More
-                                </button>
+                <br />
+                <div className="row ">
+                  <div className="col">
+                    <div className="row  d-flex justify-content-center">
+                      {proj
+                        .filter((e) => e.type === 4)
+                        .map((obj1) => {
+                          return (
+                            <>
+                              <div
+                                className="col-6 projectRow d-flex justify-content-center"
+                                onClick={() => {
+                                  navigate(`/projects/${obj1.id}`);
+                                }}
+                              >
+                                <img
+                                  src={obj1.img}
+                                  alt=""
+                                  className="projectImg"
+                                />
+                                <div className="container text">
+                                  <h5 className="mt-2">{obj1.title}</h5>
+                                  <small>{obj1.body}</small>
+                                  <br />
+                                  <button
+                                    className="mx-2 my-3 jobbutton"
+                                    onClick={() => {
+                                      navigate(`/projects/${obj1.id}`);
+                                    }}
+                                  >
+                                    Learn More
+                                  </button>
+                                </div>
                               </div>
-                            </div>
-                          </>
-                        );
-                      })}
+                            </>
+                          );
+                        })}
+                    </div>
                   </div>
                 </div>
-              </div>
-              <br />
-              <hr />
-              {/* gov admin buildings */}
-              <div className="row followMeBar">
-                <div className="col">
-                  <div className=" text-center my-3">
-                    <h1 style={{ color: "lightgray" }}>
-                      GOVERNMENT ADMINISTRATIVE BUILDING
-                    </h1>
+                <br />
+                <hr />
+                {/* gov admin buildings */}
+                <div className="row followMeBar">
+                  <div className="col">
+                    <div className=" text-center my-3">
+                      <h1 style={{ color: "lightgray" }}>
+                        GOVERNMENT ADMINISTRATIVE BUILDING
+                      </h1>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <br />
-              <div className="row ">
-                <div className="col">
-                  <div className="row  d-flex justify-content-center">
-                    {proj
-                      .filter((e) => e.type === 5)
-                      .map((obj1) => {
-                        return (
-                          <>
-                            <div
-                              className="col-6 projectRow d-flex justify-content-center"
-                              onClick={() => {
-                                navigate(`/projects/${obj1.id}`);
-                              }}
-                            >
-                              <img
-                                src={obj1.img}
-                                alt=""
-                                className="projectImg"
-                              />
-                              <div className="container text">
-                                <h5 className="mt-2">{obj1.title}</h5>
-                                <small>{obj1.body}</small>
-                                <br />
-                                <button
-                                  className="mx-2 my-3 jobbutton"
-                                  onClick={() => {
-                                    navigate(`/projects/${obj1.id}`);
-                                  }}
-                                >
-                                  Learn More
-                                </button>
+                <br />
+                <div className="row ">
+                  <div className="col">
+                    <div className="row  d-flex justify-content-center">
+                      {proj
+                        .filter((e) => e.type === 5)
+                        .map((obj1) => {
+                          return (
+                            <>
+                              <div
+                                className="col-6 projectRow d-flex justify-content-center"
+                                onClick={() => {
+                                  navigate(`/projects/${obj1.id}`);
+                                }}
+                              >
+                                <img
+                                  src={obj1.img}
+                                  alt=""
+                                  className="projectImg"
+                                />
+                                <div className="container text">
+                                  <h5 className="mt-2">{obj1.title}</h5>
+                                  <small>{obj1.body}</small>
+                                  <br />
+                                  <button
+                                    className="mx-2 my-3 jobbutton"
+                                    onClick={() => {
+                                      navigate(`/projects/${obj1.id}`);
+                                    }}
+                                  >
+                                    Learn More
+                                  </button>
+                                </div>
                               </div>
-                            </div>
-                          </>
-                        );
-                      })}
+                            </>
+                          );
+                        })}
+                    </div>
                   </div>
                 </div>
-              </div>
-              <br />
-              <hr />
-              {/* other facilities  */}
-              <div className="row followMeBar">
-                <div className="col">
-                  <div className=" text-center my-3">
-                    <h1 style={{ color: "lightgray" }}>OTHER FACILITIES</h1>
+                <br />
+                <hr />
+                {/* other facilities  */}
+                <div className="row followMeBar">
+                  <div className="col">
+                    <div className=" text-center my-3">
+                      <h1 style={{ color: "lightgray" }}>OTHER FACILITIES</h1>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <br />
-              <div className="row ">
-                <div className="col">
-                  <div className="row  d-flex justify-content-center">
-                    {proj
-                      .filter((e) => e.type === 6)
-                      .map((obj1) => {
-                        return (
-                          <>
-                            <div
-                              className="col-6 projectRow d-flex justify-content-center"
-                              onClick={() => {
-                                navigate(`/projects/${obj1.id}`);
-                              }}
-                            >
-                              <img
-                                src={obj1.img}
-                                alt=""
-                                className="projectImg"
-                              />
-                              <div className="container text">
-                                <h5 className="mt-2">{obj1.title}</h5>
-                                <small>{obj1.body}</small>
-                                <br />
-                                <button
-                                  className="mx-2 my-3 jobbutton"
-                                  onClick={() => {
-                                    navigate(`/projects/${obj1.id}`);
-                                  }}
-                                >
-                                  Learn More
-                                </button>
+                <br />
+                <div className="row ">
+                  <div className="col">
+                    <div className="row  d-flex justify-content-center">
+                      {proj
+                        .filter((e) => e.type === 6)
+                        .map((obj1) => {
+                          return (
+                            <>
+                              <div
+                                className="col-6 projectRow d-flex justify-content-center"
+                                onClick={() => {
+                                  navigate(`/projects/${obj1.id}`);
+                                }}
+                              >
+                                <img
+                                  src={obj1.img}
+                                  alt=""
+                                  className="projectImg"
+                                />
+                                <div className="container text">
+                                  <h5 className="mt-2">{obj1.title}</h5>
+                                  <small>{obj1.body}</small>
+                                  <br />
+                                  <button
+                                    className="mx-2 my-3 jobbutton"
+                                    onClick={() => {
+                                      navigate(`/projects/${obj1.id}`);
+                                    }}
+                                  >
+                                    Learn More
+                                  </button>
+                                </div>
                               </div>
-                            </div>
-                          </>
-                        );
-                      })}
+                            </>
+                          );
+                        })}
+                    </div>
                   </div>
                 </div>
               </div>

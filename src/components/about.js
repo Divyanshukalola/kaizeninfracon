@@ -108,11 +108,10 @@ function About() {
       <div className="bg-light">
         <br />
         <div className="mt-4 mx-5 text-center">
-          {" "}
           <span className="sectionHeader">EXPERTISE</span>
           <hr />
         </div>
-        <div className="row ">
+        <div className="row" style={{ width: "101%" }}>
           <div className="col text-center my-5">
             <img
               src="https://www.navedzubairi.com/wp-content/uploads/2018/10/corporate-building-760x400.jpg"
@@ -121,7 +120,7 @@ function About() {
               className="my-4"
             />
           </div>
-          <div className="col my-5  mx-5">
+          <div className="col my-5 ">
             <div>
               <h1
                 style={{
@@ -156,7 +155,7 @@ function About() {
         </div>
       </div>
       <div className="bg-white">
-        <div className="row ">
+        <div className="row " style={{ width: "101%" }}>
           <div className="col my-5  mx-5">
             <div>
               <h1
@@ -200,7 +199,7 @@ function About() {
         </div>
       </div>
       <div className="bg-light">
-        <div className="row ">
+        <div className="row " style={{ width: "101%" }}>
           <div className="col text-center my-5">
             <img
               src="https://cdn.wallpapersafari.com/31/16/U0HoD2.jpg"
@@ -244,7 +243,7 @@ function About() {
         </div>
       </div>
       <div className="bg-white">
-        <div className="row ">
+        <div className="row " style={{ width: "101%" }}>
           <div className="col my-5  mx-5">
             <div>
               <h1
@@ -288,7 +287,7 @@ function About() {
         </div>
       </div>
       <div className="bg-light">
-        <div className="row ">
+        <div className="row " style={{ width: "101%" }}>
           <div className="col text-center my-5">
             <img
               src="https://www.re-thinkingthefuture.com/wp-content/uploads/2021/02/A3239-10-Impressive-Government-buildings-Image-28.jpg"
@@ -332,7 +331,7 @@ function About() {
         </div>
       </div>
       <div className="bg-white">
-        <div className="row ">
+        <div className="row " style={{ width: "101%" }}>
           <div className="col my-5  mx-5">
             <div>
               <h1

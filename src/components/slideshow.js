@@ -34,7 +34,7 @@ function SlideSHow(props) {
 
   return (
     <div className="Home">
-      <div className="row">
+      <div className="row" style={{ width: "101%" }}>
         <div className="col mySlides1" id="slideShow" key={"1"} ref={ref}>
           {" "}
           <Topnavigation home="true"></Topnavigation>

@@ -206,7 +206,7 @@ function Home1({ proj, coverImage }) {
           </div>
         </div>
         {/* section 1 */}
-        <div className=" bg-white">
+        <div className=" bg-white ">
           <div className="containter">
             {" "}
             <div className="row mx-5 mt-5">

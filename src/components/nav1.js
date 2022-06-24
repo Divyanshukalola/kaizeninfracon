@@ -24,13 +24,16 @@ const Nav1 = (props) => {
   function career() {
     navigate("/career");
   }
+  function people() {
+    navigate("/people");
+  }
   return (
     <>
       {/* navigation  */}{" "}
       <div
         className="row sticky-top cover"
         style={{
-          zIndex: "100",
+          zIndex: "99999",
         }}
       >
         <div className="col my-3 mx-5">
@@ -46,9 +49,9 @@ const Nav1 = (props) => {
             <img src={mainlogo} alt="mainlogo" height={"50px"} />
           </button>
         </div>
-        <div className="col-7 my-3 mx-5">
-          <div className="row mx-3 mt-3 text-center" style={{ float: "right" }}>
-            <div className="col ">
+        <div className="col my-3 mx-5">
+          <div className="row mt-3 text-right ">
+            <div className="col  ">
               <button
                 style={{
                   border: "transparent",
@@ -69,7 +72,8 @@ const Nav1 = (props) => {
                 </span>
               </button>
             </div>
-            <div className="col">
+
+            <div className="col ">
               <button
                 style={{
                   border: "transparent",
@@ -90,8 +94,29 @@ const Nav1 = (props) => {
                 </span>
               </button>
             </div>
+            <div className="col  ">
+              <button
+                style={{
+                  border: "transparent",
+                  color: "#1c3e44",
+                  background: "transparent",
+                  cursor: "pointer",
+                }}
+                onClick={people}
+              >
+                <span
+                  className={
+                    props.team
+                      ? "hoverNavItem hoverNavItemActive"
+                      : "hoverNavItem"
+                  }
+                >
+                  Team
+                </span>
+              </button>
+            </div>
 
-            <div className="col">
+            <div className="col ">
               <button
                 style={{
                   border: "transparent",
@@ -112,7 +137,7 @@ const Nav1 = (props) => {
                 </span>
               </button>
             </div>
-            <div className="col">
+            <div className="col ">
               <button
                 style={{
                   border: "transparent",
@@ -133,7 +158,7 @@ const Nav1 = (props) => {
                 </span>
               </button>
             </div>
-            <div className="col">
+            <div className="col ">
               <button
                 style={{
                   border: "transparent",

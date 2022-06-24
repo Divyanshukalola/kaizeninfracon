@@ -42,7 +42,7 @@ function Career() {
           opacity: "70%",
         }}
       >
-        <div className="row text-center">
+        <div className="row text-center" style={{ width: "101%" }}>
           <div className="col">
             <h1
               style={{

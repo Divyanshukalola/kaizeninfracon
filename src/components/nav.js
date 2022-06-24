@@ -28,8 +28,11 @@ const Nav = (props) => {
     navigate("/career");
   }
   return (
-    <div className="row sticky-top bg-white border" style={{ zIndex: "9999" }}>
-      <div className="col-6 my-3">
+    <div
+      className="row sticky-top bg-white"
+      style={{ zIndex: "9999", width: "101%" }}
+    >
+      <div className="col-6 my-3 ">
         <button
           style={{
             border: "transparent",
@@ -41,7 +44,7 @@ const Nav = (props) => {
           <img src={mainlogo} alt="mainlogo" height={"50px"} />
         </button>
       </div>
-      <div className="col-6 my-3 ">
+      <div className="col my-3 mx-5">
         <div className="row mt-3 text-right ">
           <div className="col  ">
             <button
