@@ -25,6 +25,8 @@ import People from "./components/people";
 import AdminLogin from "./components/admin/login";
 import SectionProjectView from "./components/views/sectionProjectView";
 import Gallery from "./components/gallery";
+import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+import { auth } from "./../src/firebase-config";
 
 function App() {
   const [news, setNews] = useState([]);
@@ -50,6 +52,16 @@ function App() {
   const dataCollectionRef7 = collection(db, "gallery");
   const dataCollectionRef8 = collection(db, "coverImage");
 
+  const [user, setUser] = useState({});
+  onAuthStateChanged(auth, (currentUser) => {
+    if (currentUser !== null) {
+      setState(true);
+      setUser(currentUser);
+    } else {
+      setState(false);
+      //   navigate("/login");
+    }
+  });
   // read data from firebase
   useEffect(() => {
     // Update the document title using the browser API
@@ -172,8 +184,13 @@ function App() {
                 />
               );
             })}
+
             <Route
               path="/admin"
+              element={<AdminLogin setState={setState}></AdminLogin>}
+            />
+            <Route
+              path={`/admin-${user.uid}`}
               element={
                 state ? (
                   <Admin

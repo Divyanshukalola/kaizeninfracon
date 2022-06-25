@@ -12,21 +12,20 @@ function AdminLogin({ setState }) {
   const [pass, setPass] = useState(null);
   const navigate = useNavigate();
 
-  onAuthStateChanged(auth, (currentUser) => {
-    if (currentUser !== null) {
-      setState(true);
-
-      navigate("/admin");
-      console.log("ran");
-      console.log(currentUser);
-    } else {
-      setState(false);
-      //   navigate("/login");
-    }
-  });
+ 
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    onAuthStateChanged(auth, (currentUser) => {
+      if (currentUser !== null) {
+        setState(true);
+
+        navigate(`/admin-${currentUser.uid}`);
+      } else {
+        setState(false);
+        //   navigate("/login");
+      }
+    });
   }, []);
 
   async function login() {
