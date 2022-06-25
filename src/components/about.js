@@ -14,39 +14,32 @@ function About() {
     <div className="about">
       {/* navigation  */}
       <Topnavigation about="true"></Topnavigation>
+      <br />
+      <br />
+      <br />
+      <br />
+      <div className="row container mx-5">
+        <div className="col">
+          <p style={{ textTransform: "uppercase" }}>About us</p>
 
-      <div
-        className="bg-light"
-        style={{
-          background:
-            'linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/images%2Faboutus.webp?alt=media&token=dcb021c7-20bd-43f7-aa2c-b586ff0ed303"),no-repeat',
-
-          height: "500px",
-          backgroundSize: "100%",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <div className="row mx-5">
-          <div className="col-6 mt-5">
-            <div style={{ borderStyle: "solid", borderColor: "#1c3e44" }}>
-              {" "}
-              <h1 className=" mt-5 mx-5" style={{ fontSize: "55px" }}>
-                OUR COMPANY
-              </h1>
-              <p className="mx-5 mb-5">
-                {" "}
-                Kaizen Infracon is a well known name with handy proposals in the
-                field of Construction and Infrastructure Development Projects.
-                Kaizen Infracon is known in its client base for its sincerity
-                and dedication in the execution of projects withs good quality
-                aspects. Kaizen Infracon was started in the year 2019 as a
-                Partnership Firm and headed by Mr. Hardik Rangani as a Managing
-                Partner of Kaizen Infracon. Mr. Hardik Rangani is having a
-                qualification of Diploma in Civil Engineering and M.B.A. in
-                Project Management.
-              </p>
-            </div>
-          </div>
+          <h1>
+            Know about <span style={{ color: "#ff5e10" }}>our </span>
+            company
+            <span style={{ color: "#ff5e10" }}>.</span>
+          </h1>
+          <h6 style={{ lineHeight: "1.8" }}>
+            Kaizen Infracon is a well known name with handy proposals in the
+            field of Construction <br /> and Infrastructure Development
+            Projects. Kaizen Infracon is known in its client base for <br /> its
+            sincerity and dedication in the execution of projects withs good
+            quality aspects. <br /> Kaizen Infracon was started in the year 2019
+            as a Partnership Firm and headed by <br /> Mr. Hardik Rangani as a
+            Managing Partner of Kaizen Infracon. Mr. Hardik Rangani is <br />{" "}
+            having a qualification of Diploma in Civil Engineering and M.B.A. in
+            Project Management.
+          </h6>
+          <br />
+          <br />
         </div>
       </div>
 

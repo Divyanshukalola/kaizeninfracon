@@ -11,13 +11,16 @@ import Typography from "@mui/material/Typography";
 import CardActions from "@mui/material/CardActions";
 import { useNavigate } from "react-router-dom";
 
-
+import Pagination from "@mui/material/Pagination";
 
 import SlideSHow from "./slideshow";
 
 function Home1({ proj, coverImage }) {
-  console.log(proj);
-  console.log(coverImage);
+  const [page, setPage] = React.useState(1);
+  const handleChange = (event, value) => {
+    setPage(value);
+  };
+
   const navigate = useNavigate();
   const [clistate, setclistate] = useState(0);
 
@@ -228,7 +231,7 @@ function Home1({ proj, coverImage }) {
                   <div className="row">
                     <div className="col">
                       {" "}
-                      {organiseData(proj, 2).map((obj) => {
+                      {organiseData(proj, 2).map((obj, index) => {
                         let today = new Date().toLocaleDateString("en-us");
                         // var t = new Date(1970, 0, 1);
 
@@ -237,52 +240,70 @@ function Home1({ proj, coverImage }) {
                         var seconds2 = date.getTime() / 1000;
                         return (
                           <>
-                            <div className="row mx-5 my-5">
-                              {" "}
-                              {obj.map((obj1) => {
-                                return (
-                                  <>
-                                    {seconds2 <
-                                    obj1.details.project_end_date.seconds ? (
-                                      <div className="col-6">
-                                        <Card variant="outlined">
-                                          <CardMedia
-                                            component="img"
-                                            height="340"
-                                            image={obj1.img}
-                                            alt="green iguana"
-                                          />
-                                          <CardContent>
-                                            <Typography
-                                              gutterBottom
-                                              variant="h5"
-                                              component="div"
-                                            >
-                                              {obj1.title}
-                                            </Typography>
-                                          </CardContent>
-                                          <CardActions>
-                                            <button
-                                              className="mx-2 my-3 jobbutton"
-                                              onClick={() => {
-                                                navigate(
-                                                  `/projects/${obj1.id}`
-                                                );
-                                              }}
-                                            >
-                                              Learn More
-                                            </button>
-                                          </CardActions>
-                                        </Card>
-                                      </div>
-                                    ) : null}
-                                  </>
-                                );
-                              })}
-                            </div>
+                            {index === page - 1 ? (
+                              <div className="row mx-5 my-5">
+                                {" "}
+                                {obj.map((obj1) => {
+                                  return (
+                                    <>
+                                      {seconds2 <
+                                      obj1.details.project_end_date.seconds ? (
+                                        <div className="col-6">
+                                          <Card variant="outlined">
+                                            <CardMedia
+                                              component="img"
+                                              height="340"
+                                              image={obj1.img}
+                                              alt="green iguana"
+                                            />
+                                            <CardContent>
+                                              <Typography
+                                                gutterBottom
+                                                variant="h5"
+                                                component="div"
+                                              >
+                                                {obj1.title}
+                                              </Typography>
+                                            </CardContent>
+                                            <CardActions>
+                                              <button
+                                                className="mx-2 my-3 jobbutton"
+                                                onClick={() => {
+                                                  navigate(
+                                                    `/projects/${obj1.id}`
+                                                  );
+                                                }}
+                                              >
+                                                Learn More
+                                              </button>
+                                            </CardActions>
+                                          </Card>
+                                        </div>
+                                      ) : null}
+                                    </>
+                                  );
+                                })}
+                              </div>
+                            ) : null}
                           </>
                         );
                       })}
+                      {page >= 1 ? (
+                        <>
+                          {" "}
+                          <br />
+                          <div className="row ">
+                            <div className="col d-flex justify-content-center">
+                              {" "}
+                              <Pagination
+                                count={organiseData(proj, 2).length}
+                                page={page}
+                                onChange={handleChange}
+                              />
+                            </div>
+                          </div>
+                        </>
+                      ) : null}
                     </div>{" "}
                   </div>
                   <br />

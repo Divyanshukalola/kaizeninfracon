@@ -3,42 +3,13 @@ import React, { useEffect } from "react";
 import Footer from "./footer";
 
 import Topnavigation from "./nav";
-// import { useForm } from "react-hook-form";
-// import man from "./../static/img/man.png";
-// import building from "./../static/img/buildings.png";
-// import Button from "@mui/material/Button";
-// import { styled } from "@mui/material/styles";
-// import Slide from "@mui/material/Slide";
-// import Fade from "@mui/material/Fade";
 
-// import Card from "@mui/material/Card";
-// import CardContent from "@mui/material/CardContent";
-// import CardMedia from "@mui/material/CardMedia";
-// import { CardActionArea } from "@mui/material";
-
-// import Card from "@mui/material/Card";
-// import Typography from "@mui/material/Typography";
-// import CardContent from "@mui/material/CardContent";
-// import CardMedia from "@mui/material/CardMedia";
-// import CardActions from "@mui/material/CardActions";
-// import TextField from "@mui/material/TextField";
-// import { addDoc, collection } from "firebase/firestore";
-// import { db } from "./../firebase-config";
-// import Button from "@mui/material/Button";
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-// import {
-//   ref,
-//   uploadBytes,
-//   getDownloadURL,
-//   deleteObject,
-// } from "@firebase/storage";
-// import { storage } from "./../firebase-config";
-
-// import { v4 } from "uuid";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 import AdminProj from "./admin/proj";
 import AdminNews from "./admin/news";
@@ -80,6 +51,16 @@ function a11yProps(index) {
 }
 
 function Admin(props) {
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: "#2196f3",
+      },
+      secondary: {
+        main: "#ff5e10",
+      },
+    },
+  });
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -98,62 +79,65 @@ function Admin(props) {
       <br />
 
       <hr />
-      {props.state ? (
-        <Box sx={{ width: "100%" }}>
-          <Box
-            sx={{
-              borderBottom: 1,
-              borderColor: "divider",
-            }}
-          >
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              aria-label="basic tabs example"
-              textColor="#ff5e10"
-              indicatorColor="secondary"
-              centered
+      <ThemeProvider theme={theme}>
+        {" "}
+        {props.state ? (
+          <Box sx={{ width: "100%" }}>
+            <Box
+              sx={{
+                borderBottom: 1,
+                borderColor: "divider",
+              }}
             >
-              <Tab label="Projects" {...a11yProps(0)} />
-              <Tab label="News" {...a11yProps(1)} />
-              <Tab label="Articles" {...a11yProps(2)} />
-              <Tab label="Videos" {...a11yProps(3)} />
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                aria-label="basic tabs example"
+                textColor="#ff5e10"
+                indicatorColor="secondary"
+                centered
+              >
+                <Tab label="Projects" {...a11yProps(0)} />
+                <Tab label="News" {...a11yProps(1)} />
+                <Tab label="Articles" {...a11yProps(2)} />
+                <Tab label="Videos" {...a11yProps(3)} />
 
-              {/* <Tab label="Clients" {...a11yProps(4)} /> */}
-            </Tabs>
-          </Box>
-          <TabPanel value={value} index={1}>
-            <AdminNews news={props.new} value={setValue}></AdminNews>
-          </TabPanel>
-          <TabPanel value={value} index={0}>
-            <AdminProj proj={props.proj} value={setValue}></AdminProj>
-          </TabPanel>
-          <TabPanel value={value} index={2}>
-            <AdminArticle arti={props.arti} value={setValue}></AdminArticle>
-          </TabPanel>
-          <TabPanel value={value} index={3}>
-            <AdminVideos videos={props.videos}></AdminVideos>
-          </TabPanel>
+                {/* <Tab label="Clients" {...a11yProps(4)} /> */}
+              </Tabs>
+            </Box>
+            <TabPanel value={value} index={1}>
+              <AdminNews news={props.new} value={setValue}></AdminNews>
+            </TabPanel>
+            <TabPanel value={value} index={0}>
+              <AdminProj proj={props.proj} value={setValue}></AdminProj>
+            </TabPanel>
+            <TabPanel value={value} index={2}>
+              <AdminArticle arti={props.arti} value={setValue}></AdminArticle>
+            </TabPanel>
+            <TabPanel value={value} index={3}>
+              <AdminVideos videos={props.videos}></AdminVideos>
+            </TabPanel>
 
-          {/* <TabPanel value={value} index={4}>
+            {/* <TabPanel value={value} index={4}>
           <AdminClients cli={props.cli}></AdminClients>
         </TabPanel> */}
-        </Box>
-      ) : (
-        <>
-          <div className="row">
-            <div className="col text-center">
-              <img
-                src="https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/images%2Fnotauth.png?alt=media&token=75ab26d5-7091-4a36-97a6-9827e8dc1021"
-                alt=""
-              />
-              <p>
-                Please go to the <a href="/">home</a> page.
-              </p>
+          </Box>
+        ) : (
+          <>
+            <div className="row">
+              <div className="col text-center">
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/images%2Fnotauth.png?alt=media&token=75ab26d5-7091-4a36-97a6-9827e8dc1021"
+                  alt=""
+                />
+                <p>
+                  Please go to the <a href="/">home</a> page.
+                </p>
+              </div>
             </div>
-          </div>
-        </>
-      )}
+          </>
+        )}
+      </ThemeProvider>
 
       {/* footer  */}
       <br />

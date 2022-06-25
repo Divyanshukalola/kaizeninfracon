@@ -24,9 +24,22 @@ import CardMedia from "@mui/material/CardMedia";
 import CardActions from "@mui/material/CardActions";
 // import NewsView from "./views/newsview";
 // import Button from "@mui/material/Button";
+import Pagination from "@mui/material/Pagination";
 
 function News(props) {
   const navigate = useNavigate();
+  const [page, setPage] = React.useState(1);
+  const handleChange = (event, value) => {
+    setPage(value);
+  };
+  const [page1, setPage1] = React.useState(1);
+  const handleChange1 = (event, value) => {
+    setPage1(value);
+  };
+  const [page2, setPage2] = React.useState(1);
+  const handleChange2 = (event, value) => {
+    setPage2(value);
+  };
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -96,82 +109,111 @@ function News(props) {
           <br />
         </div>
 
-        {organiseData(props.new, 3).map((obj) => {
+        {organiseData(props.new, 3).map((obj, index) => {
+          console.log("index " + index);
+          console.log("page " + page);
           return (
             <>
-              <div className="row mx-5 my-5 justify-content-center">
-                {" "}
-                {obj.map((obj1) => {
-                  return (
-                    <>
-                      <div className="col">
-                        {" "}
-                        <Card>
-                          <CardMedia
-                            component="img"
-                            height="250"
-                            image={obj1.img}
-                            alt="green iguana"
-                          />
-                          <CardContent>
-                            <Typography
-                              gutterBottom
-                              variant="h6"
-                              component="div"
-                            >
-                              {obj1.title}
-                            </Typography>
-                            <Typography variant="body3" color="text.secondary">
-                              <div
-                                style={{
-                                  whiteSpace: "pre-wrap",
-                                  overflowWrap: "break-word",
-                                }}
+              {index === page - 1 ? (
+                <div className="row mx-5 my-5 justify-content-center">
+                  {" "}
+                  {obj.map((obj1) => {
+                    return (
+                      <>
+                        <div className="col-6">
+                          {" "}
+                          <Card>
+                            <CardMedia
+                              component="img"
+                              image={obj1.img}
+                              height="150px"
+                              alt="green iguana"
+                            />
+                            <CardContent>
+                              <Typography
+                                gutterBottom
+                                variant="h6"
+                                component="div"
+                              >
+                                {obj1.title}
+                              </Typography>
+                              <Typography
+                                variant="body3"
+                                color="text.secondary"
+                              >
+                                <div
+                                  style={{
+                                    whiteSpace: "pre-wrap",
+                                    overflowWrap: "break-word",
+                                  }}
+                                >
+                                  {" "}
+                                  <pre>
+                                    <TextTruncate
+                                      line={1}
+                                      element="span"
+                                      truncateText="…"
+                                      text={obj1.body}
+                                    />
+                                  </pre>
+                                </div>
+                              </Typography>
+                              <br />
+                              <Typography
+                                variant="body3"
+                                color="text.secondary"
                               >
                                 {" "}
-                                <pre>
-                                  <TextTruncate
-                                    line={1}
-                                    element="span"
-                                    truncateText="…"
-                                    text={obj1.body}
-                                  />
-                                </pre>
-                              </div>
-                            </Typography>
-                            <br />
-                            <Typography variant="body3" color="text.secondary">
-                              {" "}
-                              Written By: {obj1.writenBy}
-                            </Typography>
-                            <br />
-                            <Typography variant="body3" color="text.secondary">
-                              {" "}
-                              Date:{" "}
-                              {new Date(
-                                obj1.date.seconds * 1000
-                              ).toLocaleDateString()}
-                            </Typography>
-                          </CardContent>
-                          <CardActions>
-                            <button
-                              className="mx-2 mb-3 jobbutton"
-                              onClick={() => {
-                                navigate(`/news/${obj1.id}`);
-                              }}
-                            >
-                              Learn More
-                            </button>
-                          </CardActions>
-                        </Card>
-                      </div>
-                    </>
-                  );
-                })}
-              </div>
+                                Written By: {obj1.writenBy}
+                              </Typography>
+                              <br />
+                              <Typography
+                                variant="body3"
+                                color="text.secondary"
+                              >
+                                {" "}
+                                Date:{" "}
+                                {new Date(
+                                  obj1.date.seconds * 1000
+                                ).toLocaleDateString()}
+                              </Typography>
+                            </CardContent>
+                            <CardActions>
+                              <button
+                                className="mx-2 mb-3 jobbutton"
+                                onClick={() => {
+                                  navigate(`/news/${obj1.id}`);
+                                }}
+                              >
+                                Learn More
+                              </button>
+                            </CardActions>
+                          </Card>
+                        </div>
+                      </>
+                    );
+                  })}
+                </div>
+              ) : null}
             </>
           );
         })}
+        {page >= 1 ? (
+          <>
+            {" "}
+            <br />
+            <div className="row ">
+              <div className="col d-flex justify-content-center">
+                {" "}
+                <Pagination
+                  count={organiseData(props.new, 3).length}
+                  page={page}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+          </>
+        ) : null}
       </div>
 
       <div className="bg-white">
@@ -182,83 +224,111 @@ function News(props) {
           <br />
         </div>
 
-        {organiseData(props.arti, 3).map((obj) => {
+        {organiseData(props.arti, 3).map((obj, index) => {
           return (
             <>
-              <div className="row mx-5 my-5 justify-content-center">
-                {obj.map((obj1) => {
-                  return (
-                    <>
-                      <div className="col">
-                        {" "}
-                        <Card>
-                          <CardMedia
-                            component="img"
-                            height="300"
-                            image={obj1.img}
-                            alt="green iguana"
-                          />
-                          <CardContent>
-                            <Typography
-                              gutterBottom
-                              variant="h6"
-                              component="div"
-                            >
-                              {obj1.title}
-                            </Typography>
-                            <Typography variant="body3" color="text.secondary">
-                              <div
-                                className="artibody"
-                                style={{
-                                  whiteSpace: "pre-wrap",
-                                  overflowWrap: "break-word",
-                                }}
+              {index === page1 - 1 ? (
+                <div className="row mx-5 my-5 justify-content-center">
+                  {obj.map((obj1) => {
+                    return (
+                      <>
+                        <div className="col-6">
+                          {" "}
+                          <Card>
+                            <CardMedia
+                              component="img"
+                              height="300"
+                              image={obj1.img}
+                              alt="green iguana"
+                            />
+                            <CardContent>
+                              <Typography
+                                gutterBottom
+                                variant="h6"
+                                component="div"
+                              >
+                                {obj1.title}
+                              </Typography>
+                              <Typography
+                                variant="body3"
+                                color="text.secondary"
+                              >
+                                <div
+                                  className="artibody"
+                                  style={{
+                                    whiteSpace: "pre-wrap",
+                                    overflowWrap: "break-word",
+                                  }}
+                                >
+                                  {" "}
+                                  <pre>
+                                    <TextTruncate
+                                      line={1}
+                                      element="span"
+                                      truncateText="…"
+                                      text={obj1.body}
+                                    />
+                                  </pre>
+                                </div>
+                              </Typography>
+                              <br />
+                              <Typography
+                                variant="body3"
+                                color="text.secondary"
                               >
                                 {" "}
-                                <pre>
-                                  <TextTruncate
-                                    line={1}
-                                    element="span"
-                                    truncateText="…"
-                                    text={obj1.body}
-                                  />
-                                </pre>
-                              </div>
-                            </Typography>
-                            <br />
-                            <Typography variant="body3" color="text.secondary">
-                              {" "}
-                              Written By: {obj1.writenBy}
-                            </Typography>
-                            <br />
-                            <Typography variant="body3" color="text.secondary">
-                              {" "}
-                              Date:{" "}
-                              {new Date(
-                                obj1.date.seconds * 1000
-                              ).toLocaleDateString()}
-                            </Typography>
-                          </CardContent>
+                                Written By: {obj1.writenBy}
+                              </Typography>
+                              <br />
+                              <Typography
+                                variant="body3"
+                                color="text.secondary"
+                              >
+                                {" "}
+                                Date:{" "}
+                                {new Date(
+                                  obj1.date.seconds * 1000
+                                ).toLocaleDateString()}
+                              </Typography>
+                            </CardContent>
 
-                          <CardActions>
-                            <button
-                              className="mx-2 my-3 jobbutton"
-                              onClick={() => {
-                                navigate(`/news/${obj1.id}`);
-                              }}
-                            >
-                              Learn More
-                            </button>
-                          </CardActions>
-                        </Card>
-                      </div>
-                    </>
-                  );
-                })}
-              </div>
+                            <CardActions>
+                              <button
+                                className="mx-2 my-3 jobbutton"
+                                onClick={() => {
+                                  navigate(`/news/${obj1.id}`);
+                                }}
+                              >
+                                Learn More
+                              </button>
+                            </CardActions>
+                          </Card>
+                        </div>
+                      </>
+                    );
+                  })}
+                </div>
+              ) : null}
             </>
           );
         })}
+
+        {page1 >= 1 ? (
+          <>
+            {" "}
+            <br />
+            <div className="row ">
+              <div className="col d-flex justify-content-center">
+                {" "}
+                <Pagination
+                  count={organiseData(props.arti, 3).length}
+                  page={page1}
+                  onChange={handleChange1}
+                />
+              </div>
+            </div>
+          </>
+        ) : null}
       </div>
       <div className="bg-white">
         <div className="mt-5 text-center">
@@ -268,38 +338,56 @@ function News(props) {
           <br />
         </div>
 
-        {organiseData(props.videos, 3).map((obj) => {
+        {organiseData(props.videos, 3).map((obj, index) => {
           return (
             <>
-              <div className="row mx-5 my-5 justify-content-center">
-                {obj.map((obj1) => {
-                  return (
-                    <>
-                      <div className="col text-center">
-                        <video
-                          src={obj1.link}
-                          controls
-                          height={"200px"}
-                          style={{ float: "center" }}
-                        ></video>
-                        <br />
-                        <small> {obj1.description}</small>
-                        <br />
-                        <small>
-                          {" "}
-                          Date:{" "}
-                          {new Date(
-                            obj1.date.seconds * 1000
-                          ).toLocaleDateString()}
-                        </small>
-                      </div>
-                    </>
-                  );
-                })}
-              </div>
+              {index === page2 - 1 ? (
+                <div className="row mx-5 my-5 justify-content-center">
+                  {obj.map((obj1) => {
+                    return (
+                      <>
+                        <div className="col text-center">
+                          <video
+                            src={obj1.link}
+                            controls
+                            height={"200px"}
+                            style={{ float: "center" }}
+                          ></video>
+                          <br />
+                          <small> {obj1.description}</small>
+                          <br />
+                          <small>
+                            {" "}
+                            Date:{" "}
+                            {new Date(
+                              obj1.date.seconds * 1000
+                            ).toLocaleDateString()}
+                          </small>
+                        </div>
+                      </>
+                    );
+                  })}
+                </div>
+              ) : null}
             </>
           );
         })}
+
+        {page2 >= 1 ? (
+          <>
+            <br />
+            <div className="row ">
+              <div className="col d-flex justify-content-center">
+                {" "}
+                <Pagination
+                  count={organiseData(props.videos, 3).length}
+                  page={page2}
+                  onChange={handleChange2}
+                />
+              </div>
+            </div>
+          </>
+        ) : null}
       </div>
 
       {/* footer  */}
