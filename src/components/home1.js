@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import Footer from "./footer";
-
+import { useForm } from "react-hook-form";
 
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -14,6 +14,11 @@ import { useNavigate } from "react-router-dom";
 import Pagination from "@mui/material/Pagination";
 
 import SlideSHow from "./slideshow";
+import TextField from "@mui/material/TextField";
+
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "./../firebase-config";
+import { v4 } from "uuid";
 
 function Home1({ proj, coverImage }) {
   const [page, setPage] = React.useState(1);
@@ -46,14 +51,32 @@ function Home1({ proj, coverImage }) {
 
     return result;
   }
+  const [loading, setLoading] = useState(false);
+  const { register, getValues } = useForm({});
+  const [id] = useState(v4());
+  const dataCollectionRef1 = collection(db, "users");
+  //write Data
+  async function writeData() {
+    setLoading(true);
+
+    await addDoc(dataCollectionRef1, {
+      business: getValues("business"),
+      name: getValues("name"),
+      email: getValues("email"),
+      userID: id,
+    });
+
+    await setTimeout(function() {
+      setLoading(false);
+      window.location.reload(false);
+    }, 100);
+  }
 
   return (
     <div className="Home">
       {/* navigation  */}
 
       <div>
-        {/* hero  */}
-
         <SlideSHow time={5000} data={coverImage}></SlideSHow>
         <br />
         {/* section 1 */}
@@ -96,7 +119,9 @@ function Home1({ proj, coverImage }) {
                         />
                         <CardContent>
                           <h5
-                            style={{ textTransform: "uppercase" }}
+                            style={{
+                              textTransform: "uppercase",
+                            }}
                             className="mt-4"
                           >
                             Supporting Wellness Through Human-Centered Design
@@ -124,7 +149,9 @@ function Home1({ proj, coverImage }) {
                         />
                         <CardContent>
                           <h5
-                            style={{ textTransform: "uppercase" }}
+                            style={{
+                              textTransform: "uppercase",
+                            }}
                             className="mt-4"
                           >
                             A TEAM YOU CAN TRUST
@@ -154,7 +181,9 @@ function Home1({ proj, coverImage }) {
                         />
                         <CardContent>
                           <h5
-                            style={{ textTransform: "uppercase" }}
+                            style={{
+                              textTransform: "uppercase",
+                            }}
                             className="mt-4"
                           >
                             Never compromise on quality for economics benefits.
@@ -182,7 +211,9 @@ function Home1({ proj, coverImage }) {
                         />
                         <CardContent>
                           <h5
-                            style={{ textTransform: "uppercase" }}
+                            style={{
+                              textTransform: "uppercase",
+                            }}
                             className="mt-4"
                           >
                             In society, we work to create new opportunities.
@@ -476,6 +507,87 @@ function Home1({ proj, coverImage }) {
                             setclistate(0);
                           }}
                         />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Subscribe */}
+        <div>
+          <div className="containter">
+            {" "}
+            <div className="row mx-5 mt-5" style={{ height: "500px" }}>
+              <div className="col mt-5">
+                <div className="mt-3 text-center">
+                  {" "}
+                  <span className="sectionHeader">SUBSCRIBE</span>
+                  <hr />
+                  <br />
+                  <h2
+                    style={{
+                      fontWeight: "bold",
+                    }}
+                  >
+                    Be the <span className="secondary">first</span> one...
+                  </h2>
+                  <p>Learn about our newest initiatives and concepts.</p>
+                </div>
+                <div
+                  className="row d-flex justify-content-center"
+                  style={{
+                    height: "500px",
+                  }}
+                >
+                  <div className="col-6 mx-5 ">
+                    <div className="row my-3">
+                      <div className="col">
+                        <TextField
+                          id="outlined-basic"
+                          label="Name"
+                          variant="outlined"
+                          fullWidth
+                          {...register("name")}
+                        />
+                      </div>
+                    </div>
+                    <div className="row my-3">
+                      <div className="col">
+                        <TextField
+                          id="outlined-basic"
+                          label="Email"
+                          variant="outlined"
+                          fullWidth
+                          {...register("email")}
+                        />
+                      </div>
+                    </div>
+                    <div className="row my-3">
+                      <div className="col">
+                        <TextField
+                          id="outlined-basic"
+                          label="Business"
+                          variant="outlined"
+                          fullWidth
+                          {...register("business")}
+                        />
+                      </div>
+                    </div>
+
+                    <div className="row ">
+                      <div className="col d-flex justify-content-center">
+                        {loading ? (
+                          <button className="jobbutton" disabled>
+                            Uploading your Data
+                          </button>
+                        ) : (
+                          <button className="jobbutton" onClick={writeData}>
+                            Subscribe
+                          </button>
+                        )}
                       </div>
                     </div>
                   </div>

@@ -40,14 +40,6 @@ const Footer = () => {
               </button>{" "}
               <br />
               <button className="footbutton">Contact us </button>
-              <button
-                className="footbutton"
-                onClick={() => {
-                  navigate("/admin");
-                }}
-              >
-                Admin{" "}
-              </button>
             </div>
           </div>
         </div>

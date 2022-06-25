@@ -15,6 +15,7 @@ function AdminLogin({ setState }) {
   onAuthStateChanged(auth, (currentUser) => {
     if (currentUser !== null) {
       setState(true);
+
       navigate("/admin");
       console.log("ran");
       console.log(currentUser);

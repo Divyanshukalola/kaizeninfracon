@@ -16,6 +16,8 @@ import AdminNews from "./admin/news";
 import AdminArticle from "./admin/article";
 import AdminVideos from "./admin/videos";
 // import AdminClients from "./admin/clients";
+import AdminGallery from "./admin/gallery";
+import AdminCover from "./admin/cover";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -61,6 +63,7 @@ function Admin(props) {
       },
     },
   });
+
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -82,46 +85,52 @@ function Admin(props) {
       <ThemeProvider theme={theme}>
         {" "}
         {props.state ? (
-          <Box sx={{ width: "100%" }}>
-            <Box
-              sx={{
-                borderBottom: 1,
-                borderColor: "divider",
-              }}
-            >
-              <Tabs
-                value={value}
-                onChange={handleChange}
-                aria-label="basic tabs example"
-                textColor="#ff5e10"
-                indicatorColor="secondary"
-                centered
+          <>
+            <Box sx={{ width: "100%" }}>
+              <Box
+                sx={{
+                  borderBottom: 1,
+                  borderColor: "divider",
+                }}
               >
-                <Tab label="Projects" {...a11yProps(0)} />
-                <Tab label="News" {...a11yProps(1)} />
-                <Tab label="Articles" {...a11yProps(2)} />
-                <Tab label="Videos" {...a11yProps(3)} />
+                <Tabs
+                  value={value}
+                  onChange={handleChange}
+                  aria-label="basic tabs example"
+                  textColor="#ff5e10"
+                  indicatorColor="secondary"
+                  centered
+                >
+                  <Tab label="Projects" {...a11yProps(0)} />
+                  <Tab label="News" {...a11yProps(1)} />
+                  <Tab label="Articles" {...a11yProps(2)} />
+                  <Tab label="Videos" {...a11yProps(3)} />
 
-                {/* <Tab label="Clients" {...a11yProps(4)} /> */}
-              </Tabs>
+                  <Tab label="Gallery" {...a11yProps(4)} />
+                  <Tab label="Cover Images" {...a11yProps(5)} />
+                </Tabs>
+              </Box>
+              <TabPanel value={value} index={1}>
+                <AdminNews news={props.new} value={setValue}></AdminNews>
+              </TabPanel>
+              <TabPanel value={value} index={0}>
+                <AdminProj proj={props.proj} value={setValue}></AdminProj>
+              </TabPanel>
+              <TabPanel value={value} index={2}>
+                <AdminArticle arti={props.arti} value={setValue}></AdminArticle>
+              </TabPanel>
+              <TabPanel value={value} index={3}>
+                <AdminVideos videos={props.videos}></AdminVideos>
+              </TabPanel>
+
+              <TabPanel value={value} index={4}>
+                <AdminGallery images={props.images}></AdminGallery>
+              </TabPanel>
+              <TabPanel value={value} index={5}>
+                <AdminCover cover={props.cover}></AdminCover>
+              </TabPanel>
             </Box>
-            <TabPanel value={value} index={1}>
-              <AdminNews news={props.new} value={setValue}></AdminNews>
-            </TabPanel>
-            <TabPanel value={value} index={0}>
-              <AdminProj proj={props.proj} value={setValue}></AdminProj>
-            </TabPanel>
-            <TabPanel value={value} index={2}>
-              <AdminArticle arti={props.arti} value={setValue}></AdminArticle>
-            </TabPanel>
-            <TabPanel value={value} index={3}>
-              <AdminVideos videos={props.videos}></AdminVideos>
-            </TabPanel>
-
-            {/* <TabPanel value={value} index={4}>
-          <AdminClients cli={props.cli}></AdminClients>
-        </TabPanel> */}
-          </Box>
+          </>
         ) : (
           <>
             <div className="row">

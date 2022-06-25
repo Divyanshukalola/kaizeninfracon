@@ -42,7 +42,7 @@ const Nav = (props) => {
       className="row sticky-top bg-white"
       style={{ zIndex: "9999", width: "101%" }}
     >
-      <div className={props.logout ? "col-5 my-3 " : "col-5 my-3 "}>
+      <div className={props.logout ? "col-4 my-3 " : "col-5 my-3 "}>
         <button
           style={{
             border: "transparent",
@@ -154,7 +154,7 @@ const Nav = (props) => {
             >
               <span
                 className={
-                  props.proj
+                  props.gallery
                     ? "hoverNavItem hoverNavItemActive"
                     : "hoverNavItem"
                 }

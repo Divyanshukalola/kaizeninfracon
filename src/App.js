@@ -33,6 +33,8 @@ function App() {
   const [videos, setvideos] = useState([]);
   const [coverImage, setcoverImage] = useState([]);
   const [gallery, setgallery] = useState([]);
+  const [cover, setcover] = useState([]);
+
   const [loading, setLoading] = useState(true);
   const [state, setState] = useState(false);
   const types = [1, 2, 3, 4, 5, 6];
@@ -46,62 +48,70 @@ function App() {
   // const dataCollectionRef5 = collection(db, "clients");
   const dataCollectionRef6 = collection(db, "coverImage");
   const dataCollectionRef7 = collection(db, "gallery");
+  const dataCollectionRef8 = collection(db, "coverImage");
 
   // read data from firebase
   useEffect(() => {
-                    // Update the document title using the browser API
+    // Update the document title using the browser API
 
-                    const getData = async () => {
-                      const New = await getDocs(dataCollectionRef1);
-                      const proj = await getDocs(dataCollectionRef2);
-                      const arti = await getDocs(dataCollectionRef3);
-                      const video = await getDocs(dataCollectionRef4);
-                      //  const client = await getDocs(dataCollectionRef5);
-                      const coverimage = await getDocs(dataCollectionRef6);
-                      const gallery = await getDocs(dataCollectionRef7);
+    const getData = async () => {
+      const New = await getDocs(dataCollectionRef1);
+      const proj = await getDocs(dataCollectionRef2);
+      const arti = await getDocs(dataCollectionRef3);
+      const video = await getDocs(dataCollectionRef4);
+      //  const client = await getDocs(dataCollectionRef5);
+      const coverimage = await getDocs(dataCollectionRef6);
+      const gallery = await getDocs(dataCollectionRef7);
+      const coverImages = await getDocs(dataCollectionRef8);
 
-                      setNews(
-                        New.docs.map((doc) => ({
-                          ...doc.data(),
-                          id: doc.id,
-                        }))
-                      );
-                      setgallery(
-                        gallery.docs.map((doc) => ({
-                          ...doc.data(),
-                          id: doc.id,
-                        }))
-                      );
-                      setprojects(
-                        proj.docs.map((doc) => ({
-                          ...doc.data(),
-                          id: doc.id,
-                        }))
-                      );
-                      setarticle(
-                        arti.docs.map((doc) => ({
-                          ...doc.data(),
-                          id: doc.id,
-                        }))
-                      );
-                      setvideos(
-                        video.docs.map((doc) => ({
-                          ...doc.data(),
-                          id: doc.id,
-                        }))
-                      );
-                      setcoverImage(
-                        coverimage.docs.map((doc) => ({
-                          ...doc.data(),
-                          id: doc.id,
-                        }))
-                      );
+      setcover(
+        coverImages.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }))
+      );
+      setNews(
+        New.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }))
+      );
+      setgallery(
+        gallery.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }))
+      );
+      setprojects(
+        proj.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }))
+      );
+      setarticle(
+        arti.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }))
+      );
+      setvideos(
+        video.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }))
+      );
+      setcoverImage(
+        coverimage.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }))
+      );
 
-                      // setclients(client.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-                      setLoading(false);
-                    };
-                    getData();
-                  }, []);
+      // setclients(client.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      setLoading(false);
+    };
+    getData();
+  }, []);
 
   return (
     <div className="App">
@@ -166,6 +176,8 @@ function App() {
                     videos={videos}
                     proj={projects}
                     state={state}
+                    images={gallery}
+                    cover={cover}
 
                     // cli={clients}
                   ></Admin>
