@@ -25,7 +25,7 @@ import People from "./components/people";
 import AdminLogin from "./components/admin/login";
 import SectionProjectView from "./components/views/sectionProjectView";
 import Gallery from "./components/gallery";
-import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./../src/firebase-config";
 
 function App() {
