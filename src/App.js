@@ -130,7 +130,13 @@ function App() {
             <Route path="/timeline" element={<Timeline></Timeline>} />
             <Route
               path="/"
-              element={<Home1 proj={projects} coverImage={coverImage}></Home1>}
+              element={
+                <Home1
+                  proj={projects}
+                  coverImage={coverImage}
+                  images={gallery}
+                ></Home1>
+              }
             />
             <Route path="/people" element={<People></People>} />
 

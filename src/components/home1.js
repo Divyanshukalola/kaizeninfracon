@@ -20,7 +20,7 @@ import { addDoc, collection } from "firebase/firestore";
 import { db } from "./../firebase-config";
 import { v4 } from "uuid";
 
-function Home1({ proj, coverImage }) {
+function Home1({ proj, coverImage, images }) {
   const [page, setPage] = React.useState(1);
   const handleChange = (event, value) => {
     setPage(value);
@@ -77,7 +77,10 @@ function Home1({ proj, coverImage }) {
       {/* navigation  */}
 
       <div>
-        <SlideSHow time={5000} data={coverImage}></SlideSHow>
+        <SlideSHow
+          time={5000}
+          data={coverImage ? coverImage : images}
+        ></SlideSHow>
         <br />
         {/* section 1 */}
         <div className=" bg-white">
