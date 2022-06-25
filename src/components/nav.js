@@ -29,6 +29,9 @@ const Nav = (props) => {
   function career() {
     navigate("/career");
   }
+  function gallery() {
+    navigate("/gallery");
+  }
 
   async function logout() {
     await signOut(auth);
@@ -39,7 +42,7 @@ const Nav = (props) => {
       className="row sticky-top bg-white"
       style={{ zIndex: "9999", width: "101%" }}
     >
-      <div className={props.logout ? "col-5 my-3 " : "col-6 my-3 "}>
+      <div className={props.logout ? "col-5 my-3 " : "col-5 my-3 "}>
         <button
           style={{
             border: "transparent",
@@ -136,6 +139,27 @@ const Nav = (props) => {
                 }
               >
                 Project
+              </span>
+            </button>
+          </div>
+          <div className="col ">
+            <button
+              style={{
+                border: "transparent",
+                color: "#1c3e44",
+                background: "transparent",
+                cursor: "pointer",
+              }}
+              onClick={gallery}
+            >
+              <span
+                className={
+                  props.proj
+                    ? "hoverNavItem hoverNavItemActive"
+                    : "hoverNavItem"
+                }
+              >
+                Gallery
               </span>
             </button>
           </div>

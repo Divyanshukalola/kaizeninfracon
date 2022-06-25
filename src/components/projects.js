@@ -22,6 +22,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import TextTruncate from "react-text-truncate";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -172,7 +173,7 @@ function Projects({ proj }) {
                             return (
                               <>
                                 <div
-                                  className="col-6 projectRow d-flex justify-content-center"
+                                  className="col-6 projectRow d-flex justify-content-center rounded"
                                   onClick={() => {
                                     navigate(`/projects/${obj1.id}`);
                                   }}
@@ -224,7 +225,7 @@ function Projects({ proj }) {
                             return (
                               <>
                                 <div
-                                  className="col-6 projectRow d-flex justify-content-center"
+                                  className="col-6 projectRow d-flex justify-content-center rounded"
                                   onClick={() => {
                                     navigate(`/projects/${obj1.id}`);
                                   }}
@@ -506,10 +507,15 @@ function Projects({ proj }) {
                                         variant="body2"
                                         color="text.secondary"
                                       >
-                                        {obj1.body}
+                                        <TextTruncate
+                                          line={2}
+                                          element="span"
+                                          truncateText="…"
+                                          text={obj1.body}
+                                        />
                                       </Typography>
                                     </CardContent>
-                                    <CardActions>
+                                    <CardActions className="d-flex justify-content-center">
                                       <button
                                         className="mx-2 my-3 jobbutton"
                                         onClick={() => {

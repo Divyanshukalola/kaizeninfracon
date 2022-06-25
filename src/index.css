@@ -286,6 +286,8 @@
   width: 670px;
    position: absolute;
    align-items: center;
+   border-radius: 10px;
+
 
 }
 .text{

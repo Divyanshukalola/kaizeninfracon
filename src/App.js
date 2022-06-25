@@ -24,6 +24,7 @@ import ReactLoading from "react-loading";
 import People from "./components/people";
 import AdminLogin from "./components/admin/login";
 import SectionProjectView from "./components/views/sectionProjectView";
+import Gallery from "./components/gallery";
 
 function App() {
   const [news, setNews] = useState([]);
@@ -31,6 +32,7 @@ function App() {
   const [article, setarticle] = useState([]);
   const [videos, setvideos] = useState([]);
   const [coverImage, setcoverImage] = useState([]);
+  const [gallery, setgallery] = useState([]);
   const [loading, setLoading] = useState(true);
   const [state, setState] = useState(false);
   const types = [1, 2, 3, 4, 5, 6];
@@ -43,6 +45,7 @@ function App() {
   const dataCollectionRef4 = collection(db, "video");
   // const dataCollectionRef5 = collection(db, "clients");
   const dataCollectionRef6 = collection(db, "coverImage");
+  const dataCollectionRef7 = collection(db, "gallery");
 
   // read data from firebase
   useEffect(() => {
@@ -55,9 +58,16 @@ function App() {
                       const video = await getDocs(dataCollectionRef4);
                       //  const client = await getDocs(dataCollectionRef5);
                       const coverimage = await getDocs(dataCollectionRef6);
+                      const gallery = await getDocs(dataCollectionRef7);
 
                       setNews(
                         New.docs.map((doc) => ({
+                          ...doc.data(),
+                          id: doc.id,
+                        }))
+                      );
+                      setgallery(
+                        gallery.docs.map((doc) => ({
                           ...doc.data(),
                           id: doc.id,
                         }))
@@ -118,6 +128,10 @@ function App() {
             <Route
               path="/login"
               element={<AdminLogin setState={setState}></AdminLogin>}
+            />
+            <Route
+              path="/gallery"
+              element={<Gallery gallery={gallery}></Gallery>}
             />
             <Route
               path="/news"

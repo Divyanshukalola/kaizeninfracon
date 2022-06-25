@@ -84,6 +84,7 @@ function Home1({ proj, coverImage }) {
                       <Card
                         sx={{
                           height: "450px",
+                          borderColor: "transparent",
                         }}
                         variant="outlined"
                       >
@@ -111,6 +112,7 @@ function Home1({ proj, coverImage }) {
                       <Card
                         sx={{
                           height: "450px",
+                          borderColor: "transparent",
                         }}
                         variant="outlined"
                       >
@@ -140,6 +142,7 @@ function Home1({ proj, coverImage }) {
                       <Card
                         sx={{
                           height: "450px",
+                          borderColor: "transparent",
                         }}
                         variant="outlined"
                       >
@@ -167,6 +170,7 @@ function Home1({ proj, coverImage }) {
                       <Card
                         sx={{
                           height: "450px",
+                          borderColor: "transparent",
                         }}
                         variant="outlined"
                       >
@@ -265,7 +269,7 @@ function Home1({ proj, coverImage }) {
                                                 {obj1.title}
                                               </Typography>
                                             </CardContent>
-                                            <CardActions>
+                                            <CardActions className="d-flex justify-content-center">
                                               <button
                                                 className="mx-2 my-3 jobbutton"
                                                 onClick={() => {

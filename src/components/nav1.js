@@ -27,6 +27,10 @@ const Nav1 = (props) => {
   function people() {
     navigate("/people");
   }
+  function gallery() {
+    navigate("/gallery");
+  }
+
   return (
     <>
       {/* navigation  */}{" "}
@@ -36,7 +40,7 @@ const Nav1 = (props) => {
           zIndex: "99999",
         }}
       >
-        <div className="col my-3 mx-5">
+        <div className="col-4 my-3 mx-5">
           {/* <img src="" alt="" /> */}
           <button
             style={{
@@ -134,6 +138,27 @@ const Nav1 = (props) => {
                   }
                 >
                   Project
+                </span>
+              </button>
+            </div>
+            <div className="col ">
+              <button
+                style={{
+                  border: "transparent",
+                  color: "#1c3e44",
+                  background: "transparent",
+                  cursor: "pointer",
+                }}
+                onClick={gallery}
+              >
+                <span
+                  className={
+                    props.proj
+                      ? "hoverNavItem hoverNavItemActive"
+                      : "hoverNavItem"
+                  }
+                >
+                  Gallery
                 </span>
               </button>
             </div>
