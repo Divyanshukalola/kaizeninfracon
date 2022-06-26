@@ -32,6 +32,9 @@ const Nav = (props) => {
   function gallery() {
     navigate("/gallery");
   }
+  function contact() {
+    navigate("/contactus");
+  }
 
   async function logout() {
     await signOut(auth);
@@ -213,6 +216,7 @@ const Nav = (props) => {
                 background: "transparent",
                 cursor: "pointer",
               }}
+              onClick={contact}
             >
               <span
                 className={

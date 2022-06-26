@@ -30,6 +30,9 @@ const Nav1 = (props) => {
   function gallery() {
     navigate("/gallery");
   }
+  function contact() {
+    navigate("/contactus");
+  }
 
   return (
     <>
@@ -219,6 +222,7 @@ const Nav1 = (props) => {
                       ? "hoverNavItem hoverNavItemActive"
                       : "hoverNavItem"
                   }
+                  onClick={contact}
                 >
                   Contact
                 </span>

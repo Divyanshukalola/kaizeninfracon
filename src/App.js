@@ -27,6 +27,8 @@ import SectionProjectView from "./components/views/sectionProjectView";
 import Gallery from "./components/gallery";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./../src/firebase-config";
+import Error404 from "./components/Error/404";
+import ContactUs from "./components/contactUs";
 
 function App() {
   const [news, setNews] = useState([]);
@@ -138,6 +140,7 @@ function App() {
       ) : (
         <BrowserRouter>
           <Routes>
+            <Route path="*" element={<Error404></Error404>} status={404} />
             {/* <Route path="/" element={<CommingSoon></CommingSoon>} /> */}
             <Route path="/timeline" element={<Timeline></Timeline>} />
             <Route
@@ -153,6 +156,7 @@ function App() {
             <Route path="/people" element={<People></People>} />
 
             <Route path="/about" element={<About></About>} />
+            <Route path="/contactus" element={<ContactUs></ContactUs>} />
             <Route
               path="/login"
               element={<AdminLogin setState={setState}></AdminLogin>}
