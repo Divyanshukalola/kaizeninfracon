@@ -7,13 +7,19 @@ const Footer = () => {
       <div className="row ">
         <div className="col-4 text-center my-4">
           <p>Copyright © 2022 Kizen. All Rights Reserved</p>
-          <br />
+          Created By:{" "}
+          <a
+            style={{ color: "#ff5e10" }}
+            href="https://www.linkedin.com/in/divyanshu-k-4b6a1311a/"
+          >
+            Divyanshu Kalola
+          </a>
         </div>
         <div className="col-2 border-right">
           <div className="row">
             <div className="col text-right">
               <button
-                className="footbutton"
+                className="footbutton mt-1"
                 onClick={() => {
                   navigate("/about");
                 }}
@@ -22,7 +28,7 @@ const Footer = () => {
               </button>
               <br />
               <button
-                className="footbutton"
+                className="footbutton mt-1"
                 onClick={() => {
                   navigate("/news");
                 }}
@@ -31,7 +37,7 @@ const Footer = () => {
               </button>{" "}
               <br />
               <button
-                className="footbutton"
+                className="footbutton mt-1"
                 onClick={() => {
                   navigate("/news");
                 }}
@@ -39,12 +45,12 @@ const Footer = () => {
                 Over Events{" "}
               </button>{" "}
               <br />
-              <button className="footbutton">Contact us </button>
+              <button className="footbutton mt-1">Contact us </button>
             </div>
           </div>
         </div>
         <div className="col">
-          <div className="row">
+          <div className="row mt-2">
             <div className="col">
               <h5>Rajkot, Gujarat</h5>
               <p>
@@ -63,17 +69,6 @@ const Footer = () => {
               </p>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="row text-center mt-5">
-        <div className="col">
-          Created By:{" "}
-          <a
-            style={{ color: "#ff5e10" }}
-            href="https://www.linkedin.com/in/divyanshu-k-4b6a1311a/"
-          >
-            Divyanshu Kalola
-          </a>
         </div>
       </div>
     </>
