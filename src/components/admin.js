@@ -19,6 +19,8 @@ import AdminVideos from "./admin/videos";
 import AdminGallery from "./admin/gallery";
 import AdminCover from "./admin/cover";
 
+import useWindowDimensions from "./useWindowDimensions";
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -53,6 +55,8 @@ function a11yProps(index) {
 }
 
 function Admin(props) {
+  const { height, width } = useWindowDimensions();
+  console.log(height);
   const theme = createTheme({
     palette: {
       primary: {
@@ -82,71 +86,89 @@ function Admin(props) {
       <br />
 
       <hr />
-      <ThemeProvider theme={theme}>
-        {" "}
-        {props.state ? (
-          <>
-            <Box sx={{ width: "100%" }}>
-              <Box
-                sx={{
-                  borderBottom: 1,
-                  borderColor: "divider",
-                }}
-              >
-                <Tabs
-                  value={value}
-                  onChange={handleChange}
-                  aria-label="basic tabs example"
-                  textColor="#ff5e10"
-                  indicatorColor="secondary"
-                  centered
-                >
-                  <Tab label="Projects" {...a11yProps(0)} />
-                  <Tab label="News" {...a11yProps(1)} />
-                  <Tab label="Articles" {...a11yProps(2)} />
-                  <Tab label="Videos" {...a11yProps(3)} />
-
-                  <Tab label="Gallery" {...a11yProps(4)} />
-                  <Tab label="Cover Images" {...a11yProps(5)} />
-                </Tabs>
-              </Box>
-              <TabPanel value={value} index={1}>
-                <AdminNews news={props.new} value={setValue}></AdminNews>
-              </TabPanel>
-              <TabPanel value={value} index={0}>
-                <AdminProj proj={props.proj} value={setValue}></AdminProj>
-              </TabPanel>
-              <TabPanel value={value} index={2}>
-                <AdminArticle arti={props.arti} value={setValue}></AdminArticle>
-              </TabPanel>
-              <TabPanel value={value} index={3}>
-                <AdminVideos videos={props.videos}></AdminVideos>
-              </TabPanel>
-
-              <TabPanel value={value} index={4}>
-                <AdminGallery images={props.images}></AdminGallery>
-              </TabPanel>
-              <TabPanel value={value} index={5}>
-                <AdminCover cover={props.cover}></AdminCover>
-              </TabPanel>
-            </Box>
-          </>
-        ) : (
-          <>
-            <div className="row">
-              <div className="col text-center">
-                <img
-                  src="https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/images%2Fnotauth.png?alt=media&token=75ab26d5-7091-4a36-97a6-9827e8dc1021"
-                  alt=""
-                />
-                <p>
-                  Please go to the <a href="/">home</a> page.
-                </p>
-              </div>
+      {width <= 1300 ? (
+        <>
+          <div className="row">
+            <div className="col text-center">
+              <h1>Please View this page on a Desktop.</h1>
+              <p>This page is not made for mobiles or tablets use.</p>
+              <small>
+                If this message appears on a desktop version. Please contact
+                your developer.
+              </small>
             </div>
-          </>
-        )}
-      </ThemeProvider>
+          </div>
+        </>
+      ) : (
+        <ThemeProvider theme={theme}>
+          {" "}
+          {props.state ? (
+            <>
+              <Box sx={{ width: "100%" }}>
+                <Box
+                  sx={{
+                    borderBottom: 1,
+                    borderColor: "divider",
+                  }}
+                >
+                  <Tabs
+                    value={value}
+                    onChange={handleChange}
+                    aria-label="basic tabs example"
+                    textColor="#ff5e10"
+                    indicatorColor="secondary"
+                    centered
+                  >
+                    <Tab label="Projects" {...a11yProps(0)} />
+                    <Tab label="News" {...a11yProps(1)} />
+                    <Tab label="Articles" {...a11yProps(2)} />
+                    <Tab label="Videos" {...a11yProps(3)} />
+
+                    <Tab label="Gallery" {...a11yProps(4)} />
+                    <Tab label="Cover Images" {...a11yProps(5)} />
+                  </Tabs>
+                </Box>
+                <TabPanel value={value} index={1}>
+                  <AdminNews news={props.new} value={setValue}></AdminNews>
+                </TabPanel>
+                <TabPanel value={value} index={0}>
+                  <AdminProj proj={props.proj} value={setValue}></AdminProj>
+                </TabPanel>
+                <TabPanel value={value} index={2}>
+                  <AdminArticle
+                    arti={props.arti}
+                    value={setValue}
+                  ></AdminArticle>
+                </TabPanel>
+                <TabPanel value={value} index={3}>
+                  <AdminVideos videos={props.videos}></AdminVideos>
+                </TabPanel>
+
+                <TabPanel value={value} index={4}>
+                  <AdminGallery images={props.images}></AdminGallery>
+                </TabPanel>
+                <TabPanel value={value} index={5}>
+                  <AdminCover cover={props.cover}></AdminCover>
+                </TabPanel>
+              </Box>
+            </>
+          ) : (
+            <>
+              <div className="row">
+                <div className="col text-center">
+                  <img
+                    src="https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/images%2Fnotauth.png?alt=media&token=75ab26d5-7091-4a36-97a6-9827e8dc1021"
+                    alt=""
+                  />
+                  <p>
+                    Please go to the <a href="/">home</a> page.
+                  </p>
+                </div>
+              </div>
+            </>
+          )}
+        </ThemeProvider>
+      )}
 
       {/* footer  */}
       <br />

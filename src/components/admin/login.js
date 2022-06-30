@@ -62,7 +62,7 @@ function AdminLogin({ setState }) {
             height: "500px",
           }}
         >
-          <div className="col-4" style={{}}>
+          <div className="col-sm-4 mx-5" style={{}}>
             {" "}
             <br />
             <br />
