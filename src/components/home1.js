@@ -346,7 +346,7 @@ function Home1({ proj, coverImage, images }) {
                 </div>
 
                 <div className="row">
-                  <div className="col text-center clientText">
+                  <div className="col-sm text-center clientText">
                     <div
                       className="container client_info"
                       style={{
@@ -422,9 +422,9 @@ function Home1({ proj, coverImage, images }) {
                       </>
                     </div>
                   </div>
-                  <div className="col">
-                    <div className="row mt-5 text-center">
-                      <div className="col">
+                  <div className="col-sm">
+                    <div className="row mt-sm-5 mt-5 text-center">
+                      <div className="col mt-4 mt-sm-0">
                         <img
                           src={
                             "https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png"
@@ -440,7 +440,7 @@ function Home1({ proj, coverImage, images }) {
                           }}
                         />
                       </div>
-                      <div className="col">
+                      <div className="col mt-4 mt-sm-0">
                         {" "}
                         <img
                           src={
@@ -458,10 +458,9 @@ function Home1({ proj, coverImage, images }) {
                         />
                       </div>
                     </div>
-                    <br />
-                    <br />
-                    <div className="row mt-5 text-center">
-                      <div className="col ">
+
+                    <div className="row mt-sm-5 mt-5 text-center">
+                      <div className="col mt-4 mt-sm-0">
                         <img
                           src={
                             "http://assets.stickpng.com/images/580b57fcd9996e24bc43c521.png"
@@ -477,7 +476,7 @@ function Home1({ proj, coverImage, images }) {
                           }}
                         />
                       </div>
-                      <div className="col">
+                      <div className="col mt-4 mt-sm-0">
                         <img
                           src={
                             "https://barod.cymru/wp-content/uploads/2020/07/facebook-icon-transparent-background-3.png"

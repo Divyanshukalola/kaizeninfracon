@@ -172,7 +172,7 @@ function ContactUs() {
         {/* footer  */}
         <br />
         <br />
-        <div className="row mx-5 my-5 border-top">
+        <div className="row mx-5 my-5 ">
           <div className="col mt-5">
             <Footer></Footer>{" "}
           </div>

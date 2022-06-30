@@ -5,6 +5,7 @@ import Footer from "./footer";
 import Topnavigation from "./nav";
 import { useNavigate } from "react-router-dom";
 
+
 // img
 
 import PropTypes from "prop-types";
@@ -114,7 +115,7 @@ function Projects({ proj }) {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="row text-center" style={{ width: "101%" }}>
+        <div className="row mx-0 text-center" style={{ width: "100%" }}>
           <div className="col-sm">
             <h1
               style={{
@@ -128,7 +129,7 @@ function Projects({ proj }) {
           </div>
         </div>
       </div>
-      <div className="row " style={{ width: "101%" }}>
+      <div className="row mx-0 " style={{ width: "100%" }}>
         <div className="col-sm">
           {" "}
           <ThemeProvider theme={theme}>
@@ -154,7 +155,7 @@ function Projects({ proj }) {
               <TabPanel value={value} index={0}>
                 <div>
                   {/* commercial  */}
-                  <div className="row followMeBar">
+                  <div className="row mx-0 followMeBar">
                     <div className="col-sm ">
                       <div className=" text-center my-3 ">
                         <h1 style={{ color: "lightgray" }}>
@@ -164,16 +165,16 @@ function Projects({ proj }) {
                     </div>
                   </div>
                   <br />
-                  <div className="row ">
+                  <div className="row mx-0 ">
                     <div className="col">
-                      <div className="row  d-flex justify-content-center">
+                      <div className="row">
                         {proj
                           .filter((e) => e.type === 1)
                           .map((obj1) => {
                             return (
                               <>
                                 <div
-                                  className="col-sm-6 projectRow d-sm-flex justify-content-center rounded"
+                                  className="col-sm-6 mx-0 projectRow d-sm-flex justify-content-center rounded"
                                   onClick={() => {
                                     navigate(`/projects/${obj1.id}`);
                                   }}
@@ -185,7 +186,15 @@ function Projects({ proj }) {
                                   />
                                   <div className="container text">
                                     <h5 className="mt-2">{obj1.title}</h5>
-                                    <small>{obj1.body}</small>
+                                    <small>
+                                      {" "}
+                                      <TextTruncate
+                                        line={1}
+                                        element="span"
+                                        truncateText="…"
+                                        text={obj1.body}
+                                      />
+                                    </small>
                                     <br />
                                     <button
                                       className="mx-2 my-3 jobbutton"
@@ -206,7 +215,7 @@ function Projects({ proj }) {
                   <br />
                   <hr />
                   {/* residential  */}
-                  <div className="row followMeBar">
+                  <div className="row mx-0 followMeBar">
                     <div className="col-sm">
                       <div className=" text-center my-3 ">
                         <h1 style={{ color: "lightgray" }}>
@@ -216,16 +225,16 @@ function Projects({ proj }) {
                     </div>
                   </div>
                   <br />
-                  <div className="row ">
+                  <div className="row mx-0 ">
                     <div className="col-sm">
-                      <div className="row d-flex justify-content-center">
+                      <div className="row">
                         {proj
                           .filter((e) => e.type === 2)
                           .map((obj1) => {
                             return (
                               <>
                                 <div
-                                  className="col-sm-6 projectRow d-sm-flex justify-content-center rounded"
+                                  className="col-sm-6 mx-0 projectRow d-sm-flex justify-content-center rounded"
                                   onClick={() => {
                                     navigate(`/projects/${obj1.id}`);
                                   }}
@@ -237,7 +246,20 @@ function Projects({ proj }) {
                                   />
                                   <div className="container text">
                                     <h5 className="mt-2">{obj1.title}</h5>
-                                    <small>{obj1.body}</small>
+                                    <small>
+                                      {" "}
+                                      <TextTruncate
+                                        line={1}
+                                        element="span"
+                                        truncateText="…"
+                                        text=<TextTruncate
+                                          line={1}
+                                          element="span"
+                                          truncateText="…"
+                                          text={obj1.body}
+                                        />
+                                      />
+                                    </small>
                                     <br />
                                     <button
                                       className="mx-2 my-3 jobbutton"
@@ -259,7 +281,7 @@ function Projects({ proj }) {
                   <br />
                   <hr />
                   {/* roads and bridges  */}
-                  <div className="row followMeBar">
+                  <div className="row mx-0 followMeBar">
                     <div className="col">
                       <div className=" text-center my-3">
                         <h1 style={{ color: "lightgray" }}>
@@ -269,9 +291,9 @@ function Projects({ proj }) {
                     </div>
                   </div>
                   <br />
-                  <div className="row ">
+                  <div className="row mx-0 ">
                     <div className="col">
-                      <div className="row  d-flex justify-content-center">
+                      <div className="row ">
                         {proj
                           .filter((e) => e.type === 3)
                           .map((obj1) => {
@@ -290,7 +312,15 @@ function Projects({ proj }) {
                                   />
                                   <div className="container text">
                                     <h5 className="mt-2">{obj1.title}</h5>
-                                    <small>{obj1.body}</small>
+                                    <small>
+                                      {" "}
+                                      <TextTruncate
+                                        line={1}
+                                        element="span"
+                                        truncateText="…"
+                                        text={obj1.body}
+                                      />
+                                    </small>
                                     <br />
                                     <button
                                       className="mx-2 my-3 jobbutton"
@@ -311,7 +341,7 @@ function Projects({ proj }) {
                   <br />
                   <hr />
                   {/* hospital and colleges */}
-                  <div className="row followMeBar">
+                  <div className="row mx-0 followMeBar">
                     <div className="col">
                       <div className=" text-center my-3">
                         <h1 style={{ color: "lightgray" }}>
@@ -321,9 +351,9 @@ function Projects({ proj }) {
                     </div>
                   </div>
                   <br />
-                  <div className="row ">
+                  <div className="row mx-0 ">
                     <div className="col">
-                      <div className="row  d-flex justify-content-center">
+                      <div className="row ">
                         {proj
                           .filter((e) => e.type === 4)
                           .map((obj1) => {
@@ -342,7 +372,15 @@ function Projects({ proj }) {
                                   />
                                   <div className="container text">
                                     <h5 className="mt-2">{obj1.title}</h5>
-                                    <small>{obj1.body}</small>
+                                    <small>
+                                      {" "}
+                                      <TextTruncate
+                                        line={1}
+                                        element="span"
+                                        truncateText="…"
+                                        text={obj1.body}
+                                      />
+                                    </small>
                                     <br />
                                     <button
                                       className="mx-2 my-3 jobbutton"
@@ -363,7 +401,7 @@ function Projects({ proj }) {
                   <br />
                   <hr />
                   {/* gov admin buildings */}
-                  <div className="row followMeBar">
+                  <div className="row mx-0 followMeBar">
                     <div className="col">
                       <div className=" text-center my-3">
                         <h1 style={{ color: "lightgray" }}>
@@ -373,9 +411,9 @@ function Projects({ proj }) {
                     </div>
                   </div>
                   <br />
-                  <div className="row ">
+                  <div className="row mx-0 ">
                     <div className="col">
-                      <div className="row  d-flex justify-content-center">
+                      <div className="row ">
                         {proj
                           .filter((e) => e.type === 5)
                           .map((obj1) => {
@@ -394,7 +432,15 @@ function Projects({ proj }) {
                                   />
                                   <div className="container text">
                                     <h5 className="mt-2">{obj1.title}</h5>
-                                    <small>{obj1.body}</small>
+                                    <small>
+                                      {" "}
+                                      <TextTruncate
+                                        line={1}
+                                        element="span"
+                                        truncateText="…"
+                                        text={obj1.body}
+                                      />
+                                    </small>
                                     <br />
                                     <button
                                       className="mx-2 my-3 jobbutton"
@@ -415,7 +461,7 @@ function Projects({ proj }) {
                   <br />
                   <hr />
                   {/* other facilities  */}
-                  <div className="row followMeBar">
+                  <div className="row mx-0 followMeBar">
                     <div className="col">
                       <div className=" text-center my-3">
                         <h1 style={{ color: "lightgray" }}>OTHER FACILITIES</h1>
@@ -423,9 +469,9 @@ function Projects({ proj }) {
                     </div>
                   </div>
                   <br />
-                  <div className="row ">
+                  <div className="row mx-0 ">
                     <div className="col">
-                      <div className="row  d-flex justify-content-center">
+                      <div className="row ">
                         {proj
                           .filter((e) => e.type === 6)
                           .map((obj1) => {
@@ -444,7 +490,15 @@ function Projects({ proj }) {
                                   />
                                   <div className="container text">
                                     <h5 className="mt-2">{obj1.title}</h5>
-                                    <small>{obj1.body}</small>
+                                    <small>
+                                      {" "}
+                                      <TextTruncate
+                                        line={1}
+                                        element="span"
+                                        truncateText="…"
+                                        text={obj1.body}
+                                      />
+                                    </small>
                                     <br />
                                     <button
                                       className="mx-2 my-3 jobbutton"
@@ -480,7 +534,7 @@ function Projects({ proj }) {
                   var seconds2 = date.getTime() / 1000;
                   return (
                     <>
-                      <div className="row mx-sm-5 my-sm-5">
+                      <div className="row mx-0 mx-sm-5 my-sm-5">
                         {" "}
                         {obj.map((obj1) => {
                           return (
@@ -511,7 +565,12 @@ function Projects({ proj }) {
                                           line={2}
                                           element="span"
                                           truncateText="…"
-                                          text={obj1.body}
+                                          text=<TextTruncate
+                                            line={1}
+                                            element="span"
+                                            truncateText="…"
+                                            text={obj1.body}
+                                          />
                                         />
                                       </Typography>
                                     </CardContent>

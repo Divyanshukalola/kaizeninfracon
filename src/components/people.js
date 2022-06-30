@@ -94,11 +94,11 @@ function People() {
       {organiseData(team, 3).map((obj1) => {
         return (
           <>
-            <div className="row d-flex justify-content-center containter mr-sm-5 mx-5">
+            <div className="row justify-content-center">
               {" "}
               {obj1.map((obj) => {
                 return (
-                  <div className="col-sm-4 my-4 justify-content-center">
+                  <div className="col-sm-4 my-4 justify-content-center mr-sm-5 mx-5">
                     <img src={obj.img} alt="" className="teamImage" />
                     <h6 className="mt-3">{obj.name}</h6>
                     <small>{obj.pos}</small>

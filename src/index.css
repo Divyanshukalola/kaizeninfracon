@@ -555,8 +555,15 @@ border-color: grey;
   height: 400px;
   width: 400px;
 }
+.tags{
+  font-size: 55px;
+  color: grey;
+}
 
 @media only screen and (max-width: 800px) {
+  .tags{
+    font-size: 40px;
+  }
   .slideshow{
     width: 97%;
   }
@@ -570,9 +577,21 @@ border-color: grey;
   display: inline;
   font-size: 34px;
   }
+  .mySlides1 {
+ 
+  transition: opacity 1s ease-in-out;
+   height: 700px;
+  background-repeat: no-repeat;
+  background-size: 210% 100%;
+  background-position: 40%;
+  z-index: 9999;
+  transition: 2s;
+
+}
   .slide-tagline{
-    font-size: 60px ;
-    text-align: center;
+    font-size: 40px ;
+    line-height: 0%;
+    
   }
   .nav1menuebutton1{
   display: none;
@@ -594,17 +613,17 @@ border-color: grey;
 
 }
 .projectImg{
-  min-height: 400px;
-  min-width: 450px;
-  max-width: 450px;
-  max-height: 400px;
+  min-height: 350px;
+  min-width: 400px;
+  max-width: 400px;
+  max-height: 350px;
 }
 
 
 .text{
 display: inline-block;
-  width: 430px;
-  max-height: 300px;
+  width: 380px;
+  max-height: 330px;
   background-color: #cbcbcbbf;
   margin: 10px;
   position: absolute;
@@ -620,6 +639,9 @@ display: inline-block;
   z-index: 1;
   background-color: white;
 
+}
+.hoverClients{
+  height: 80px;
 }
 
 }

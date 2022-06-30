@@ -47,9 +47,11 @@ function SlideSHow(props) {
                     marginTop: "35%",
                     fontSize: "90px",
                     textTransform: "uppercase",
+                    backdropFilter: "brightness(80%)",
                   }}
+                  className="mx-3 text-center"
                 >
-                  <span className="slide-tagline" ref={ref1}>
+                  <span className="slide-tagline " ref={ref1}>
                     Hello
                   </span>
 

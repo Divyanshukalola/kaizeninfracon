@@ -101,15 +101,7 @@ function About() {
           </div>
           <div className="col-sm my-5 ">
             <div>
-              <h1
-                style={{
-                  color: "grey",
-                  fontSize: "55px",
-                }}
-                className="mx-5"
-              >
-                Commercial Buildings
-              </h1>
+              <h1 className="mx-5 tags">Commercial Buildings</h1>
               <p
                 style={{
                   color: "grey",
@@ -144,15 +136,7 @@ function About() {
         <div className="row mx-0 " style={{ width: "100%" }}>
           <div className="col-sm my-5 ">
             <div>
-              <h1
-                style={{
-                  color: "grey",
-                  fontSize: "55px",
-                }}
-                className="mx-5"
-              >
-                Residential Buildings
-              </h1>
+              <h1 className="mx-5 tags">Residential Buildings</h1>
               <p
                 style={{
                   color: "grey",
@@ -201,15 +185,7 @@ function About() {
           </div>
           <div className="col-sm my-5 ">
             <div>
-              <h1
-                style={{
-                  color: "grey",
-                  fontSize: "55px",
-                }}
-                className="mx-5"
-              >
-                Roads and Bridges
-              </h1>
+              <h1 className="mx-5 tags">Roads and Bridges</h1>
               <p
                 style={{
                   color: "grey",
@@ -244,15 +220,7 @@ function About() {
         <div className="row mx-0 " style={{ width: "100%" }}>
           <div className="col-sm my-5 ">
             <div>
-              <h1
-                style={{
-                  color: "grey",
-                  fontSize: "55px",
-                }}
-                className="mx-5"
-              >
-                Hospital Buildings - Colleges
-              </h1>
+              <h1 className="mx-5 tags">Hospital Buildings - Colleges</h1>
               <p
                 style={{
                   color: "grey",
@@ -301,15 +269,7 @@ function About() {
           </div>
           <div className="col-sm my-5 ">
             <div>
-              <h1
-                style={{
-                  color: "grey",
-                  fontSize: "55px",
-                }}
-                className="mx-5"
-              >
-                Government Administrative Buildings
-              </h1>
+              <h1 className="mx-5 tags">Government Administrative Buildings</h1>
               <p
                 style={{
                   color: "grey",
@@ -344,15 +304,7 @@ function About() {
         <div className="row mx-0 " style={{ width: "100%" }}>
           <div className="col-sm my-5 ">
             <div>
-              <h1
-                style={{
-                  color: "grey",
-                  fontSize: "55px",
-                }}
-                className="mx-5"
-              >
-                Other Infrastructure Facilities
-              </h1>
+              <h1 className="mx-5 tags">Other Infrastructure Facilities</h1>
               <p
                 style={{
                   color: "grey",
