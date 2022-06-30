@@ -9,7 +9,7 @@ import { auth } from "./../firebase-config";
 import { BsList } from "react-icons/bs";
 import { BsChevronDoubleUp } from "react-icons/bs";
 
-import useWindowDimensions from "./useWindowDimensions";
+
 
 // import { IconName } from "react-icons/bs";
 
@@ -66,7 +66,8 @@ const Nav = (props) => {
         </button>
       </div>
       <div className="nav1menuebutton col text-right mt-4 mx-4" ref={ref1}>
-        <a
+        <button
+          style={{ borderColor: "transparent", background: "transparent" }}
           onClick={() => {
             ref1.current.style.display = "none";
             ref.current.style.display = "inline";
@@ -74,10 +75,11 @@ const Nav = (props) => {
           }}
         >
           <BsList></BsList>
-        </a>
+        </button>
       </div>
       <div className="nav1menuebutton1 col text-right mt-4 mx-4" ref={ref2}>
-        <a
+        <button
+          style={{ borderColor: "transparent", background: "transparent" }}
           onClick={() => {
             ref1.current.style.display = "inline";
             ref.current.style.display = "none";
@@ -85,7 +87,7 @@ const Nav = (props) => {
           }}
         >
           <BsChevronDoubleUp></BsChevronDoubleUp>
-        </a>
+        </button>
       </div>
       <div className="nav1menue col my-3 mx-5" ref={ref}>
         <div className="row mt-3 text-center">

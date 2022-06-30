@@ -8,6 +8,7 @@ import useWindowDimensions from "./useWindowDimensions";
 
 function Career() {
   const { height, width } = useWindowDimensions();
+console.log(height);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

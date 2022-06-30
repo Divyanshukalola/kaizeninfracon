@@ -29,6 +29,7 @@ import useWindowDimensions from "./useWindowDimensions";
 
 function News(props) {
   const { height, width } = useWindowDimensions();
+  console.log(height);
   const navigate = useNavigate();
   const [page, setPage] = React.useState(1);
   const handleChange = (event, value) => {
