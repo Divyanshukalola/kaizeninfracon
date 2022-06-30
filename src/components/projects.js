@@ -115,7 +115,7 @@ function Projects({ proj }) {
         }}
       >
         <div className="row text-center" style={{ width: "101%" }}>
-          <div className="col">
+          <div className="col-sm">
             <h1
               style={{
                 color: "white",
@@ -129,7 +129,7 @@ function Projects({ proj }) {
         </div>
       </div>
       <div className="row " style={{ width: "101%" }}>
-        <div className="col">
+        <div className="col-sm">
           {" "}
           <ThemeProvider theme={theme}>
             <Box sx={{ width: "100%" }}>
@@ -155,7 +155,7 @@ function Projects({ proj }) {
                 <div>
                   {/* commercial  */}
                   <div className="row followMeBar">
-                    <div className="col ">
+                    <div className="col-sm ">
                       <div className=" text-center my-3 ">
                         <h1 style={{ color: "lightgray" }}>
                           COMMERCIAL BUILDING
@@ -173,7 +173,7 @@ function Projects({ proj }) {
                             return (
                               <>
                                 <div
-                                  className="col-6 projectRow d-flex justify-content-center rounded"
+                                  className="col-sm-6 projectRow d-sm-flex justify-content-center rounded"
                                   onClick={() => {
                                     navigate(`/projects/${obj1.id}`);
                                   }}
@@ -207,7 +207,7 @@ function Projects({ proj }) {
                   <hr />
                   {/* residential  */}
                   <div className="row followMeBar">
-                    <div className="col">
+                    <div className="col-sm">
                       <div className=" text-center my-3 ">
                         <h1 style={{ color: "lightgray" }}>
                           RESIDENTIAL BUILDING
@@ -217,7 +217,7 @@ function Projects({ proj }) {
                   </div>
                   <br />
                   <div className="row ">
-                    <div className="col">
+                    <div className="col-sm">
                       <div className="row d-flex justify-content-center">
                         {proj
                           .filter((e) => e.type === 2)
@@ -225,7 +225,7 @@ function Projects({ proj }) {
                             return (
                               <>
                                 <div
-                                  className="col-6 projectRow d-flex justify-content-center rounded"
+                                  className="col-sm-6 projectRow d-sm-flex justify-content-center rounded"
                                   onClick={() => {
                                     navigate(`/projects/${obj1.id}`);
                                   }}
@@ -278,7 +278,7 @@ function Projects({ proj }) {
                             return (
                               <>
                                 <div
-                                  className="col-6 projectRow d-flex justify-content-center"
+                                  className="col-sm-6 projectRow d-sm-flex justify-content-center"
                                   onClick={() => {
                                     navigate(`/projects/${obj1.id}`);
                                   }}
@@ -330,7 +330,7 @@ function Projects({ proj }) {
                             return (
                               <>
                                 <div
-                                  className="col-6 projectRow d-flex justify-content-center"
+                                  className="col-sm-6 projectRow d-sm-flex justify-content-center"
                                   onClick={() => {
                                     navigate(`/projects/${obj1.id}`);
                                   }}
@@ -382,7 +382,7 @@ function Projects({ proj }) {
                             return (
                               <>
                                 <div
-                                  className="col-6 projectRow d-flex justify-content-center"
+                                  className="col-sm-6 projectRow d-sm-flex justify-content-center"
                                   onClick={() => {
                                     navigate(`/projects/${obj1.id}`);
                                   }}
@@ -432,7 +432,7 @@ function Projects({ proj }) {
                             return (
                               <>
                                 <div
-                                  className="col-6 projectRow d-flex justify-content-center"
+                                  className="col-sm-6 projectRow d-sm-flex justify-content-center"
                                   onClick={() => {
                                     navigate(`/projects/${obj1.id}`);
                                   }}
@@ -466,7 +466,7 @@ function Projects({ proj }) {
               </TabPanel>
               <TabPanel value={value} index={1}>
                 {/* current projects  */}
-                <div className="mt-4 mx-5 text-center">
+                <div className="mt-sm-4 mx-sm-5 text-center">
                   {" "}
                   <span className="sectionHeader">CURRENT PROJECTS</span>
                   <hr />
@@ -480,14 +480,14 @@ function Projects({ proj }) {
                   var seconds2 = date.getTime() / 1000;
                   return (
                     <>
-                      <div className="row mx-5 my-5">
+                      <div className="row mx-sm-5 my-sm-5">
                         {" "}
                         {obj.map((obj1) => {
                           return (
                             <>
                               {seconds2 <
                               obj1.details.project_end_date.seconds ? (
-                                <div className="col-6">
+                                <div className="col-sm-6 mt-5">
                                   <Card>
                                     <CardMedia
                                       component="img"

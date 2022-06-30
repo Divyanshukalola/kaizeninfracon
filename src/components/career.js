@@ -3,28 +3,11 @@ import React, { useEffect } from "react";
 import Footer from "./footer";
 
 import Topnavigation from "./nav";
-// import man from "./../static/img/man.png";
-// import building from "./../static/img/buildings.png";
-// import Button from "@mui/material/Button";
-// import { styled } from "@mui/material/styles";
-// import Slide from "@mui/material/Slide";
-// import Fade from "@mui/material/Fade";
 
-// import Card from "@mui/material/Card";
-// import CardContent from "@mui/material/CardContent";
-// import CardMedia from "@mui/material/CardMedia";
-// import { CardActionArea } from "@mui/material";
-
-// import sample from "./../static/img/sample_video.mp4";
-
-// import Card from "@mui/material/Card";
-// import Typography from "@mui/material/Typography";
-// import CardContent from "@mui/material/CardContent";
-// import CardMedia from "@mui/material/CardMedia";
-// import CardActions from "@mui/material/CardActions";
-// import Button from "@mui/material/Button";
+import useWindowDimensions from "./useWindowDimensions";
 
 function Career() {
+  const { height, width } = useWindowDimensions();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -36,18 +19,15 @@ function Career() {
       <div
         className="bg-light"
         style={{
-          height: "500px",
-          backgroundSize: "100%",
-          backgroundRepeat: "no-repeat",
-          opacity: "70%",
+          height: width <= 600 ? "300px" : "500px",
         }}
       >
-        <div className="row text-center" style={{ width: "101%" }}>
-          <div className="col">
+        <div className="row mx-0 text-center" style={{ width: "100%" }}>
+          <div className="col-sm">
             <h1
               style={{
                 marginTop: "12%",
-                fontSize: "55px",
+                fontSize: width <= 600 ? "30px" : "55px",
                 textTransform: "capitalize",
               }}
             >
@@ -65,8 +45,8 @@ function Career() {
       </div>
 
       <div className="bg-white">
-        <div className="row mx-5 mt-5">
-          <div className="col-6 mx-5 mt-5">
+        <div className="row mx-0 mt-sm-5">
+          <div className="col-sm-6 mx-5 mt-5">
             <h5 style={{ fontWeight: "bold" }}>Opportunities</h5>
             <p>
               Many individuals visit Kizen and decide to stay. That is something
@@ -84,8 +64,8 @@ function Career() {
       <br />
       <br />
       <div className="bg-white">
-        <div className="row mx-5 mt-5">
-          <div className="col-5 mx-5 mt-5">
+        <div className="row mx-0  mt-sm-5">
+          <div className="col-sm-5 mx-5 mt-5">
             <h5 style={{ fontWeight: "bold" }}>Culture</h5>
             <p>
               Kizen's dynamic culture revolves around excellence. Our continuous
@@ -104,27 +84,27 @@ function Career() {
             </p>
             <button className="jobbutton">View Our Work</button>
           </div>
-          <div className="col mx-3 mt-5">
+          <div className="col-sm mx-3 mt-5 text-center text-sm-left">
             <img
               src="https://media.istockphoto.com/photos/young-happy-worker-and-manager-giving-each-other-manly-greet-at-steel-picture-id1057484742?k=20&m=1057484742&s=612x612&w=0&h=iVCLJv8q6ktWFOyfzwaqRiQIa4iXfPG75dY37ivpz30="
               alt="img"
-              height={"400px"}
+              height={width <= 600 ? "300px" : "400px"}
             />
           </div>
         </div>
       </div>
 
       <div className="bg-white">
-        <div className="row mx-5 mt-5">
-          <div className="col-7 mt-5">
+        <div className="row mx-0  mt-sm-5 mx-0 border">
+          <div className="col-sm-7 mt-5 text-center text-sm-left">
             {" "}
             <img
               src="https://st.depositphotos.com/1037987/2504/i/600/depositphotos_25046043-stock-photo-team-working-at-desks-in.jpg"
               alt="img"
-              height={"500px"}
+              height={width <= 600 ? "300px" : "500px"}
             />
           </div>
-          <div className="col mt-5">
+          <div className="col-sm mt-5 text-center text-sm-left">
             <img
               src="https://cdn.pixabay.com/photo/2021/08/30/18/33/worker-6586718__340.jpg"
               alt="img"
@@ -134,14 +114,14 @@ function Career() {
         </div>
       </div>
       <div className="bg-white">
-        <div className="row mx-5 mt-5">
-          <div className="col-5 my-5">
+        <div className="row mx-0  mt-sm-5">
+          <div className="col-sm-5 my-5 mx-4 mx-sm-0">
             <h1>
               Kizen is always on the lookout for outstanding talent to join our
               fast-paced, ever-expanding team.
             </h1>
           </div>
-          <div className="col mx-5 mt-5">
+          <div className="col mx-5 mt-sm-5">
             <br />
             <h5>
               Kizen can help you discover your gift by allowing you to explore
@@ -154,20 +134,20 @@ function Career() {
       </div>
 
       <div className="bg-white">
-        <div className="row mx-5 mt-5">
-          <div className="col mt-5">
+        <div className="row mx-0  mt-sm-5">
+          <div className="col-sm mt-5 text-center text-sm-left">
             <img
               src="https://cdn.pixabay.com/photo/2021/08/30/18/33/worker-6586718__340.jpg"
               alt="img"
-              height={"400px"}
+              height={width <= 600 ? "300px" : "400px"}
             />
           </div>
-          <div className="col-6 mt-5">
+          <div className="col-sm-6 mt-5 text-center text-sm-left">
             {" "}
             <img
               src="https://st.depositphotos.com/1037987/2504/i/600/depositphotos_25046043-stock-photo-team-working-at-desks-in.jpg"
               alt="img"
-              height={"420px"}
+              height={width <= 600 ? "300px" : "420px"}
             />
           </div>
         </div>

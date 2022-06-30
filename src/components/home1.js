@@ -87,12 +87,12 @@ function Home1({ proj, coverImage, images }) {
                     human experience.
                   </p>
                   <br />
-                  <div className="row">
-                    <div className="col">
+                  <div className="row my-4">
+                    <div className="col-sm-6 ">
                       <Card
                         sx={{
-                          height: "450px",
                           borderColor: "transparent",
+                          width: "100%",
                         }}
                         variant="outlined"
                       >
@@ -118,11 +118,11 @@ function Home1({ proj, coverImage, images }) {
                         </CardContent>
                       </Card>
                     </div>
-                    <div className="col">
+                    <div className="col-sm-6 ">
                       <Card
                         sx={{
-                          height: "450px",
                           borderColor: "transparent",
+                          width: "100%",
                         }}
                         variant="outlined"
                       >
@@ -139,7 +139,7 @@ function Home1({ proj, coverImage, images }) {
                             }}
                             className="mt-4"
                           >
-                            A TEAM YOU CAN TRUST
+                            Reliable and trustworthy team.
                           </h5>
                           <small>
                             We take inspiration from the society we live in and
@@ -150,11 +150,11 @@ function Home1({ proj, coverImage, images }) {
                     </div>
                   </div>
                   <div className="row my-4">
-                    <div className="col">
+                    <div className="col-sm-6">
                       <Card
                         sx={{
-                          height: "450px",
                           borderColor: "transparent",
+                          width: "100%",
                         }}
                         variant="outlined"
                       >
@@ -180,11 +180,11 @@ function Home1({ proj, coverImage, images }) {
                         </CardContent>
                       </Card>
                     </div>
-                    <div className="col">
+                    <div className="col-sm-6">
                       <Card
                         sx={{
-                          height: "450px",
                           borderColor: "transparent",
+                          width: "100%",
                         }}
                         variant="outlined"
                       >
@@ -261,14 +261,14 @@ function Home1({ proj, coverImage, images }) {
                         return (
                           <>
                             {index === page - 1 ? (
-                              <div className="row mx-5 my-5">
+                              <div className="row mx-sm-5 my-5">
                                 {" "}
                                 {obj.map((obj1) => {
                                   return (
                                     <>
                                       {seconds2 <
                                       obj1.details.project_end_date.seconds ? (
-                                        <div className="col-6">
+                                        <div className="col-sm-6 my-3">
                                           <Card variant="outlined">
                                             <CardMedia
                                               component="img"
@@ -346,7 +346,7 @@ function Home1({ proj, coverImage, images }) {
                 </div>
 
                 <div className="row">
-                  <div className="col text-center">
+                  <div className="col text-center clientText">
                     <div
                       className="container client_info"
                       style={{

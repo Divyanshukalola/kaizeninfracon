@@ -33,15 +33,15 @@ function SlideSHow(props) {
   }
 
   return (
-    <div className="Home">
-      <div className="row" style={{ width: "101%" }}>
+    <div className="slideshow border">
+      <div className="row">
         <div className="col mySlides1" id="slideShow" key={"1"} ref={ref}>
           {" "}
           <Topnavigation home="true"></Topnavigation>
           <span>
             {" "}
             <div className="row">
-              <div className="col mx-5 text-left">
+              <div className="col text-left">
                 <h2
                   style={{
                     marginTop: "35%",

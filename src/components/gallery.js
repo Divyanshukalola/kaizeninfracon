@@ -7,7 +7,12 @@ import Topnavigation from "./nav";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
+import useWindowDimensions from "./useWindowDimensions";
+
 function Gallery({ gallery }) {
+  const { height, width } = useWindowDimensions();
+
+  console.log(height + " " + width);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -23,8 +28,8 @@ function Gallery({ gallery }) {
         <br />
         <br />
         <br />
-        <div className="row container mx-5">
-          <div className="col">
+        <div className="row mx-0 container mx-sm-5">
+          <div className="col-sm">
             <p style={{ textTransform: "uppercase" }}>Gallery</p>
 
             <h1>
@@ -41,12 +46,12 @@ function Gallery({ gallery }) {
           </div>
         </div>
 
-        <div className="row">
+        <div className="row mx-0">
           <div className="col d-flex justify-content-center">
             {" "}
-            <ImageList sx={{ width: 1200 }}>
+            <ImageList cols={width <= 600 ? 1 : 2} sx={{ width: 1200 }}>
               {gallery.map((item) => (
-                <ImageListItem key={item.img} className="my-2">
+                <ImageListItem key={item.img} className="my-2 mx-3">
                   <img
                     src={`${item.img}?w=248&fit=crop&auto=format`}
                     srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}

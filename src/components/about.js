@@ -18,8 +18,8 @@ function About() {
       <br />
       <br />
       <br />
-      <div className="row container mx-5">
-        <div className="col">
+      <div className="row mx-0 container">
+        <div className="col-sm mx-4">
           <p style={{ textTransform: "uppercase" }}>About us</p>
 
           <h1>
@@ -27,16 +27,15 @@ function About() {
             company
             <span style={{ color: "#ff5e10" }}>.</span>
           </h1>
-          <h6 style={{ lineHeight: "1.8" }}>
+          <h6 className="aboutus">
             Kaizen Infracon is a well known name with handy proposals in the
-            field of Construction <br /> and Infrastructure Development
-            Projects. Kaizen Infracon is known in its client base for <br /> its
-            sincerity and dedication in the execution of projects withs good
-            quality aspects. <br /> Kaizen Infracon was started in the year 2019
-            as a Partnership Firm and headed by <br /> Mr. Hardik Rangani as a
-            Managing Partner of Kaizen Infracon. Mr. Hardik Rangani is <br />{" "}
-            having a qualification of Diploma in Civil Engineering and M.B.A. in
-            Project Management.
+            field of Construction and Infrastructure Development Projects.
+            Kaizen Infracon is known in its client base for its sincerity and
+            dedication in the execution of projects withs good quality aspects.
+            Kaizen Infracon was started in the year 2019 as a Partnership Firm
+            and headed by Mr. Hardik Rangani as a Managing Partner of Kaizen
+            Infracon. Mr. Hardik Rangani is having a qualification of Diploma in
+            Civil Engineering and M.B.A. in Project Management.
           </h6>
           <br />
           <br />
@@ -50,19 +49,12 @@ function About() {
           <hr />
         </div>
 
-        <div className="row justify-content-center containter mr-5 my-5">
-          <div className="col-3 text-center ">
+        <div className="row mx-0 justify-content-center containter  my-sm-5">
+          <div className="col-sm-3 my-3 text-center mr-sm-5">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/images%2Fpeople%2Fhardik.png?alt=media&token=6cb96d94-54a3-4f3d-9f75-b561b7d65bba"
-              style={{
-                height: "210px",
-                width: "210px",
-                borderStyle: "solid",
-                borderRadius: "50%",
-                borderColor: "#ff5e10",
-                borderWidth: "3px",
-              }}
               alt="img"
+              className="promoters"
             />
 
             <br />
@@ -74,17 +66,10 @@ function About() {
               Managing Partner of Kaizen Infracon
             </small>
           </div>
-          <div className="col-3 text-center ">
+          <div className="col-sm-3 my-3 mb-5 mb-sm-0 text-center ">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/images%2Fpeople%2FBhovan.png?alt=media&token=d2741d8d-9d62-40d8-9bed-a3d41e255b0d"
-              style={{
-                height: "210px",
-                width: "210px",
-                borderStyle: "solid",
-                borderRadius: "50%",
-                borderColor: "#ff5e10",
-                borderWidth: "3px",
-              }}
+              className="promoters"
               alt="img"
             />
 
@@ -106,16 +91,15 @@ function About() {
           <span className="sectionHeader">EXPERTISE</span>
           <hr />
         </div>
-        <div className="row" style={{ width: "101%" }}>
-          <div className="col text-center my-5">
+        <div className="row mx-0" style={{ width: "100%" }}>
+          <div className="col-sm text-center my-sm-5">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/images%2Ftype1.jpeg?alt=media&token=2a0c783e-f16d-4046-9633-cc336077924f"
               alt="about"
-              height={"300px"}
-              className="my-4"
+              className="aboutusphoto my-sm-4"
             />
           </div>
-          <div className="col my-5 ">
+          <div className="col-sm my-5 ">
             <div>
               <h1
                 style={{
@@ -157,8 +141,8 @@ function About() {
         </div>
       </div>
       <div className="bg-white">
-        <div className="row " style={{ width: "101%" }}>
-          <div className="col my-5  mx-5">
+        <div className="row mx-0 " style={{ width: "100%" }}>
+          <div className="col-sm my-5 ">
             <div>
               <h1
                 style={{
@@ -197,27 +181,25 @@ function About() {
               </button>
             </div>
           </div>
-          <div className="col text-center my-5">
+          <div className="col-sm text-center my-sm-5">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/images%2Ftype2.jpeg?alt=media&token=55c77853-5d41-45ce-a999-4804c15c7592"
               alt="about"
-              height={"300px"}
-              className="my-4"
+              className="aboutusphoto my-4"
             />
           </div>
         </div>
       </div>
       <div className="bg-light">
-        <div className="row " style={{ width: "101%" }}>
-          <div className="col text-center my-5">
+        <div className="row mx-0 " style={{ width: "100%" }}>
+          <div className="col-sm text-center my-sm-5">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/images%2Ftype3.webp?alt=media&token=587aeb75-070a-427f-bfc7-33f741f2c415"
               alt="about"
-              height={"300px"}
-              className="my-4"
+              className="aboutusphoto my-4"
             />
           </div>
-          <div className="col my-5  mx-5">
+          <div className="col-sm my-5 ">
             <div>
               <h1
                 style={{
@@ -259,8 +241,8 @@ function About() {
         </div>
       </div>
       <div className="bg-white">
-        <div className="row " style={{ width: "101%" }}>
-          <div className="col my-5  mx-5">
+        <div className="row mx-0 " style={{ width: "100%" }}>
+          <div className="col-sm my-5 ">
             <div>
               <h1
                 style={{
@@ -299,27 +281,25 @@ function About() {
               </button>
             </div>
           </div>
-          <div className="col text-center my-5">
+          <div className="col-sm text-center my-5">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/images%2Ftype4.jpeg?alt=media&token=ecb512e7-774c-41da-95c3-60db258d1aa8"
               alt="about"
-              height={"330px"}
-              className="my-4"
+              className="aboutusphoto my-sm-4"
             />
           </div>
         </div>
       </div>
       <div className="bg-light">
-        <div className="row " style={{ width: "101%" }}>
-          <div className="col text-center my-5">
+        <div className="row mx-0 " style={{ width: "100%" }}>
+          <div className="col-sm text-center my-sm-5">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/images%2Ftype5.jpeg?alt=media&token=262ab589-23a8-4834-bb4c-fa29ae7e28c7"
               alt="about"
-              height={"360px"}
-              className="my-4"
+              className="aboutusphoto my-4"
             />
           </div>
-          <div className="col my-5  mx-5">
+          <div className="col-sm my-5 ">
             <div>
               <h1
                 style={{
@@ -361,8 +341,8 @@ function About() {
         </div>
       </div>
       <div className="bg-white">
-        <div className="row " style={{ width: "101%" }}>
-          <div className="col my-5  mx-5">
+        <div className="row mx-0 " style={{ width: "100%" }}>
+          <div className="col-sm my-5 ">
             <div>
               <h1
                 style={{
@@ -401,12 +381,11 @@ function About() {
               </button>
             </div>
           </div>
-          <div className="col text-center my-5">
+          <div className="col-sm text-center my-sm-5">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/images%2Ftype6.jpeg?alt=media&token=a3b59769-a0c4-4b89-8951-31d61d032ef0"
               alt="about"
-              height={"330px"}
-              className="my-4"
+              className="aboutusphoto my-4"
             />
           </div>
         </div>

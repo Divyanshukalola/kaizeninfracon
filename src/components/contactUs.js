@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 
-
+import Footer from "./footer";
 import TextField from "@mui/material/TextField";
 import { useForm } from "react-hook-form";
 
@@ -48,8 +48,8 @@ function ContactUs() {
       {/* Subscribe */}
       <div>
         <div className="containter">
-          <div className="row mx-5 mt-5" style={{ height: "500px" }}>
-            <div className="col mt-5">
+          <div className="row mx-5 mt-sm-5">
+            <div className="col-sm mt-5">
               <div className="mt-3 text-center">
                 {" "}
                 <span className="sectionHeader">CONTACT US</span>
@@ -71,9 +71,9 @@ function ContactUs() {
                   height: "500px",
                 }}
               >
-                <div className="col-6 mx-5 ">
+                <div className="col-sm-6 mx-5 ">
                   <div className="row my-3">
-                    <div className="col">
+                    <div className="col-sm mt-3 mt-sm-0">
                       <TextField
                         id="outlined-basic"
                         label="First Name"
@@ -82,7 +82,7 @@ function ContactUs() {
                         {...register("fname")}
                       />
                     </div>
-                    <div className="col">
+                    <div className="col-sm mt-3 mt-sm-0">
                       <TextField
                         id="outlined-basic"
                         label="Last Name"
@@ -93,7 +93,7 @@ function ContactUs() {
                     </div>
                   </div>
                   <div className="row my-3">
-                    <div className="col">
+                    <div className="col-sm mt-3 mt-sm-0">
                       <TextField
                         id="outlined-basic"
                         label="Phone"
@@ -102,7 +102,7 @@ function ContactUs() {
                         {...register("phone")}
                       />
                     </div>
-                    <div className="col">
+                    <div className="col-sm mt-3 mt-sm-0">
                       <TextField
                         id="outlined-basic"
                         label="Email"
@@ -151,7 +151,7 @@ function ContactUs() {
                     </div>
                   </div>
 
-                  <div className="row ">
+                  <div className="row">
                     <div className="col d-flex justify-content-center">
                       {loading ? (
                         <button className="jobbutton" disabled>
@@ -167,6 +167,14 @@ function ContactUs() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        {/* footer  */}
+        <br />
+        <br />
+        <div className="row mx-5 my-5 border-top">
+          <div className="col mt-5">
+            <Footer></Footer>{" "}
           </div>
         </div>
       </div>

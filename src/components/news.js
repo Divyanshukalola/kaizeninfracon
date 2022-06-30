@@ -25,8 +25,10 @@ import CardActions from "@mui/material/CardActions";
 // import NewsView from "./views/newsview";
 // import Button from "@mui/material/Button";
 import Pagination from "@mui/material/Pagination";
+import useWindowDimensions from "./useWindowDimensions";
 
 function News(props) {
+  const { height, width } = useWindowDimensions();
   const navigate = useNavigate();
   const [page, setPage] = React.useState(1);
   const handleChange = (event, value) => {
@@ -70,24 +72,23 @@ function News(props) {
   //   return t;
   // }
   return (
-    <div className="Services">
+    <div className="Services ">
       {/* navigation  */}
       <Topnavigation news="true"></Topnavigation>
-      <div></div>
 
       <div
-        className="bg-light"
+        className="bg-white"
         style={{
           backgroundImage:
             'url("https://ak.picdn.net/shutterstock/videos/1055334359/thumb/1.jpg")',
-          height: "500px",
+          height: width <= 600 ? "300px" : "500px",
           backgroundSize: "100%",
           backgroundRepeat: "no-repeat",
           opacity: "70%",
         }}
       >
-        <div className="row text-center" style={{ width: "101%" }}>
-          <div className="col">
+        <div className="row mx-0 text-center" style={{ width: "100%" }}>
+          <div className="col mt-5 mt-sm-0">
             <h1
               style={{
                 color: "white",
@@ -101,9 +102,8 @@ function News(props) {
         </div>
       </div>
 
-      <div className="bg-white">
+      <div className="bg-white ">
         <div className="mt-5 text-center">
-          {" "}
           <span className="sectionHeader">MEDIA CORNER</span>
           <hr />
           <br />
@@ -115,12 +115,12 @@ function News(props) {
           return (
             <>
               {index === page - 1 ? (
-                <div className="row mx-5 my-5 justify-content-center">
+                <div className="row mx-0 mx-sm-5 my-sm-5 my-3 justify-content-center">
                   {" "}
                   {obj.map((obj1) => {
                     return (
                       <>
-                        <div className="col-6">
+                        <div className="col-sm-6 mx-4 mx-sm-0">
                           {" "}
                           <Card>
                             <CardMedia
@@ -202,7 +202,7 @@ function News(props) {
           <>
             {" "}
             <br />
-            <div className="row ">
+            <div className="row mx-0 ">
               <div className="col d-flex justify-content-center">
                 {" "}
                 <Pagination
@@ -228,11 +228,11 @@ function News(props) {
           return (
             <>
               {index === page1 - 1 ? (
-                <div className="row mx-5 my-5 justify-content-center">
+                <div className="row mx-0 mx-sm-5 my-sm-5 my-3 justify-content-center">
                   {obj.map((obj1) => {
                     return (
                       <>
-                        <div className="col-6">
+                        <div className="col-sm-6 mx-4 mx-sm-0">
                           {" "}
                           <Card>
                             <CardMedia
@@ -317,8 +317,8 @@ function News(props) {
           <>
             {" "}
             <br />
-            <div className="row ">
-              <div className="col d-flex justify-content-center">
+            <div className="row mx-0 ">
+              <div className="col-sm d-flex justify-content-center">
                 {" "}
                 <Pagination
                   count={organiseData(props.arti, 3).length}
@@ -342,11 +342,11 @@ function News(props) {
           return (
             <>
               {index === page2 - 1 ? (
-                <div className="row mx-5 my-5 justify-content-center">
+                <div className="row mx-0 mx-sm-5 my-sm-5 my-3 justify-content-center ">
                   {obj.map((obj1) => {
                     return (
                       <>
-                        <div className="col text-center">
+                        <div className="col-sm text-center">
                           <video
                             src={obj1.link}
                             controls
@@ -376,7 +376,7 @@ function News(props) {
         {page2 >= 1 ? (
           <>
             <br />
-            <div className="row ">
+            <div className="row mx-0 ">
               <div className="col d-flex justify-content-center">
                 {" "}
                 <Pagination
