@@ -48,7 +48,7 @@ const Nav1 = (props) => {
           zIndex: "99999",
         }}
       >
-        <div className="mainlogo col-5 my-3">
+        <div className="mainlogo col-md-4 my-3">
           {/* <img src="" alt="" /> */}
           <button
             style={{
@@ -85,7 +85,7 @@ const Nav1 = (props) => {
             <BsChevronDoubleUp></BsChevronDoubleUp>
           </button>
         </div>
-        <div className="nav1menue col my-3 mx-5" ref={ref}>
+        <div className="nav1menue col-md my-3 mx-md-5" ref={ref}>
           <div className="row mt-3 text-center ">
             <div className="col-sm  col-md  my-3 my-sm-0">
               <button
