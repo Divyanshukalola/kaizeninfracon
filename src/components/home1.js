@@ -16,6 +16,7 @@ import Pagination from "@mui/material/Pagination";
 import SlideSHow from "./slideshow";
 
 import Subscribe from "./functions/Subscribe";
+import Topnavigation from "./nav";
 
 function Home1({ proj, coverImage, images }) {
   const [page, setPage] = React.useState(1);
@@ -30,35 +31,31 @@ function Home1({ proj, coverImage, images }) {
     window.scrollTo(0, 0);
   }, []);
   function organiseData(array, size) {
-                                       var perChunk = size; // items per chunk
+    var perChunk = size; // items per chunk
 
-                                       var inputArray = array;
+    var inputArray = array;
 
-                                       var result = inputArray.reduce(
-                                         (resultArray, item, index) => {
-                                           const chunkIndex = Math.floor(
-                                             index / perChunk
-                                           );
+    var result = inputArray.reduce((resultArray, item, index) => {
+      const chunkIndex = Math.floor(index / perChunk);
 
-                                           if (!resultArray[chunkIndex]) {
-                                             resultArray[chunkIndex] = []; // start a new chunk
-                                           }
+      if (!resultArray[chunkIndex]) {
+        resultArray[chunkIndex] = []; // start a new chunk
+      }
 
-                                           resultArray[chunkIndex].push(item);
+      resultArray[chunkIndex].push(item);
 
-                                           return resultArray;
-                                         },
-                                         []
-                                       );
+      return resultArray;
+    }, []);
 
-                                       return result;
-                                     }
+    return result;
+  }
 
   return (
     <div className="Home">
       {/* navigation  */}
 
       <div>
+        <Topnavigation home="true"></Topnavigation>
         <SlideSHow
           time={5000}
           data={coverImage ? coverImage : images}

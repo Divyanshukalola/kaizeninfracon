@@ -43,12 +43,14 @@ const Nav1 = (props) => {
     <>
       {/* navigation  */}{" "}
       <div
-        className="row sticky-top cover"
+        className="row fixed-top "
         style={{
           zIndex: "99999",
+          width: "101.5%",
+          backgroundColor: "rgba(255,255,255,0.9)",
         }}
       >
-        <div className="mainlogo col-4 my-3">
+        <div className="mainlogo col-3 my-3">
           {/* <img src="" alt="" /> */}
           <button
             style={{
@@ -85,7 +87,7 @@ const Nav1 = (props) => {
             <BsChevronDoubleUp></BsChevronDoubleUp>
           </button>
         </div>
-        <div className="nav1menue col  my-3 mx-md-3" ref={ref}>
+        <div className="nav1menue col  my-3" ref={ref}>
           <div className="row mt-3 text-center ">
             <div className="col-sm    my-3 my-sm-0">
               <button

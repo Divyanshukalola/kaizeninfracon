@@ -45,9 +45,9 @@ function Home({ proj }) {
 
   return (
     <div className="Home">
-      {/* navigation  */}
-      <Topnavigation home="true"></Topnavigation>
       <div>
+        {/* navigation  */}
+        <Topnavigation home="true"></Topnavigation>
         {/* hero  */}
         <div className=" bg-light">
           <div
@@ -221,7 +221,7 @@ function Home({ proj }) {
         </div>
         {/* section 1 */}
         <div className=" bg-white">
-          <div className="containter">
+          <div>
             {" "}
             <div className="row mx-5 mt-5">
               <div className="col text-center" style={{ height: "620px" }}>

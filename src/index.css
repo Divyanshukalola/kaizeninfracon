@@ -471,9 +471,7 @@ border-color: grey;
     letter-spacing: 0.03333em;
 }
 
-.cover{
-  background-color: rgba(255, 255, 255, 0.577);
-}
+
 
 .slide-tagline {
     -webkit-text-stroke: 0.025em white;

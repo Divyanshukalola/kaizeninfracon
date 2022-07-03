@@ -48,7 +48,15 @@ const Nav = (props) => {
     navigate("/login");
   }
   return (
-    <div className="row sticky-top bg-white" style={{ zIndex: "9999" }}>
+    <div
+      className="row fixed-top"
+      style={{
+        zIndex: "9999",
+        backgroundColor: "rgba(255,255,255,0.5)",
+        width: "101.5%",
+        backdropFilter: "blur(3px)",
+      }}
+    >
       <div
         className={
           props.logout ? "mainlogo col-3 my-3 " : "mainlogo col-4 my-3 "
@@ -89,7 +97,7 @@ const Nav = (props) => {
           <BsChevronDoubleUp></BsChevronDoubleUp>
         </button>
       </div>
-      <div className="nav1menue col  my-3 mx-md-3" ref={ref}>
+      <div className="nav1menue col my-3" ref={ref}>
         <div className="row mt-3 text-center">
           <div className="col-sm   my-3 my-sm-0">
             <button
