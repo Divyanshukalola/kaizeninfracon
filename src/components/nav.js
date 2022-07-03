@@ -51,7 +51,7 @@ const Nav = (props) => {
     <div className="row sticky-top bg-white" style={{ zIndex: "9999" }}>
       <div
         className={
-          props.logout ? "mainlogo col-4 my-3 " : "mainlogo col-5 my-3 "
+          props.logout ? "mainlogo col-3 my-3 " : "mainlogo col-4 my-3 "
         }
       >
         <button
@@ -89,9 +89,9 @@ const Nav = (props) => {
           <BsChevronDoubleUp></BsChevronDoubleUp>
         </button>
       </div>
-      <div className="nav1menue col my-3 mx-5" ref={ref}>
+      <div className="nav1menue col  my-3 mx-md-3" ref={ref}>
         <div className="row mt-3 text-center">
-          <div className="col-sm col-md  my-3 my-sm-0">
+          <div className="col-sm   my-3 my-sm-0">
             <button
               style={{
                 border: "transparent",
@@ -113,7 +113,7 @@ const Nav = (props) => {
             </button>
           </div>
 
-          <div className="col-sm col-md my-3 my-sm-0">
+          <div className="col-sm  my-3 my-sm-0">
             <button
               style={{
                 border: "transparent",
@@ -134,7 +134,7 @@ const Nav = (props) => {
               </span>
             </button>
           </div>
-          <div className="col-sm col-md my-3 my-sm-0 ">
+          <div className="col-sm  my-3 my-sm-0 ">
             <button
               style={{
                 border: "transparent",
@@ -156,7 +156,7 @@ const Nav = (props) => {
             </button>
           </div>
 
-          <div className="col-sm col-md my-3 my-sm-0">
+          <div className="col-sm  my-3 my-sm-0">
             <button
               style={{
                 border: "transparent",
@@ -177,7 +177,7 @@ const Nav = (props) => {
               </span>
             </button>
           </div>
-          <div className="col-sm col-md my-3 my-sm-0">
+          <div className="col-sm  my-3 my-sm-0">
             <button
               style={{
                 border: "transparent",
@@ -198,7 +198,7 @@ const Nav = (props) => {
               </span>
             </button>
           </div>
-          <div className="col-sm col-md my-3 my-sm-0">
+          <div className="col-sm  my-3 my-sm-0">
             <button
               style={{
                 border: "transparent",
@@ -219,7 +219,7 @@ const Nav = (props) => {
               </span>
             </button>
           </div>
-          <div className="col-sm col-md my-3 my-sm-0">
+          <div className="col-sm  my-3 my-sm-0">
             <button
               style={{
                 border: "transparent",
@@ -240,7 +240,7 @@ const Nav = (props) => {
               </span>
             </button>
           </div>
-          <div className="col-sm col-md my-3 my-sm-0 ">
+          <div className="col-sm  my-3 my-sm-0 ">
             <button
               style={{
                 border: "transparent",
