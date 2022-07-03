@@ -279,32 +279,7 @@
   color: #ff5e10;
 }
 
-.text{
-  display: none;
-  width: inherit;
 
-
-  background-color: #cbcbcbdf;
-
-  position: absolute;
-   margin: 0;
-   top: 0;
-   right: 0;
-
-   left: 0;
-
-  transition: 0.5s;
-  overflow: hidden;
-  padding: 10px;
-
-  
-}
-.text:hover{
-   display: inline-block;
-    transition: 0.5s;
-
-  
-}
 
 .projectImg{
   cursor: pointer;
@@ -325,10 +300,7 @@
 
 }
 
-.projectImg:hover ~ .text{
-  display: inline-block;
-  
-}
+
 .projectImg:hover{
   filter: none;
 }
@@ -602,6 +574,29 @@ border-color: grey;
   color: white;
 }
 
+.text{
+  display: none;
+
+  background-color: #cbcbcbdf;
+  position: relative;
+   
+  transition: 0.5s;
+  overflow: hidden;
+  padding: 10px;
+  text-overflow: ellipsis;
+  border-radius: 5px;
+}
+.text:hover{
+   display: inline-block;
+    transition: 0.5s;
+    
+  
+}
+.projectImg:hover ~ .text{
+  display: inline-block;
+  
+}
+
 @media only screen and (max-width: 800px) {
   .sectionTitle{
     font-size: 13px;
@@ -702,17 +697,14 @@ border-color: grey;
 
 
 .text{
-display: inline-block;
-  width: 380px;
-  max-height: 330px;
+
+ 
   background-color: #cbcbcbbf;
-  margin: 10px;
-  position: absolute;
+ 
+  position: relative;
   transition: 0.5s;
   overflow: hidden;
     text-overflow: ellipsis;
-  
-  
 }
 .followMeBar {
   position: sticky;

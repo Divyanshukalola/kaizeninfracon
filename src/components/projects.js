@@ -177,7 +177,7 @@ function Projects2({ proj }) {
                                 .map((obj1) => {
                                   return (
                                     <div
-                                      className="col-sm-5 position-relative rounded border my-3 mx-3"
+                                      className="col-sm-5 position-relative rounded  my-3 mx-3"
                                       style={{ height: "400px" }}
                                       onClick={() => {
                                         navigate(`/projects/${obj1.id}`);
@@ -188,36 +188,23 @@ function Projects2({ proj }) {
                                         alt=""
                                         className="projectImg"
                                       />
-                                      <div className="row">
-                                        <div className="col">
-                                          {" "}
-                                          <div className="text mx-3 mt-3">
-                                            <h5 className="mt-2">
-                                              {obj1.title}
-                                            </h5>
-                                            <small
-                                              style={{ overflow: "hidden" }}
-                                            >
-                                              <TextTruncate
-                                                line={1}
-                                                element="span"
-                                                truncateText="…"
-                                                text={obj1.body}
-                                              />
-                                            </small>
-                                            <br />
-                                            <button
-                                              className="mx-2 my-3 jobbutton"
-                                              onClick={() => {
-                                                navigate(
-                                                  `/projects/${obj1.id}`
-                                                );
-                                              }}
-                                            >
-                                              Learn More
-                                            </button>
-                                          </div>
-                                        </div>
+                                      <div
+                                        className="text mt-3"
+                                        style={{
+                                          width: "inherit",
+                                        }}
+                                      >
+                                        <h5 className="mt-2">{obj1.title}</h5>
+
+                                        <br />
+                                        <button
+                                          className="mx-2 my-3 jobbutton"
+                                          onClick={() => {
+                                            navigate(`/projects/${obj1.id}`);
+                                          }}
+                                        >
+                                          Learn More
+                                        </button>
                                       </div>
                                     </div>
                                   );
