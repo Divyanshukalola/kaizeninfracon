@@ -18,7 +18,7 @@ console.log(height);
       <Topnavigation career="true"></Topnavigation>
 
       <div
-        className="bg-light"
+        className="bg-light mt-5"
         style={{
           height: width <= 600 ? "300px" : "500px",
         }}
@@ -86,34 +86,19 @@ console.log(height);
             <button className="jobbutton">View Our Work</button>
           </div>
           <div className="col-sm mx-3 mt-5 text-center text-sm-left">
-            <img
-              src="https://media.istockphoto.com/photos/young-happy-worker-and-manager-giving-each-other-manly-greet-at-steel-picture-id1057484742?k=20&m=1057484742&s=612x612&w=0&h=iVCLJv8q6ktWFOyfzwaqRiQIa4iXfPG75dY37ivpz30="
-              alt="img"
-              height={width <= 600 ? "300px" : "400px"}
-            />
+            <div className="row">
+              <div className="col">
+                <img
+                  src="https://media.istockphoto.com/photos/young-happy-worker-and-manager-giving-each-other-manly-greet-at-steel-picture-id1057484742?k=20&m=1057484742&s=612x612&w=0&h=iVCLJv8q6ktWFOyfzwaqRiQIa4iXfPG75dY37ivpz30="
+                  alt="img"
+                  height={width <= 600 ? "200px" : "400px"}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="bg-white">
-        <div className="row mx-0  mt-sm-5 mx-0 border">
-          <div className="col-sm-7 mt-5 text-center text-sm-left">
-            {" "}
-            <img
-              src="https://st.depositphotos.com/1037987/2504/i/600/depositphotos_25046043-stock-photo-team-working-at-desks-in.jpg"
-              alt="img"
-              height={width <= 600 ? "300px" : "500px"}
-            />
-          </div>
-          <div className="col-sm mt-5 text-center text-sm-left">
-            <img
-              src="https://cdn.pixabay.com/photo/2021/08/30/18/33/worker-6586718__340.jpg"
-              alt="img"
-              height={"300px"}
-            />
-          </div>
-        </div>
-      </div>
       <div className="bg-white">
         <div className="row mx-0  mt-sm-5">
           <div className="col-sm-5 my-5 mx-4 mx-sm-0">
@@ -140,15 +125,14 @@ console.log(height);
             <img
               src="https://cdn.pixabay.com/photo/2021/08/30/18/33/worker-6586718__340.jpg"
               alt="img"
-              height={width <= 600 ? "300px" : "400px"}
+              height={width <= 600 ? "200px" : "400px"}
             />
           </div>
           <div className="col-sm-6 mt-5 text-center text-sm-left">
-            {" "}
             <img
               src="https://st.depositphotos.com/1037987/2504/i/600/depositphotos_25046043-stock-photo-team-working-at-desks-in.jpg"
               alt="img"
-              height={width <= 600 ? "300px" : "420px"}
+              height={width <= 600 ? "200px" : "420px"}
             />
           </div>
         </div>

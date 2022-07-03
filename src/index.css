@@ -721,6 +721,10 @@ border-color: grey;
   padding: 40px;
 }
 
+.careerImg{
+  width: inherit;
+}
+
 
 }
 
