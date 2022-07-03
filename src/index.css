@@ -644,7 +644,7 @@ border-color: grey;
     display: none;
       padding-top: 20%;
       padding-bottom: 20%;
-     
+      border-radius: 4px;
   }
   .navContents{
     position: relative;
@@ -652,6 +652,8 @@ border-color: grey;
     border-color: #1c3e44;
     border-style: solid;
      backdrop-filter: blur(8px);
+     border-radius: 4px;
+
     
   }
   .nav1menuebutton{
