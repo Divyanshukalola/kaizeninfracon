@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import Topnavigation from "./nav1";
+
 
 function SlideSHow(props) {
   const ref = React.useRef();
