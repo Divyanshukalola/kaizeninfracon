@@ -281,7 +281,8 @@
 
 .text{
   display: none;
-  width: auto;
+  width: inherit;
+
 
   background-color: #cbcbcbdf;
 
@@ -296,8 +297,6 @@
   overflow: hidden;
   padding: 10px;
 
-  
-  
   
 }
 .text:hover{
