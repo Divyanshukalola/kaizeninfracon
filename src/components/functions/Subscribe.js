@@ -30,7 +30,8 @@ function Subscribe() {
     await sendEmail();
 
     await setTimeout(function() {
-      // window.location.reload(false);
+      setLoading(false);
+      window.location.reload(false);
     }, 100);
   }
 
