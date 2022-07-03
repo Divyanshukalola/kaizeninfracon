@@ -580,8 +580,14 @@ border-color: grey;
   background-repeat: no-repeat;
   opacity: 0.8;
 }
+.nav{
+  width: 101.5%;
+}
 
 @media only screen and (max-width: 800px) {
+  .nav{
+  width: 103%;
+}
   .projectBackground{
   background-image: url("https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/images%2Fprojects.jpeg?alt=media&token=6c75e8c5-cdc2-4933-87b2-388bbf3c3828");
   height: 500px;
@@ -601,7 +607,19 @@ border-color: grey;
     margin-left: 10px;
   }
   .nav1menue{
+    position: relative;
     display: none;
+      padding-top: 20%;
+      padding-bottom: 20%;
+     
+  }
+  .navContents{
+    position: relative;
+
+    border-color: #1c3e44;
+    border-style: solid;
+     backdrop-filter: blur(8px);
+    
   }
   .nav1menuebutton{
   display: inline;

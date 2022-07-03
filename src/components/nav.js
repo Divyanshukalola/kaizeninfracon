@@ -49,11 +49,11 @@ const Nav = (props) => {
   }
   return (
     <div
-      className="row fixed-top"
+      className="row fixed-top nav"
       style={{
         zIndex: "9999",
         backgroundColor: "rgba(255,255,255,0.5)",
-        width: "101.5%",
+
         backdropFilter: "blur(3px)",
       }}
     >
@@ -73,32 +73,9 @@ const Nav = (props) => {
           <img src={mainlogo} alt="mainlogo" height={"50px"} />
         </button>
       </div>
-      <div className="nav1menuebutton col text-right mt-4 mx-4" ref={ref1}>
-        <button
-          style={{ borderColor: "transparent", background: "transparent" }}
-          onClick={() => {
-            ref1.current.style.display = "none";
-            ref.current.style.display = "inline";
-            ref2.current.style.display = "inline";
-          }}
-        >
-          <BsList></BsList>
-        </button>
-      </div>
-      <div className="nav1menuebutton1 col text-right mt-4 mx-4" ref={ref2}>
-        <button
-          style={{ borderColor: "transparent", background: "transparent" }}
-          onClick={() => {
-            ref1.current.style.display = "inline";
-            ref.current.style.display = "none";
-            ref2.current.style.display = "none";
-          }}
-        >
-          <BsChevronDoubleUp></BsChevronDoubleUp>
-        </button>
-      </div>
+
       <div className="nav1menue col my-3" ref={ref}>
-        <div className="row mt-3 text-center">
+        <div className="row mt-3 text-center navContents">
           <div className="col-sm   my-3 my-sm-0">
             <button
               style={{
@@ -277,6 +254,30 @@ const Nav = (props) => {
             </div>
           ) : null}
         </div>
+      </div>
+      <div className="nav1menuebutton col text-right mt-4 mx-4" ref={ref1}>
+        <button
+          style={{ borderColor: "transparent", background: "transparent" }}
+          onClick={() => {
+            ref1.current.style.display = "none";
+            ref.current.style.display = "inline";
+            ref2.current.style.display = "inline";
+          }}
+        >
+          <BsList></BsList>
+        </button>
+      </div>
+      <div className="nav1menuebutton1 col text-right mt-4 mx-4" ref={ref2}>
+        <button
+          style={{ borderColor: "transparent", background: "transparent" }}
+          onClick={() => {
+            ref1.current.style.display = "inline";
+            ref.current.style.display = "none";
+            ref2.current.style.display = "none";
+          }}
+        >
+          <BsChevronDoubleUp></BsChevronDoubleUp>
+        </button>
       </div>
     </div>
   );
