@@ -66,7 +66,7 @@ function ProjectView({ project }) {
           <div className="col">
             <hr />
           </div>
-          <div className="col-2 text-center sectionTitle">Details</div>
+          <div className="col-3 text-center sectionTitle">Details</div>
           <div className="col">
             <hr />
           </div>
