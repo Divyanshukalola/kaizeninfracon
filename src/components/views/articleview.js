@@ -53,12 +53,19 @@ function ArticleView({ article }) {
       <Topnavigation news="true"></Topnavigation>
       <br />
       <br />
-      <div className="container">
+      <div className="container pt-5">
         {" "}
         <div className="row">
           <div className="col">
             <div className="row justify-content-center">
-              <img src={article.img} alt="" className="newsImg" />
+              <div className="col">
+                <img
+                  src={article.img}
+                  alt=""
+                  style={{ width: "inherit" }}
+                  className="newsImg"
+                />
+              </div>
             </div>
 
             <br />
