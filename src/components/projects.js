@@ -188,21 +188,36 @@ function Projects2({ proj }) {
                                         alt=""
                                         className="projectImg"
                                       />
-
-                                      <div className="text mx-3 mt-3">
-                                        <h5 className="mt-2">{obj1.title}</h5>
-                                        <small style={{ overflow: "hidden" }}>
-                                          {obj1.body}
-                                        </small>
-                                        <br />
-                                        <button
-                                          className="mx-2 my-3 jobbutton"
-                                          onClick={() => {
-                                            navigate(`/projects/${obj1.id}`);
-                                          }}
-                                        >
-                                          Learn More
-                                        </button>
+                                      <div className="row">
+                                        <div className="col">
+                                          {" "}
+                                          <div className="text mx-3 mt-3">
+                                            <h5 className="mt-2">
+                                              {obj1.title}
+                                            </h5>
+                                            <small
+                                              style={{ overflow: "hidden" }}
+                                            >
+                                              <TextTruncate
+                                                line={1}
+                                                element="span"
+                                                truncateText="…"
+                                                text={obj1.body}
+                                              />
+                                            </small>
+                                            <br />
+                                            <button
+                                              className="mx-2 my-3 jobbutton"
+                                              onClick={() => {
+                                                navigate(
+                                                  `/projects/${obj1.id}`
+                                                );
+                                              }}
+                                            >
+                                              Learn More
+                                            </button>
+                                          </div>
+                                        </div>
                                       </div>
                                     </div>
                                   );

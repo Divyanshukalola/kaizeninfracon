@@ -604,6 +604,9 @@ border-color: grey;
 }
 
 @media only screen and (max-width: 800px) {
+  .sectionTitle{
+    font-size: 13px;
+  }
   .timelineicon{
   width: 0.5em;
   height: 0.5em;

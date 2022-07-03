@@ -66,7 +66,7 @@ function ProjectView({ project }) {
           <div className="col">
             <hr />
           </div>
-          <div className="col-2 text-center">Details</div>
+          <div className="col-2 text-center sectionTitle">Details</div>
           <div className="col">
             <hr />
           </div>
@@ -141,7 +141,7 @@ function ProjectView({ project }) {
               <div className="col">
                 <hr />
               </div>
-              <div className="col-2 text-center">Time Line</div>
+              <div className="col-3 text-center sectionTitle">Time Line</div>
               <div className="col">
                 <hr />
               </div>
@@ -160,7 +160,9 @@ function ProjectView({ project }) {
               <div className="col">
                 <hr />
               </div>
-              <div className="col-3 text-center">Extra Information</div>
+              <div className="col-4 text-center sectionTitle">
+                Extra Information
+              </div>
               <div className="col">
                 <hr />
               </div>
