@@ -183,28 +183,40 @@ function Projects2({ proj }) {
                                         navigate(`/projects/${obj1.id}`);
                                       }}
                                     >
-                                      <img
-                                        src={obj1.img}
-                                        alt=""
-                                        className="projectImg"
-                                      />
-                                      <div
-                                        className="text mt-3"
-                                        style={{
-                                          width: "inherit",
-                                        }}
-                                      >
-                                        <h5 className="mt-2">{obj1.title}</h5>
+                                      <div className="row">
+                                        <div className="col">
+                                          <img
+                                            src={obj1.img}
+                                            alt=""
+                                            style={{
+                                              height: "inherit",
+                                              width: "inherit",
+                                            }}
+                                            className="projectImg"
+                                          />
+                                          <div
+                                            className="text mt-3"
+                                            style={{
+                                              width: "inherit",
+                                            }}
+                                          >
+                                            <h5 className="mt-2">
+                                              {obj1.title}
+                                            </h5>
 
-                                        <br />
-                                        <button
-                                          className="mx-2 my-3 jobbutton"
-                                          onClick={() => {
-                                            navigate(`/projects/${obj1.id}`);
-                                          }}
-                                        >
-                                          Learn More
-                                        </button>
+                                            <br />
+                                            <button
+                                              className="mx-2 my-3 jobbutton"
+                                              onClick={() => {
+                                                navigate(
+                                                  `/projects/${obj1.id}`
+                                                );
+                                              }}
+                                            >
+                                              Learn More
+                                            </button>
+                                          </div>
+                                        </div>
                                       </div>
                                     </div>
                                   );
