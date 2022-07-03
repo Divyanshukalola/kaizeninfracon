@@ -48,7 +48,10 @@ function ProjectView({ project }) {
       <Topnavigation proj="true"></Topnavigation>
       <br />
       <br />
-      <div className="container">
+      <div
+        className="container pt-5 projectitle"
+        style={{ position: "relative" }}
+      >
         {" "}
         <div className="row">
           <div className="col">
@@ -57,177 +60,189 @@ function ProjectView({ project }) {
             <h6>
               <pre>{project.body}</pre>
             </h6>
+          </div>
+        </div>
+        <div className="row my-4">
+          <div className="col">
+            <hr />
+          </div>
+          <div className="col-2 text-center">Details</div>
+          <div className="col">
+            <hr />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-sm-6 my-4">
+            <div className="row">
+              <div className="col">
+                <img src={project.img} alt="" className="newsImg" />
+              </div>
+            </div>
+          </div>
+          <div className="col-sm-6 my-4">
+            <h6>
+              <pre>
+                <b>Project Cost: </b>
+                {project.details.project_cost}
+              </pre>
+              <hr />
+              <pre>
+                <b>Project Start Date: </b>
+                {new Date(
+                  project.details.project_start_date.seconds * 1000
+                ).toLocaleDateString()}
+              </pre>
+              <hr />
+              <pre>
+                <b>Project Execution Period: </b>
+                {project.details.project_exe_period}
+              </pre>
+              <hr />
+              <pre>
+                <b>Project Operation & Maintenance: </b>
+                {project.details.project_op_main}
+              </pre>
+              <hr />
+              <pre>
+                <b>Project Cost: </b>
+                {project.details.project_cost}
+              </pre>
+              <hr />
+              <pre>
+                <b>Project Client: </b>
+                {project.details.project_client}
+              </pre>
+              <hr />
+              <pre>
+                <b>Project Concessionaire: </b>
+                {project.details.project_Concessionaire}
+              </pre>
+              <hr />
+              <pre>
+                <b>Project EPC Contractor: </b>
+                {project.details.project_epc_con}
+              </pre>
+              <hr />
+              <pre>
+                <b>Project EPC Sub-Contractor: </b>
+                {project.details.project_epc_sub_con}
+              </pre>
+              <hr />
+              <pre>
+                <b>Project Engineer: </b>
+                {project.details.project_Engineer}
+              </pre>
+            </h6>{" "}
+          </div>
+        </div>
+        {project.timeline ? (
+          <>
             <div className="row my-4">
               <div className="col">
                 <hr />
               </div>
-              <div className="col-2 text-center">Details</div>
+              <div className="col-2 text-center">Time Line</div>
+              <div className="col">
+                <hr />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col text-center">
+                <Timeline items={items}></Timeline>
+              </div>
+            </div>
+          </>
+        ) : null}
+        <br />
+        {project.extra_info ? (
+          <>
+            <div className="row my-4">
+              <div className="col">
+                <hr />
+              </div>
+              <div className="col-3 text-center">Extra Information</div>
               <div className="col">
                 <hr />
               </div>
             </div>
             <div className="row">
               <div className="col">
-                {" "}
-                <div className="row justify-content-center">
-                  <img src={project.img} alt="" className="newsImg" />
-                </div>
-              </div>
-              <div className="col">
-                <h6>
-                  <pre>
-                    <b>Project Cost: </b>
-                    {project.details.project_cost}
-                  </pre>
-                  <hr />
-                  <pre>
-                    <b>Project Start Date: </b>
-                    {new Date(
-                      project.details.project_start_date.seconds * 1000
-                    ).toLocaleDateString()}
-                  </pre>
-                  <hr />
-                  <pre>
-                    <b>Project Execution Period: </b>
-                    {project.details.project_exe_period}
-                  </pre>
-                  <hr />
-                  <pre>
-                    <b>Project Operation & Maintenance: </b>
-                    {project.details.project_op_main}
-                  </pre>
-                  <hr />
-                  <pre>
-                    <b>Project Cost: </b>
-                    {project.details.project_cost}
-                  </pre>
-                  <hr />
-                  <pre>
-                    <b>Project Client: </b>
-                    {project.details.project_client}
-                  </pre>
-                  <hr />
-                  <pre>
-                    <b>Project Concessionaire: </b>
-                    {project.details.project_Concessionaire}
-                  </pre>
-                  <hr />
-                  <pre>
-                    <b>Project EPC Contractor: </b>
-                    {project.details.project_epc_con}
-                  </pre>
-                  <hr />
-                  <pre>
-                    <b>Project EPC Sub-Contractor: </b>
-                    {project.details.project_epc_sub_con}
-                  </pre>
-                  <hr />
-                  <pre>
-                    <b>Project Engineer: </b>
-                    {project.details.project_Engineer}
-                  </pre>
-                </h6>{" "}
+                {itemsinfo.map((obj, index) => {
+                  return (
+                    <>
+                      {index % 2 !== 0 ? (
+                        <div className="row bg-light">
+                          <div className="col-sm my-5 mx-3">
+                            <div className="row">
+                              <div className="col">
+                                {" "}
+                                <img
+                                  src={obj[1].img}
+                                  alt=""
+                                  className="extrainfoimg"
+                                />
+                              </div>
+                            </div>
+
+                            <pre style={{ fontSize: "15px" }} className="my-3">
+                              {obj[1].data}
+                            </pre>
+                            <br />
+                          </div>
+                          <div className="col-sm-3 my-5 mx-3 text-center">
+                            <h1
+                              style={{
+                                color: "lightgray",
+                                textTransform: "uppercase",
+                                fontWeight: "bold",
+                              }}
+                            >
+                              {obj[1].tag}
+                              <span style={{ color: "#ff5e10" }}>.</span>
+                            </h1>
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="row bg-white">
+                          <div className="col-sm-3 my-5 mx-3 text-center">
+                            <h1
+                              style={{
+                                color: "lightgray",
+                                textTransform: "uppercase",
+                                fontWeight: "bold",
+                              }}
+                            >
+                              {obj[1].tag}
+                              <span style={{ color: "#ff5e10" }}>.</span>
+                            </h1>
+                          </div>
+                          <div className="col-sm my-5 mx-3">
+                            <div className="row">
+                              <div className="col">
+                                {" "}
+                                <img
+                                  src={obj[1].img}
+                                  alt=""
+                                  className="extrainfoimg"
+                                />
+                              </div>
+                            </div>
+
+                            <pre style={{ fontSize: "15px" }} className="my-3">
+                              {obj[1].data}
+                            </pre>
+                            <br />
+                          </div>
+                        </div>
+                      )}
+                      <hr />
+                    </>
+                  );
+                })}
               </div>
             </div>
-
-            {project.timeline ? (
-              <>
-                <div className="row my-4">
-                  <div className="col">
-                    <hr />
-                  </div>
-                  <div className="col-2 text-center">Time Line</div>
-                  <div className="col">
-                    <hr />
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col text-center">
-                    <Timeline items={items}></Timeline>
-                  </div>
-                </div>
-              </>
-            ) : null}
-
-            <br />
-
-            {project.extra_info ? (
-              <>
-                <div className="row my-4">
-                  <div className="col">
-                    <hr />
-                  </div>
-                  <div className="col-3 text-center">Extra Information</div>
-                  <div className="col">
-                    <hr />
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col">
-                    {itemsinfo.map((obj, index) => {
-                      return (
-                        <>
-                          {index % 2 === 0 ? (
-                            <div className="row bg-light">
-                              <div className="col my-5 mx-3">
-                                <img src={obj[1].img} alt="" width={"700px"} />
-                                <pre
-                                  style={{ fontSize: "15px" }}
-                                  className="my-3"
-                                >
-                                  {obj[1].data}
-                                </pre>
-                                <br />
-                              </div>
-                              <div className="col-3 my-5 mx-3 text-center">
-                                <h1
-                                  style={{
-                                    color: "lightgray",
-                                    textTransform: "uppercase",
-                                    fontWeight: "bold",
-                                  }}
-                                >
-                                  {obj[1].tag}
-                                  <span style={{ color: "#ff5e10" }}>.</span>
-                                </h1>
-                              </div>
-                            </div>
-                          ) : (
-                            <div className="row bg-white">
-                              <div className="col-3 my-5 mx-3 text-center">
-                                <h1
-                                  style={{
-                                    color: "lightgray",
-                                    textTransform: "uppercase",
-                                    fontWeight: "bold",
-                                  }}
-                                >
-                                  {obj[1].tag}
-                                  <span style={{ color: "#ff5e10" }}>.</span>
-                                </h1>
-                              </div>
-                              <div className="col my-5 mx-3">
-                                <img src={obj[1].img} alt="" width={"700px"} />
-                                <pre
-                                  style={{ fontSize: "15px" }}
-                                  className="my-3"
-                                >
-                                  {obj[1].data}
-                                </pre>
-                                <br />
-                              </div>
-                            </div>
-                          )}
-                          <hr />
-                        </>
-                      );
-                    })}
-                  </div>
-                </div>
-              </>
-            ) : null}
-          </div>
-        </div>
+          </>
+        ) : null}
       </div>
       {/* footer  */}
       <br />

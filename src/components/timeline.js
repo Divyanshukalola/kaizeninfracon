@@ -29,7 +29,6 @@ const Timeline = (props) => {
     <>
       <div
         style={{
-          overflowX: "scroll",
           width: "100%",
         }}
       >
@@ -47,20 +46,17 @@ const Timeline = (props) => {
                             <div class="MuiGrid-root TimelineEvent-container-4">
                               <svg
                                 stroke="currentColor"
-                                fill="white"
+                                fill="currentColor"
                                 stroke-width="0"
                                 viewBox="0 0 16 16"
-                                class="TimelineEvent-icon-5"
-                                height="1em"
-                                width="1em"
+                                class="TimelineEvent-icon-5 timelineicon"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <circle cx="8" cy="8" r="8"></circle>
                               </svg>
                               <svg
-                                width="225"
-                                height="187"
                                 viewBox="0 0 59.531 49.477"
+                                className="timelinecomp"
                               >
                                 <g transform="matrix(.99959 0 0 .99838 -100.96 -38.57)">
                                   <path
@@ -114,9 +110,7 @@ const Timeline = (props) => {
                                   fill="currentColor"
                                   stroke-width="0"
                                   viewBox="0 0 16 16"
-                                  class="TimelineEvent-icon-5"
-                                  height="1em"
-                                  width="1em"
+                                  class="TimelineEvent-icon-5 timelineicon"
                                   xmlns="http://www.w3.org/2000/svg"
                                 >
                                   <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
@@ -127,9 +121,7 @@ const Timeline = (props) => {
                                   fill="currentColor"
                                   stroke-width="0"
                                   viewBox="0 0 16 16"
-                                  class="TimelineEvent-icon-5"
-                                  height="1em"
-                                  width="1em"
+                                  class="TimelineEvent-icon-5 timelineicon"
                                   xmlns="http://www.w3.org/2000/svg"
                                 >
                                   <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"></path>
@@ -137,8 +129,7 @@ const Timeline = (props) => {
                               )}
 
                               <svg
-                                width="225"
-                                height="187"
+                                className="timelinecomp"
                                 viewBox="0 0 59.531 49.477"
                               >
                                 <g transform="matrix(.99959 0 0 .99838 -100.96 -38.57)">
