@@ -17,8 +17,32 @@ import SlideSHow from "./slideshow";
 
 import Subscribe from "./functions/Subscribe";
 import Topnavigation from "./nav";
+import useWindowDimensions from "./useWindowDimensions";
 
 function Home1({ proj, coverImage, images }) {
+  const clients = [
+    {
+      name: "Google",
+      logo:
+        "https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png",
+    },
+    {
+      name: "Twitter",
+      logo:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/2491px-Twitter-logo.svg.png",
+    },
+    {
+      name: "Instagram",
+      logo: "http://assets.stickpng.com/images/580b57fcd9996e24bc43c521.png",
+    },
+    {
+      name: "Facebook",
+      logo:
+        "https://barod.cymru/wp-content/uploads/2020/07/facebook-icon-transparent-background-3.png",
+    },
+  ];
+  const { height, width } = useWindowDimensions();
+  console.log(height);
   const [page, setPage] = React.useState(1);
   const handleChange = (event, value) => {
     setPage(value);
@@ -423,9 +447,7 @@ function Home1({ proj, coverImage, images }) {
                     <div className="row mt-sm-5 mt-5 text-center">
                       <div className="col mt-4 mt-sm-0">
                         <img
-                          src={
-                            "https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png"
-                          }
+                          src={clients[0].logo}
                           alt="img"
                           className="hoverClients"
                           height="140px"
@@ -436,13 +458,16 @@ function Home1({ proj, coverImage, images }) {
                             setclistate(0);
                           }}
                         />
+                        {width <= 600 ? (
+                          clistate === 1 ? (
+                            <p className="mt-3">{clients[0].name}</p>
+                          ) : null
+                        ) : null}
                       </div>
                       <div className="col mt-4 mt-sm-0">
                         {" "}
                         <img
-                          src={
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/2491px-Twitter-logo.svg.png"
-                          }
+                          src={clients[1].logo}
                           alt="img"
                           className="hoverClients"
                           height="140px"
@@ -453,15 +478,18 @@ function Home1({ proj, coverImage, images }) {
                             setclistate(0);
                           }}
                         />
+                        {width <= 600 ? (
+                          clistate === 2 ? (
+                            <p className="mt-3">{clients[1].name}</p>
+                          ) : null
+                        ) : null}
                       </div>
                     </div>
 
                     <div className="row mt-sm-5 mt-5 text-center">
                       <div className="col mt-4 mt-sm-0">
                         <img
-                          src={
-                            "http://assets.stickpng.com/images/580b57fcd9996e24bc43c521.png"
-                          }
+                          src={clients[2].logo}
                           alt="img"
                           className="hoverClients"
                           height="140px"
@@ -472,12 +500,15 @@ function Home1({ proj, coverImage, images }) {
                             setclistate(0);
                           }}
                         />
+                        {width <= 600 ? (
+                          clistate === 3 ? (
+                            <p className="mt-3">{clients[2].name}</p>
+                          ) : null
+                        ) : null}
                       </div>
                       <div className="col mt-4 mt-sm-0">
                         <img
-                          src={
-                            "https://barod.cymru/wp-content/uploads/2020/07/facebook-icon-transparent-background-3.png"
-                          }
+                          src={clients[3].logo}
                           alt="img"
                           className="hoverClients"
                           height="140px"
@@ -488,6 +519,11 @@ function Home1({ proj, coverImage, images }) {
                             setclistate(0);
                           }}
                         />
+                        {width <= 600 ? (
+                          clistate === 4 ? (
+                            <p className="mt-3">{clients[3].name}</p>
+                          ) : null
+                        ) : null}
                       </div>
                     </div>
                   </div>
