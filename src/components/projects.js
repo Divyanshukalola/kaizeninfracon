@@ -171,57 +171,68 @@ function Projects2({ proj }) {
                         <br />
                         <div className="row">
                           <div className="col">
-                            <div className="row d-sm-flex justify-content-center">
-                              {proj
-                                .filter((e) => e.type === index + 1)
-                                .map((obj1) => {
-                                  return (
-                                    <div
-                                      className="col-sm-5 position-relative rounded  my-3 mx-3"
-                                      style={{ height: "400px" }}
-                                      onClick={() => {
-                                        navigate(`/projects/${obj1.id}`);
-                                      }}
-                                    >
-                                      <div className="row">
-                                        <div className="col">
-                                          <img
-                                            src={obj1.img}
-                                            alt=""
-                                            style={{
-                                              height: "inherit",
-                                              width: "inherit",
-                                            }}
-                                            className="projectImg"
-                                          />
+                            <>
+                              {organiseData(
+                                proj.filter((e) => e.type === index + 1),
+                                2
+                              ).map((obj) => {
+                                return (
+                                  <div className="row d-sm-flex my-sm-4 justify-content-center">
+                                    {obj.map((obj1) => {
+                                      return (
+                                        <>
                                           <div
-                                            className="text mt-3"
+                                            className="col-sm-5 position-relative rounded  my-sm-3 mx-3"
                                             style={{
-                                              width: "inherit",
+                                              minHeight: "500px",
+                                            }}
+                                            onClick={() => {
+                                              navigate(`/projects/${obj1.id}`);
                                             }}
                                           >
-                                            <h5 className="mt-2">
-                                              {obj1.title}
-                                            </h5>
+                                            <div className="row">
+                                              <div className="col">
+                                                <img
+                                                  src={obj1.img}
+                                                  alt=""
+                                                  style={{
+                                                    height: "inherit",
+                                                    width: "inherit",
+                                                  }}
+                                                  className="projectImg"
+                                                />
+                                                <div
+                                                  className="text mt-3"
+                                                  style={{
+                                                    width: "inherit",
+                                                  }}
+                                                >
+                                                  <h5 className="mt-2">
+                                                    {obj1.title}
+                                                  </h5>
 
-                                            <br />
-                                            <button
-                                              className="mx-2 my-3 jobbutton"
-                                              onClick={() => {
-                                                navigate(
-                                                  `/projects/${obj1.id}`
-                                                );
-                                              }}
-                                            >
-                                              Learn More
-                                            </button>
+                                                  <br />
+                                                  <button
+                                                    className="mx-2 my-3 jobbutton"
+                                                    onClick={() => {
+                                                      navigate(
+                                                        `/projects/${obj1.id}`
+                                                      );
+                                                    }}
+                                                  >
+                                                    Learn More
+                                                  </button>
+                                                </div>
+                                              </div>
+                                            </div>
                                           </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  );
-                                })}
-                            </div>
+                                        </>
+                                      );
+                                    })}
+                                  </div>
+                                );
+                              })}
+                            </>
                           </div>
                         </div>
                         <br />
