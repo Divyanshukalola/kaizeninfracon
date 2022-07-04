@@ -250,7 +250,11 @@ function AdminProjEdit(props) {
 
   return (
     <>
-      <Topnavigation proj="true"></Topnavigation> <br />
+      <Topnavigation proj="true"></Topnavigation>
+      <br />
+      <br />
+      <br />
+      <br />
       {/* projects  */}
       <div className="row text-center">
         <div className="col">

@@ -84,7 +84,8 @@ function Admin(props) {
 
       <Topnavigation logout={true}></Topnavigation>
       <br />
-
+      <br />
+      <br />
       <hr />
       {width <= 1300 ? (
         <>

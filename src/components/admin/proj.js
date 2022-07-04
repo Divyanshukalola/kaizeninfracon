@@ -775,12 +775,12 @@ function AdminProj(props) {
                         </h6>
                         <h6>
                           <b>Operation & Maintenance: </b>
-                          {obj1.details.project_client}
+                          {obj1.details.project_op_main}
                         </h6>
 
                         <h6>
                           <b>Client: </b>
-                          {obj1.details.project_op_main}
+                          {obj1.details.project_client}
                         </h6>
                         <h6>
                           <b>Concessionaire: </b>
