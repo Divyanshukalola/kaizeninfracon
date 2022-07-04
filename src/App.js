@@ -29,6 +29,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./../src/firebase-config";
 import Error404 from "./components/Error/404";
 import ContactUs from "./components/contactUs";
+import ResumeSubmit from "./components/submitResume";
 
 function App() {
   const [news, setNews] = useState([]);
@@ -143,6 +144,10 @@ function App() {
             <Route path="*" element={<Error404></Error404>} status={404} />
             {/* <Route path="/" element={<CommingSoon></CommingSoon>} /> */}
             <Route path="/timeline" element={<Timeline></Timeline>} />
+            <Route
+              path="/submit-resume"
+              element={<ResumeSubmit></ResumeSubmit>}
+            />
             <Route
               path="/"
               element={

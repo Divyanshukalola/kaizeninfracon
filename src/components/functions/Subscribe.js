@@ -39,6 +39,11 @@ function Subscribe() {
     const emailForm = {
       to_name: getValues("name"),
       to_email: getValues("email"),
+      text: "Thank you for submitting your information.",
+      text1: "We'll keep you informed about our new initiatives,",
+      text2:
+        "using which we might even be able to assist you in realising your goal.",
+      sub_title: "🙏 Thank you for choosing us.",
     };
 
     await emailjs

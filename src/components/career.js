@@ -5,10 +5,12 @@ import Footer from "./footer";
 import Topnavigation from "./nav";
 
 import useWindowDimensions from "./useWindowDimensions";
+import { useNavigate } from "react-router-dom";
 
 function Career() {
+  const navigate = useNavigate();
   const { height, width } = useWindowDimensions();
-console.log(height);
+  console.log(height);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -58,7 +60,14 @@ console.log(height);
               cooperation, and fun; and a culture that encourages teamwork and
               smart risk-taking are all part of the Kizen experience.
             </p>
-            <button className="jobbutton">Search job opportunities</button>
+            <button
+              className="jobbutton"
+              onClick={() => {
+                navigate("/submit-resume");
+              }}
+            >
+              Submit your Resume
+            </button>
           </div>
         </div>
       </div>
@@ -83,7 +92,14 @@ console.log(height);
               attitude are also in our DNA, driving us to always discover new
               methods to satisfy our clients.
             </p>
-            <button className="jobbutton">View Our Work</button>
+            <button
+              className="jobbutton"
+              onClick={() => {
+                navigate("/proj");
+              }}
+            >
+              View Our Work
+            </button>
           </div>
           <div className="col-sm mx-3 mt-5 text-center text-sm-left">
             <div className="row">
@@ -114,7 +130,14 @@ console.log(height);
               your options.
             </h5>
             <br />
-            <button className="jobbutton">Search job opportunities</button>
+            <button
+              className="jobbutton"
+              onClick={() => {
+                navigate("/submit-resume");
+              }}
+            >
+              Submit your Resume
+            </button>
           </div>
         </div>
       </div>
