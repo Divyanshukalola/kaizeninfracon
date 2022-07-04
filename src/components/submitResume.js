@@ -93,13 +93,13 @@ function ResumeSubmit() {
 
     if (
       uFile == null ||
-      getValues("fname") == "" ||
-      getValues("lname") == "" ||
-      getValues("addr") == "" ||
-      getValues("phone") == "" ||
-      getValues("email") == "" ||
-      getValues("citizen") == "" ||
-      getValues("placeob") == ""
+      getValues("fname") === "" ||
+      getValues("lname") === "" ||
+      getValues("addr") === "" ||
+      getValues("phone") === "" ||
+      getValues("email") === "" ||
+      getValues("citizen") === "" ||
+      getValues("placeob") === ""
     ) {
       setLoading(false);
       alert(
