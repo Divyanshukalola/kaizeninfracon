@@ -5,29 +5,23 @@ import TextTruncate from "react-text-truncate";
 import { useNavigate } from "react-router-dom";
 
 import Topnavigation from "./nav";
-// import man from "./../static/img/man.png";
-// import building from "./../static/img/buildings.png";
-// import Button from "@mui/material/Button";
-// import { styled } from "@mui/material/styles";
-// import Slide from "@mui/material/Slide";
-// import Fade from "@mui/material/Fade";
-
-// import Card from "@mui/material/Card";
-// import CardContent from "@mui/material/CardContent";
-// import CardMedia from "@mui/material/CardMedia";
-// import { CardActionArea } from "@mui/material";
 
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import CardActions from "@mui/material/CardActions";
-// import NewsView from "./views/newsview";
-// import Button from "@mui/material/Button";
+
 import Pagination from "@mui/material/Pagination";
 import useWindowDimensions from "./useWindowDimensions";
 
-function News(props) {
+// import readData from "./functions/DB";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// import NewsView from "./views/newsview";
+// import ArticleView from "./views/articleview";
+
+function News({ news, arti, videos, setPagination }) {
   const { height, width } = useWindowDimensions();
   console.log(height);
   const navigate = useNavigate();
@@ -45,8 +39,9 @@ function News(props) {
   };
   useEffect(() => {
     window.scrollTo(0, 0);
+    setPagination(page);
   }, []);
-  // console.log(props.news);
+
   function organiseData(array, size) {
     var perChunk = size; // items per chunk
 
@@ -67,11 +62,6 @@ function News(props) {
     return result;
   }
 
-  // function dateConvert(date) {
-  //   var t = new Date(1970, 0, 1); // Epoch
-  //   t.setSeconds(date);
-  //   return t;
-  // }
   return (
     <div className="Services ">
       {/* navigation  */}
@@ -110,9 +100,7 @@ function News(props) {
           <br />
         </div>
 
-        {organiseData(props.new, 3).map((obj, index) => {
-          console.log("index " + index);
-          console.log("page " + page);
+        {organiseData(news, 2).map((obj, index) => {
           return (
             <>
               {index === page - 1 ? (
@@ -124,12 +112,15 @@ function News(props) {
                         <div className="col-sm-6 mx-4 mx-sm-0">
                           {" "}
                           <Card>
-                            <CardMedia
-                              component="img"
-                              image={obj1.img}
-                              height="150px"
-                              alt="green iguana"
-                            />
+                            {obj1.img ? (
+                              <CardMedia
+                                component="img"
+                                image={obj1.img}
+                                height="150px"
+                                alt="green iguana"
+                              />
+                            ) : null}
+
                             <CardContent>
                               <Typography
                                 gutterBottom
@@ -207,7 +198,7 @@ function News(props) {
               <div className="col d-flex justify-content-center">
                 {" "}
                 <Pagination
-                  count={organiseData(props.new, 3).length}
+                  count={organiseData(news, 2).length}
                   page={page}
                   onChange={handleChange}
                 />
@@ -225,7 +216,7 @@ function News(props) {
           <br />
         </div>
 
-        {organiseData(props.arti, 3).map((obj, index) => {
+        {organiseData(arti, 2).map((obj, index) => {
           return (
             <>
               {index === page1 - 1 ? (
@@ -322,7 +313,7 @@ function News(props) {
               <div className="col-sm d-flex justify-content-center">
                 {" "}
                 <Pagination
-                  count={organiseData(props.arti, 3).length}
+                  count={organiseData(arti, 2).length}
                   page={page1}
                   onChange={handleChange1}
                 />
@@ -339,7 +330,7 @@ function News(props) {
           <br />
         </div>
 
-        {organiseData(props.videos, 3).map((obj, index) => {
+        {organiseData(videos, 3).map((obj, index) => {
           return (
             <>
               {index === page2 - 1 ? (
@@ -381,7 +372,7 @@ function News(props) {
               <div className="col d-flex justify-content-center">
                 {" "}
                 <Pagination
-                  count={organiseData(props.videos, 3).length}
+                  count={organiseData(videos, 3).length}
                   page={page2}
                   onChange={handleChange2}
                 />

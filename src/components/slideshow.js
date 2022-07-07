@@ -6,13 +6,13 @@ function SlideSHow(props) {
   const ref = React.useRef();
   const ref1 = React.useRef();
   const imgs = props.data;
-  console.log(props.data);
+
   useEffect(() => {
-      window.scrollTo(0, 0);
-      if (ref.current !== undefined) {
-        ref.current.style.backgroundImage = `url("${imgs[0].img}")`;
-        ref1.current.innerText = imgs[0].cap;
-      }
+    window.scrollTo(0, 0);
+    if (ref.current !== undefined) {
+      ref.current.style.backgroundImage = `url("${imgs[0].img}")`;
+      ref1.current.innerText = imgs[0].cap;
+    }
   }, []);
 
   let slideIndex = 0;

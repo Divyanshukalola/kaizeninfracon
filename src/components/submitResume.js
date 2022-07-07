@@ -36,7 +36,7 @@ function ResumeSubmit() {
 
     await emailjs
       .send(
-        "service_y5xz1jh",
+        "service_c74b0jo",
         "template_ygk24sf",
         emailForm,
         "aqzKs0f24gmAZAWOH"
@@ -71,7 +71,7 @@ function ResumeSubmit() {
 
     await emailjs
       .send(
-        "service_y5xz1jh",
+        "service_c74b0jo",
         "template_r2o35bl",
         emailForm,
         "aqzKs0f24gmAZAWOH"

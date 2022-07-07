@@ -1,32 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 import { useForm } from "react-hook-form";
-// import man from "./../static/img/man.png";
-// import building from "./../static/img/buildings.png";
-// import Button from "@mui/material/Button";
-// import { styled } from "@mui/material/styles";
-// import Slide from "@mui/material/Slide";
-// import Fade from "@mui/material/Fade";
 
-// import Card from "@mui/material/Card";
-// import CardContent from "@mui/material/CardContent";
-// import CardMedia from "@mui/material/CardMedia";
-// import { CardActionArea } from "@mui/material";
-
-// import Card from "@mui/material/Card";
-// import Typography from "@mui/material/Typography";
-// import CardContent from "@mui/material/CardContent";
-// import CardMedia from "@mui/material/CardMedia";
-// import CardActions from "@mui/material/CardActions";
-// import TextField from "@mui/material/TextField";
 import { doc, addDoc, collection, deleteDoc } from "firebase/firestore";
 import { db } from "./../../firebase-config";
-// import Button from "@mui/material/Button";
-// import PropTypes from "prop-types";
-// import Tabs from "@mui/material/Tabs";
-// import Tab from "@mui/material/Tab";
-// import Typography from "@mui/material/Typography";
-// import Box from "@mui/material/Box";
+
 import {
   ref,
   uploadBytes,
@@ -61,20 +39,21 @@ function AdminNews({ news }) {
         writenBy: getValues("writtenBy"),
         imageListID: id,
       });
-    }
-    const imageRef = ref(storage, `news/${id}`);
-    await uploadBytes(imageRef, file).then((snapshot) => {
-      getDownloadURL(snapshot.ref).then((url) => {
-        addDoc(dataCollectionRef1, {
-          title: getValues("title"),
-          body: getValues("body"),
-          img: url,
-          date: getValues("date"),
-          writenBy: getValues("writtenBy"),
-          imageListID: id,
+    } else {
+      const imageRef = ref(storage, `news/${id}`);
+      await uploadBytes(imageRef, file).then((snapshot) => {
+        getDownloadURL(snapshot.ref).then((url) => {
+          addDoc(dataCollectionRef1, {
+            title: getValues("title"),
+            body: getValues("body"),
+            img: url,
+            date: getValues("date"),
+            writenBy: getValues("writtenBy"),
+            imageListID: id,
+          });
         });
       });
-    });
+    }
 
     await setTimeout(function() {
       setLoading(false);
