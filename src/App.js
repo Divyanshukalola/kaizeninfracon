@@ -37,8 +37,8 @@ function App() {
   const [projects, setprojects] = useState([]);
   const [article, setarticle] = useState([]);
   const [videos, setvideos] = useState([]);
-  const [coverImage, setcoverImage] = useState([]);
-  const [gallery, setgallery] = useState([]);
+  // const [coverImage, setcoverImage] = useState([]);
+  // const [gallery, setgallery] = useState([]);
 
   const [loading, setLoading] = useState(true);
   const [state, setState] = useState(false);
@@ -72,12 +72,12 @@ function App() {
       readData("video").then((e) => {
         setvideos(e);
       });
-      readData("coverImage").then((e) => {
-        setcoverImage(e);
-      });
-      readData("gallery").then((e) => {
-        setgallery(e);
-      });
+      // readData("coverImage").then((e) => {
+      //   setcoverImage(e);
+      // });
+      // readData("gallery").then((e) => {
+      //   setgallery(e);
+      // });
       setLoading(false);
     };
     getData();
@@ -103,16 +103,7 @@ function App() {
               path="/submit-resume"
               element={<ResumeSubmit></ResumeSubmit>}
             />
-            <Route
-              path="/"
-              element={
-                <Home1
-                  proj={projects}
-                  coverImage={coverImage}
-                  images={gallery}
-                ></Home1>
-              }
-            />
+            <Route path="/" element={<Home1></Home1>} />
             <Route path="/people" element={<People></People>} />
 
             <Route path="/about" element={<About></About>} />
@@ -121,10 +112,7 @@ function App() {
               path="/login"
               element={<AdminLogin setState={setState}></AdminLogin>}
             />
-            <Route
-              path="/gallery"
-              element={<Gallery gallery={gallery}></Gallery>}
-            />
+            <Route path="/gallery" element={<Gallery></Gallery>} />
             <Route
               path="/news"
               element={<News news={news} arti={article} videos={videos}></News>}
@@ -163,8 +151,6 @@ function App() {
                     videos={videos}
                     proj={projects}
                     state={state}
-                    images={gallery}
-                    cover={coverImage}
 
                     // cli={clients}
                   ></Admin>

@@ -15,13 +15,8 @@ import CardActions from "@mui/material/CardActions";
 import Pagination from "@mui/material/Pagination";
 import useWindowDimensions from "./useWindowDimensions";
 
-// import readData from "./functions/DB";
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// import NewsView from "./views/newsview";
-// import ArticleView from "./views/articleview";
-
-function News({ news, arti, videos, setPagination }) {
+function News({ news, arti, videos }) {
   const { height, width } = useWindowDimensions();
   console.log(height);
   const navigate = useNavigate();
@@ -39,7 +34,6 @@ function News({ news, arti, videos, setPagination }) {
   };
   useEffect(() => {
     window.scrollTo(0, 0);
-    setPagination(page);
   }, []);
 
   function organiseData(array, size) {

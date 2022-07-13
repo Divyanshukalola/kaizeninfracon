@@ -9,6 +9,8 @@ function SlideSHow(props) {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    console.log(props.data);
+
     if (ref.current !== undefined) {
       ref.current.style.backgroundImage = `url("${imgs[0].img}")`;
       ref1.current.innerText = imgs[0].cap;
@@ -36,7 +38,6 @@ function SlideSHow(props) {
     <div className="slideshow border position-relative" style={{ zIndex: "0" }}>
       <div className="row">
         <div className="col mySlides1" id="slideShow" key={"1"} ref={ref}>
-          {" "}
           <span>
             {" "}
             <div className="row">
