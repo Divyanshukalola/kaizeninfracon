@@ -62,7 +62,7 @@ function ArticleView({ article }) {
                 <img
                   src={article.img}
                   alt=""
-                  style={{ width: "inherit" }}
+                  style={{ width: "40vh" }}
                   className="newsImg"
                 />
               </div>
