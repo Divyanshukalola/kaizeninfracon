@@ -39,7 +39,7 @@ function ResumeSubmit() {
         "service_c74b0jo",
         "template_ygk24sf",
         emailForm,
-        "aqzKs0f24gmAZAWOH"
+        "v9INaLV6ajkEPTt6U"
       )
       .then(
         function(response) {
@@ -74,7 +74,7 @@ function ResumeSubmit() {
         "service_c74b0jo",
         "template_r2o35bl",
         emailForm,
-        "aqzKs0f24gmAZAWOH"
+        "v9INaLV6ajkEPTt6U"
       )
       .then(
         function(response) {

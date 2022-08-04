@@ -30,9 +30,9 @@ function Subscribe() {
     await sendEmail();
 
     await setTimeout(function() {
-      setLoading(false);
-      window.location.reload(false);
-    }, 100);
+                                  setLoading(false);
+                                  // window.location.reload(false);
+                                }, 100);
   }
 
   async function sendEmail() {
@@ -51,7 +51,7 @@ function Subscribe() {
         "service_c74b0jo",
         "template_r2o35bl",
         emailForm,
-        "aqzKs0f24gmAZAWOH"
+        "v9INaLV6ajkEPTt6U"
       )
       .then(
         function(response) {
