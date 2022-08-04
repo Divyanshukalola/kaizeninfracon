@@ -39,7 +39,7 @@ function SectionProjectView({ project, type }) {
           height: "500px",
           backgroundSize: "100%",
           backgroundRepeat: "no-repeat",
-          opacity: "70%",
+          opacity: "80%",
         }}
       ></div>
       <br />
@@ -69,7 +69,7 @@ function SectionProjectView({ project, type }) {
         </div>
       </div>
       <br />
-      <div className="row ">
+      <div className="row">
         <div className="col">
           <div className="row  d-flex justify-content-center">
             {project
@@ -78,13 +78,17 @@ function SectionProjectView({ project, type }) {
                 return (
                   <>
                     <div
-                      className="col-6 projectRow d-flex justify-content-center"
+                      className="col-5 projectRow d-flex justify-content-center"
                       onClick={() => {
                         navigate(`/projects/${obj1.id}`);
                       }}
+                      style={{ height: "50vh" }}
                     >
                       <img src={obj1.img} alt="" className="projectImg" />
-                      <div className="container text">
+                      <div
+                        className="container text"
+                        style={{ height: "30vh" }}
+                      >
                         <h5 className="mt-2">{obj1.title}</h5>
                         <small>{obj1.body}</small>
                         <br />

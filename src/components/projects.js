@@ -184,7 +184,7 @@ function Projects2({ proj }) {
                                           <div
                                             className="col-sm-5 position-relative rounded  my-sm-3 mx-3"
                                             style={{
-                                              minHeight: "500px",
+                                              minHeight: "70vh",
                                             }}
                                             onClick={() => {
                                               navigate(`/projects/${obj1.id}`);
