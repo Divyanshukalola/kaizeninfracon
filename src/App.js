@@ -31,7 +31,7 @@ import ContactUs from "./components/contactUs";
 import ResumeSubmit from "./components/submitResume";
 
 import readData from "./components/functions/DB";
-
+ 
 function App() {
   const [news, setNews] = useState([]);
   const [projects, setprojects] = useState([]);

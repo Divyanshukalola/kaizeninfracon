@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import Footer from "./footer";
 
@@ -20,6 +20,7 @@ import AdminGallery from "./admin/gallery";
 import AdminCover from "./admin/cover";
 
 import useWindowDimensions from "./useWindowDimensions";
+import readData from "./functions/DB";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -57,6 +58,8 @@ function a11yProps(index) {
 function Admin(props) {
   const { height, width } = useWindowDimensions();
   console.log(height);
+  const [coverImage, setcoverImage] = useState([]);
+  const [gallery, setgallery] = useState([]);
   const theme = createTheme({
     palette: {
       primary: {
@@ -76,6 +79,12 @@ function Admin(props) {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    readData("coverImage").then((e) => {
+      setcoverImage(e);
+    });
+    readData("gallery").then((e) => {
+      setgallery(e);
+    });
   }, []);
 
   return (
@@ -146,10 +155,10 @@ function Admin(props) {
                 </TabPanel>
 
                 <TabPanel value={value} index={4}>
-                  <AdminGallery images={props.images}></AdminGallery>
+                  <AdminGallery images={gallery}></AdminGallery>
                 </TabPanel>
                 <TabPanel value={value} index={5}>
-                  <AdminCover cover={props.cover}></AdminCover>
+                  <AdminCover cover={coverImage}></AdminCover>
                 </TabPanel>
               </Box>
             </>
