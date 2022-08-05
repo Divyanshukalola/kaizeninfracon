@@ -7,6 +7,7 @@ import readData from "./functions/DB";
 
 function People() {
   const [team, setteam] = useState([]);
+  const [team1, setteam1] = useState([]);
   // const team = [
   //   {
   //     img:
@@ -65,6 +66,9 @@ function People() {
     readData("team").then((e) => {
       setteam(e);
     });
+    readData("keyperson").then((e) => {
+      setteam1(e);
+    });
   }, []);
 
   return (
@@ -115,7 +119,49 @@ function People() {
           </>
         );
       })}
+      <hr />
+      <div className="row">
+        <div className="col text-center">
+          <p style={{ textTransform: "uppercase" }}>Key Personal</p>
+        </div>
+      </div>
 
+      {team1 ? (
+        <>
+          {organiseData(team1, 1).map((obj, index) => {
+            return (
+              <div className="row">
+                {obj.map((obj1) => {
+                  return (
+                    <div className="col">
+                      <div className="row mx-5 my-1 border ">
+                        <div className="col mx-3 my-3">
+                          <div className="row">
+                            <div className="col-1">{index + 1}</div>
+                            <div className="col-3">
+                              <h6>{obj1.name}</h6>
+                            </div>
+                            <div className="col">
+                              <h6>{obj1.designation}</h6>
+                            </div>
+                            <div className="col">
+                              <h6>{obj1.graduation}</h6>
+                            </div>
+                            <div className="col">
+                              <h6>{obj1.experience}</h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          })}
+        </>
+      ) : null}
+      <hr />
       {/* footer  */}
       <br />
       <div className="mx-5 my-5">

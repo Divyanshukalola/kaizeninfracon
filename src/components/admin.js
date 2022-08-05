@@ -17,6 +17,7 @@ import AdminNews from "./admin/news";
 import AdminArticle from "./admin/article";
 import AdminVideos from "./admin/videos";
 import AdminTeam from "./admin/team";
+import AdminKeyPerson from "./admin/keyperson";
 // import AdminClients from "./admin/clients";
 import AdminGallery from "./admin/gallery";
 import AdminCover from "./admin/cover";
@@ -148,6 +149,7 @@ function Admin(props) {
                     <Tab label="Gallery" {...a11yProps(4)} />
                     <Tab label="Cover Images" {...a11yProps(5)} />
                     <Tab label="Team" {...a11yProps(6)} />
+                    <Tab label="Key Personal" {...a11yProps(7)} />
                   </Tabs>
                 </Box>
                 <TabPanel value={value} index={1}>
@@ -174,6 +176,9 @@ function Admin(props) {
                 </TabPanel>
                 <TabPanel value={value} index={6}>
                   <AdminTeam team={team}></AdminTeam>
+                </TabPanel>
+                <TabPanel value={value} index={7}>
+                  <AdminKeyPerson></AdminKeyPerson>
                 </TabPanel>
               </Box>
             </>
