@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 
+import { useCookies } from "react-cookie";
 import Footer from "./footer";
 
 import Topnavigation from "./nav";
@@ -57,6 +58,8 @@ function a11yProps(index) {
 }
 
 function Admin(props) {
+  const [cookies, setCookie] = useCookies(["user"]);
+
   const { height, width } = useWindowDimensions();
   console.log(height);
   const [coverImage, setcoverImage] = useState([]);
@@ -77,6 +80,7 @@ function Admin(props) {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    setCookie("value", newValue, { path: "/" });
   };
 
   useEffect(() => {
@@ -90,6 +94,8 @@ function Admin(props) {
     readData("team").then((e) => {
       setteam(e);
     });
+
+    setValue(parseInt(cookies.value));
   }, []);
 
   return (
