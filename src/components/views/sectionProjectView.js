@@ -78,7 +78,7 @@ function SectionProjectView({ project, type }) {
                 return (
                   <>
                     <div
-                      className="col-5 projectRow d-flex justify-content-center"
+                      className="col-5 projectRow mx-3 d-flex justify-content-center"
                       onClick={() => {
                         navigate(`/projects/${obj1.id}`);
                       }}

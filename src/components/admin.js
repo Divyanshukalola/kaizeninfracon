@@ -15,6 +15,7 @@ import AdminProj from "./admin/proj";
 import AdminNews from "./admin/news";
 import AdminArticle from "./admin/article";
 import AdminVideos from "./admin/videos";
+import AdminTeam from "./admin/team";
 // import AdminClients from "./admin/clients";
 import AdminGallery from "./admin/gallery";
 import AdminCover from "./admin/cover";
@@ -60,6 +61,7 @@ function Admin(props) {
   console.log(height);
   const [coverImage, setcoverImage] = useState([]);
   const [gallery, setgallery] = useState([]);
+  const [team, setteam] = useState([]);
   const theme = createTheme({
     palette: {
       primary: {
@@ -84,6 +86,9 @@ function Admin(props) {
     });
     readData("gallery").then((e) => {
       setgallery(e);
+    });
+    readData("team").then((e) => {
+      setteam(e);
     });
   }, []);
 
@@ -136,6 +141,7 @@ function Admin(props) {
 
                     <Tab label="Gallery" {...a11yProps(4)} />
                     <Tab label="Cover Images" {...a11yProps(5)} />
+                    <Tab label="Team" {...a11yProps(6)} />
                   </Tabs>
                 </Box>
                 <TabPanel value={value} index={1}>
@@ -159,6 +165,9 @@ function Admin(props) {
                 </TabPanel>
                 <TabPanel value={value} index={5}>
                   <AdminCover cover={coverImage}></AdminCover>
+                </TabPanel>
+                <TabPanel value={value} index={6}>
+                  <AdminTeam team={team}></AdminTeam>
                 </TabPanel>
               </Box>
             </>
