@@ -108,16 +108,12 @@ function About() {
                 }}
                 className="mx-5 my-5"
               >
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+                Business operations depend heavily on commercial buildings, both
+                for those who own them and for those who rent them. Retailers,
+                eateries, offices, manufacturing, and other business kinds could
+                all be housed in a commercial structure. It's critical to
+                comprehend what is involved if you intend to buy and manage
+                commercial buildings or start a firm with a physical location.
               </p>
 
               <button
@@ -143,16 +139,15 @@ function About() {
                 }}
                 className="mx-5 my-5"
               >
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+                Residential construction projects provide temporary or permanent
+                housing for people, supplies, or equipment. The size of a
+                residential building is determined by how many people live
+                there. The projects often involve plumbing and electrical
+                installation in bathrooms, kitchens, and other areas of the
+                structures. Residential buildings are designed by engineers and
+                architects, and after that, a builder completes all construction
+                work and employs subcontractors as necessary for specialist work
+                like electrical installation.
               </p>
 
               <button
@@ -185,23 +180,22 @@ function About() {
           </div>
           <div className="col-sm my-5 ">
             <div>
-              <h1 className="mx-5 tags">Roads and Bridges</h1>
+              <h1 className="mx-5 tags">Civil infrastructure</h1>
               <p
                 style={{
                   color: "grey",
                 }}
                 className="mx-5 my-5"
               >
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+                Massive construction projects including dams, railroads,
+                undersea tunnels, motorways, and bridges are typically
+                considered civil infrastructure works. Governments or
+                significant financial institutions typically sponsor these
+                initiatives. To manage elements of nature, such as water or
+                weather, or to give structural integrity and support for other
+                projects, such tunnels under mountains or underground train
+                lines, they require particular planning to accommodate extensive
+                use by car traffic and other transit systems.
               </p>
 
               <button
@@ -220,23 +214,20 @@ function About() {
         <div className="row mx-0 " style={{ width: "100%" }}>
           <div className="col-sm my-5 ">
             <div>
-              <h1 className="mx-5 tags">Hospital Buildings - Colleges</h1>
+              <h1 className="mx-5 tags">Institutional</h1>
               <p
                 style={{
                   color: "grey",
                 }}
                 className="mx-5 my-5"
               >
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+                Massive structures like stadiums, hospitals, schools, and
+                skyscrapers that house or offer services on a large scale are
+                referred to as institutional construction projects. To maintain
+                the security of those within during periods of high occupancy,
+                high traffic, or high inventory, they need particular planning
+                and design. These projects are typically funded by businesses or
+                governments.
               </p>
 
               <button
@@ -276,16 +267,16 @@ function About() {
                 }}
                 className="mx-5 my-5"
               >
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+                For public building projects intended to benefit the general
+                public, the owner may be a state, local, federal, or government
+                entity. Even if another agency assists in funding the project,
+                the controlling agency is still regarded as the owner. These
+                tasks might take years to accomplish and range from
+                straightforward construction to more complicated undertakings.
+                Buildings like courthouses, public hospitals, public schools,
+                military installations, and government offices can be considered
+                public projects, as can infrastructure work like creating roads
+                and flood control systems.
               </p>
 
               <button
@@ -311,16 +302,8 @@ function About() {
                 }}
                 className="mx-5 my-5"
               >
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+                These projects are tailored specifically suit the needs of the
+                owner. We want to give our consumers the very best.
               </p>
 
               <button

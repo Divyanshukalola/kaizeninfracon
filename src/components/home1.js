@@ -26,23 +26,24 @@ import readData from "./../components/functions/DB";
 function Home1() {
   const clients = [
     {
-      name: "Google",
+      name: "Iron Triangle PVT LTD.",
       logo:
-        "https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png",
+        "https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/clients%2FITTIC.png?alt=media&token=621a722e-db7b-49e8-9879-953a377ce645",
     },
     {
-      name: "Twitter",
+      name: "Kaizen Integrated Solutions PVT LTD.",
       logo:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/2491px-Twitter-logo.svg.png",
+        "https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/clients%2FKIS.png?alt=media&token=2b48f7f7-ee51-47a7-9541-e35d4231b659",
     },
     {
-      name: "Instagram",
-      logo: "http://assets.stickpng.com/images/580b57fcd9996e24bc43c521.png",
+      name: "Odisha State Housing Board",
+      logo:
+        "https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/clients%2FOSHB.png?alt=media&token=40319794-b0fb-4ce5-b0e2-8569f97a6108",
     },
     {
-      name: "Facebook",
+      name: "Works Department Government of Odisha",
       logo:
-        "https://barod.cymru/wp-content/uploads/2020/07/facebook-icon-transparent-background-3.png",
+        "https://firebasestorage.googleapis.com/v0/b/kaizeninfracon-15b66.appspot.com/o/clients%2FWDGOO.png?alt=media&token=99c12169-a1b9-442a-8722-90a8119627d6",
     },
   ];
   const { height, width } = useWindowDimensions();
@@ -390,7 +391,7 @@ function Home1() {
           <div className=" bg-light">
             <div className="containter">
               {" "}
-              <div className="row mx-5 mt-5" style={{ height: "730px" }}>
+              <div className="row mx-5 mt-5" style={{ height: "auto" }}>
                 <div className="col mt-5">
                   <div className="mt-3 text-center">
                     {" "}
@@ -403,7 +404,7 @@ function Home1() {
                       <div
                         className="container client_info"
                         style={{
-                          marginTop: "30%",
+                          marginTop: "15%",
                           marginLeft: "10%",
                           color: "lightgray",
                         }}
@@ -416,11 +417,9 @@ function Home1() {
                                   fontSize: "55px",
                                 }}
                               >
-                                Google
+                                {clients[0].name}
                               </h1>
-                              <small>
-                                This is the worlds one of the biggest giants.
-                              </small>
+                              <small>{clients[0].desp}</small>
                             </div>
                           ) : clistate === 2 ? (
                             <div className="clititle">
@@ -429,11 +428,9 @@ function Home1() {
                                   fontSize: "55px",
                                 }}
                               >
-                                Twitter
+                                {clients[1].name}
                               </h1>
-                              <small>
-                                This is the worlds one of the biggest giants.
-                              </small>
+                              <small>{clients[1].desp}</small>
                             </div>
                           ) : clistate === 3 ? (
                             <div className="clititle">
@@ -442,11 +439,9 @@ function Home1() {
                                   fontSize: "55px",
                                 }}
                               >
-                                Instagram
+                                {clients[2].name}
                               </h1>
-                              <small>
-                                This is the worlds one of the biggest giants.
-                              </small>
+                              <small>{clients[2].desp}</small>
                             </div>
                           ) : clistate === 4 ? (
                             <div className="clititle">
@@ -455,11 +450,9 @@ function Home1() {
                                   fontSize: "55px",
                                 }}
                               >
-                                Facebook
+                                {clients[3].name}
                               </h1>
-                              <small>
-                                This is the worlds one of the biggest giants.
-                              </small>
+                              <small>{clients[3].desp}</small>
                             </div>
                           ) : (
                             <div>
@@ -476,13 +469,12 @@ function Home1() {
                       </div>
                     </div>
                     <div className="col-sm">
-                      <div className="row mt-sm-5 mt-5 text-center">
+                      <div className="row mt-sm-5 my-5 text-center">
                         <div className="col mt-4 mt-sm-0">
                           <img
                             src={clients[0].logo}
                             alt="img"
                             className="hoverClients"
-                            height="140px"
                             onMouseEnter={() => {
                               setclistate(1);
                             }}
@@ -502,7 +494,6 @@ function Home1() {
                             src={clients[1].logo}
                             alt="img"
                             className="hoverClients"
-                            height="140px"
                             onMouseEnter={() => {
                               setclistate(2);
                             }}
@@ -518,13 +509,12 @@ function Home1() {
                         </div>
                       </div>
 
-                      <div className="row mt-sm-5 mt-5 text-center">
-                        <div className="col mt-4 mt-sm-0">
+                      <div className="row mt-sm-5 my-5 text-center">
+                        <div className="col my-4 mt-sm-0">
                           <img
                             src={clients[2].logo}
                             alt="img"
                             className="hoverClients"
-                            height="140px"
                             onMouseEnter={() => {
                               setclistate(3);
                             }}
@@ -538,12 +528,11 @@ function Home1() {
                             ) : null
                           ) : null}
                         </div>
-                        <div className="col mt-4 mt-sm-0">
+                        <div className="col my-4 mt-sm-0">
                           <img
                             src={clients[3].logo}
                             alt="img"
                             className="hoverClients"
-                            height="140px"
                             onMouseEnter={() => {
                               setclistate(4);
                             }}

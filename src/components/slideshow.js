@@ -35,7 +35,10 @@ function SlideSHow(props) {
   }
 
   return (
-    <div className="slideshow border position-relative" style={{ zIndex: "0" }}>
+    <div
+      className="slideshow border position-relative"
+      style={{ zIndex: "0", height: "100vh" }}
+    >
       <div className="row">
         <div className="col mySlides1" id="slideShow" key={"1"} ref={ref}>
           <span>
