@@ -6,8 +6,7 @@ import { doc, deleteDoc, addDoc, collection } from "firebase/firestore";
 import { db } from "./../../firebase-config";
 // import Button from "@mui/material/Button";
 
-import { ref, deleteObject } from "@firebase/storage";
-import { storage } from "./../../firebase-config";
+
 import readData from "./../functions/DB";
 
 import { v4 } from "uuid";
