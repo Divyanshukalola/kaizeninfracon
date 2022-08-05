@@ -125,7 +125,31 @@ function People() {
           <p style={{ textTransform: "uppercase" }}>Key Personal</p>
         </div>
       </div>
-
+      <div className="row">
+        <div className="col">
+          <div className="row mx-5 ">
+            <div className="col mx-3 my-3">
+              <div className="row">
+                <div className="col-1" style={{ fontWeight: "bold" }}>
+                  Index
+                </div>
+                <div className="col-3" style={{ fontWeight: "bold" }}>
+                  Name
+                </div>
+                <div className="col" style={{ fontWeight: "bold" }}>
+                  Designation
+                </div>
+                <div className="col" style={{ fontWeight: "bold" }}>
+                  Graduation
+                </div>
+                <div className="col" style={{ fontWeight: "bold" }}>
+                  Experience
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       {team1 ? (
         <>
           {organiseData(team1, 1).map((obj, index) => {
