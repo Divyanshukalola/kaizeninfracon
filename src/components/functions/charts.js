@@ -4,11 +4,11 @@ function Charts({ financial }) {
   console.log(financial);
   const currentYear = new Date().getFullYear();
   function mapValues(output_start, output_end, input_start, input_end, input) {
-    return (
-      output_start +
-      ((output_end - output_start) / (input_end - input_start)) *
-        (input - input_start)
-    );
+    var new_value =
+      ((input - input_start) / (input_end - input_start)) *
+        (output_end - output_start) +
+      output_start;
+    return new_value;
   }
 
   function getMaxValue(arr) {
@@ -22,18 +22,14 @@ function Charts({ financial }) {
         }
       }
     }
-    //   arr.map((obj, index) => {
 
-    //   }, []);
-
-    // console.log(value);
     return parseFloat(value);
   }
 
   function range(steps, max) {
-    var divider = max / steps;
-    var changingsum = 0;
-    const filledArray = [...Array(steps)].map(() => {
+    var divider = (Math.round(Math.ceil(max / 1000)) * 1000) / steps;
+    var changingsum = 0 - divider;
+    const filledArray = [...Array(steps + 1)].map(() => {
       return (changingsum += divider);
     });
     return filledArray.reverse();
@@ -51,7 +47,7 @@ function Charts({ financial }) {
                   Annual Turnover <hr />
                 </div>
               </div>
-              <div className="row">
+              <div className="row" style={{ height: "60.5vh" }}>
                 <div className="col-1 page-break container text-right">
                   {range(10, getMaxValue(financial[5]["Annual Turnover"])).map(
                     (obj) => {
@@ -68,7 +64,10 @@ function Charts({ financial }) {
                   )}
                 </div>
                 <div className="col">
-                  <div className="row align-items-end grid border text-center">
+                  <div
+                    className="row align-items-end grid border text-center"
+                    style={{ height: "60vh" }}
+                  >
                     {financial[5]["Annual Turnover"].map((obj) => {
                       return (
                         <>
@@ -84,7 +83,13 @@ function Charts({ financial }) {
                                 0,
                                 60,
                                 0,
-                                getMaxValue(financial[5]["Annual Turnover"]),
+                                Math.round(
+                                  Math.ceil(
+                                    getMaxValue(
+                                      financial[5]["Annual Turnover"]
+                                    ) / 1000
+                                  )
+                                ) * 1000,
                                 parseFloat(obj)
                               )}vh`,
                             }}

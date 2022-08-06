@@ -734,7 +734,7 @@ border-color: grey;
 .grid {
     background-image:
       repeating-linear-gradient(#ccc 0 1px, transparent 1px 100%);
-    background-size: 6vh 6vh;
+    background-size: 5.45vh 5.45vh;
 
      
 }
