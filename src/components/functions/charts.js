@@ -13,15 +13,18 @@ function Charts({ financial }) {
 
   function getMaxValue(arr) {
     var value = 0;
-    arr.map((obj, index) => {
-      if (index + 1 < arr.length) {
-        if (arr[index] < arr[index + 1]) {
-          value = arr[index + 1];
+    for (var i = 0; i < arr.length; i++) {
+      if (i + 1 < arr.length) {
+        if (arr[i] < arr[i + 1]) {
+          value = arr[i + 1];
         } else {
-          value = arr[index];
+          value = arr[i];
         }
       }
-    });
+    }
+    //   arr.map((obj, index) => {
+
+    //   }, []);
 
     // console.log(value);
     return parseFloat(value);
