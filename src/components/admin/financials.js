@@ -87,13 +87,13 @@ function AdminFinancial() {
               </div>
               <div className="row">
                 <div className="col border text-center">
-                  {currentYear - 4} - {currentYear - 3}
-                </div>
-                <div className="col border text-center">
                   {currentYear - 3} - {currentYear - 2}
                 </div>
                 <div className="col border text-center">
                   {currentYear - 2} - {currentYear - 1}
+                </div>
+                <div className="col border text-center">
+                  {currentYear - 1} - {currentYear}
                 </div>
               </div>
             </div>
@@ -116,7 +116,7 @@ function AdminFinancial() {
                             type="number"
                             className="form-control"
                             step=".01"
-                            defaultValue={parseInt(Object.values(obj)[0][0])}
+                            defaultValue={parseFloat(Object.values(obj)[0][0])}
                             {...register(
                               `financial.${index}.${Object.keys(obj)}.0`
                             )}
@@ -129,7 +129,7 @@ function AdminFinancial() {
                             type="number"
                             className="form-control"
                             step=".01"
-                            defaultValue={parseInt(Object.values(obj)[0][1])}
+                            defaultValue={parseFloat(Object.values(obj)[0][1])}
                             {...register(
                               `financial.${index}.${Object.keys(obj)}.1`
                             )}
@@ -142,7 +142,7 @@ function AdminFinancial() {
                             type="number"
                             className="form-control"
                             step=".01"
-                            defaultValue={parseInt(Object.values(obj)[0][2])}
+                            defaultValue={parseFloat(Object.values(obj)[0][2])}
                             {...register(
                               `financial.${index}.${Object.keys(obj)}.2`
                             )}
