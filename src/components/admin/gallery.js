@@ -1,32 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 import { useForm } from "react-hook-form";
-// import man from "./../static/img/man.png";
-// import building from "./../static/img/buildings.png";
-// import Button from "@mui/material/Button";
-// import { styled } from "@mui/material/styles";
-// import Slide from "@mui/material/Slide";
-// import Fade from "@mui/material/Fade";
 
-// import Card from "@mui/material/Card";
-// import CardContent from "@mui/material/CardContent";
-// import CardMedia from "@mui/material/CardMedia";
-// import { CardActionArea } from "@mui/material";
-
-// import Card from "@mui/material/Card";
-// import Typography from "@mui/material/Typography";
-// import CardContent from "@mui/material/CardContent";
-// import CardMedia from "@mui/material/CardMedia";
-// import CardActions from "@mui/material/CardActions";
-// import TextField from "@mui/material/TextField";
 import { doc, addDoc, collection, deleteDoc } from "firebase/firestore";
 import { db } from "./../../firebase-config";
-// import Button from "@mui/material/Button";
-// import PropTypes from "prop-types";
-// import Tabs from "@mui/material/Tabs";
-// import Tab from "@mui/material/Tab";
-// import Typography from "@mui/material/Typography";
-// import Box from "@mui/material/Box";
+import readData from "./../functions/DB";
 import {
   ref,
   uploadBytes,
@@ -41,14 +19,17 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 
-function AdminGallery({ images, setValue }) {
+function AdminGallery({ setValue }) {
   const [file, setFile] = useState(null);
-
+  const [images, setgallery] = useState([]);
   const [loading, setLoading] = useState(false);
   const [id] = useState(v4());
   const { register, getValues } = useForm({});
   useEffect(() => {
     window.scrollTo(0, 0);
+    readData("gallery").then((e) => {
+      setgallery(e);
+    });
   }, []);
   const dataCollectionRef1 = collection(db, "gallery");
 

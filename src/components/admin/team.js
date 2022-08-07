@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { doc, deleteDoc, addDoc, collection } from "firebase/firestore";
 import { db } from "./../../firebase-config";
 // import Button from "@mui/material/Button";
+import readData from "./../functions/DB";
 
 import {
   ref,
@@ -16,14 +17,18 @@ import { storage } from "./../../firebase-config";
 
 import { v4 } from "uuid";
 
-function AdminTeam({ team, setValue }) {
+function AdminTeam({ setValue }) {
   const [file, setFile] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [team, setteam] = useState([]);
 
   const [id] = useState(v4());
   const { register, getValues } = useForm({});
   useEffect(() => {
     window.scrollTo(0, 0);
+    readData("team").then((e) => {
+      setteam(e.sort((a, b) => a.rank - b.rank));
+    });
   }, []);
   const dataCollectionRef1 = collection(db, "team");
 
@@ -35,6 +40,7 @@ function AdminTeam({ team, setValue }) {
       addDoc(dataCollectionRef1, {
         fname: getValues("fname"),
         lname: getValues("lname"),
+        rank: getValues("rank"),
         description: getValues("body"),
         link: "null",
 
@@ -47,6 +53,7 @@ function AdminTeam({ team, setValue }) {
         addDoc(dataCollectionRef1, {
           fname: getValues("fname"),
           lname: getValues("lname"),
+          rank: getValues("rank"),
           description: getValues("body"),
           link: url,
 
@@ -146,6 +153,18 @@ function AdminTeam({ team, setValue }) {
               </div>
             </div>
             <div className="col">
+              <div className="form-group">
+                <label>Rank (Eg: 1,2,3 ...)</label>
+                <input
+                  type="number"
+                  className="form-control"
+                  placeholder="Rank ..."
+                  {...register("rank")}
+                  {...(loading ? "disabled" : null)}
+                />
+              </div>
+            </div>
+            <div className="col">
               {" "}
               <div className="form-group">
                 <label for="exampleFormControlFile1">Photo</label>
@@ -211,12 +230,10 @@ function AdminTeam({ team, setValue }) {
                             {obj1.fname} {obj1.lname}
                           </h5>
                           <h6>{obj1.description}</h6>
-
-                          <br />
-
+                          <h6>Rank: {obj1.rank}</h6>
                           <br />
                           <br />
-
+                          <br />
                           <button
                             className="jobbutton"
                             onClick={() => {

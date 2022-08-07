@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 import { useCookies } from "react-cookie";
 import Footer from "./footer";
@@ -64,9 +64,7 @@ function Admin(props) {
 
   const { height, width } = useWindowDimensions();
   console.log(height);
-  const [coverImage, setcoverImage] = useState([]);
-  const [gallery, setgallery] = useState([]);
-  const [team, setteam] = useState([]);
+
   const theme = createTheme({
     palette: {
       primary: {
@@ -87,15 +85,6 @@ function Admin(props) {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    readData("coverImage").then((e) => {
-      setcoverImage(e);
-    });
-    readData("gallery").then((e) => {
-      setgallery(e);
-    });
-    readData("team").then((e) => {
-      setteam(e);
-    });
 
     setValue(parseInt(cookies.value));
   }, []);
@@ -155,29 +144,26 @@ function Admin(props) {
                   </Tabs>
                 </Box>
                 <TabPanel value={value} index={1}>
-                  <AdminNews news={props.new} value={setValue}></AdminNews>
+                  <AdminNews news={props.new}></AdminNews>
                 </TabPanel>
                 <TabPanel value={value} index={0}>
-                  <AdminProj proj={props.proj} value={setValue}></AdminProj>
+                  <AdminProj proj={props.proj}></AdminProj>
                 </TabPanel>
                 <TabPanel value={value} index={2}>
-                  <AdminArticle
-                    arti={props.arti}
-                    value={setValue}
-                  ></AdminArticle>
+                  <AdminArticle arti={props.arti}></AdminArticle>
                 </TabPanel>
                 <TabPanel value={value} index={3}>
                   <AdminVideos videos={props.videos}></AdminVideos>
                 </TabPanel>
 
                 <TabPanel value={value} index={4}>
-                  <AdminGallery images={gallery}></AdminGallery>
+                  <AdminGallery></AdminGallery>
                 </TabPanel>
                 <TabPanel value={value} index={5}>
-                  <AdminCover cover={coverImage}></AdminCover>
+                  <AdminCover></AdminCover>
                 </TabPanel>
                 <TabPanel value={value} index={6}>
-                  <AdminTeam team={team}></AdminTeam>
+                  <AdminTeam></AdminTeam>
                 </TabPanel>
                 <TabPanel value={value} index={7}>
                   <AdminKeyPerson></AdminKeyPerson>

@@ -64,7 +64,8 @@ function People() {
     window.scrollTo(0, 0);
     // var items = false;
     readData("team").then((e) => {
-      setteam(e);
+      setteam(e.sort((a, b) => a.rank - b.rank));
+
     });
     readData("keyperson").then((e) => {
       setteam1(e);

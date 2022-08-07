@@ -54,7 +54,10 @@ function Charts({ financial }) {
                       return (
                         <>
                           <div className="row">
-                            <div className="col " style={{ fontSize: "10px" }}>
+                            <div
+                              className="col fonts"
+                              style={{ fontSize: "10px" }}
+                            >
                               {obj}
                             </div>
                           </div>
@@ -66,7 +69,7 @@ function Charts({ financial }) {
                 <div className="col">
                   <div
                     className="row align-items-end grid border text-center"
-                    style={{ height: "60vh" }}
+                    style={{ height: "59.5vh" }}
                   >
                     {financial[5]["Annual Turnover"].map((obj) => {
                       return (
@@ -78,7 +81,7 @@ function Charts({ financial }) {
                           <div
                             className="col mx-5"
                             style={{
-                              backgroundColor: "#A6ACAF",
+                              backgroundColor: "#ff5e10 ",
                               height: `${mapValues(
                                 0,
                                 60,

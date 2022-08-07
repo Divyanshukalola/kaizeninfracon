@@ -728,13 +728,25 @@ border-color: grey;
   width: inherit;
 }
 
+.fonts{
+  font-size: 10px;
+}
 
+.chart{
+  display: none;
+}
+
+
+}
+
+.chart{
+  width: 60vw;
 }
 
 .grid {
     background-image:
       repeating-linear-gradient(#ccc 0 1px, transparent 1px 100%);
-    background-size: 5.45vh 5.45vh;
+    background-size: 6vh 6vh;
 
      
 }

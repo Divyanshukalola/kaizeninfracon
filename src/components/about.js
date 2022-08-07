@@ -388,30 +388,38 @@ function About() {
                                </p>
                                <div ref={ref}>
                                  <div
-                                   className="row mx-5"
+                                   className="row mx-lg-5"
                                    style={{ fontWeight: "bold" }}
                                  >
-                                   <div className="col-1 border text-center">
-                                     Sr. No.
+                                   <div className="col-2 border text-center">
+                                     <p className="fonts"> Sr.No.</p>
                                    </div>
-                                   <div className="col-5 border text-center">
-                                     Particulars
+                                   <div className="col-3 border text-center">
+                                     <p className="fonts">Particulars</p>
                                    </div>
-                                   <div className="col">
+                                   <div className="col-7">
                                      <div className="row">
                                        <div className="col border text-center">
-                                         Audited (Rs. In Lakh)
+                                         <p className="fonts">
+                                           Audited (Rs. In Lakh)
+                                         </p>
                                        </div>
                                      </div>
                                      <div className="row">
                                        <div className="col border text-center">
-                                         {currentYear - 3} - {currentYear - 2}
+                                         <p className="fonts">
+                                           {currentYear - 3} - {currentYear - 2}
+                                         </p>
                                        </div>
                                        <div className="col border text-center">
-                                         {currentYear - 2} - {currentYear - 1}
+                                         <p className="fonts">
+                                           {currentYear - 2} - {currentYear - 1}
+                                         </p>
                                        </div>
                                        <div className="col border text-center">
-                                         {currentYear - 1} - {currentYear}
+                                         <p className="fonts">
+                                           {currentYear - 1} - {currentYear}
+                                         </p>
                                        </div>
                                      </div>
                                    </div>
@@ -420,33 +428,35 @@ function About() {
                                    return (
                                      <>
                                        {" "}
-                                       <div className="row mx-5">
-                                         <div className="col-1 border text-center">
-                                           <h6 className="my-3">{index}</h6>
+                                       <div className="row mx-lg-5">
+                                         <div className="col-2 border text-center">
+                                           <h6 className="my-3 fonts">
+                                             {index}
+                                           </h6>
                                          </div>
-                                         <div className="col-5 border text-center">
-                                           <h6 className="my-3">
+                                         <div className="col-3 border text-center">
+                                           <h6 className="my-3 fonts">
                                              {Object.keys(obj)}
                                            </h6>
                                          </div>
-                                         <div className="col">
+                                         <div className="col-7">
                                            <div className="row">
-                                             <div className="col border text-center">
-                                               <h6 className="my-3">
+                                             <div className="col-4 border text-center">
+                                               <h6 className="my-3 fonts">
                                                  {parseFloat(
                                                    Object.values(obj)[0][0]
                                                  )}
                                                </h6>
                                              </div>
-                                             <div className="col border text-center">
-                                               <h6 className="my-3">
+                                             <div className="col-4 border text-center">
+                                               <h6 className="my-3 fonts">
                                                  {parseFloat(
                                                    Object.values(obj)[0][1]
                                                  )}
                                                </h6>
                                              </div>
-                                             <div className="col border text-center">
-                                               <h6 className="my-3">
+                                             <div className="col-4 border text-center">
+                                               <h6 className="my-3 fonts">
                                                  {parseFloat(
                                                    Object.values(obj)[0][2]
                                                  )}
@@ -458,9 +468,13 @@ function About() {
                                      </>
                                    );
                                  })}
-                                 {financial !== [] ? (
-                                   <Charts financial={financial}></Charts>
-                                 ) : null}
+
+                                 <div className="chart container justify-content-md-center">
+                                   {" "}
+                                   {financial !== [] ? (
+                                     <Charts financial={financial}></Charts>
+                                   ) : null}
+                                 </div>
                                </div>
 
                                <button
