@@ -100,14 +100,14 @@ function People() {
         </div>
       </div>
       <hr />
-      {organiseData(team, 2).map((obj1) => {
+      {organiseData(team, 3).map((obj1) => {
         return (
           <>
             <div className="row justify-content-center">
               {" "}
               {obj1.map((obj) => {
                 return (
-                  <div className="col-sm-4 my-4 justify-content-center mr-sm-5 mx-5">
+                  <div className="col-sm-3 my-4 justify-content-center mr-sm-5 ">
                     <img src={obj.link} alt="" className="teamImage" />
                     <h6 className="mt-3">
                       {obj.fname} {obj.lname}
@@ -121,9 +121,13 @@ function People() {
         );
       })}
       <hr />
-      <div className="row">
+      <div className="row my-5">
         <div className="col text-center">
-          <p style={{ textTransform: "uppercase" }}>Key Personal</p>
+          <h1>
+            Key Personal
+            <span style={{ color: "#ff5e10" }}>.</span>
+          </h1>
+          {/* <h4 style={{ textTransform: "uppercase" }}>Key Personal</h4> */}
         </div>
       </div>
       <div className="row">

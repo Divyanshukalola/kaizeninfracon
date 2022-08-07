@@ -546,8 +546,10 @@ border-color: grey;
 }
 
 .teamImage{
-  height: 400px;
-  width: 400px;
+  height: 330px;
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 30px #939393 ;
 }
 .tags{
   font-size: 55px;
