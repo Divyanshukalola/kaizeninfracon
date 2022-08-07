@@ -24,7 +24,7 @@ import AdminGallery from "./admin/gallery";
 import AdminCover from "./admin/cover";
 
 import useWindowDimensions from "./useWindowDimensions";
-import readData from "./functions/DB";
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
