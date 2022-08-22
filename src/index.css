@@ -613,7 +613,10 @@ border-color: grey;
 .teamImage{
     height: 230px;
   width: 200px;
-  
+
+}
+.smallProject{
+  font-size: 30px;
 }
   .sectionTitle{
     font-size: 13px;

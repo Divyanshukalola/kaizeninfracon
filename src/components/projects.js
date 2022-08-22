@@ -161,10 +161,15 @@ function Projects2({ proj }) {
                       {" "}
                       <div>
                         {/* commercial  */}
-                        <div className="row mx-0 followMeBar">
+                        <div className="row mx-0 followMeBar ">
                           <div className="col-sm ">
                             <div className=" text-center my-3 ">
-                              <h1 style={{ color: "lightgray" }}>{cat}</h1>
+                              <h1
+                                className="smallProject"
+                                style={{ color: "lightgray" }}
+                              >
+                                {cat}
+                              </h1>
                             </div>
                           </div>
                         </div>
