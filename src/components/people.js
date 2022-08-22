@@ -107,12 +107,16 @@ function People() {
               {" "}
               {obj1.map((obj) => {
                 return (
-                  <div className="col-sm-3 my-4 justify-content-center mr-sm-5 ">
-                    <img src={obj.link} alt="" className="teamImage" />
-                    <h6 className="mt-3">
-                      {obj.fname} {obj.lname}
-                    </h6>
-                    <small>{obj.description}</small>
+                  <div className="col-sm-3 my-4  mr-sm-5 mx-3 ">
+                    <div className="d-flex justify-content-end">
+                      <div className="col">
+                        <img src={obj.link} alt="" className="teamImage" />
+                        <h6 className="mt-3">
+                          {obj.fname} {obj.lname}
+                        </h6>
+                        <small>{obj.description}</small>
+                      </div>
+                    </div>
                   </div>
                 );
               })}
@@ -130,13 +134,13 @@ function People() {
           {/* <h4 style={{ textTransform: "uppercase" }}>Key Personal</h4> */}
         </div>
       </div>
-      <div className="row">
+      <div className="row tableFont">
         <div className="col">
-          <div className="row mx-5 ">
-            <div className="col mx-3 my-3">
+          <div className="row mx-sm-5 ">
+            <div className="col mx-sm-3 my-3">
               <div className="row">
-                <div className="col-1" style={{ fontWeight: "bold" }}>
-                  Index
+                <div className="col-2" style={{ fontWeight: "bold" }}>
+                  Sr.
                 </div>
                 <div className="col-3" style={{ fontWeight: "bold" }}>
                   Name
@@ -144,10 +148,10 @@ function People() {
                 <div className="col" style={{ fontWeight: "bold" }}>
                   Designation
                 </div>
-                <div className="col" style={{ fontWeight: "bold" }}>
+                <div className="col tableHide" style={{ fontWeight: "bold" }}>
                   Graduation
                 </div>
-                <div className="col" style={{ fontWeight: "bold" }}>
+                <div className="col tableHide" style={{ fontWeight: "bold" }}>
                   Experience
                 </div>
               </div>
@@ -159,24 +163,24 @@ function People() {
         <>
           {organiseData(team1, 1).map((obj, index) => {
             return (
-              <div className="row">
+              <div className="row tableFont">
                 {obj.map((obj1) => {
                   return (
                     <div className="col">
-                      <div className="row mx-5 my-1 border ">
-                        <div className="col mx-3 my-3">
+                      <div className="row mx-sm-5 my-1 border ">
+                        <div className="col mx-sm-3 my-3">
                           <div className="row">
-                            <div className="col-1">{index + 1}</div>
+                            <div className="col-2">{index + 1}</div>
                             <div className="col-3">
                               <h6>{obj1.name}</h6>
                             </div>
                             <div className="col">
                               <h6>{obj1.designation}</h6>
                             </div>
-                            <div className="col">
+                            <div className="col tableHide">
                               <h6>{obj1.graduation}</h6>
                             </div>
-                            <div className="col">
+                            <div className="col tableHide">
                               <h6>{obj1.experience}</h6>
                             </div>
                           </div>

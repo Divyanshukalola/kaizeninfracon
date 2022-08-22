@@ -603,6 +603,18 @@ border-color: grey;
 }
 
 @media only screen and (max-width: 800px) {
+  .tableFont{
+    font-size: smaller;
+    padding-left: 10px;
+  }
+  .tableHide{
+    display: none;
+  }
+.teamImage{
+    height: 230px;
+  width: 200px;
+  
+}
   .sectionTitle{
     font-size: 13px;
   }
